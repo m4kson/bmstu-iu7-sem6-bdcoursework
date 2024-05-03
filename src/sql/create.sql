@@ -37,8 +37,8 @@ create table if not exists assemblylines
 drop table if exists tractor_line CASCADE;
 create table if not exists tractor_line
 (
-    tractorid int,
-    lineid int
+    tractorid uuid,
+    lineid uuid
 );
 
 drop table if exists details CASCADE;
@@ -57,8 +57,8 @@ create table if not exists details
 drop table if exists line_detail CASCADE;
 create table if not exists line_detail
 (
-    lineid int,
-    detailid int
+    lineid uuid,
+    detailid uuid
 );
 
 drop table if exists users CASCADE;
@@ -69,7 +69,7 @@ create table if not exists users
     surname VARCHAR(64),
     fatherame VARCHAR(64),
     department VARCHAR(64),
-    email text,
+    email VARCHAR(64),
     password nchar(64),
     dateofbirth date,
     sex VARCHAR(64),
@@ -80,8 +80,8 @@ drop table if exists detailorders CASCADE;
 create table if not exists detailorders
 (
     id uuid,
-    userid int,
-    requestid int, 
+    userid uuid,
+    requestid uuid, 
     status VARCHAR(64),
     totalprice float,
     orderdate timestamp
@@ -90,8 +90,8 @@ create table if not exists detailorders
 drop table if exists order_detail CASCADE;
 create table if not exists order_detail
 (
-    orderid int,
-    detailid int,
+    orderid uuid,
+    detailid uuid,
     detailsamount int
 );
 
@@ -99,8 +99,8 @@ drop table if exists servicerequests CASCADE;
 create table if not exists servicerequests
 (
     id uuid,
-    lineid int,
-    userid int,
+    lineid uuid,
+    userid uuid,
     requestdate timestamp,
     status VARCHAR(64),
     type VARCHAR(64),
@@ -111,9 +111,9 @@ drop table if exists servicereports CASCADE;
 create table if not exists servicereports
 (
     id uuid,
-    lineid int,
-    userid int, 
-    requestid int, 
+    lineid uuid,
+    userid uuid, 
+    requestid uuid, 
     opendate timestamp,
     closedate timestamp,
     totalprice float,
