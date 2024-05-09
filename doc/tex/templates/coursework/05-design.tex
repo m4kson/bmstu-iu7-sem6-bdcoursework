@@ -1,0 +1,160 @@
+\chapter{Конструкторский раздел}
+
+В данном разделе приведено описание сущностей и диаграмма проектируемой базы данных, описание проектируемых ограничений целостности базы данных, описание проектируемых процедур, функций и триггеров и описание проектируемой ролевой модели.
+
+\section{Описание сущностей базы данных}
+
+Анализируя таблицу \ref{tab:er} и диаграмму сущностей базы данных (рисунок \ref{img:er}) формализуем сущности проектируемой базы данных. В таблицах \ref{tab:tractor} - \ref{tab:report} приведена формализация полей выделенных сущностей, указаны их типы и ограничения.
+
+
+
+На рисунке \ref{img:erdb} приведена ER-диаграмма проектируемой базы данных.
+
+
+\begin{table}[H]
+    \centering
+  
+    \begin{tabular}{|c|c|c|c|} \hline 
+         \textbf{поле}&  \textbf{тип}&  \textbf{ограничения}& \textbf{описание}\\ \hline 
+         id &  \makecell{уникальный \\ идентификатор} & \makecell{not null,\\ primary key} & \makecell{идентификатор \\ трактора}\\ \hline 
+         model&  строка&  not null& название модели\\ \hline 
+         releaseyear& дата&  not null& \makecell{год создания\\ модели}\\ \hline 
+         enginetype&  строка&  not null& тип двигателя\\ \hline 
+         enginemodel&  строка&  not null& модель двигателя\\ \hline 
+         enginepower&  целое число&  not null& \makecell{мощность двигателя\\ в лошадиных силах}\\ \hline 
+         fronttiresize&  целое число&  not null& \makecell{диаметр передних\\ колес в дюймах}\\ \hline 
+         backtiresize&  целое число&  not null& \makecell{диаметр задних\\ колес в дюймах}\\ \hline 
+         wheelsamount&  целое число&  not null& количество колес\\ \hline
+ tankcapacity& целое число& not null&\makecell{вместимость\\ бензобака\\ в литрах}\\\hline
+ ecologicalstandart& строка& not null& \makecell{эклолгический\\ стандарт}\\\hline
+ length& \makecell{вещественное \\число}& not null&длина в метрах\\ \hline 
+ width& \makecell{вещественное \\число}& not null&ширина в метрах\\\hline
+ cabinheight& \makecell{вещественное \\число}& not null&\makecell{высота по кабине\\ в метрах}\\\hline
+    \end{tabular}
+    \caption{Формализация полей таблицы тракторов}
+    \label{tab:tractor}
+\end{table}
+
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|} \hline 
+        \textbf{поле}&  \textbf{тип}&  \textbf{ограничения}& \textbf{описание}\\ \hline 
+         id&  \makecell{уникальный \\ идентификатор}&  \makecell{not null,\\ primary key}& \makecell{идентификатор\\ производственной\\ линии}\\ \hline 
+         name&  строка&  not null& название линии\\ \hline 
+         length&  целое число&  not null& длина в мм\\ \hline 
+         width&  целое число&  not null& ширина в мм\\ \hline 
+         height&  целое число&  not null& высота в мм\\ \hline 
+         status&  строка&  not null& статус\\ \hline 
+         production&  целое число&  not null& \makecell{количество\\ произведенных\\ тракторов в месяц}\\ \hline 
+         downtime&  целое число&  not null& \makecell{время простоя\\ в минутах}\\ \hline 
+         inspectionsamount&  целое число&  not null& \makecell{требуемое\\ количество \\техосмотров в год}\\ \hline 
+         lastinspection&  дата&  not null& \makecell{дата последнего\\ техосмотра}\\ \hline
+ nextinspection& дата& not null&\makecell{дата следующего \\техосмотра}\\\hline
+ defectrate& целое число& not null&\makecell{процент брака}\\\hline
+    \end{tabular}
+    \caption{Формализация полей таблицы производственных линий}
+    \label{tab:assemblyline}
+\end{table}
+
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|} \hline 
+        \textbf{поле}&  \textbf{тип}&  \textbf{ограничения}& \textbf{описание}\\ \hline 
+         id&  \makecell{уникальный \\ идентификатор}&  \makecell{not null, primary key}& \makecell{идентификатор \\пользователя}\\ \hline 
+         name&  строка&  not null& имя\\ \hline 
+         surname&  строка&  not null& фамилия\\ \hline 
+         fathername&  строка&  not null& отчество\\ \hline 
+         department&  строка&  not null& отдел\\ \hline 
+         email&  строка&  not null& почта\\ \hline 
+         password&  \makecell{хэшированная стрка}&  not null& пароль\\ \hline 
+         dateofbirth&  дата&  not null& дата рождения\\ \hline 
+         sex&  строка &  not null& пол \\ \hline 
+         role&  строка&  not null& должность\\ \hline
+    \end{tabular}
+    \caption{Формализация полей таблицы сотрудников}
+    \label{tab:user}
+\end{table}
+
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|} \hline 
+         \textbf{поле}&  \textbf{тип}&  \textbf{ограничения}& \textbf{описание}\\ \hline 
+         id&  \makecell{уникальный \\ идентификатор}&  \makecell{not null, primary key}& \makecell{идентификатор детали}\\ \hline 
+         name&  строка&  not null& название\\ \hline 
+         country&  строка&  not null& страна производитель\\ \hline 
+          amount&  целое число&  not null& \makecell{количество на складе}\\ \hline 
+         price&  \makecell{вещественное \\число}&  not null& цена в рублях\\ \hline 
+         length&  целое число&  not null& длина в мм\\ \hline 
+         width&  целое число&  not null& ширина в мм\\ \hline 
+         height&  целое число&  not null& высота в мм\\ \hline
+    \end{tabular}
+    \caption{Формализация полей таблицы деталей}
+    \label{tab:detail}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|} \hline 
+        \textbf{поле}&  \textbf{тип}&  \textbf{ограничения}& \textbf{описание}\\ \hline 
+         id&  \makecell{уникальный \\ идентификатор}&  \makecell{not null, primary key}& \makecell{идентификатор \\заказа деталей}\\ \hline 
+         userid&  \makecell{уникальный \\ идентификатор}&  \makecell{not null, foreign key}& \makecell{идентификатор \\заказчика}\\ \hline 
+         requestid&  \makecell{уникальный \\ идентификатор}&  \makecell{not null, foreign key}& \makecell{идентификатор\\ заявки для которой \\заказывают \\детали}\\ \hline 
+         status& строка&  not null& \makecell{статус \\заказа}\\ \hline 
+         totalprice&  \makecell{вещественное \\число}&  not null& цена\\ \hline 
+         orderdate&  дата&  not null& дата заказа\\\hline
+    \end{tabular}
+    \caption{Формализация полей таблицы заказа деталей}
+    \label{tab:orderdetail}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|} \hline 
+        \textbf{поле}&  \textbf{тип}&  \textbf{ограничения}& \textbf{описание}\\ \hline 
+         id&  \makecell{уникальный \\ идентификатор}&  \makecell{not null,\\ primary key}& \makecell{идентификатор заявки \\на обслуживание}\\ \hline 
+         lineid&  \makecell{уникальный \\ идентификатор}&  \makecell{not null,\\ foreign key}& \makecell{идентификатор \\производственной\\ линии}\\ \hline 
+         userid&  \makecell{уникальный \\ идентификатор}&  \makecell{not null,\\ foreign key}& \makecell{идентификатор\\ сотрудника}\\ \hline 
+         requestdate&  дата&  not null& дата заказа\\ \hline 
+         status&  строка&  not null& статус \\ \hline 
+         type&  строка&  not null& \makecell{статус}\\ \hline 
+         description&  текст&  not null& описание заявки\\ \hline
+    \end{tabular}
+    \caption{Формализация полей таблицы заявки на обслуживание}
+    \label{tab:request}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|} \hline 
+        \textbf{поле}&  \textbf{тип}&  \textbf{ограничения}& \textbf{описание}\\ \hline 
+         id&  \makecell{уникальный \\ идентификатор}&  \makecell{not null,\\ primary key}& \makecell{идентификатор \\отчета об \\обслуживании}\\ \hline 
+         lineid&  \makecell{уникальный \\ идентификатор}&  \makecell{not null,\\ foreign key}& \makecell{идентификатор \\производственной линии}\\ \hline 
+         userid&  \makecell{уникальный \\ идентификатор}&  \makecell{not null,\\ foreign key}& \makecell{идентификатор сотрудника}\\ \hline 
+         requestid&  \makecell{уникальный \\ идентификатор}&  \makecell{not null,\\ foreign key}& \makecell{идентификатор заявки}\\ \hline 
+         opendate&  дата и время&  not null& \makecell{дата начала \\обслуживания}\\ \hline 
+         closedate&  дата и время&  not null& \makecell{дата завеншения \\обслуживания}\\ \hline 
+         totalprice&  \makecell{вещественное \\число}&  not null& цена ремонта\\ \hline 
+         description&  текст&  not null& описание\\ \hline
+    \end{tabular}
+    \caption{Формализация полей таблицы отчета об обслуживании}
+    \label{tab:report}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{templates/coursework/inc/img/er.png}
+    \caption{ER-диаграмма проектируемой базы данных}
+    \label{img:erdb}
+\end{figure}
+
+\section{Описание проектируемых триггеров}
+
