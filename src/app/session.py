@@ -6,6 +6,7 @@ def create_connection(recreate=False):
     print("Версия SQL Alchemy:", sqlalchemy.__version__)
 
     engine = create_engine(
+        #f'postgresql+psycopg://m4ks0n:admin@localhost:5432/ProductMonitor',
         url=settings.DATABASE_URL_psycopg,
         echo=True,
     )
