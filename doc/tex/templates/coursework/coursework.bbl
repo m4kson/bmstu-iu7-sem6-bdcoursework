@@ -1,0 +1,170 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{дейт2001введение}{article}{}
+      \name{author}{1}{}{%
+        {{hash=77262ee7feaaa8d2f5ee074ae6732fc5}{%
+           family={Дейт},
+           familyi={Д\bibinitperiod},
+           given={К\bibnamedelima Дж},
+           giveni={К\bibinitperiod\bibinitdelim Д\bibinitperiod}}}%
+      }
+      \strng{namehash}{77262ee7feaaa8d2f5ee074ae6732fc5}
+      \strng{fullhash}{77262ee7feaaa8d2f5ee074ae6732fc5}
+      \strng{bibnamehash}{77262ee7feaaa8d2f5ee074ae6732fc5}
+      \strng{authorbibnamehash}{77262ee7feaaa8d2f5ee074ae6732fc5}
+      \strng{authornamehash}{77262ee7feaaa8d2f5ee074ae6732fc5}
+      \strng{authorfullhash}{77262ee7feaaa8d2f5ee074ae6732fc5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Введение в системы баз данных}
+      \field{year}{2001}
+    \endentry
+    \entry{роб2004системы}{article}{}
+      \name{author}{2}{}{%
+        {{hash=91dd95d96d9503610b4c0d29137a4344}{%
+           family={Роб},
+           familyi={Р\bibinitperiod},
+           given={Питер},
+           giveni={П\bibinitperiod}}}%
+        {{hash=573c7992a7ac9606ea1d566d5efa99d5}{%
+           family={Коронел},
+           familyi={К\bibinitperiod},
+           given={Карлос},
+           giveni={К\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {БХВ-Петербург}%
+      }
+      \strng{namehash}{430e57426ffcf24f598d2ff70c01e8cc}
+      \strng{fullhash}{430e57426ffcf24f598d2ff70c01e8cc}
+      \strng{bibnamehash}{430e57426ffcf24f598d2ff70c01e8cc}
+      \strng{authorbibnamehash}{430e57426ffcf24f598d2ff70c01e8cc}
+      \strng{authornamehash}{430e57426ffcf24f598d2ff70c01e8cc}
+      \strng{authorfullhash}{430e57426ffcf24f598d2ff70c01e8cc}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Системы баз данных: проектирование, реализация и управление}
+      \field{year}{2004}
+    \endentry
+    \entry{кузнецов1998основы}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1b9562d9b81f0afc90229b4319104ee4}{%
+           family={Кузнецов},
+           familyi={К\bibinitperiod},
+           given={СД},
+           giveni={С\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b9562d9b81f0afc90229b4319104ee4}
+      \strng{fullhash}{1b9562d9b81f0afc90229b4319104ee4}
+      \strng{bibnamehash}{1b9562d9b81f0afc90229b4319104ee4}
+      \strng{authorbibnamehash}{1b9562d9b81f0afc90229b4319104ee4}
+      \strng{authornamehash}{1b9562d9b81f0afc90229b4319104ee4}
+      \strng{authorfullhash}{1b9562d9b81f0afc90229b4319104ee4}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{М: Центр Информационных Технологий}
+      \field{title}{Основы современных баз данных}
+      \field{year}{1998}
+    \endentry
+    \entry{интуит}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{--- Режим доступа: \url{https://intuit.ru/studies/courses/3439/681/lecture/} (дата обращения: 30.04.2024).}
+      \field{title}{Модели организации баз данных [Электронный ресурс].}
+    \endentry
+    \entry{БГЭУ}{misc}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{--- Режим доступа: \url{https://bseu.by/it/tohod/} (дата обращения: 30.04.2024).}
+      \field{title}{Лекция на тему МОДЕЛИ ДАННЫХ [Электронный ресурс].}
+    \endentry
+    \entry{парфенов2016постреляционные}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6e8d037188c252ec9eb7415c86f3d3a4}{%
+           family={Парфенов},
+           familyi={П\bibinitperiod},
+           given={Юрий\bibnamedelima Павлович},
+           giveni={Ю\bibinitperiod\bibinitdelim П\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Издательство Уральского университета}%
+      }
+      \strng{namehash}{6e8d037188c252ec9eb7415c86f3d3a4}
+      \strng{fullhash}{6e8d037188c252ec9eb7415c86f3d3a4}
+      \strng{bibnamehash}{6e8d037188c252ec9eb7415c86f3d3a4}
+      \strng{authorbibnamehash}{6e8d037188c252ec9eb7415c86f3d3a4}
+      \strng{authornamehash}{6e8d037188c252ec9eb7415c86f3d3a4}
+      \strng{authorfullhash}{6e8d037188c252ec9eb7415c86f3d3a4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Постреляционные хранилища данных}
+      \field{year}{2016}
+    \endentry
+    \entry{DB-Engines}{misc}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{--- Режим доступа: \url{https://db-engines.com/en/ranking} (дата обращения: 09.05.2024).}
+      \field{title}{DB-Engines Ranking [Электронный ресурс].}
+    \endentry
+    \entry{Oracle}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{--- Режим доступа: \url{https://www.oracle.com/cis/database/} (дата обращения: 09.05.2024).}
+      \field{title}{Oracle Россия и СНГ [Электронный ресурс].}
+    \endentry
+    \entry{MySQL}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{--- Режим доступа: \url{https://www.mysql.com/} (дата обращения: 09.05.2024).}
+      \field{title}{MySQL [Электронный ресурс].}
+    \endentry
+    \entry{MicrosoftSQLServer}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{--- Режим доступа: \url{https://www.microsoft.com/ru-ru/sql-server/sql-server-2019} (дата обращения: 09.05.2024).}
+      \field{title}{Microsoft SQL server [Электронный ресурс].}
+    \endentry
+    \entry{PostgreSQL}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{--- Режим доступа: \url{https://www.postgresql.org/} (дата обращения: 09.05.2024).}
+      \field{title}{PostgreSQL [Электронный ресурс].}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
