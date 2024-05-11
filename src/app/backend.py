@@ -1,10 +1,8 @@
-from fastapi import FastAPI, Depends, HTTPException, status, APIRouter, Response
-from models import *
-#todo import schemas
-from session import create_session, get_db
-import uvicorn
+from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
-import time
+from session import get_db
+from models import Detail
+import uvicorn
 
 app = FastAPI()
 
@@ -13,11 +11,12 @@ app = FastAPI()
 def get_home():
     return "hello, world!"
 
+
 @app.get("/details_read")
 def get_all_details(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
-    skip = (page - 2) * limit
+    skip = (page - 1) * limit
     details = db.query(Detail).limit(limit).offset(skip).all()
-    return {'status' : 'success', 'results': len(details), 'details' : details}
+    return {'status': 'success', 'results': len(details), 'details': details}
 
 
 if __name__ == "__main__":

@@ -3,19 +3,19 @@ CREATE EXTENSION IF NOT EXISTS pgcrypto;
 --вставка тестовых данных
 
 -- Вставка данных в таблицу tractors
-INSERT INTO tractors (id, model, release_year, enginetype, enginemodel, enginepower, fronttiresize, backtiresize, wheelsamount, tankcapacity, ecologicalstandart, length, width, cabinheight)
+INSERT INTO tractors (model, release_year, enginetype, enginemodel, enginepower, fronttiresize, backtiresize, wheelsamount, tankcapacity, ecologicalstandart, length, width, cabinheight)
 VALUES 
-('eb22c8af-1952-43a1-bc86-001d2af3096d', 'John Deere 5075E', 2020, 'Diesel', 'PowerTech 3029H', 75, 14, 18, 4, 90, 'Euro 6', 3.5, 1.8, 2.1),
-('34e31c52-2a77-408f-a0ca-da9ac48460d6', 'New Holland T7.190', 2019, 'Diesel', 'FPT Industrial NEF 6', 190, 16, 20, 4, 220, 'Euro 5', 3.8, 1.9, 2.2),
-('c2b38806-c697-45cc-8311-7fbc5b86b76e', 'Case IH Puma 185', 2021, 'Diesel', 'FPT Industrial NEF 6', 185, 18, 22, 4, 210, 'Tier 4B', 3.6, 1.8, 2.1);
+('John Deere 5075E', 2020, 'Diesel', 'PowerTech 3029H', 75, 14, 18, 4, 90, 'Euro 6', 3.5, 1.8, 2.1),
+('New Holland T7.190', 2019, 'Diesel', 'FPT Industrial NEF 6', 190, 16, 20, 4, 220, 'Euro 5', 3.8, 1.9, 2.2),
+('Case IH Puma 185', 2021, 'Diesel', 'FPT Industrial NEF 6', 185, 18, 22, 4, 210, 'Tier 4B', 3.6, 1.8, 2.1);
 
 
 -- Вставка данных в таблицу assemblylines
 INSERT INTO assemblylines (id, name, length, height, width, status, production, downtime, inspectionsamountperyear, lastinspectiondate, nextinspectiondate, defectrate)
 VALUES 
-('12a8b960-924b-41f7-80c3-ccc393e4b274', 'Line 1', 100, 5, 3, 'Active', 100, 10, 12, '2023-01-01', '2024-01-01', 2),
-('60c51385-4f28-4113-a6c8-55541534f6a4', 'Line 2', 120, 6, 4, 'Active', 120, 15, 10, '2023-02-01', '2024-02-01', 3),
-('629ca7b0-908f-4e68-8a6f-ad17eba75a71', 'Line 3', 80, 4, 3, 'Active', 80, 8, 8, '2023-03-01', '2024-03-01', 1);
+('Line 1', 100, 5, 3, 'Active', 100, 10, 12, '2023-01-01', '2024-01-01', 2),
+('Line 2', 120, 6, 4, 'Active', 120, 15, 10, '2023-02-01', '2024-02-01', 3),
+('Line 3', 80, 4, 3, 'Active', 80, 8, 8, '2023-03-01', '2024-03-01', 1);
 
 
 -- Вставка данных в таблицу users

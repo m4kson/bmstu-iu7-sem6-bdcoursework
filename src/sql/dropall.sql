@@ -1,0 +1,10 @@
+drop table if EXISTS tractors CASCADE;
+drop table if EXISTS assemblylines CASCADE;
+drop table if EXISTS detailorders CASCADE;
+drop table if EXISTS details CASCADE;
+drop table if EXISTS line_detail CASCADE;
+drop table if EXISTS order_detail CASCADE;
+drop table if EXISTS servicereports CASCADE;
+drop table if EXISTS servicerequests CASCADE;
+drop table if EXISTS tractor_line CASCADE;
+drop table if EXISTS users CASCADE;
