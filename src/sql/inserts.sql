@@ -11,11 +11,11 @@ VALUES
 
 
 -- Вставка данных в таблицу assemblylines
-INSERT INTO assemblylines (id, name, length, height, width, status, production, downtime, inspectionsamountperyear, lastinspectiondate, nextinspectiondate, defectrate)
+INSERT INTO assemblylines (name, length, height, width, status, production, downtime, inspectionsamountperyear, lastinspectiondate, nextinspectiondate, defectrate)
 VALUES 
-('Line 1', 100, 5, 3, 'Active', 100, 10, 12, '2023-01-01', '2024-01-01', 2),
-('Line 2', 120, 6, 4, 'Active', 120, 15, 10, '2023-02-01', '2024-02-01', 3),
-('Line 3', 80, 4, 3, 'Active', 80, 8, 8, '2023-03-01', '2024-03-01', 1);
+('Line 1', 100, 5, 3, 'работает', 100, 10, 12, '2023-01-01', '2024-01-01', 2),
+('Line 2', 120, 6, 4, 'работает', 120, 15, 10, '2023-02-01', '2024-02-01', 3),
+('Line 3', 80, 4, 3, 'работает', 80, 8, 8, '2023-03-01', '2024-03-01', 1);
 
 
 -- Вставка данных в таблицу users
@@ -24,16 +24,17 @@ VALUES
 ('65e3c7db-c6ce-4b2f-9124-d9bf1c9c68c9', 'Иван', 'Иванов', 'Иванович', 'Производство', 'ivan@example.com', 'password123', '1990-05-15', 'Мужской', 'Работник');
 
 -- Вставка данных в таблицу details
-INSERT INTO details (id, name, country, amount, price, length, width, height)
+INSERT INTO details (name, country, amount, price, length, width, height)
 VALUES 
-('29c94e51-8dab-4d67-95f2-4fbb1bf6f95e', 'Болт M12x30', 'Россия', 1000, 1.5, 30, 12, 12),
-('19c475f6-35ed-498b-8dab-46bcb4fdfa7b', 'Плоская шайба', 'Россия', 2000, 0.5, 15, 15, 2),
-('7d0513b2-0a09-43a5-b3aa-21f01e252c77', 'Винт M8x30', 'Китай', 1500, 1.0, 30, 8, 8);
+('Болт M12x30', 'Россия', 1000, 1.5, 30, 12, 12),
+('Плоская шайба', 'Россия', 2000, 0.5, 15, 15, 2),
+('Винт M8x30', 'Китай', 1500, 1.0, 30, 8, 8);
 
 select * from servicerequests;
 select * from servicereports;
 select * from assemblylines;
 select * from users;
+select * from details;
 
 
 --тест1 для триггера4 (вставка в таблицу заявок): статус линии должен измениться на "на обслуживании"

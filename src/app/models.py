@@ -1,37 +1,45 @@
 import datetime
-from sqlalchemy import Table, Column, ForeignKey, Integer, Float, String, Date, Text
+from sqlalchemy import Table, Column, ForeignKey, Integer, Float, String, Date, Text, Enum
 from sqlalchemy.orm import relationship, Mapped, mapped_column
 from sqlalchemy.ext.declarative import declarative_base
 import enum
+from typing import Literal
 
 Base = declarative_base()
 
-class AssemblyLineStatus(enum.Enum):
-    working = "работает"
-    on_service = "на обслуживании"
+AssemblyLineStatus = Literal["работает", "на обслуживании"]
+Sex = Literal["м", "ж"]
+Role = Literal["администратор", "оператор производства", "специалист по обслуживанию"]
+DetailOrderStatus = Literal["обрабатывается", "принят", "доставляется", "выполнен"]
+ServiceRequestStatus = Literal["открыта", "закрыта"]
+ServiceRequestType = Literal["техосмотр", "ремонт"]
 
-class Sex(enum.Enum):
-    male = "м"
-    female = "ж"
+# class AssemblyLineStatus(enum.Enum):
+#     working = "работает"
+#     on_service = "на обслуживании"
 
-class Role(enum.Enum):
-    admin = "администратор"
-    operator = "оператор производства"
-    service_specialist = "специалист по обслуживанию"
+# class Sex(enum.Enum):
+#     male = "м"
+#     female = "ж"
 
-class DetailOrderStatus(enum.Enum):
-    processed = "обрабатывается"
-    acepted = "принят"
-    delivery = "доставляется"
-    done = "выполнен"
+# class Role(enum.Enum):
+#     admin = "администратор"
+#     operator = "оператор производства"
+#     service_specialist = "специалист по обслуживанию"
 
-class ServiceRequestStatus(enum.Enum):
-    open = "открыта"
-    closed = "закрыта"
+# class DetailOrderStatus(enum.Enum):
+#     processed = "обрабатывается"
+#     acepted = "принят"
+#     delivery = "доставляется"
+#     done = "выполнен"
 
-class ServiceRequestType(enum.Enum):
-    service = "техосмотр"
-    repair = "ремонт"
+# class ServiceRequestStatus(enum.Enum):
+#     open = "открыта"
+#     closed = "закрыта"
+
+# class ServiceRequestType(enum.Enum):
+#     service = "техосмотр"
+#     repair = "ремонт"
 
 class Tractor(Base):
     __tablename__ = 'tractors'
@@ -58,7 +66,7 @@ class AssemblyLine(Base):
     length: Mapped[float]
     height: Mapped[float]
     width: Mapped[float]
-    status: Mapped[AssemblyLineStatus]
+    status: Mapped[AssemblyLineStatus] = mapped_column(Enum("работает", "на обслуживании", name="status_enum"))
     production: Mapped[int]
     downtime: Mapped[int]
     inspectionsamountperyear: Mapped[int]
@@ -101,8 +109,8 @@ class User(Base):
     email: Mapped[str]
     password: Mapped[str]
     dateofbirth: Mapped[datetime.date]
-    sex:  Mapped[Sex]
-    role:  Mapped[Role]
+    sex:  Mapped[Sex] = mapped_column(Enum("м", "ж", name="sex_enum"))
+    role:  Mapped[Role] = mapped_column(Enum("администратор", "оператор производства", "специалист по обслуживанию", name="role_enum"))
 
 class DetailOrder(Base):
     __tablename__ = 'detailorders'
@@ -110,7 +118,7 @@ class DetailOrder(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     userid: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"))
     requestid: Mapped[int] = mapped_column(ForeignKey("servicerequests.id", ondelete="CASCADE"))
-    status: Mapped[DetailOrderStatus]
+    status: Mapped[DetailOrderStatus] = mapped_column(Enum("обрабатывается", "принят", "доставляется", "выполнен", name="orderstatus_enum"))
     totalprice: Mapped[float]
     orderdate: Mapped[datetime.datetime]
 
@@ -128,8 +136,8 @@ class ServiceRequest(Base):
     lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"))
     userid: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"))
     requestdate: Mapped[datetime.datetime]
-    status: Mapped[ServiceRequestStatus]
-    type: Mapped[ServiceRequestType]
+    status: Mapped[ServiceRequestStatus] = mapped_column(Enum("открыта", "закрыта", name="requeststatus_enum"))
+    type: Mapped[ServiceRequestType] = mapped_column(Enum("техосмотр", "ремонт", name="requesttype_enum"))
     description: Mapped[str]
 
 class ServiceReport(Base):
