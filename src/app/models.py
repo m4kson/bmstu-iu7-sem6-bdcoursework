@@ -1,6 +1,7 @@
-from sqlalchemy import Column, ForeignKey, Integer, String, Float, Date, Text, TIMESTAMP, BigInteger
+from sqlalchemy import Column, ForeignKey, Integer, String, Float, Date, Text, TIMESTAMP, BigInteger, UUID
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, Mapped, mapped_column
+import uuid
 
 Base = declarative_base()
 
@@ -41,7 +42,7 @@ class AssemblyLine(Base):
 class Detail(Base):
     __tablename__ = 'details'
 
-    id = Column(String, primary_key=True)
+    id = Column(UUID, primary_key=True)
     name = Column(String(64), nullable=False)
     country = Column(String(64), nullable=False)
     amount = Column(Integer, nullable=False)

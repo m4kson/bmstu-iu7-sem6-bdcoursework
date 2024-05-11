@@ -1,21 +1,39 @@
 import sqlalchemy
-from sqlalchemy import create_engine, text, URL
+from sqlalchemy import create_engine, text
 from config import settings
-from sqlalchemy.orm import Session, sessionmaker
+from sqlalchemy.orm import Session, sessionmaker, DeclarativeBase
+from models import Base
 
 def create_session(recreate=False):
     print("Версия SQL Alchemy:", sqlalchemy.__version__)
 
     engine = create_engine(
-        #f'postgresql+psycopg://m4ks0n:admin@localhost:5432/ProductMonitor',
         url=settings.DATABASE_URL_psycopg,
         echo=False,
     )
+    
+    try:
+        with engine.connect() as conn:
+            res = conn.execute(text("SELECT VERSION()"))
+            print("Версия PostgreSQL: {}".format(res.first()[0]))
 
-    with engine.connect() as conn:
-        res = conn.execute(text("SELECT * from assemblylines"))
-        print(f"{res.first()=}")
+    except:
+        print("Connetion to db failed")
 
-if __name__ == "__main__":
-    create_session(True)
+    session_factory = sessionmaker(engine)
+    db = Session()
+
+    if recreate:
+        Base.metadata.create_all(engine)
+    
+    return db
+
+def get_db():
+    db = create_session()
+    try:
+        yield db
+    
+    finally:
+        db.close()
+
 
