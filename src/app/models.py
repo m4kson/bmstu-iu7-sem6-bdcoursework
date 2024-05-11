@@ -1,117 +1,145 @@
-from sqlalchemy import Column, ForeignKey, Integer, Float, String, Date, Text
-from sqlalchemy.orm import relationship
+import datetime
+from sqlalchemy import Table, Column, ForeignKey, Integer, Float, String, Date, Text
+from sqlalchemy.orm import relationship, Mapped, mapped_column
 from sqlalchemy.ext.declarative import declarative_base
+import enum
 
 Base = declarative_base()
+
+class AssemblyLineStatus(enum.Enum):
+    working = "работает"
+    on_service = "на обслуживании"
+
+class Sex(enum.Enum):
+    male = "м"
+    female = "ж"
+
+class Role(enum.Enum):
+    admin = "администратор"
+    operator = "оператор производства"
+    service_specialist = "специалист по обслуживанию"
+
+class DetailOrderStatus(enum.Enum):
+    processed = "обрабатывается"
+    acepted = "принят"
+    delivery = "доставляется"
+    done = "выполнен"
+
+class ServiceRequestStatus(enum.Enum):
+    open = "открыта"
+    closed = "закрыта"
+
+class ServiceRequestType(enum.Enum):
+    service = "техосмотр"
+    repair = "ремонт"
 
 class Tractor(Base):
     __tablename__ = 'tractors'
 
-    id = Column(Integer, primary_key=True)
-    model = Column(String(64), nullable=False)
-    release_year = Column(Integer, nullable=False)
-    enginetype = Column(String(64), nullable=False)
-    enginemodel = Column(String(64))
-    enginepower = Column(Integer, nullable=False)
-    fronttiresize = Column(Integer, nullable=False)
-    backtiresize = Column(Integer, nullable=False)
-    wheelsamount = Column(Integer, nullable=False)
-    tankcapacity = Column(Integer, nullable=False)
-    ecologicalstandart = Column(String(64), nullable=False)
-    length = Column(Float, nullable=False)
-    width = Column(Float, nullable=False)
-    cabinheight = Column(Float, nullable=False)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    model: Mapped[str]
+    release_year: Mapped[int]
+    enginetype: Mapped[str]
+    enginepower: Mapped[str]
+    fronttiresize: Mapped[int]
+    backtiresize: Mapped[int]
+    wheelsamount: Mapped[int]
+    tankcapacity: Mapped[int]
+    ecologicalstandart: Mapped[str]
+    length: Mapped[float]
+    width: Mapped[float]
+    cabinheight: Mapped[float]
 
 class AssemblyLine(Base):
     __tablename__ = 'assemblylines'
 
-    id = Column(Integer, primary_key=True)
-    name = Column(String(64), nullable=False)
-    length = Column(Float, nullable=False)
-    height = Column(Float, nullable=False)
-    width = Column(Float, nullable=False)
-    status = Column(String(64), nullable=False)
-    production = Column(Integer, nullable=False)
-    downtime = Column(Integer, nullable=False)
-    inspectionsamountperyear = Column(Integer, nullable=False)
-    lastinspectiondate = Column(Date, nullable=False)
-    nextinspectiondate = Column(Date, nullable=False)
-    defectrate = Column(Integer, nullable=False)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str]
+    length: Mapped[float]
+    height: Mapped[float]
+    width: Mapped[float]
+    status: Mapped[AssemblyLineStatus]
+    production: Mapped[int]
+    downtime: Mapped[int]
+    inspectionsamountperyear: Mapped[int]
+    lastinspectiondate: Mapped[datetime.date]
+    nextinspectiondate: Mapped[datetime.date]
+    defectrate: Mapped[int]
 
 class TractorLine(Base):
     __tablename__ = 'tractor_line'
 
-    tractorid = Column(Integer, ForeignKey('tractors.id'), primary_key=True)
-    lineid = Column(Integer, ForeignKey('assemblylines.id'), primary_key=True)
+    tractorid: Mapped[int] = mapped_column(ForeignKey("tractors.id", ondelete="CASCADE"), primary_key=True)
+    lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"), primary_key=True)
 
 class Detail(Base):
     __tablename__ = 'details'
 
-    id = Column(Integer, primary_key=True)
-    name = Column(String(64), nullable=False)
-    country = Column(String(64), nullable=False)
-    amount = Column(Integer, nullable=False)
-    price = Column(Float, nullable=False)
-    length = Column(Integer, nullable=False)
-    height = Column(Integer, nullable=False)
-    width = Column(Integer, nullable=False)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str]
+    country: Mapped[str]
+    amount: Mapped[int]
+    price: Mapped[float]
+    length: Mapped[int]
+    height: Mapped[int]
+    width: Mapped[int]
 
 class LineDetail(Base):
     __tablename__ = 'line_detail'
 
-    lineid = Column(Integer, ForeignKey('assemblylines.id'), primary_key=True)
-    detailid = Column(Integer, ForeignKey('details.id'), primary_key=True)
+    lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"), primary_key=True)
+    detailid: Mapped[int] = mapped_column(ForeignKey("details.id", ondelete="CASCADE"), primary_key=True)
 
 class User(Base):
     __tablename__ = 'users'
 
-    id = Column(Integer, primary_key=True)
-    name = Column(String(64), nullable=False)
-    surname = Column(String(64), nullable=False)
-    fatherame = Column(String(64), nullable=False)
-    department = Column(String(64), nullable=False)
-    email = Column(String(64), nullable=False)
-    password = Column(String(64), nullable=False)
-    dateofbirth = Column(Date, nullable=False)
-    sex = Column(String(64), nullable=False)
-    role = Column(String(64), nullable=False)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str]
+    surname: Mapped[str]
+    fatherame: Mapped[str]
+    department: Mapped[str]
+    email: Mapped[str]
+    password: Mapped[str]
+    dateofbirth: Mapped[datetime.date]
+    sex:  Mapped[Sex]
+    role:  Mapped[Role]
 
 class DetailOrder(Base):
     __tablename__ = 'detailorders'
 
-    id = Column(Integer, primary_key=True)
-    userid = Column(Integer, ForeignKey('users.id'), nullable=False)
-    requestid = Column(Integer, nullable=False)
-    status = Column(String(64), nullable=False)
-    totalprice = Column(Float, nullable=False)
-    orderdate = Column(Date, nullable=False)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    userid: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"))
+    requestid: Mapped[int] = mapped_column(ForeignKey("servicerequests.id", ondelete="CASCADE"))
+    status: Mapped[DetailOrderStatus]
+    totalprice: Mapped[float]
+    orderdate: Mapped[datetime.datetime]
 
 class OrderDetail(Base):
     __tablename__ = 'order_detail'
 
-    orderid = Column(Integer, ForeignKey('detailorders.id'), primary_key=True)
-    detailid = Column(Integer, ForeignKey('details.id'), primary_key=True)
-    detailsamount = Column(Integer, nullable=False)
+    orderid: Mapped[int] = mapped_column(ForeignKey("detailorders.id", ondelete="CASCADE"), primary_key=True)
+    detailid: Mapped[int] = mapped_column(ForeignKey("details.id", ondelete="CASCADE"), primary_key=True)
+    detailsamount: Mapped[int]
 
 class ServiceRequest(Base):
     __tablename__ = 'servicerequests'
 
-    id = Column(Integer, primary_key=True)
-    lineid = Column(Integer, ForeignKey('assemblylines.id'), nullable=False)
-    userid = Column(Integer, ForeignKey('users.id'), nullable=False)
-    requestdate = Column(Date, nullable=False)
-    status = Column(String(64), nullable=False)
-    type = Column(String(64), nullable=False)
-    description = Column(Text, nullable=False)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"))
+    userid: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"))
+    requestdate: Mapped[datetime.datetime]
+    status: Mapped[ServiceRequestStatus]
+    type: Mapped[ServiceRequestType]
+    description: Mapped[str]
 
 class ServiceReport(Base):
     __tablename__ = 'servicereports'
 
-    id = Column(Integer, primary_key=True)
-    lineid = Column(Integer, ForeignKey('assemblylines.id'), nullable=False)
-    userid = Column(Integer, ForeignKey('users.id'), nullable=False)
-    requestid = Column(Integer, ForeignKey('servicerequests.id'), nullable=False)
-    opendate = Column(Date, nullable=False)
-    closedate = Column(Date, nullable=False)
-    totalprice = Column(Float, nullable=False)
-    description = Column(Text, nullable=False)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"))
+    userid: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"))
+    requestid: Mapped[int] = mapped_column(ForeignKey("servicerequests.id", ondelete="CASCADE"))
+    opendate: Mapped[datetime.datetime]
+    closedate: Mapped[datetime.datetime]
+    totalprice: Mapped[float]
+    description: Mapped[str]
