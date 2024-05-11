@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
 from session import get_db
-from models import Detail
+from models import *
 import uvicorn
 
 app = FastAPI()
@@ -12,12 +12,52 @@ def get_home():
     return "hello, world!"
 
 
-@app.get("/details_read")
+@app.get("/tractors")
+def get_all_tractors(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
+    skip = (page - 1) * limit
+    tractors = db.query(Tractor).limit(limit).offset(skip).all()
+    return {'status': 'success', 'results': len(tractors), 'details': tractors}
+
+@app.get("/assembly_lines")
+def get_all_assembly_lines(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
+    skip = (page - 1) * limit
+    lines = db.query(AssemblyLine).limit(limit).offset(skip).all()
+    return {'status': 'success', 'results': len(lines), 'details': lines}
+
+@app.get("/service_requests")
+def get_all_service_requests(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
+    skip = (page - 1) * limit
+    requests = db.query(ServiceRequest).limit(limit).offset(skip).all()
+    return {'status': 'success', 'results': len(requests), 'details': requests}
+
+@app.get("/service_reports")
+def get_all_service_reports(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
+    skip = (page - 1) * limit
+    reports = db.query(ServiceReport).limit(limit).offset(skip).all()
+    return {'status': 'success', 'results': len(reports), 'details': reports}
+
+@app.get("/users")
+def get_all_users(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
+    skip = (page - 1) * limit
+    users = db.query(User).limit(limit).offset(skip).all()
+    return {'status': 'success', 'results': len(users), 'details': users}
+
+@app.get("/Orders")
+def get_all_orders(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
+    skip = (page - 1) * limit
+    orders = db.query(DetailOrder).limit(limit).offset(skip).all()
+    return {'status': 'success', 'results': len(orders), 'details': orders}
+
+
+@app.get("/details")
 def get_all_details(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
     skip = (page - 1) * limit
     details = db.query(Detail).limit(limit).offset(skip).all()
     return {'status': 'success', 'results': len(details), 'details': details}
 
 
+
+
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=9877)
+
