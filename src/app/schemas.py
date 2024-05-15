@@ -3,7 +3,6 @@ from typing import Literal
 from pydantic import BaseModel, Field, EmailStr
 
 class STractor(BaseModel):
-    id: int
     model: str
     release_year: int
     enginetype: str
@@ -21,7 +20,6 @@ class STractor(BaseModel):
         orm_mode = True
 
 class SAssemblyLine(BaseModel):
-    id: int
     name: str
     length: float
     height: float
@@ -45,7 +43,6 @@ class STractorLine(BaseModel):
         orm_mode = True
 
 class SDetail(BaseModel):
-    id: int
     name: str
     country: str
     amount: int
@@ -65,7 +62,6 @@ class SLineDetail(BaseModel):
         orm_mode = True
 
 class SUser(BaseModel):
-    id: int
     name: str
     surname: str
     fatherame: str
@@ -80,7 +76,6 @@ class SUser(BaseModel):
         orm_mode = True
 
 class SDetailOrder(BaseModel):
-    id: int
     userid: int
     requestid: int
     status: Literal["обрабатывается", "принят", "доставляется", "выполнен"]
@@ -99,7 +94,6 @@ class SOrderDetail(BaseModel):
         orm_mode = True
 
 class SServiceRequest(BaseModel):
-    id: int
     lineid: int
     userid: int
     requestdate: datetime
@@ -111,7 +105,6 @@ class SServiceRequest(BaseModel):
         orm_mode = True
 
 class SServiceReport(BaseModel):
-    id: int
     lineid: int
     userid: int
     requestid: int
