@@ -14,32 +14,6 @@ DetailOrderStatus = Literal["обрабатывается", "принят", "д�
 ServiceRequestStatus = Literal["открыта", "закрыта"]
 ServiceRequestType = Literal["техосмотр", "ремонт"]
 
-# class AssemblyLineStatus(enum.Enum):
-#     working = "работает"
-#     on_service = "на обслуживании"
-
-# class Sex(enum.Enum):
-#     male = "м"
-#     female = "ж"
-
-# class Role(enum.Enum):
-#     admin = "администратор"
-#     operator = "оператор производства"
-#     service_specialist = "специалист по обслуживанию"
-
-# class DetailOrderStatus(enum.Enum):
-#     processed = "обрабатывается"
-#     acepted = "принят"
-#     delivery = "доставляется"
-#     done = "выполнен"
-
-# class ServiceRequestStatus(enum.Enum):
-#     open = "открыта"
-#     closed = "закрыта"
-
-# class ServiceRequestType(enum.Enum):
-#     service = "техосмотр"
-#     repair = "ремонт"
 
 class Tractor(Base):
     __tablename__ = 'tractors'

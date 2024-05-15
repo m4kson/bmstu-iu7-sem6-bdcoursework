@@ -44,7 +44,7 @@ class TractorLineSchema(BaseModel):
     class Config:
         orm_mode = True
 
-class DetailSchema(BaseModel):
+class SDetail(BaseModel):
     id: int
     name: str
     country: str
