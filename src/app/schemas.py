@@ -2,7 +2,7 @@ from datetime import date, datetime
 from typing import Literal
 from pydantic import BaseModel, Field, EmailStr
 
-class TractorSchema(BaseModel):
+class STractor(BaseModel):
     id: int
     model: str
     release_year: int
@@ -20,7 +20,7 @@ class TractorSchema(BaseModel):
     class Config:
         orm_mode = True
 
-class AssemblyLineSchema(BaseModel):
+class SAssemblyLine(BaseModel):
     id: int
     name: str
     length: float
@@ -37,7 +37,7 @@ class AssemblyLineSchema(BaseModel):
     class Config:
         orm_mode = True
 
-class TractorLineSchema(BaseModel):
+class STractorLine(BaseModel):
     tractorid: int
     lineid: int
 
@@ -57,14 +57,14 @@ class SDetail(BaseModel):
     class Config:
         orm_mode = True
 
-class LineDetailSchema(BaseModel):
+class SLineDetail(BaseModel):
     lineid: int
     detailid: int
 
     class Config:
         orm_mode = True
 
-class UserSchema(BaseModel):
+class SUser(BaseModel):
     id: int
     name: str
     surname: str
@@ -79,7 +79,7 @@ class UserSchema(BaseModel):
     class Config:
         orm_mode = True
 
-class DetailOrderSchema(BaseModel):
+class SDetailOrder(BaseModel):
     id: int
     userid: int
     requestid: int
@@ -90,7 +90,7 @@ class DetailOrderSchema(BaseModel):
     class Config:
         orm_mode = True
 
-class OrderDetailSchema(BaseModel):
+class SOrderDetail(BaseModel):
     orderid: int
     detailid: int
     detailsamount: int
@@ -98,7 +98,7 @@ class OrderDetailSchema(BaseModel):
     class Config:
         orm_mode = True
 
-class ServiceRequestSchema(BaseModel):
+class SServiceRequest(BaseModel):
     id: int
     lineid: int
     userid: int
@@ -110,7 +110,7 @@ class ServiceRequestSchema(BaseModel):
     class Config:
         orm_mode = True
 
-class ServiceReportSchema(BaseModel):
+class SServiceReport(BaseModel):
     id: int
     lineid: int
     userid: int
