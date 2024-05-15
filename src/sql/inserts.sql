@@ -37,35 +37,35 @@ select * from users;
 select * from details;
 
 
---тест1 для триггера4 (вставка в таблицу заявок): статус линии должен измениться на "на обслуживании"
-INSERT INTO servicerequests (id, lineid, userid, requestdate, status, type, description)
+--тест1 для триггера4 (вставка в таблицу заявок): статус линии должен измениться на "на обслуживании"    done
+INSERT INTO servicerequests (lineid, userid, requestdate, status, type, description)
 VALUES 
-('fbf609cc-a5d1-4406-b858-60e50481f4a4', '12a8b960-924b-41f7-80c3-ccc393e4b274', '65e3c7db-c6ce-4b2f-9124-d9bf1c9c68c9', CURRENT_TIMESTAMP, 'открыта', 'ремонт', 'text sample');
+(1, 1, CURRENT_TIMESTAMP, 'открыта', 'ремонт', 'text sample');
 
 
---тест2 для триггера2 (вставка в таблицу отчетов): статус заявки на обслуживание должени измениться на "завершена"
+--тест2 для триггера2 (вставка в таблицу отчетов): статус заявки на обслуживание должени измениться на "завершена"  done
 -- Пример INSERT-запроса для т'блицы servicereports
-INSERT INTO servicereports (id, lineid, userid, requestid, opendate, closedate, totalprice, description)
+INSERT INTO servicereports (lineid, userid, requestid, opendate, closedate, totalprice, description)
 VALUES 
-('0a4ec264-b524-4b83-ad7c-7f02005add4a', '12a8b960-924b-41f7-80c3-ccc393e4b274', '65e3c7db-c6ce-4b2f-9124-d9bf1c9c68c9', 'fbf609cc-a5d1-4406-b858-60e50481f4a4', '2024-05-09 11:30:00', '2024-05-09 15:30:00', 50.0, 'Замена подшипника выполнена успешно.');
+(1, 2, 1, '2024-05-09 11:30:00', '2024-05-09 15:30:00', 50.0, 'Замена подшипника выполнена успешно.');
 
---тест3 для триггера3 (вставка в таблицу отчетов): должно обновиться downtime и статус на "работает" (заявка будет на ремонт, поэтому поля техосмотров не меняются)
-INSERT INTO servicerequests (id, lineid, userid, requestdate, status, type, description)
+--тест3 для триггера3 (вставка в таблицу отчетов): должно обновиться downtime и статус на "работает" (заявка будет на ремонт, поэтому поля техосмотров не меняются) done
+INSERT INTO servicerequests (lineid, userid, requestdate, status, type, description)
 VALUES 
-('f9c03b25-243e-47e4-a376-847538b86f68', '60c51385-4f28-4113-a6c8-55541534f6a4', '65e3c7db-c6ce-4b2f-9124-d9bf1c9c68c9', '2024-05-09 11:30:00', 'открыта', 'ремонт', 'text sample');
+(3, 3, '2024-05-09 11:30:00', 'открыта', 'ремонт', 'text sample');
 
-INSERT INTO servicereports (id, lineid, userid, requestid, opendate, closedate, totalprice, description)
+INSERT INTO servicereports (lineid, userid, requestid, opendate, closedate, totalprice, description)
 VALUES 
-('56763f79-a01f-4bcf-98d1-0cb45cddc3d7', '60c51385-4f28-4113-a6c8-55541534f6a4', '65e3c7db-c6ce-4b2f-9124-d9bf1c9c68c9', 'f9c03b25-243e-47e4-a376-847538b86f68', '2024-05-09 12:30:00', '2024-05-09 13:30:00', 150.0, 'Замена болта выполнена успешно.');
+(3, 4, 2, '2024-05-09 12:30:00', '2024-05-09 13:30:00', 150.0, 'Замена болта выполнена успешно.');
 
---тест4 для триггера3 (вставка в таблицу отчетов): должно обновиться downtime и статус на "работает", измениться LastInspectionDate и NextInspectionDate
-INSERT INTO servicerequests (id, lineid, userid, requestdate, status, type, description)
+--тест4 для триггера3 (вставка в таблицу отчетов): должно обновиться downtime и статус на "работает", измениться LastInspectionDate и NextInspectionDate done
+INSERT INTO servicerequests (lineid, userid, requestdate, status, type, description)
 VALUES 
-('d481da61-d260-4b63-92fa-5aa9fe8d5ddc', '629ca7b0-908f-4e68-8a6f-ad17eba75a71', '65e3c7db-c6ce-4b2f-9124-d9bf1c9c68c9', '2024-05-09 11:30:00', 'открыта', 'техосмотр', 'text sample');
+(4, 5, '2024-05-09 11:30:00', 'открыта', 'техосмотр', 'text sample');
 
-INSERT INTO servicereports (id, lineid, userid, requestid, opendate, closedate, totalprice, description)
+INSERT INTO servicereports (lineid, userid, requestid, opendate, closedate, totalprice, description)
 VALUES 
-('3059180a-7000-44c9-9d49-55afe7a498b5', '629ca7b0-908f-4e68-8a6f-ad17eba75a71', '65e3c7db-c6ce-4b2f-9124-d9bf1c9c68c9', 'd481da61-d260-4b63-92fa-5aa9fe8d5ddc', '2024-05-09 12:30:00', '2024-05-09 13:30:00', 10.0, 'Техосмотр пройден успешно.');
+(4, 6, 3, '2024-05-09 12:30:00', '2024-05-09 13:30:00', 10.0, 'Техосмотр пройден успешно.');
 
 
 

@@ -1,13 +1,18 @@
+DROP TRIGGER update_service_request_status_trigger ON servicereports;
+DROP TRIGGER update_line_status_trigger ON servicerequests;
+DROP TRIGGER update_assemblyline_trigger ON servicereports;
+
 CREATE OR REPLACE FUNCTION update_service_request_status()
 RETURNS TRIGGER AS $$
 BEGIN
     UPDATE servicerequests
-    SET status = 'завершена'
+    SET status = 'закрыта'
     WHERE id = NEW.requestid;
 
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
+
 
 CREATE TRIGGER update_service_request_status_trigger
 AFTER INSERT ON servicereports
