@@ -1,6 +1,6 @@
 from sqlalchemy import text, insert, bindparam
 from session import get_db
-from models import *
+from app.models.models import *
 import uuid
 
 def inseert_data():

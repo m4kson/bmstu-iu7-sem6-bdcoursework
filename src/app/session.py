@@ -2,7 +2,7 @@ import sqlalchemy
 from sqlalchemy import create_engine, text
 from config import settings
 from sqlalchemy.orm import Session, sessionmaker, DeclarativeBase, class_mapper
-from models import *
+from app.models.models import *
 
 def create_session(recreate=False):
     print("Версия SQL Alchemy:", sqlalchemy.__version__)

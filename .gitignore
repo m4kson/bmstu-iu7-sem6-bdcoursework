@@ -1,12 +1,13 @@
 .DS_Store
 .vscode/
+__pycache__
+.DS_Store
+src/app/__pycache__/config.cpython-310.pyc
 doc/.DS_Store
-doc/testdata/
 src/.DS_Store
 src/app/__pycache__/models.cpython-310.pyc
 src/app/__pycache__/session.cpython-310.pyc
 src/app/tempCodeRunnerFile.py
 src/sql/.DS_Store
 src/sql/tempCodeRunnerFile.py
-modified:   src/app/__pycache__/config.cpython-310.pyc
 src/app/__pycache__/config.cpython-310.pyc

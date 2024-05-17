@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from typing import List
-from schemas import *
-from models import *
+from app.schemas.schemas import *
+from app.models.models import *
 
 
 class DetailRepository:
@@ -19,9 +19,10 @@ class DetailRepository:
             width=detail_create.width
         )
         self.db.add(detail)
+        self.db.flush()
         self.db.commit()
         self.db.refresh(detail)
-        return detail
+        return detail.id
 
     def get_all_details(self, skip: int = 0, limit: int = 10) -> List[Detail]:
         return self.db.query(Detail).offset(skip).limit(limit).all()
@@ -47,9 +48,10 @@ class TractorRepository:
             cabinheight = tractor_create.cabinheight
         )
         self.db.add(tractor)
+        self.db.flush()
         self.db.commit()
         self.db.refresh(tractor)
-        return tractor
+        return tractor.id
 
     def get_all_tractors(self, skip: int = 0, limit: int = 10) -> List[Tractor]:
         return self.db.query(Tractor).offset(skip).limit(limit).all()
@@ -74,9 +76,10 @@ class AssemblyLineRepository:
             defectrate=assembly_line_create.defectrate,
         )
         self.db.add(assembly_line)
+        self.db.flush()
         self.db.commit()
         self.db.refresh(assembly_line)
-        return assembly_line
+        return assembly_line.id
 
     def get_all_assembly_lines(self, skip: int = 0, limit: int = 10) -> List[AssemblyLine]:
         return self.db.query(AssemblyLine).offset(skip).limit(limit).all()
@@ -98,9 +101,10 @@ class UserRepository:
             role=user_create.role,
         )
         self.db.add(user)
+        self.db.flush()
         self.db.commit()
         self.db.refresh(user)
-        return user
+        return user.id
 
     def get_all_users(self, skip: int = 0, limit: int = 10) -> List[User]:
         return self.db.query(User).offset(skip).limit(limit).all()
@@ -119,9 +123,10 @@ class DetailOrderRepository:
             orderdate=detail_order_create.orderdate,
         )
         self.db.add(detail_order)
+        self.db.flush()
         self.db.commit()
         self.db.refresh(detail_order)
-        return detail_order
+        return detail_order.id
 
     def get_all_detail_orders(self, skip: int = 0, limit: int = 10) -> List[DetailOrder]:
         return self.db.query(DetailOrder).offset(skip).limit(limit).all()
@@ -140,9 +145,10 @@ class ServiceRequestRepository:
             description=service_request_create.description,
         )
         self.db.add(service_request)
+        self.db.flush()
         self.db.commit()
         self.db.refresh(service_request)
-        return service_request
+        return service_request.id
 
     def get_all_service_requests(self, skip: int = 0, limit: int = 10) -> List[ServiceRequest]:
         return self.db.query(ServiceRequest).offset(skip).limit(limit).all()
@@ -162,9 +168,10 @@ class ServiceReportRepository:
             description=service_report_create.description,
         )
         self.db.add(service_report)
+        self.db.flush()
         self.db.commit()
         self.db.refresh(service_report)
-        return service_report
+        return service_report.id
 
     def get_all_service_reports(self, skip: int = 0, limit: int = 10) -> List[ServiceReport]:
         return self.db.query(ServiceReport).offset(skip).limit(limit).all()
