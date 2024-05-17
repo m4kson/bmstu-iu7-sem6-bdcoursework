@@ -57,7 +57,7 @@ class TractorLine(Base):
 class Detail(Base):
     __tablename__ = 'details'
 
-    id: Mapped[int] = mapped_column(primary_key=True)
+    id: Mapped[int] = mapped_column(primary_key=True, index=True, autoincrement=True)
     name: Mapped[str]
     country: Mapped[str]
     amount: Mapped[int]

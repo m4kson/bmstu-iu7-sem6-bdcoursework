@@ -2,8 +2,7 @@ from datetime import date, datetime
 from typing import Literal
 from pydantic import BaseModel, Field, EmailStr
 
-class TractorSchema(BaseModel):
-    id: int
+class STractor(BaseModel):
     model: str
     release_year: int
     enginetype: str
@@ -20,8 +19,7 @@ class TractorSchema(BaseModel):
     class Config:
         orm_mode = True
 
-class AssemblyLineSchema(BaseModel):
-    id: int
+class SAssemblyLine(BaseModel):
     name: str
     length: float
     height: float
@@ -37,7 +35,7 @@ class AssemblyLineSchema(BaseModel):
     class Config:
         orm_mode = True
 
-class TractorLineSchema(BaseModel):
+class STractorLine(BaseModel):
     tractorid: int
     lineid: int
 
@@ -45,7 +43,6 @@ class TractorLineSchema(BaseModel):
         orm_mode = True
 
 class SDetail(BaseModel):
-    id: int
     name: str
     country: str
     amount: int
@@ -57,15 +54,14 @@ class SDetail(BaseModel):
     class Config:
         orm_mode = True
 
-class LineDetailSchema(BaseModel):
+class SLineDetail(BaseModel):
     lineid: int
     detailid: int
 
     class Config:
         orm_mode = True
 
-class UserSchema(BaseModel):
-    id: int
+class SUser(BaseModel):
     name: str
     surname: str
     fatherame: str
@@ -79,8 +75,7 @@ class UserSchema(BaseModel):
     class Config:
         orm_mode = True
 
-class DetailOrderSchema(BaseModel):
-    id: int
+class SDetailOrder(BaseModel):
     userid: int
     requestid: int
     status: Literal["обрабатывается", "принят", "доставляется", "выполнен"]
@@ -90,7 +85,7 @@ class DetailOrderSchema(BaseModel):
     class Config:
         orm_mode = True
 
-class OrderDetailSchema(BaseModel):
+class SOrderDetail(BaseModel):
     orderid: int
     detailid: int
     detailsamount: int
@@ -98,8 +93,7 @@ class OrderDetailSchema(BaseModel):
     class Config:
         orm_mode = True
 
-class ServiceRequestSchema(BaseModel):
-    id: int
+class SServiceRequest(BaseModel):
     lineid: int
     userid: int
     requestdate: datetime
@@ -110,8 +104,7 @@ class ServiceRequestSchema(BaseModel):
     class Config:
         orm_mode = True
 
-class ServiceReportSchema(BaseModel):
-    id: int
+class SServiceReport(BaseModel):
     lineid: int
     userid: int
     requestid: int
