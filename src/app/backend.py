@@ -10,52 +10,25 @@ import uvicorn
 app = FastAPI()
 
 
-#select
+# tarctors
+@app.post("/tractors/", response_model=STractor)
+def create_tractor(
+    tractor_create: Annotated[STractor, Depends()],
+    db: Annotated[Session, Depends(get_db)]
+):
+    tractor_repo = TractorRepository(db)
+    return tractor_repo.add_tractor(tractor_create)
 
-@app.get("/tractors")
-def get_all_tractors(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
-    skip = (page - 1) * limit
-    tractors = db.query(Tractor).limit(limit).offset(skip).all()
-    return {'status': 'success', 'results': len(tractors), 'details': tractors}
+@app.get("/tractors/", response_model=List[STractor])
+def read_tractors(
+    db: Annotated[Session, Depends(get_db)],
+    skip: int = 0,
+    limit: int = 10,
+):
+    tractor_repo = TractorRepository(db)
+    return tractor_repo.get_all_tractors(skip=skip, limit=limit)
 
-@app.get("/assembly_lines")
-def get_all_assembly_lines(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
-    skip = (page - 1) * limit
-    lines = db.query(AssemblyLine).limit(limit).offset(skip).all()
-    return {'status': 'success', 'results': len(lines), 'details': lines}
-
-@app.get("/service_requests")
-def get_all_service_requests(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
-    skip = (page - 1) * limit
-    requests = db.query(ServiceRequest).limit(limit).offset(skip).all()
-    return {'status': 'success', 'results': len(requests), 'details': requests}
-
-@app.get("/service_reports")
-def get_all_service_reports(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
-    skip = (page - 1) * limit
-    reports = db.query(ServiceReport).limit(limit).offset(skip).all()
-    return {'status': 'success', 'results': len(reports), 'details': reports}
-
-@app.get("/users")
-def get_all_users(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
-    skip = (page - 1) * limit
-    users = db.query(User).limit(limit).offset(skip).all()
-    return {'status': 'success', 'results': len(users), 'details': users}
-
-@app.get("/Orders")
-def get_all_orders(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
-    skip = (page - 1) * limit
-    orders = db.query(DetailOrder).limit(limit).offset(skip).all()
-    return {'status': 'success', 'results': len(orders), 'details': orders}
-
-
-@app.get("/details")
-def get_all_details(db: Session = Depends(get_db), limit: int = 10, page: int = 1):
-    skip = (page - 1) * limit
-    details = db.query(Detail).limit(limit).offset(skip).all()
-    return {'status': 'success', 'results': len(details), 'details': details}
-
-
+#details
 @app.post("/details/", response_model=SDetail)
 def create_detail(
     detail_create: Annotated[SDetail, Depends()], 
@@ -73,6 +46,41 @@ def read_details(
     detail_repo = DetailRepository(db)
     return detail_repo.get_all_details(skip=skip, limit=limit)
 
+#assemblylines
+@app.post("/lines/", response_model=SAssemblyLine)
+def create_line(
+    line_create: Annotated[SAssemblyLine, Depends()], 
+    db: Annotated[Session, Depends(get_db)]
+):
+    line_repo = AssemblyLineRepository(db)
+    return line_repo.add_assembly_line(line_create)
+
+@app.get("/lines/", response_model=List[SAssemblyLine])
+def read_lines(
+    db: Annotated[Session, Depends(get_db)],
+    skip: int = 0,
+    limit: int = 10,
+):
+    line_repo = AssemblyLineRepository(db)
+    return line_repo.get_all_assembly_lines(skip=skip, limit=limit)
+
+#users
+@app.post("/users/", response_model=SUser)
+def create_user(
+    user_create: Annotated[SUser, Depends()], 
+    db: Annotated[Session, Depends(get_db)]
+):
+    user_repo = UserRepository(db)
+    return user_repo.add_user(user_create)
+
+@app.get("/users/", response_model=List[SUser])
+def read_users(
+    db: Annotated[Session, Depends(get_db)],
+    skip: int = 0,
+    limit: int = 10,
+):
+    user_repo = UserRepository(db)
+    return user_repo.get_all_users(skip=skip, limit=limit)
 
 
 if __name__ == "__main__":
