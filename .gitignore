@@ -11,3 +11,4 @@ src/app/tempCodeRunnerFile.py
 src/sql/.DS_Store
 src/sql/tempCodeRunnerFile.py
 src/app/__pycache__/config.cpython-310.pyc
+src/app/__pycache__/

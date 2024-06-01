@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
-from typing import List
+from typing import List, Optional
 from app.schemas.schemas import *
 from app.models.models import *
-
+from datetime import datetime
 
 class DetailRepository:
     def __init__(self, db: Session):
@@ -32,7 +32,7 @@ class TractorRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    def add_tractor(self, tractor_create: STractor) -> Tractor:
+    def add_tractor(self, tractor_create: STractor) -> int:
         tractor = Tractor(
             model = tractor_create.model,
             release_year = tractor_create.release_year,
@@ -55,6 +55,9 @@ class TractorRepository:
 
     def get_all_tractors(self, skip: int = 0, limit: int = 10) -> List[Tractor]:
         return self.db.query(Tractor).offset(skip).limit(limit).all()
+    
+    def get_tractor_by_id(self, tractor_id: int) -> Optional[Tractor]:
+        return self.db.query(Tractor).filter(Tractor.id == tractor_id).first()
 
 
 class AssemblyLineRepository:
@@ -83,6 +86,9 @@ class AssemblyLineRepository:
 
     def get_all_assembly_lines(self, skip: int = 0, limit: int = 10) -> List[AssemblyLine]:
         return self.db.query(AssemblyLine).offset(skip).limit(limit).all()
+    
+    def get_line_by_id(self, line_id: int) -> Optional[AssemblyLine]:
+        return self.db.query(AssemblyLine).filter(AssemblyLine.id == line_id).first()
 
 class UserRepository:
     def __init__(self, db: Session):
@@ -135,12 +141,12 @@ class ServiceRequestRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    def add_service_request(self, service_request_create: SServiceRequest) -> ServiceRequest:
+    def add_service_request(self, service_request_create: SServiceRequest) -> int:
         service_request = ServiceRequest(
             lineid=service_request_create.lineid,
             userid=service_request_create.userid,
-            requestdate=service_request_create.requestdate,
-            status=service_request_create.status,
+            requestdate=datetime.now(),  
+            status="открыта",
             type=service_request_create.type,
             description=service_request_create.description,
         )
@@ -152,6 +158,9 @@ class ServiceRequestRepository:
 
     def get_all_service_requests(self, skip: int = 0, limit: int = 10) -> List[ServiceRequest]:
         return self.db.query(ServiceRequest).offset(skip).limit(limit).all()
+    
+    def get_request_by_id(self, request_id: int) -> Optional[ServiceRequest]:
+        return self.db.query(ServiceRequest).filter(ServiceRequest.id == request_id).first()
 
 class ServiceReportRepository:
     def __init__(self, db: Session):

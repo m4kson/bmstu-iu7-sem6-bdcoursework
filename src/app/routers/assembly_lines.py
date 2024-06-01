@@ -28,3 +28,11 @@ def read_lines(
 ):
     line_repo = AssemblyLineRepository(db)
     return line_repo.get_all_assembly_lines(skip=skip, limit=limit)
+
+@router_lines.get(" get line by id")
+def read_line(
+    db: Annotated[Session, Depends(get_db)],
+    id: int
+):
+    line_repo = AssemblyLineRepository(db)
+    return line_repo.get_line_by_id(id)

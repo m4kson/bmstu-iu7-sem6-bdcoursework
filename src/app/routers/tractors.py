@@ -28,3 +28,11 @@ def read_tractors(
 ):
     tractor_repo = TractorRepository(db)
     return tractor_repo.get_all_tractors(skip=skip, limit=limit)
+
+@router_tractors.get("/{tractor_id}}")
+def read_tractor(
+    db: Annotated[Session, Depends(get_db)],
+    tractor_id: int
+):
+    tractor_repo = TractorRepository(db)
+    return tractor_repo.get_tractor_by_id(tractor_id)

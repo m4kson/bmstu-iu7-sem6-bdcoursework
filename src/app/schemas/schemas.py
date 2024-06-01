@@ -96,8 +96,6 @@ class SOrderDetail(BaseModel):
 class SServiceRequest(BaseModel):
     lineid: int
     userid: int
-    requestdate: datetime
-    status: Literal["открыта", "закрыта"]
     type: Literal["техосмотр", "ремонт"]
     description: str
 

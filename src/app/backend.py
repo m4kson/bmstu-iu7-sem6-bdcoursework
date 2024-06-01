@@ -2,7 +2,9 @@ from fastapi import FastAPI
 import uvicorn
 from app.routers import router
 
-app = FastAPI()
+app = FastAPI(
+    title="ProductMonitor"
+)
 app.include_router(router)
 
 if __name__ == "__main__":
