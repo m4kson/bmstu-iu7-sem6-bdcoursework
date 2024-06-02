@@ -72,15 +72,15 @@ def protected_route(user: User = Depends(current_user)):
 
 @router.get("/protected-route-for-admin")
 def protected_route(user: User = Depends(get_admin_user)):
-    return f"Hello, {user.email}. Your role is {user.role}"
+    return f"Hello, {user.email}"
 
 @router.get("/protected-route-for-operator")
 def protected_route(user: User = Depends(get_operator_user)):
-    return f"Hello, {user.email}. Your role is {user.role}"
+    return f"Hello, {user.email}"
 
 @router.get("/protected-route-for-specialist")
 def protected_route(user: User = Depends(get_specialist_user)):
-    return f"Hello, {user.email}. Your role is {user.role}"
+    return f"Hello, {user.email}"
 
 @router.get("/unprotected-route")
 def unprotected_route():
