@@ -1,14 +1,16 @@
-from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import AsyncSession
 from typing import List, Optional
 from app.schemas.schemas import *
 from app.models.models import *
 from datetime import datetime
+from sqlalchemy.future import select
+from sqlalchemy import delete
 
 class DetailRepository:
-    def __init__(self, db: Session):
+    def __init__(self, db: AsyncSession):
         self.db = db
 
-    def add_detail(self, detail_create: SDetail) -> Detail:
+    async def add_detail(self, detail_create: SDetail) -> Detail:
         detail = Detail(
             name=detail_create.name,
             country=detail_create.country,
@@ -19,20 +21,21 @@ class DetailRepository:
             width=detail_create.width
         )
         self.db.add(detail)
-        self.db.flush()
-        self.db.commit()
-        self.db.refresh(detail)
-        return detail.id
+        await self.db.flush()
+        await self.db.commit()
+        await self.db.refresh(detail)
+        return detail
 
-    def get_all_details(self, skip: int = 0, limit: int = 10) -> List[Detail]:
-        return self.db.query(Detail).offset(skip).limit(limit).all()
+    async def get_all_details(self, skip: int = 0, limit: int = 10) -> List[Detail]:
+        result = await self.db.execute(select(Detail).offset(skip).limit(limit))
+        return result.scalars().all()
 
 
 class TractorRepository:
-    def __init__(self, db: Session):
+    def __init__(self, db: AsyncSession):
         self.db = db
 
-    def add_tractor(self, tractor_create: STractor) -> int:
+    async def add_tractor(self, tractor_create: STractor) -> int:
         tractor = Tractor(
             model = tractor_create.model,
             release_year = tractor_create.release_year,
@@ -48,23 +51,25 @@ class TractorRepository:
             cabinheight = tractor_create.cabinheight
         )
         self.db.add(tractor)
-        self.db.flush()
-        self.db.commit()
-        self.db.refresh(tractor)
+        await self.db.flush()
+        await self.db.commit()
+        await self.db.refresh(tractor)
         return tractor.id
 
-    def get_all_tractors(self, skip: int = 0, limit: int = 10) -> List[Tractor]:
-        return self.db.query(Tractor).offset(skip).limit(limit).all()
+    async def get_all_tractors(self, skip: int = 0, limit: int = 10) -> List[Tractor]:
+        result = await self.db.execute(select(Tractor).offset(skip).limit(limit))
+        return result.scalars().all()
     
-    def get_tractor_by_id(self, tractor_id: int) -> Optional[Tractor]:
-        return self.db.query(Tractor).filter(Tractor.id == tractor_id).first()
+    async def get_tractor_by_id(self, tractor_id: int) -> Optional[Tractor]:
+        result = await self.db.execute(select(Tractor).filter(Tractor.id == tractor_id))
+        return result.scalars().first()
 
 
 class AssemblyLineRepository:
-    def __init__(self, db: Session):
+    def __init__(self, db: AsyncSession):
         self.db = db
 
-    def add_assembly_line(self, assembly_line_create: SAssemblyLine) -> AssemblyLine:
+    async def add_assembly_line(self, assembly_line_create: SAssemblyLine) -> AssemblyLine:
         assembly_line = AssemblyLine(
             name=assembly_line_create.name,
             length=assembly_line_create.length,
@@ -79,22 +84,24 @@ class AssemblyLineRepository:
             defectrate=assembly_line_create.defectrate,
         )
         self.db.add(assembly_line)
-        self.db.flush()
-        self.db.commit()
-        self.db.refresh(assembly_line)
-        return assembly_line.id
+        await self.db.flush()
+        await self.db.commit()
+        await self.db.refresh(assembly_line)
+        return assembly_line
 
-    def get_all_assembly_lines(self, skip: int = 0, limit: int = 10) -> List[AssemblyLine]:
-        return self.db.query(AssemblyLine).offset(skip).limit(limit).all()
+    async def get_all_assembly_lines(self, skip: int = 0, limit: int = 10) -> List[AssemblyLine]:
+        result = await self.db.execute(select(AssemblyLine).offset(skip).limit(limit))
+        return result.scalars().all()
     
-    def get_line_by_id(self, line_id: int) -> Optional[AssemblyLine]:
-        return self.db.query(AssemblyLine).filter(AssemblyLine.id == line_id).first()
+    async def get_line_by_id(self, line_id: int) -> Optional[AssemblyLine]:
+        result = await self.db.execute(select(AssemblyLine).filter(AssemblyLine.id == line_id))
+        return result.scalars().first()
 
 class UserRepository:
-    def __init__(self, db: Session):
+    def __init__(self, db: AsyncSession):
         self.db = db
 
-    def add_user(self, user_create: SUser) -> User:
+    async def add_user(self, user_create: SUser) -> User:
         user = User(
             name=user_create.name,
             surname=user_create.surname,
@@ -107,20 +114,21 @@ class UserRepository:
             role=user_create.role,
         )
         self.db.add(user)
-        self.db.flush()
-        self.db.commit()
-        self.db.refresh(user)
-        return user.id
+        await self.db.flush()
+        await self.db.commit()
+        await self.db.refresh(user)
+        return user
 
-    def get_all_users(self, skip: int = 0, limit: int = 10) -> List[User]:
-        return self.db.query(User).offset(skip).limit(limit).all()
+    async def get_all_users(self, skip: int = 0, limit: int = 10) -> List[User]:
+        result = await self.db.execute(select(User).offset(skip).limit(limit))
+        return result.scalars().all()
     
 
 class DetailOrderRepository:
-    def __init__(self, db: Session):
+    def __init__(self, db: AsyncSession):
         self.db = db
 
-    def add_detail_order(self, detail_order_create: SDetailOrder) -> DetailOrder:
+    async def add_detail_order(self, detail_order_create: SDetailOrder) -> DetailOrder:
         detail_order = DetailOrder(
             userid=detail_order_create.userid,
             requestid=detail_order_create.requestid,
@@ -129,19 +137,20 @@ class DetailOrderRepository:
             orderdate=detail_order_create.orderdate,
         )
         self.db.add(detail_order)
-        self.db.flush()
-        self.db.commit()
-        self.db.refresh(detail_order)
-        return detail_order.id
+        await self.db.flush()
+        await self.db.commit()
+        await self.db.refresh(detail_order)
+        return detail_order
 
-    def get_all_detail_orders(self, skip: int = 0, limit: int = 10) -> List[DetailOrder]:
-        return self.db.query(DetailOrder).offset(skip).limit(limit).all()
+    async def get_all_detail_orders(self, skip: int = 0, limit: int = 10) -> List[DetailOrder]:
+        result = await self.db.execute(select(DetailOrder).offset(skip).limit(limit))
+        return result.scalars().all()
 
 class ServiceRequestRepository:
-    def __init__(self, db: Session):
+    def __init__(self, db: AsyncSession):
         self.db = db
 
-    def add_service_request(self, service_request_create: SServiceRequest) -> int:
+    async def add_service_request(self, service_request_create: SServiceRequest) -> int:
         service_request = ServiceRequest(
             lineid=service_request_create.lineid,
             userid=service_request_create.userid,
@@ -151,22 +160,24 @@ class ServiceRequestRepository:
             description=service_request_create.description,
         )
         self.db.add(service_request)
-        self.db.flush()
-        self.db.commit()
-        self.db.refresh(service_request)
+        await self.db.flush()
+        await self.db.commit()
+        await self.db.refresh(service_request)
         return service_request.id
 
-    def get_all_service_requests(self, skip: int = 0, limit: int = 10) -> List[ServiceRequest]:
-        return self.db.query(ServiceRequest).offset(skip).limit(limit).all()
+    async def get_all_service_requests(self, skip: int = 0, limit: int = 10) -> List[ServiceRequest]:
+        result = await self.db.execute(select(ServiceRequest).offset(skip).limit(limit))
+        return result.scalars().all()
     
-    def get_request_by_id(self, request_id: int) -> Optional[ServiceRequest]:
-        return self.db.query(ServiceRequest).filter(ServiceRequest.id == request_id).first()
+    async def get_request_by_id(self, request_id: int) -> Optional[ServiceRequest]:
+        result = await self.db.execute(select(ServiceRequest).filter(ServiceRequest.id == request_id))
+        return result.scalars().first()
 
 class ServiceReportRepository:
-    def __init__(self, db: Session):
+    def __init__(self, db: AsyncSession):
         self.db = db
 
-    def add_service_report(self, service_report_create: SServiceReport) -> ServiceReport:
+    async def add_service_report(self, service_report_create: SServiceReport) -> ServiceReport:
         service_report = ServiceReport(
             lineid=service_report_create.lineid,
             userid=service_report_create.userid,
@@ -177,11 +188,11 @@ class ServiceReportRepository:
             description=service_report_create.description,
         )
         self.db.add(service_report)
-        self.db.flush()
-        self.db.commit()
-        self.db.refresh(service_report)
-        return service_report.id
+        await self.db.flush()
+        await self.db.commit()
+        await self.db.refresh(service_report)
+        return service_report
 
-    def get_all_service_reports(self, skip: int = 0, limit: int = 10) -> List[ServiceReport]:
-        return self.db.query(ServiceReport).offset(skip).limit(limit).all()
-    
+    async def get_all_service_reports(self, skip: int = 0, limit: int = 10) -> List[ServiceReport]:
+        result = await self.db.execute(select(ServiceReport).offset(skip).limit(limit))
+        return result.scalars().all()

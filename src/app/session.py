@@ -1,47 +1,42 @@
 import sqlalchemy
-from sqlalchemy import create_engine, text
+import asyncio
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from config import settings
-from sqlalchemy.orm import Session, sessionmaker, DeclarativeBase, class_mapper
+from sqlalchemy.orm import sessionmaker, DeclarativeBase
 from app.models.models import *
 
-def create_session(recreate=False):
+async def create_session(recreate=False):
     print("Версия SQL Alchemy:", sqlalchemy.__version__)
 
-    engine = create_engine(
-        #f'postgresql+psycopg://m4ks0n:admin@localhost:5432/ProductMonitor',
-        url=settings.DATABASE_URL_psycopg,
+    engine = create_async_engine(
+        url=settings.DATABASE_URL_asyncpg,
         echo=False,
         pool_pre_ping=True
     )
     
     try:
-        engine.connect()
-        print("DB succesfully connected")
-        # with engine.connect() as conn:
-        #     res = conn.execute(text("SELECT VERSION()"))
-        #     print("Версия PostgreSQL: {}".format(res.first()[0]))
+        async with engine.connect() as conn:
+            print("DB successfully connected")
+    except Exception as e:
+        print(f"Connection to db failed: {e}")
+        return None
 
-    except:
-        print("Connetion to db failed")
-        return
-
-    Session = sessionmaker(bind=engine)
-    db = Session()
+    async_session = async_sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)
+    db = async_session()
 
     if recreate:
-        Base.metadata.drop_all(engine)
-        Base.metadata.create_all(engine)
+        async with engine.begin() as conn:
+            await conn.run_sync(Base.metadata.drop_all)
+            await conn.run_sync(Base.metadata.create_all)
     
     return db
 
-def get_db():
-    db = create_session()
+async def get_db():
+    db = await create_session()
     try:
         yield db
     finally:
-        db.close()
-
+        await db.close()
 
 if __name__ == "__main__":
-    create_session(True)
-
+    asyncio.run(create_session(True))

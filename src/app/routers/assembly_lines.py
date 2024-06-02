@@ -1,8 +1,8 @@
 from app.models.models import AssemblyLine
 from app.schemas.schemas import SAssemblyLine
 from app.repository.repository import AssemblyLineRepository
-from sqlalchemy.orm import Session
-from fastapi import APIRouter, Depends
+from sqlalchemy.ext.asyncio import AsyncSession
+from fastapi import APIRouter, Depends, HTTPException
 from session import get_db
 from typing import Annotated
 
@@ -12,27 +12,31 @@ router_lines = APIRouter(
 )
 
 @router_lines.post("")
-def create_line(
+async def create_line(
     line_create: Annotated[SAssemblyLine, Depends()], 
-    db: Annotated[Session, Depends(get_db)]
+    db: Annotated[AsyncSession, Depends(get_db)]
 ):
     line_repo = AssemblyLineRepository(db)
-    line_id = line_repo.add_assembly_line(line_create)
+    line_id = await line_repo.add_assembly_line(line_create)
     return {"ok": True, "line_id": line_id}
 
 @router_lines.get("")
-def read_lines(
-    db: Annotated[Session, Depends(get_db)],
+async def read_lines(
+    db: AsyncSession = Depends(get_db),
     skip: int = 0,
     limit: int = 10,
 ):
     line_repo = AssemblyLineRepository(db)
-    return line_repo.get_all_assembly_lines(skip=skip, limit=limit)
+    lines = await line_repo.get_all_assembly_lines(skip=skip, limit=limit)
+    return lines
 
-@router_lines.get(" get line by id")
-def read_line(
-    db: Annotated[Session, Depends(get_db)],
-    id: int
+@router_lines.get("/{line_id}")
+async def read_line(
+    line_id: int,
+    db: AsyncSession = Depends(get_db)
 ):
     line_repo = AssemblyLineRepository(db)
-    return line_repo.get_line_by_id(id)
+    line = await line_repo.get_line_by_id(line_id)
+    if not line:
+        raise HTTPException(status_code=404, detail="Assembly Line not found")
+    return line
