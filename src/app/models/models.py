@@ -1,9 +1,10 @@
 import datetime
-from sqlalchemy import Table, Column, ForeignKey, Integer, Float, String, Date, Text, Enum
+from sqlalchemy import Table, Column, ForeignKey, Integer, Float, String, Date, Text, Enum, Boolean
 from sqlalchemy.orm import relationship, Mapped, mapped_column
 from sqlalchemy.ext.declarative import declarative_base
 import enum
 from typing import Literal
+from fastapi_users.db import SQLAlchemyBaseUserTable, SQLAlchemyUserDatabase
 
 Base = declarative_base()
 
@@ -66,31 +67,34 @@ class Detail(Base):
     height: Mapped[int]
     width: Mapped[int]
 
-class LineDetail(Base):
-    __tablename__ = 'line_detail'
-
-    lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"), primary_key=True)
-    detailid: Mapped[int] = mapped_column(ForeignKey("details.id", ondelete="CASCADE"), primary_key=True)
-
 class User(Base):
-    __tablename__ = 'users'
+    __tablename__ = 'user'
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str]
     surname: Mapped[str]
     fatherame: Mapped[str]
     department: Mapped[str]
-    email: Mapped[str]
-    password: Mapped[str]
+    email: Mapped[str] = mapped_column(String(length=320), unique=True, index=True, nullable=False)
+    hashed_password: Mapped[str] = mapped_column(String(length=1024), nullable=False)
     dateofbirth: Mapped[datetime.date]
     sex:  Mapped[Sex] = mapped_column(Enum("м", "ж", name="sex_enum"))
     role:  Mapped[Role] = mapped_column(Enum("администратор", "оператор производства", "специалист по обслуживанию", name="role_enum"))
+    is_active: Mapped[bool] = mapped_column(Boolean, default=True, nullable=False)
+    is_superuser: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    is_verified: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+
+class LineDetail(Base):
+    __tablename__ = 'line_detail'
+
+    lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"), primary_key=True)
+    detailid: Mapped[int] = mapped_column(ForeignKey("details.id", ondelete="CASCADE"), primary_key=True)
 
 class DetailOrder(Base):
     __tablename__ = 'detailorders'
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    userid: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"))
+    userid: Mapped[int] = mapped_column(ForeignKey("user.id", ondelete="CASCADE"))
     requestid: Mapped[int] = mapped_column(ForeignKey("servicerequests.id", ondelete="CASCADE"))
     status: Mapped[DetailOrderStatus] = mapped_column(Enum("обрабатывается", "принят", "доставляется", "выполнен", name="orderstatus_enum"))
     totalprice: Mapped[float]
@@ -108,7 +112,7 @@ class ServiceRequest(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"))
-    userid: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"))
+    userid: Mapped[int] = mapped_column(ForeignKey("user.id", ondelete="CASCADE"))
     requestdate: Mapped[datetime.datetime]
     status: Mapped[ServiceRequestStatus] = mapped_column(Enum("открыта", "закрыта", name="requeststatus_enum"))
     type: Mapped[ServiceRequestType] = mapped_column(Enum("техосмотр", "ремонт", name="requesttype_enum"))
@@ -119,9 +123,10 @@ class ServiceReport(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"))
-    userid: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"))
+    userid: Mapped[int] = mapped_column(ForeignKey("user.id", ondelete="CASCADE"))
     requestid: Mapped[int] = mapped_column(ForeignKey("servicerequests.id", ondelete="CASCADE"))
     opendate: Mapped[datetime.datetime]
     closedate: Mapped[datetime.datetime]
     totalprice: Mapped[float]
     description: Mapped[str]
+
