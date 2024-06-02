@@ -1,3 +1,4 @@
+from datetime import date
 from typing import Literal, Optional
 from fastapi_users import schemas
 
@@ -23,6 +24,11 @@ class UserCreate(schemas.BaseUserCreate):
     password: str
     role: Literal["администратор", "оператор производства", "специалист по обслуживанию"]
     sex: Literal["м", "ж"]
+    department: str
+    dateofbirth: date
     is_active: Optional[bool] = True
     is_superuser: Optional[bool] = False
     is_verified: Optional[bool] = False
+
+
+
