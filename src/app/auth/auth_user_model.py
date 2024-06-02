@@ -1,10 +1,11 @@
 import datetime
-from fastapi import Depends
+from fastapi import Depends, HTTPException, status
+import fastapi_users
 from sqlalchemy import Table, Column, ForeignKey, Integer, Float, String, Date, Text, Enum, Boolean
 from sqlalchemy.orm import relationship, Mapped, mapped_column, DeclarativeBase
 from sqlalchemy.ext.declarative import declarative_base
 import enum
-from typing import Literal
+from typing import Annotated, Literal
 from fastapi_users.db import SQLAlchemyBaseUserTable, SQLAlchemyUserDatabase
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.session import get_db
@@ -37,7 +38,5 @@ class User(SQLAlchemyBaseUserTable[int], Base):
     is_superuser: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
     is_verified: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
 
-
 async def get_user_db(session: AsyncSession = Depends(get_db)):
     yield SQLAlchemyUserDatabase(session, User)
-

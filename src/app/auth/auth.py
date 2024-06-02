@@ -1,7 +1,7 @@
 from fastapi_users.authentication import CookieTransport, AuthenticationBackend
 from fastapi_users.authentication import JWTStrategy
 
-cookie_transport = CookieTransport(cookie_name="ProductMonitor", cookie_max_age=3600)
+cookie_transport = CookieTransport(cookie_name="ProductMonitor", cookie_secure=False, cookie_max_age=3600)
 
 SECRET = "SECRET"
 
