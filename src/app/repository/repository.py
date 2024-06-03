@@ -1,10 +1,12 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import List, Optional
+from app.auth.schemas import UserRead
 from app.schemas.schemas import *
 from app.models.models import *
 from datetime import datetime
 from sqlalchemy.future import select
 from sqlalchemy import delete
+from sqlalchemy.orm import aliased
 
 class DetailRepository:
     def __init__(self, db: AsyncSession):
@@ -29,6 +31,10 @@ class DetailRepository:
     async def get_all_details(self, skip: int = 0, limit: int = 10) -> List[Detail]:
         result = await self.db.execute(select(Detail).offset(skip).limit(limit))
         return result.scalars().all()
+    
+    async def get_detail_by_id(self, detail_id: int) -> Optional[Detail]:
+        result = await self.db.execute(select(Detail).filter(Detail.id == detail_id))
+        return result.scalars().first()
 
 
 class TractorRepository:
@@ -119,10 +125,50 @@ class UserRepository:
         await self.db.refresh(user)
         return user
 
-    async def get_all_users(self, skip: int = 0, limit: int = 10) -> List[User]:
-        result = await self.db.execute(select(User).offset(skip).limit(limit))
-        return result.scalars().all()
+    async def get_all_users(self, skip: int = 0, limit: int = 10):
+        user_alias = aliased(User)
+        result = await self.db.execute(
+            select(
+                user_alias.id,
+                user_alias.name,
+                user_alias.surname,
+                user_alias.fatherame,
+                user_alias.department,
+                user_alias.email,
+                user_alias.dateofbirth,
+                user_alias.sex,
+                user_alias.role,
+                user_alias.is_active,
+                user_alias.is_superuser,
+                user_alias.is_verified
+            ).offset(skip).limit(limit)
+        )
+        users = result.all()
+        return [User(**user._asdict()) for user in users]
     
+    async def get_user_by_id(self, user_id: int):
+        user_alias = aliased(User)
+        result = await self.db.execute(
+            select(
+                user_alias.id,
+                user_alias.name,
+                user_alias.surname,
+                user_alias.fatherame,
+                user_alias.department,
+                user_alias.email,
+                user_alias.dateofbirth,
+                user_alias.sex,
+                user_alias.role,
+                user_alias.is_active,
+                user_alias.is_superuser,
+                user_alias.is_verified
+            ).where(User.id == user_id)
+        )
+        user = result.first()
+        if user:
+            return UserRead.from_orm(user)
+        return None
+        
 
 class DetailOrderRepository:
     def __init__(self, db: AsyncSession):

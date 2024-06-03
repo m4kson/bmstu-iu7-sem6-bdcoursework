@@ -6,8 +6,14 @@ from fastapi_users import schemas
 class UserRead(schemas.BaseUser[int]):
     id: int
     name: str
+    surname: str
+    fatherame: str
     email: str
     role: Literal["администратор", "оператор производства", "специалист по обслуживанию"]
+    department: str
+    dateofbirth: date
+    sex: Literal["м", "ж"]
+
     is_active: bool = True
     is_superuser: bool = False
     is_verified: bool = False

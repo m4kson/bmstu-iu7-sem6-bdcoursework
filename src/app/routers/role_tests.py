@@ -2,12 +2,6 @@ from enum import Enum
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 
-
-from .tractors import router_tractors
-from .assembly_lines import router_lines
-from .details import router_details
-from .request import router_requests
-
 from app.auth.schemas import UserCreate, UserRead
 from fastapi_users import FastAPIUsers
 from auth.auth_user_model import User

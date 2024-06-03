@@ -19,7 +19,7 @@ ServiceRequestType = Literal["техосмотр", "ремонт"]
 class Tractor(Base):
     __tablename__ = 'tractors'
 
-    id: Mapped[int] = mapped_column(primary_key=True)
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     model: Mapped[str]
     release_year: Mapped[int]
     enginetype: Mapped[str]
@@ -36,7 +36,7 @@ class Tractor(Base):
 class AssemblyLine(Base):
     __tablename__ = 'assemblylines'
 
-    id: Mapped[int] = mapped_column(primary_key=True)
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     name: Mapped[str]
     length: Mapped[float]
     height: Mapped[float]
@@ -70,7 +70,7 @@ class Detail(Base):
 class User(Base):
     __tablename__ = 'user'
 
-    id: Mapped[int] = mapped_column(primary_key=True)
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     name: Mapped[str]
     surname: Mapped[str]
     fatherame: Mapped[str]
@@ -93,7 +93,7 @@ class LineDetail(Base):
 class DetailOrder(Base):
     __tablename__ = 'detailorders'
 
-    id: Mapped[int] = mapped_column(primary_key=True)
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     userid: Mapped[int] = mapped_column(ForeignKey("user.id", ondelete="CASCADE"))
     requestid: Mapped[int] = mapped_column(ForeignKey("servicerequests.id", ondelete="CASCADE"))
     status: Mapped[DetailOrderStatus] = mapped_column(Enum("обрабатывается", "принят", "доставляется", "выполнен", name="orderstatus_enum"))
@@ -110,7 +110,7 @@ class OrderDetail(Base):
 class ServiceRequest(Base):
     __tablename__ = 'servicerequests'
 
-    id: Mapped[int] = mapped_column(primary_key=True)
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"))
     userid: Mapped[int] = mapped_column(ForeignKey("user.id", ondelete="CASCADE"))
     requestdate: Mapped[datetime.datetime]
@@ -121,7 +121,7 @@ class ServiceRequest(Base):
 class ServiceReport(Base):
     __tablename__ = 'servicereports'
 
-    id: Mapped[int] = mapped_column(primary_key=True)
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"))
     userid: Mapped[int] = mapped_column(ForeignKey("user.id", ondelete="CASCADE"))
     requestid: Mapped[int] = mapped_column(ForeignKey("servicerequests.id", ondelete="CASCADE"))
