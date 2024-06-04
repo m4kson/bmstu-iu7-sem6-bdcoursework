@@ -199,14 +199,23 @@ class DetailOrderRepository:
     async def create_order(self, order_create: DetailOrderCreate, user_id: int) -> DetailOrder:
         new_order = DetailOrder(
             userid=user_id,
+            totalprice=0,
             status="обрабатывается",
-            totalprice=order_create.totalprice,
             orderdate=datetime.now()
         )
         self.db.add(new_order)
         await self.db.flush()  # Ensure the new_order gets an ID
 
+        total_price = 0
+
         for detail in order_create.order_details:
+
+            detail_price = await self.db.execute(
+                select(Detail.price).where(Detail.id == detail.detailid)
+            )
+            detail_price = detail_price.scalar_one()
+            total_price += detail_price * detail.detailsamount
+
             new_order_detail = OrderDetail(
                 orderid=new_order.id,
                 detailid=detail.detailid,
@@ -214,6 +223,7 @@ class DetailOrderRepository:
             )
             self.db.add(new_order_detail)
 
+        new_order.totalprice = total_price
         await self.db.commit()
         await self.db.refresh(new_order)
         return new_order

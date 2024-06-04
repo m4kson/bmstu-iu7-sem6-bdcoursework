@@ -97,7 +97,6 @@ class OrderDetailCreate(BaseModel):
     detailsamount: int
 
 class DetailOrderCreate(BaseModel):
-    totalprice: float
     order_details: List[OrderDetailCreate]
 
 class OrderDetailRead(BaseModel):
