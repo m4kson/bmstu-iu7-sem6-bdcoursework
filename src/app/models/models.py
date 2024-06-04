@@ -33,6 +33,11 @@ class Tractor(Base):
     width: Mapped[float]
     cabinheight: Mapped[float]
 
+    tractors_assemblylines: Mapped[list["AssemblyLine"]] = relationship(
+        back_populates="tractors_assemblylines",
+        secondary="TractorLine",
+    )
+
 class AssemblyLine(Base):
     __tablename__ = 'assemblylines'
 
@@ -48,6 +53,17 @@ class AssemblyLine(Base):
     lastinspectiondate: Mapped[datetime.date]
     nextinspectiondate: Mapped[datetime.date]
     defectrate: Mapped[int]
+
+    assemblylines_tractors: Mapped[list["Tractor"]] = relationship(
+        back_populates="tractors_assemblylines",
+        secondary="TractorLine",
+    )
+
+    assemblylines_details: Mapped[list["Detail"]] = relationship(
+        back_populates="assemblylines_details",
+        secondary="LineDetail",
+    )
+
 
 class TractorLine(Base):
     __tablename__ = 'tractor_line'
@@ -66,6 +82,17 @@ class Detail(Base):
     length: Mapped[int]
     height: Mapped[int]
     width: Mapped[int]
+
+    detailes_assemblylines: Mapped[list["AssemblyLine"]] = relationship(
+        back_populates="assemblylines_details",
+        secondary="LineDetail",
+    )
+
+    detailes_orders: Mapped[list["DetailOrder"]] = relationship(
+        back_populates="orders_details",
+        secondary="OrderDetail",
+    )
+
 
 class User(Base):
     __tablename__ = 'user'
@@ -100,6 +127,12 @@ class DetailOrder(Base):
     totalprice: Mapped[float]
     orderdate: Mapped[datetime.datetime]
 
+    orders_details: Mapped[list["Detail"]] = relationship(
+        back_populates="orders_details",
+        secondary="OrderDetail",
+    )
+
+
 class OrderDetail(Base):
     __tablename__ = 'order_detail'
 
@@ -129,6 +162,3 @@ class ServiceReport(Base):
     closedate: Mapped[datetime.datetime]
     totalprice: Mapped[float]
     description: Mapped[str]
-
-
-
