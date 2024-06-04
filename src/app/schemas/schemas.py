@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from typing import Literal
+from typing import List, Literal
 from pydantic import BaseModel, Field, EmailStr
 
 class STractor(BaseModel):
@@ -77,7 +77,6 @@ class SUser(BaseModel):
 
 class SDetailOrder(BaseModel):
     userid: int
-    requestid: int
     status: Literal["обрабатывается", "принят", "доставляется", "выполнен"]
     totalprice: float
     orderdate: datetime
@@ -92,6 +91,24 @@ class SOrderDetail(BaseModel):
 
     class Config:
         orm_mode = True
+
+class OrderDetailCreate(BaseModel):
+    detailid: int
+    detailsamount: int
+
+class DetailOrderCreate(BaseModel):
+    totalprice: float
+    order_details: List[OrderDetailCreate]
+
+class OrderDetailRead(BaseModel):
+    detailid: int
+    detailsamount: int
+
+class DetailOrderRead(BaseModel):
+    id: int
+    userid: int
+    totalprice: float
+    order_details: List[OrderDetailRead]
 
 class SServiceRequest(BaseModel):
     lineid: int

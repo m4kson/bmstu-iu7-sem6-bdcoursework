@@ -196,19 +196,27 @@ class DetailOrderRepository:
         result = await self.db.execute(select(DetailOrder).where(DetailOrder.id == id))
         return result.scalars().first()
     
-    # async def add_detail_order(self, order_create: SDetailOrder, user_id: int) -> int:
-    #     order = DetailOrder(
-    #         userid = user_id,
-    #         requestid = order_create.requestid,
-    #         status = order_create.status,
-    #         totalprice = 
-    #         orderdate: datetime
-    #     )
-    #     self.db.add(service_request)
-    #     await self.db.flush()
-    #     await self.db.commit()
-    #     await self.db.refresh(service_request)
-    #     return service_request.id
+    async def create_order(self, order_create: DetailOrderCreate, user_id: int) -> DetailOrder:
+        new_order = DetailOrder(
+            userid=user_id,
+            status="обрабатывается",
+            totalprice=order_create.totalprice,
+            orderdate=datetime.now()
+        )
+        self.db.add(new_order)
+        await self.db.flush()  # Ensure the new_order gets an ID
+
+        for detail in order_create.order_details:
+            new_order_detail = OrderDetail(
+                orderid=new_order.id,
+                detailid=detail.detailid,
+                detailsamount=detail.detailsamount
+            )
+            self.db.add(new_order_detail)
+
+        await self.db.commit()
+        await self.db.refresh(new_order)
+        return new_order
     
     
 

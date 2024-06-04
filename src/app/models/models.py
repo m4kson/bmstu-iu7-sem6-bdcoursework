@@ -33,10 +33,10 @@ class Tractor(Base):
     width: Mapped[float]
     cabinheight: Mapped[float]
 
-    tractors_assemblylines: Mapped[list["AssemblyLine"]] = relationship(
-        back_populates="tractors_assemblylines",
-        secondary="TractorLine",
-    )
+    # tractors_assemblylines: Mapped[list["AssemblyLine"]] = relationship(
+    #     back_populates="tractors_assemblylines",
+    #     secondary="tractor_line",
+    # )
 
 class AssemblyLine(Base):
     __tablename__ = 'assemblylines'
@@ -54,15 +54,15 @@ class AssemblyLine(Base):
     nextinspectiondate: Mapped[datetime.date]
     defectrate: Mapped[int]
 
-    assemblylines_tractors: Mapped[list["Tractor"]] = relationship(
-        back_populates="tractors_assemblylines",
-        secondary="TractorLine",
-    )
+    # assemblylines_tractors: Mapped[list["Tractor"]] = relationship(
+    #     back_populates="tractors_assemblylines",
+    #     secondary="tractor_line",
+    # )
 
-    assemblylines_details: Mapped[list["Detail"]] = relationship(
-        back_populates="assemblylines_details",
-        secondary="LineDetail",
-    )
+    # assemblylines_details: Mapped[list["Detail"]] = relationship(
+    #     back_populates="assemblylines_details",
+    #     secondary="line_detail",
+    # )
 
 
 class TractorLine(Base):
@@ -70,6 +70,13 @@ class TractorLine(Base):
 
     tractorid: Mapped[int] = mapped_column(ForeignKey("tractors.id", ondelete="CASCADE"), primary_key=True)
     lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"), primary_key=True)
+
+order_detail_table = Table(
+    'order_detail', Base.metadata,
+    Column('orderid', Integer, ForeignKey('detailorders.id', ondelete="CASCADE"), primary_key=True),
+    Column('detailid', Integer, ForeignKey('details.id', ondelete="CASCADE"), primary_key=True),
+    Column('detailsamount', Integer)
+)
 
 class Detail(Base):
     __tablename__ = 'details'
@@ -83,14 +90,14 @@ class Detail(Base):
     height: Mapped[int]
     width: Mapped[int]
 
-    detailes_assemblylines: Mapped[list["AssemblyLine"]] = relationship(
-        back_populates="assemblylines_details",
-        secondary="LineDetail",
-    )
+    # detailes_assemblylines: Mapped[list["AssemblyLine"]] = relationship(
+    #     back_populates="assemblylines_details",
+    #     secondary="line_detail",
+    # )
 
     detailes_orders: Mapped[list["DetailOrder"]] = relationship(
         back_populates="orders_details",
-        secondary="OrderDetail",
+        secondary=order_detail_table,
     )
 
 
@@ -122,23 +129,27 @@ class DetailOrder(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     userid: Mapped[int] = mapped_column(ForeignKey("user.id", ondelete="CASCADE"))
-    requestid: Mapped[int] = mapped_column(ForeignKey("servicerequests.id", ondelete="CASCADE"))
     status: Mapped[DetailOrderStatus] = mapped_column(Enum("обрабатывается", "принят", "доставляется", "выполнен", name="orderstatus_enum"))
     totalprice: Mapped[float]
     orderdate: Mapped[datetime.datetime]
 
     orders_details: Mapped[list["Detail"]] = relationship(
-        back_populates="orders_details",
-        secondary="OrderDetail",
+        back_populates="detailes_orders",
+        secondary=order_detail_table,
     )
 
 
 class OrderDetail(Base):
     __tablename__ = 'order_detail'
+    __table_args__ = {'extend_existing': True}
+
 
     orderid: Mapped[int] = mapped_column(ForeignKey("detailorders.id", ondelete="CASCADE"), primary_key=True)
     detailid: Mapped[int] = mapped_column(ForeignKey("details.id", ondelete="CASCADE"), primary_key=True)
     detailsamount: Mapped[int]
+
+    # detail_order: Mapped["DetailOrder"] = relationship("DetailOrder", back_populates="orders_details")
+    # detail: Mapped["Detail"] = relationship("Detail")
 
 class ServiceRequest(Base):
     __tablename__ = 'servicerequests'

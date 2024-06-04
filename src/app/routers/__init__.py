@@ -9,6 +9,7 @@ from .details import router_details
 from .request import router_requests
 from .role_tests import router_test_roles
 from .users import router_users
+from .orders import router_orders
 
 from app.auth.schemas import UserCreate, UserRead
 from fastapi_users import FastAPIUsers
@@ -38,3 +39,4 @@ router.include_router(router_lines)
 router.include_router(router_requests)
 router.include_router(router_test_roles)
 router.include_router(router_users)
+router.include_router(router_orders)
