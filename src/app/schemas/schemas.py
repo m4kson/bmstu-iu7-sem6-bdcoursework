@@ -97,6 +97,15 @@ class SServiceRequest(BaseModel):
     lineid: int
     userid: int
     type: Literal["техосмотр", "ремонт"]
+    date: datetime
+    description: str
+
+    class Config:
+        orm_mode = True
+
+class SServiceRequestWrite(BaseModel):
+    lineid: int
+    type: Literal["техосмотр", "ремонт"]
     description: str
 
     class Config:

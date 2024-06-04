@@ -22,10 +22,6 @@ fastapi_users = FastAPIUsers[User, int](
 )
 
 router = APIRouter()
-router.include_router(router_tractors)
-router.include_router(router_details)
-router.include_router(router_lines)
-router.include_router(router_requests)
 router.include_router(
     fastapi_users.get_auth_router(auth_backend),
     prefix="/auth/jwt",
@@ -36,5 +32,9 @@ router.include_router(
     prefix="/auth",
     tags=["auth"],
 )
+router.include_router(router_tractors)
+router.include_router(router_details)
+router.include_router(router_lines)
+router.include_router(router_requests)
 router.include_router(router_test_roles)
 router.include_router(router_users)

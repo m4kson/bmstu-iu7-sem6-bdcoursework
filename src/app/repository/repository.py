@@ -5,7 +5,7 @@ from app.schemas.schemas import *
 from app.models.models import *
 from datetime import datetime
 from sqlalchemy.future import select
-from sqlalchemy import delete
+from sqlalchemy import delete, update
 from sqlalchemy.orm import aliased
 
 class DetailRepository:
@@ -191,15 +191,35 @@ class DetailOrderRepository:
     async def get_all_detail_orders(self, skip: int = 0, limit: int = 10) -> List[DetailOrder]:
         result = await self.db.execute(select(DetailOrder).offset(skip).limit(limit))
         return result.scalars().all()
+    
+    async def get_order_by_id(self, id: int):
+        result = await self.db.execute(select(DetailOrder).where(DetailOrder.id == id))
+        return result.scalars().first()
+    
+    # async def add_detail_order(self, order_create: SDetailOrder, user_id: int) -> int:
+    #     order = DetailOrder(
+    #         userid = user_id,
+    #         requestid = order_create.requestid,
+    #         status = order_create.status,
+    #         totalprice = 
+    #         orderdate: datetime
+    #     )
+    #     self.db.add(service_request)
+    #     await self.db.flush()
+    #     await self.db.commit()
+    #     await self.db.refresh(service_request)
+    #     return service_request.id
+    
+    
 
 class ServiceRequestRepository:
     def __init__(self, db: AsyncSession):
         self.db = db
 
-    async def add_service_request(self, service_request_create: SServiceRequest) -> int:
+    async def add_service_request(self, service_request_create: SServiceRequestWrite, user_id: int) -> int:
         service_request = ServiceRequest(
             lineid=service_request_create.lineid,
-            userid=service_request_create.userid,
+            userid=user_id,
             requestdate=datetime.now(),  
             status="открыта",
             type=service_request_create.type,
@@ -218,6 +238,27 @@ class ServiceRequestRepository:
     async def get_request_by_id(self, request_id: int) -> Optional[ServiceRequest]:
         result = await self.db.execute(select(ServiceRequest).filter(ServiceRequest.id == request_id))
         return result.scalars().first()
+    
+    async def update_service_request(self, id: int, request_update: SServiceRequestWrite) -> ServiceRequest:
+        update_data = request_update.dict(exclude_unset=True)
+        
+        stmt = (
+            update(ServiceRequest)
+            .where(ServiceRequest.id == id)
+            .values(**update_data)
+            .returning(ServiceRequest)
+        )
+
+        result = await self.db.execute(stmt)
+        await self.db.commit()
+
+        updated_request = result.scalars().first()
+        return updated_request
+    
+    async def delete_service_request(self, id: int) -> None:
+        stmt = delete(ServiceRequest).where(ServiceRequest.id == id)
+        await self.db.execute(stmt)
+        await self.db.commit()
 
 class ServiceReportRepository:
     def __init__(self, db: AsyncSession):

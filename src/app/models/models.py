@@ -130,3 +130,5 @@ class ServiceReport(Base):
     totalprice: Mapped[float]
     description: Mapped[str]
 
+
+
