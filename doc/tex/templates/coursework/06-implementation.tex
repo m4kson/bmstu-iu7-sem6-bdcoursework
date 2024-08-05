@@ -1,0 +1,417 @@
+\chapter{Технологический раздел}
+В данной части будут приведены выбор средств реализации базы данных и приложения, листинги создания базы данных, триггеров и ролевой модели, рассмотрен интерфейс и примеры работы приложения.
+
+\section{Выбор средств реализации}
+
+На данный момент самыми широко используемыми СУБД являются\cite{DB-Engines}: 
+\begin{itemize}[label=--]
+    \item Oracle\cite{Oracle};
+    \item MySQL\cite{MySQL};
+    \item Microsoft SQL Server\cite{MicrosoftSQLServer};
+    \item PostgreSQL\cite{PostgreSQL}.
+\end{itemize}
+
+
+
+
+
+
+\section{Создание базы данных}
+
+На листинге \ref{lst:dbcreate} показан sql скрипт для создания проектируемой базы данных. На листингах \ref{lst:tractorscreate} -- \ref{lst:reportscreate} показано создание таблиц базы данных. 
+
+\lstinputlisting
+[
+    firstline=1,
+    lastline=6,
+    caption=Создание базы данных,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:dbcreate},
+]
+{inc/lst/createdb.sql}
+
+
+\lstinputlisting
+[
+    firstline=1,
+    lastline=18,
+    caption=Создание таблицы тракторов,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:tractorscreate},
+]
+{inc/lst/create.sql}
+
+\lstinputlisting
+[
+    firstline=20,
+    lastline=35,
+    caption=Создание таблицы производственныйх линий,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:linescreate},
+]
+{inc/lst/create.sql}
+
+\lstinputlisting
+[
+    firstline=37,
+    lastline=42,
+    caption=Создание таблицы tractor\_line,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:tractorlinecreate},
+]
+{inc/lst/create.sql}
+
+
+\lstinputlisting
+[
+    firstline=44,
+    lastline=55,
+    caption=Создание таблицы деталей,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:detailscreate},
+]
+{inc/lst/create.sql}
+
+\lstinputlisting
+[
+    firstline=57,
+    lastline=62,
+    caption=Создание таблицы line\_detail,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:linedetailcreate},
+]
+{inc/lst/create.sql}
+
+\lstinputlisting
+[
+    firstline=64,
+    lastline=77,
+    caption=Создание таблицы пользователей,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:userscreate},
+]
+{inc/lst/create.sql}
+
+\lstinputlisting
+[
+    firstline=79,
+    lastline=88,
+    caption=Создание таблицы заказов деталей,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:detailorderscreate},
+]
+{inc/lst/create.sql}
+
+\lstinputlisting
+[
+    firstline=90,
+    lastline=96,
+    caption=Создание таблицы order\_detail,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:orderdetailcreate},
+]
+{inc/lst/create.sql}
+
+\lstinputlisting
+[
+    firstline=98,
+    lastline=108,
+    caption=Создание таблицы заявок на обслуживание,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:requestscreate},
+]
+{inc/lst/create.sql}
+
+\lstinputlisting
+[
+    firstline=110,
+    lastline=121,
+    caption=Создание таблицы отчетов об обслуживании,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:reportscreate},
+]
+{inc/lst/create.sql}
+
+\lstinputlisting
+[
+    firstline=1,
+    lastline=16,
+    caption=Ограничения таблицы тракторов,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:tractorsconstraints},
+]
+{inc/lst/constraints.sql}
+
+\lstinputlisting
+[
+    firstline=19,
+    lastline=32,
+    caption=Ограничения таблицы тракторов,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:tractorsconstraints},
+]
+{inc/lst/constraints.sql}
+
+\lstinputlisting
+[
+    firstline=34,
+    lastline=45,
+    caption=Ограничения таблицы тракторов,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:tractorsconstraints},
+]
+{inc/lst/constraints.sql}
+
+\lstinputlisting
+[
+    firstline=47,
+    lastline=56,
+    caption=Ограничения таблицы тракторов,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:tractorsconstraints},
+]
+{inc/lst/constraints.sql}
+
+\lstinputlisting
+[
+    firstline=58,
+    lastline=68,
+    caption=Ограничения таблицы тракторов,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:tractorsconstraints},
+]
+{inc/lst/constraints.sql}
+
+\lstinputlisting
+[
+    firstline=70,
+    lastline=79,
+    caption=Ограничения таблицы тракторов,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:tractorsconstraints},
+]
+{inc/lst/constraints.sql}
+
+\lstinputlisting
+[
+    firstline=81,
+    lastline=93,
+    caption=Ограничения таблицы тракторов,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:tractorsconstraints},
+]
+{inc/lst/constraints.sql}
+
+\lstinputlisting
+[
+    firstline=95,
+    lastline=101,
+    caption=Ограничения таблицы тракторов,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:tractorsconstraints},
+]
+{inc/lst/constraints.sql}
+
+\lstinputlisting
+[
+    firstline=103,
+    lastline=106,
+    caption=Ограничения таблицы тракторов,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:tractorsconstraints},
+]
+{inc/lst/constraints.sql}
+
+\lstinputlisting
+[
+    firstline=109,
+    lastline=112,
+    caption=Ограничения таблицы тракторов,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:tractorsconstraints},
+]
+{inc/lst/constraints.sql}
+
+\section{Реализация триггеров}
+
+
+\lstinputlisting
+[
+    firstline=1,
+    lastline=15,
+    caption=Триггер\text{,} обновляющий статус заявки на обслуживание,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:trigger1},
+]
+{inc/lst/triggers.sql}
+
+\lstinputlisting
+[
+    firstline=19,
+    lastline=33,
+    caption=Триггер\text{,} обновляющий статус производственной линии при отправлении на обслуживание,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:trigger2},
+]
+{inc/lst/triggers.sql}
+
+
+\lstinputlisting
+[
+    firstline=37,
+    lastline=64,
+    caption=Триггер\text{,} обновляющий даты последнего и следующего техобслуживания\text{,} времени простоя и статуса производственной линии,
+    frame=single,
+    numbers=left,
+	numberstyle=\footnotesize\color{numbers},
+    language = SQL,
+    keywordstyle=\color{keywords},
+	stringstyle=\color{strings},
+	commentstyle=\color{comments},
+    label={lst:trigger3},
+]
+{inc/lst/triggers.sql}
+
+\section{Реализация ролевой модели}
+
+\section{Интерфейс}
+
+\subsection*{Вывод}
