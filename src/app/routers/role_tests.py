@@ -22,6 +22,7 @@ class Role(str, Enum):
     ADMIN = "администратор"
     OPERATOR = "оператор производства"
     SPECIALIST = "специалист по обслуживанию"
+    VERIFICATION = "на верификации"
 
 async def get_user(user: User = Depends(fastapi_users.current_user())) -> User:
     return user
@@ -47,25 +48,24 @@ def get_specialist_user(user: Annotated[User, Depends(get_user)]) -> User:
         )
     return user
 
+def get_user_on_verification(user: Annotated[User, Depends(get_user)]) -> User:
+    if user.role != Role.VERIFICATION:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN, detail="You do not have access to this resource"
+        )
+    return user
 
-current_user = fastapi_users.current_user()
+def get_admin_or_specialist_user(user: Annotated[User, Depends(get_user)]) -> User:
+    if user.role != Role.SPECIALIST and user.role != Role.ADMIN:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN, detail="You do not have access to this resource"
+        )
+    return user
 
-@router_test_roles.get("/protected-route")
-def protected_route(user: User = Depends(current_user)):
-    return f"Hello, {user.name}"
+def get_admin_or_operator_user(user: Annotated[User, Depends(get_user)]) -> User:
+    if user.role != Role.ADMIN and user.role != Role.OPERATOR:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN, detail="You do not have access to this resource"
+        )
+    return user
 
-@router_test_roles.get("/protected-route-for-admin")
-def protected_route(user: User = Depends(get_admin_user)):
-    return f"Hello, {user.email}"
-
-@router_test_roles.get("/protected-route-for-operator")
-def protected_route(user: User = Depends(get_operator_user)):
-    return f"Hello, {user.email}"
-
-@router_test_roles.get("/protected-route-for-specialist")
-def protected_route(user: User = Depends(get_specialist_user)):
-    return f"Hello, {user.email}"
-
-@router_test_roles.get("/unprotected-route")
-def unprotected_route():
-    return f"Hello, anonym"

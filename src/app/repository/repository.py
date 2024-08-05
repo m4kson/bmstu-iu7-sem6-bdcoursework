@@ -1,5 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import List, Optional
+from app.Exceptions.ReportAlreadyClosedException import ReportAlreadyClosedException
+from app.Exceptions.RequestNotOpenException import RequestNotOpenError
 from app.auth.schemas import UserRead
 from app.schemas.schemas import *
 from app.models.models import *
@@ -7,6 +9,7 @@ from datetime import datetime
 from sqlalchemy.future import select
 from sqlalchemy import delete, update
 from sqlalchemy.orm import aliased
+from sqlalchemy.exc import NoResultFound
 
 class DetailRepository:
     def __init__(self, db: AsyncSession):
@@ -111,7 +114,7 @@ class UserRepository:
         user = User(
             name=user_create.name,
             surname=user_create.surname,
-            fatherame=user_create.fatherame,
+            fathername=user_create.fathername,
             department=user_create.department,
             email=user_create.email,
             password=user_create.password,
@@ -132,7 +135,7 @@ class UserRepository:
                 user_alias.id,
                 user_alias.name,
                 user_alias.surname,
-                user_alias.fatherame,
+                user_alias.fathername,
                 user_alias.department,
                 user_alias.email,
                 user_alias.dateofbirth,
@@ -146,28 +149,32 @@ class UserRepository:
         users = result.all()
         return [User(**user._asdict()) for user in users]
     
-    async def get_user_by_id(self, user_id: int):
-        user_alias = aliased(User)
-        result = await self.db.execute(
-            select(
-                user_alias.id,
-                user_alias.name,
-                user_alias.surname,
-                user_alias.fatherame,
-                user_alias.department,
-                user_alias.email,
-                user_alias.dateofbirth,
-                user_alias.sex,
-                user_alias.role,
-                user_alias.is_active,
-                user_alias.is_superuser,
-                user_alias.is_verified
-            ).where(User.id == user_id)
-        )
-        user = result.first()
-        if user:
-            return UserRead.from_orm(user)
-        return None
+    async def change_user_rights(self, id: int, rights: SUserUpdateRights) -> User:
+        try:
+            result = await self.db.execute(select(User).where(User.id == id))
+            user = result.scalar_one()
+
+            await self.db.execute(
+                update(User).where(User.id == id).values(role=rights.role)
+            )
+
+            await self.db.commit()
+            await self.db.refresh(user)
+
+            return user
+        
+        except NoResultFound:
+            raise ValueError(f"User with id {id} not found")
+
+    
+    async def get_user_by_id(self, user_id: int) -> User:
+        try:
+            query = select(User).where(User.id == user_id)
+            result = await self.db.execute(query)
+            user = result.scalar_one_or_none()
+            return user
+        except NoResultFound:
+            return None
         
 
 class DetailOrderRepository:
@@ -177,7 +184,6 @@ class DetailOrderRepository:
     async def add_detail_order(self, detail_order_create: SDetailOrder) -> DetailOrder:
         detail_order = DetailOrder(
             userid=detail_order_create.userid,
-            requestid=detail_order_create.requestid,
             status=detail_order_create.status,
             totalprice=detail_order_create.totalprice,
             orderdate=detail_order_create.orderdate,
@@ -188,8 +194,21 @@ class DetailOrderRepository:
         await self.db.refresh(detail_order)
         return detail_order
 
-    async def get_all_detail_orders(self, skip: int = 0, limit: int = 10) -> List[DetailOrder]:
-        result = await self.db.execute(select(DetailOrder).offset(skip).limit(limit))
+    async def get_all_detail_orders(
+        self, 
+        skip: int = 0, 
+        limit: int = 10, 
+        userId: Optional[int] = None, 
+        is_admin: bool = False
+    ) -> List[DetailOrder]:
+        query = select(DetailOrder).offset(skip).limit(limit)
+
+        if not is_admin and userId is not None:
+            query = query.where(DetailOrder.userid == userId)
+        elif is_admin and userId is not None:
+            query = query.where(DetailOrder.userid == userId)
+
+        result = await self.db.execute(query)
         return result.scalars().all()
     
     async def get_order_by_id(self, id: int):
@@ -204,16 +223,19 @@ class DetailOrderRepository:
             orderdate=datetime.now()
         )
         self.db.add(new_order)
-        await self.db.flush()  # Ensure the new_order gets an ID
+        await self.db.flush()  
 
         total_price = 0
 
         for detail in order_create.order_details:
+            try:
+                detail_price = await self.db.execute(
+                    select(Detail.price).where(Detail.id == detail.detailid)
+                )
+                detail_price = detail_price.scalar_one()
+            except NoResultFound:
+                raise ValueError(f"Detail with id {detail.detailid} does not exist.")
 
-            detail_price = await self.db.execute(
-                select(Detail.price).where(Detail.id == detail.detailid)
-            )
-            detail_price = detail_price.scalar_one()
             total_price += detail_price * detail.detailsamount
 
             new_order_detail = OrderDetail(
@@ -235,6 +257,10 @@ class ServiceRequestRepository:
         self.db = db
 
     async def add_service_request(self, service_request_create: SServiceRequestWrite, user_id: int) -> int:
+        assemblyline = await self.db.get(AssemblyLine, service_request_create.lineid)
+        if not assemblyline:
+            raise ValueError(f"Assembly line with id {service_request_create.lineid} does not exist")
+
         service_request = ServiceRequest(
             lineid=service_request_create.lineid,
             userid=user_id,
@@ -243,11 +269,17 @@ class ServiceRequestRepository:
             type=service_request_create.type,
             description=service_request_create.description,
         )
-        self.db.add(service_request)
-        await self.db.flush()
-        await self.db.commit()
-        await self.db.refresh(service_request)
-        return service_request.id
+        try:
+            self.db.add(service_request)
+            await self.db.flush()
+            await self.db.commit()
+            await self.db.refresh(service_request)
+            return service_request.id
+        
+        except Exception as e:
+            await self.db.rollback()
+            raise e
+            
 
     async def get_all_service_requests(self, skip: int = 0, limit: int = 10) -> List[ServiceRequest]:
         result = await self.db.execute(select(ServiceRequest).offset(skip).limit(limit))
@@ -274,6 +306,14 @@ class ServiceRequestRepository:
         return updated_request
     
     async def delete_service_request(self, id: int) -> None:
+        try:
+            result = await self.db.execute(select(ServiceRequest).where(ServiceRequest.id == id))
+        except:
+            raise ValueError(f"Service request with id {id} does not exist")
+        
+        if result.status != "открыта":
+            raise ValueError(f"Service request with id {id} can not be deleted")
+
         stmt = delete(ServiceRequest).where(ServiceRequest.id == id)
         await self.db.execute(stmt)
         await self.db.commit()
@@ -282,22 +322,62 @@ class ServiceReportRepository:
     def __init__(self, db: AsyncSession):
         self.db = db
 
-    async def add_service_report(self, service_report_create: SServiceReport) -> ServiceReport:
+    async def add_service_report(self, service_report_create: SServiceReportWrite, userId: int) -> ServiceReport:
+        try:
+            result = await self.db.execute(
+                select(ServiceRequest).where(ServiceRequest.id == service_report_create.requestid)
+            )
+            existing_request = result.scalar_one()
+        except NoResultFound:
+            raise ValueError(f"Service request with id {service_report_create.requestid} does not exist")
+
+        if existing_request.status != "открыта":
+            raise RequestNotOpenError(service_report_create.requestid)
+        
         service_report = ServiceReport(
-            lineid=service_report_create.lineid,
-            userid=service_report_create.userid,
+            lineid=existing_request.lineid,
+            userid=userId,
             requestid=service_report_create.requestid,
-            opendate=service_report_create.opendate,
-            closedate=service_report_create.closedate,
-            totalprice=service_report_create.totalprice,
-            description=service_report_create.description,
+            opendate=datetime.now(),
+            closedate=None,
+            totalprice=None,
+            description=None,
         )
+        
         self.db.add(service_report)
         await self.db.flush()
         await self.db.commit()
         await self.db.refresh(service_report)
         return service_report
 
-    async def get_all_service_reports(self, skip: int = 0, limit: int = 10) -> List[ServiceReport]:
-        result = await self.db.execute(select(ServiceReport).offset(skip).limit(limit))
+
+    async def close_service_report(self, service_report_close: SServiceReportClose, userId: int) -> ServiceReport:
+        try:
+            result = await self.db.execute(
+                select(ServiceReport).where(ServiceReport.id == service_report_close.reportid)
+            )
+            existing_report = result.scalar_one()
+        except NoResultFound:
+            raise ValueError(f"Service report with id {service_report_close.reportid} does not exist")
+        
+        if existing_report.closedate is not None:
+            raise ReportAlreadyClosedException(service_report_close.reportid)
+        
+        existing_report.closedate = datetime.now()
+        existing_report.totalprice = service_report_close.totalprice
+        existing_report.description = service_report_close.description
+        
+        await self.db.commit()
+        await self.db.refresh(existing_report)
+        
+        return existing_report
+        
+
+    async def get_all_service_reports(self, skip: int = 0, limit: int = 10, lineId: int = None) -> List[ServiceReport]:
+        query = select(ServiceReport).offset(skip).limit(limit)
+
+        if lineId is not None:
+            query = query.where(ServiceReport.lineid == lineId)
+        
+        result = await self.db.execute(query)
         return result.scalars().all()

@@ -3,11 +3,11 @@ CREATE EXTENSION IF NOT EXISTS pgcrypto;
 --вставка тестовых данных
 
 -- Вставка данных в таблицу tractors
-INSERT INTO tractors (model, release_year, enginetype, enginemodel, enginepower, fronttiresize, backtiresize, wheelsamount, tankcapacity, ecologicalstandart, length, width, cabinheight)
+INSERT INTO tractors (model, release_year, enginetype, enginepower, fronttiresize, backtiresize, wheelsamount, tankcapacity, ecologicalstandart, length, width, cabinheight)
 VALUES 
-('John Deere 5075E', 2020, 'Diesel', 'PowerTech 3029H', 75, 14, 18, 4, 90, 'Euro 6', 3.5, 1.8, 2.1),
-('New Holland T7.190', 2019, 'Diesel', 'FPT Industrial NEF 6', 190, 16, 20, 4, 220, 'Euro 5', 3.8, 1.9, 2.2),
-('Case IH Puma 185', 2021, 'Diesel', 'FPT Industrial NEF 6', 185, 18, 22, 4, 210, 'Tier 4B', 3.6, 1.8, 2.1);
+('John Deere 5075E', 2020, 'Diesel', 75, 14, 18, 4, 90, 'Euro 6', 3.5, 1.8, 2.1),
+('New Holland T7.190', 2019, 'Diesel', 190, 16, 20, 4, 220, 'Euro 5', 3.8, 1.9, 2.2),
+('Case IH Puma 185', 2021, 'Diesel', 185, 18, 22, 4, 210, 'Tier 4B', 3.6, 1.8, 2.1);
 
 
 -- Вставка данных в таблицу assemblylines

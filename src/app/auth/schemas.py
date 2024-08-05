@@ -7,9 +7,9 @@ class UserRead(schemas.BaseUser[int]):
     id: int
     name: str
     surname: str
-    fatherame: str
+    fathername: str
     email: str
-    role: Literal["администратор", "оператор производства", "специалист по обслуживанию"]
+    role: Literal["администратор", "оператор производства", "специалист по обслуживанию", "на верификации"]
     department: str
     dateofbirth: date
     sex: Literal["м", "ж"]
@@ -25,16 +25,27 @@ class UserRead(schemas.BaseUser[int]):
 class UserCreate(schemas.BaseUserCreate):
     name: str
     surname: str
-    fatherame: str
+    fathername: str
     email: str
-    password: str
-    role: Literal["администратор", "оператор производства", "специалист по обслуживанию"]
     sex: Literal["м", "ж"]
+    password: str
+#    role: Optional[Literal["администратор", "оператор производства", "специалист по обслуживанию", "на верификации"]] = "на верификации"
     department: str
     dateofbirth: date
     is_active: Optional[bool] = True
     is_superuser: Optional[bool] = False
     is_verified: Optional[bool] = False
 
-
-
+class UserAdd(schemas.BaseUserCreate):
+    name: str
+    surname: str
+    fathername: str
+    email: str
+    sex: Literal["м", "ж"]
+    password: str
+    role: Optional[Literal["администратор", "оператор производства", "специалист по обслуживанию", "на верификации"]] = "на верификации"
+    department: str
+    dateofbirth: date
+    is_active: Optional[bool] = True
+    is_superuser: Optional[bool] = False
+    is_verified: Optional[bool] = False

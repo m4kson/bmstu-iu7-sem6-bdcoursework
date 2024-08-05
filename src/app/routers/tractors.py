@@ -5,6 +5,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import APIRouter, Depends, HTTPException
 from session import get_db
 from typing import Annotated, List
+from .role_tests import *
 
 router_tractors = APIRouter(
     prefix="/tractors",
@@ -13,6 +14,7 @@ router_tractors = APIRouter(
 
 @router_tractors.post("", response_model=dict)
 async def create_tractor(
+    user: Annotated[User, Depends(get_admin_user)],
     tractor_create: Annotated[STractor, Depends()], 
     db: Annotated[AsyncSession, Depends(get_db)]
 ):
@@ -22,6 +24,7 @@ async def create_tractor(
 
 @router_tractors.get("", response_model=None)
 async def read_tractors(
+    user: Annotated[User, Depends(get_user)],
     skip: int = 0,
     limit: int = 10,
     db: AsyncSession = Depends(get_db)
@@ -31,7 +34,11 @@ async def read_tractors(
     return tractors
 
 @router_tractors.get("/{tractor_id}", response_model=None)
-async def read_tractor(tractor_id: int, db: AsyncSession = Depends(get_db)):
+async def read_tractor(
+    user: Annotated[User, Depends(get_user)],
+    tractor_id: int, 
+    db: AsyncSession = Depends(get_db)
+):
     tractor_repo = TractorRepository(db)
     tractor = await tractor_repo.get_tractor_by_id(tractor_id)
     if not tractor:

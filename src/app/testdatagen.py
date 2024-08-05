@@ -14,7 +14,6 @@ def generate_tractors_data(num_records):
     tractors = []
     for i in range(1, num_records + 1):
         tractor = {
-            'id': i,
             'model': f'{fake.word()}-{random.randint(100, 999)}',
             'release_year': random.randint(2018, 2024),
             'enginetype': random.choice(engine_types),
@@ -42,7 +41,6 @@ def generate_assemblylines_data(num_records):
         nextinspectiondate = lastinspectiondate + datetime.timedelta(days=365)
         
         assemblyline = {
-            'id': i,
             'name': f'Line {i}',
             'length': round(random.uniform(45.0, 60.0), 1),
             'height': round(random.uniform(4.5, 6.0), 1),
@@ -66,7 +64,6 @@ def generate_details_data(num_records):
     details = []
     for i in range(1, num_records + 1):
         detail = {
-            'id': i,
             'name': f'{random.choice(detailsnames)}-{chr(64 + i)}',
             'country': random.choice(countries),
             'amount': random.randint(100, 200),
@@ -88,7 +85,6 @@ def generate_users_data(num_records):
     users = []
     for i in range(1, num_records + 1):
         user = {
-            'id': i,
             'name': fake.first_name(),
             'surname': fake.last_name(),
             'fatherame': fake.first_name(),

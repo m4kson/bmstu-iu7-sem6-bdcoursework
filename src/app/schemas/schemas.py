@@ -64,13 +64,32 @@ class SLineDetail(BaseModel):
 class SUser(BaseModel):
     name: str
     surname: str
-    fatherame: str
+    fathername: str
     department: str
     email: EmailStr
     password: str
     dateofbirth: date
     sex: Literal["м", "ж"]
-    role: Literal["администратор", "оператор производства", "специалист по обслуживанию"]
+    role: Literal["администратор", "оператор производства", "специалист по обслуживанию", "на верификации"]
+
+    class Config:
+        orm_mode = True
+
+class SUserGet(BaseModel):
+    id: int
+    surname: str
+    fathername: str
+    department: str
+    email: EmailStr
+    dateofbirth: date
+    sex: Literal["м", "ж"]
+    role: Literal["администратор", "оператор производства", "специалист по обслуживанию", "на верификации"]
+
+    class Config:
+        orm_mode = True
+
+class SUserUpdateRights(BaseModel):
+    role: Literal["администратор", "оператор производства", "специалист по обслуживанию", "на верификации"]
 
     class Config:
         orm_mode = True
@@ -133,6 +152,20 @@ class SServiceReport(BaseModel):
     requestid: int
     opendate: datetime
     closedate: datetime
+    totalprice: float
+    description: str
+
+    class Config:
+        orm_mode = True
+
+class SServiceReportWrite(BaseModel):
+    requestid: int
+
+    class Config:
+        orm_mode = True
+
+class SServiceReportClose(BaseModel):
+    reportid: int
     totalprice: float
     description: str
 

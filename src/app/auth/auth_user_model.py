@@ -12,7 +12,7 @@ from app.session import get_db
 
 
 Sex = Literal["м", "ж"]
-Role = Literal["администратор", "оператор производства", "специалист по обслуживанию"]
+Role = Literal["администратор", "оператор производства", "специалист по обслуживанию", "на верификации"]
 
 class Base(DeclarativeBase):
     pass
@@ -25,11 +25,12 @@ class User(SQLAlchemyBaseUserTable[int], Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str]
     surname: Mapped[str]
-    fatherame: Mapped[str]
+    fathername: Mapped[str]
     department: Mapped[str]
     dateofbirth: Mapped[datetime.date]
     sex:  Mapped[Sex] = mapped_column(Enum("м", "ж", name="sex_enum"))
-    role:  Mapped[Role] = mapped_column(Enum("администратор", "оператор производства", "специалист по обслуживанию", name="role_enum"))
+    role: Mapped[Role] = mapped_column(Enum("администратор", "оператор производства", "специалист по обслуживанию", "на верификации", name="role_enum", default="на верификации"))
+
 
 
     email: Mapped[str] = mapped_column(String(length=320), unique=True, index=True, nullable=False)

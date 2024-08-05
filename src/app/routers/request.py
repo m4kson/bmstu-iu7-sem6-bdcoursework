@@ -6,7 +6,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import APIRouter, Depends, HTTPException
 from session import get_db
 from typing import Annotated
-from .role_tests import fastapi_users, get_user, get_specialist_user, get_admin_user, get_operator_user
+from .role_tests import *
 
 router_requests = APIRouter(
     prefix="/service_request",
@@ -15,16 +15,22 @@ router_requests = APIRouter(
 
 @router_requests.post("")
 async def create_request(
-    request_create:  Annotated[SServiceRequestWrite, Depends()],
+    request_create: Annotated[SServiceRequestWrite, Depends()],
     db: AsyncSession = Depends(get_db),
-    user: User = Depends(fastapi_users.current_user())
+    user: User = Depends(get_operator_user)
 ):
     request_repo = ServiceRequestRepository(db)
-    request_id = await request_repo.add_service_request(request_create, user.id)
-    return {"ok": True, "request_id": request_id}
+    try:
+        request_id = await request_repo.add_service_request(request_create, user.id)
+        return {"ok": True, "request_id": request_id}
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Internal Server Error")
 
 @router_requests.get("")
 async def read_requests(
+    user: Annotated[User, Depends(get_user)],
     db: AsyncSession = Depends(get_db),
     skip: int = 0,
     limit: int = 10,
@@ -35,6 +41,7 @@ async def read_requests(
 
 @router_requests.get("/{id}")
 async def read_request(
+    user: Annotated[User, Depends(get_user)],
     id: int, 
     db: AsyncSession = Depends(get_db)
 ):
@@ -49,7 +56,7 @@ async def update_request(
     id: int,
     request_update: Annotated[SServiceRequestWrite, Depends()],
     db: AsyncSession = Depends(get_db),
-    user: User = Depends(fastapi_users.current_user())
+    user: User = Depends(get_operator_user)
 ):
     request_repo = ServiceRequestRepository(db)
     request = await request_repo.get_request_by_id(id)
@@ -68,7 +75,7 @@ async def update_request(
 async def delete_request(
     id: int,
     db: AsyncSession = Depends(get_db),
-    user: User = Depends(fastapi_users.current_user()),
+    user: User = Depends(get_operator_user),
 ):
     request_repo = ServiceRequestRepository(db)
     request = await request_repo.get_request_by_id(id)
