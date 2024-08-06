@@ -3,6 +3,7 @@ from typing import List, Optional
 from app.Exceptions.ReportAlreadyClosedException import ReportAlreadyClosedException
 from app.Exceptions.RequestNotOpenException import RequestNotOpenError
 from app.auth.schemas import UserRead
+from app.schemas.filters import ServiceRequestsFilter
 from app.schemas.schemas import *
 from app.models.models import *
 from datetime import datetime
@@ -281,9 +282,29 @@ class ServiceRequestRepository:
             raise e
             
 
-    async def get_all_service_requests(self, skip: int = 0, limit: int = 10) -> List[ServiceRequest]:
-        result = await self.db.execute(select(ServiceRequest).offset(skip).limit(limit))
+    async def get_all_service_requests(self, filter: Optional[ServiceRequestsFilter] = None) -> List[ServiceRequest]:
+        query = select(ServiceRequest)
+        
+        if filter:
+            if filter.lineId is not None:
+                query = query.filter(ServiceRequest.lineid == filter.lineId)
+            if filter.userId is not None:
+                query = query.filter(ServiceRequest.userid == filter.userId)
+            if filter.status is not None:
+                query = query.filter(ServiceRequest.status == filter.status)
+            if filter.type is not None:
+                query = query.filter(ServiceRequest.type == filter.type)
+            if filter.SortByDate:
+                query = query.order_by(ServiceRequest.opendate.desc())
+            
+            if filter.skip is not None:
+                query = query.offset(filter.skip)
+            if filter.limit is not None:
+                query = query.limit(filter.limit)
+
+        result = await self.db.execute(query)
         return result.scalars().all()
+
     
     async def get_request_by_id(self, request_id: int) -> Optional[ServiceRequest]:
         result = await self.db.execute(select(ServiceRequest).filter(ServiceRequest.id == request_id))
