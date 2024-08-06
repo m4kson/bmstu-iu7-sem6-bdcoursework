@@ -18,7 +18,7 @@ router_reports = APIRouter(
 async def create_report(
     report_create: Annotated[SServiceReportWrite, Depends()],
     db: AsyncSession = Depends(get_db),
-    user: User = Depends(get_specialist_user)
+    user: User = Depends(get_admin_or_specialist_user)
 ):
     report_repo = ServiceReportRepository(db)
     try:
@@ -31,7 +31,7 @@ async def create_report(
 async def close_report(
     report_close: SServiceReportClose, 
     db: AsyncSession = Depends(get_db),
-    user: User = Depends(get_specialist_user)
+    user: User = Depends(get_admin_or_specialist_user)
 ):
     report_repo = ServiceReportRepository(db)
     
