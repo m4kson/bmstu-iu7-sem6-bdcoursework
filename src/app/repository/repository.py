@@ -295,7 +295,7 @@ class ServiceRequestRepository:
             if filter.type is not None:
                 query = query.filter(ServiceRequest.type == filter.type)
             if filter.SortByDate:
-                query = query.order_by(ServiceRequest.opendate.desc())
+                query = query.order_by(ServiceRequest.requestdate.desc())
             
             if filter.skip is not None:
                 query = query.offset(filter.skip)
