@@ -17,7 +17,7 @@ router_requests = APIRouter(
 async def create_request(
     request_create: Annotated[SServiceRequestWrite, Depends()],
     db: AsyncSession = Depends(get_db),
-    user: User = Depends(get_operator_user)
+    user: User = Depends(get_admin_or_operator_user)
 ):
     request_repo = ServiceRequestRepository(db)
     try:
@@ -56,7 +56,7 @@ async def update_request(
     id: int,
     request_update: Annotated[SServiceRequestWrite, Depends()],
     db: AsyncSession = Depends(get_db),
-    user: User = Depends(get_operator_user)
+    user: User = Depends(get_admin_or_operator_user)
 ):
     request_repo = ServiceRequestRepository(db)
     request = await request_repo.get_request_by_id(id)
@@ -75,7 +75,7 @@ async def update_request(
 async def delete_request(
     id: int,
     db: AsyncSession = Depends(get_db),
-    user: User = Depends(get_operator_user),
+    user: User = Depends(get_admin_or_operator_user),
 ):
     request_repo = ServiceRequestRepository(db)
     request = await request_repo.get_request_by_id(id)

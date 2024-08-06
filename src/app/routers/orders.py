@@ -18,7 +18,7 @@ router_orders = APIRouter(
 async def create_order(
     order_create: DetailOrderCreate, 
     db: AsyncSession = Depends(get_db),
-    user: User = Depends(get_specialist_user)
+    user: User = Depends(get_admin_or_specialist_user)
 ):
     order_repo = DetailOrderRepository(db)
     try:
