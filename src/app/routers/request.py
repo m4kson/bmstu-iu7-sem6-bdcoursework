@@ -1,11 +1,12 @@
 from app.auth.auth_user_model import User
 from app.models.models import ServiceRequest
+from app.schemas.filters import ServiceRequestsFilter
 from app.schemas.schemas import SServiceRequestWrite
 from app.repository.repository import ServiceRequestRepository
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import APIRouter, Depends, HTTPException
 from session import get_db
-from typing import Annotated
+from typing import Annotated, Optional
 from .role_tests import *
 
 router_requests = APIRouter(
@@ -32,11 +33,10 @@ async def create_request(
 async def read_requests(
     user: Annotated[User, Depends(get_user)],
     db: AsyncSession = Depends(get_db),
-    skip: int = 0,
-    limit: int = 10,
+    filter: Optional[ServiceRequestsFilter] = Depends(ServiceRequestsFilter)
 ):
     request_repo = ServiceRequestRepository(db)
-    requests = await request_repo.get_all_service_requests(skip=skip, limit=limit)
+    requests = await request_repo.get_all_service_requests(filter=filter)
     return requests
 
 @router_requests.get("/{id}")
