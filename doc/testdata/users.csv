@@ -1,36 +1,1001 @@
 name,surname,fathername,department,email,hashed_password,dateofbirth,sex,role,is_active,is_superuser,is_verified
-Lisa,Carter,Mitchell,Департамент B,hurstjoel@example.com,$2b$12$5Rqpffshlq26pSpSPryZ/.fSvOLiFUuIGcpRT8PaQNPgRtNK895q2,1979-10-15,м,специалист по обслуживанию,True,False,False
-Andrew,Duke,Kyle,Департамент A,robinramirez@example.net,$2b$12$MOilxbEqK4qXtMIJjVX0LucTYPJ8/RAEE3NocB/jhSzo2EziBZCbK,1976-01-05,м,оператор производства,True,False,False
-Sarah,Richmond,Isabella,Департамент B,cdickerson@example.com,$2b$12$CHQeQB/0BSUh3u.NMfGW.eC7zRQAJrIgYP7pXbf1Uomo6fwNP7ZWa,1965-08-06,ж,специалист по обслуживанию,True,False,False
-Heidi,Brown,Jeff,Департамент A,gregory61@example.org,$2b$12$3g125Uv9ZcbHBo/f8UQ6teCH3f1fL9PZrqUuu.rsuuf8Iy4k3gF9e,1993-02-03,ж,оператор производства,True,False,False
-Ronald,Carroll,Allison,Департамент C,rhodesann@example.com,$2b$12$BAcTMQhsFU7VKWdDK9tKGu.BCpSgxs/IlWAdsyUUk2qSRiwr.OzW.,1987-12-28,м,администратор,True,False,False
-Danielle,Bruce,Robert,Департамент A,hornmelissa@example.com,$2b$12$1AhCFIj1.5epDBUaIRZvUeN6pyCaGmx/l7vp7YRtS4jxnsM0xw6UC,1998-11-04,ж,специалист по обслуживанию,True,False,False
-Andrew,Woodward,Kristopher,Департамент A,sean59@example.org,$2b$12$Kb5F./6DQbJsIVWBJ/2aUe/F51YT8j6C9ay9kgIpMjUMvhXlD1oCS,1977-03-03,ж,администратор,True,False,False
-Sheila,Thompson,Christopher,Департамент A,pittmanjames@example.net,$2b$12$hFkx68GnlO3VBbweUPy2XeprwR9THM78ZzV2YOlMMghbQu5BRDcAi,1969-01-24,ж,оператор производства,True,False,False
-Aaron,Reid,Cynthia,Департамент A,connietorres@example.net,$2b$12$pzcQHIUGJlLvd0CSo8l11.BE2Edvqy54cOpSopgnL8WWUe8sCC/TO,1973-09-24,м,специалист по обслуживанию,True,False,False
-Kayla,Jackson,Dillon,Департамент A,markmartinez@example.net,$2b$12$aQWdO34zOsExHetltcJAGuIzR/lFZJnHxOuW7rWO.SQqCN/BQqwpG,1971-03-31,м,администратор,True,False,False
-Miguel,Wright,Laura,Департамент C,john32@example.org,$2b$12$QQfrILz/9KOaZ/sgxbyHL.Ygm9JjERWDBtd/wV7XKY/sB8NdGouiy,1995-02-22,ж,оператор производства,True,False,False
-Scott,Howell,Melissa,Департамент A,usimpson@example.net,$2b$12$SgR3.FuUaY44NFdLjusr6e0WpbMCgTRqxb.fq5hZI1Sf01Gq.LZYW,1983-03-29,м,специалист по обслуживанию,True,False,False
-Erica,Potts,David,Департамент B,dcrawford@example.com,$2b$12$FU2JRXAhNwjft5P9vf919eTt.0O0m1rztbnlrgBmKfIMYNiqZp6oe,1971-07-01,ж,администратор,True,False,False
-Nicole,King,Heather,Департамент A,william12@example.net,$2b$12$2c9.ytmoXfqr5.IaEb1P0uzlQ.zT/TxLXaRYGmE5tlC3aMb8NJp4W,1991-04-28,м,администратор,True,False,False
-Chad,Lewis,Bryan,Департамент A,qcook@example.org,$2b$12$SPDjnynV8KFoFfHfc30RsOvarlvsDDqD8dYXH0cf5xJdYUlNGmg02,1994-03-19,ж,оператор производства,True,False,False
-Cassie,Kennedy,Jesse,Департамент C,traci22@example.org,$2b$12$i3Ylc6cmKxs58Up1BmyeseqyImxuqZ8Cq1Iv9pG.kwMunAhXoEcr2,1989-07-14,ж,администратор,True,False,False
-Thomas,Smith,Megan,Департамент A,shawn39@example.com,$2b$12$unf/LzXzFYFjFQA9uXeAbOp374bZK5ywGPSdk7MUT8PZAgg1Mn4WW,1970-09-09,м,оператор производства,True,False,False
-Michael,Williams,April,Департамент C,stephaniecurry@example.com,$2b$12$LHP6qFX512NSmRcCpMyOKeFNgMsgbge5x6USbk4Cmjy/Sv6plzrNO,1995-09-09,ж,оператор производства,True,False,False
-Jeffrey,Palmer,Jennifer,Департамент B,kimtheresa@example.com,$2b$12$y2eZyH6mOFOsyidMXsLpPOJzJH4crbjKmczUXm6MAEdHpIDnfaLkC,1966-05-12,м,оператор производства,True,False,False
-John,French,Patrick,Департамент C,brian28@example.com,$2b$12$q/1sOoyBBTqOw8qLypTp0OicwnrxYcZjPhMQW5pMRRiGJkC5atgo.,1981-10-09,ж,оператор производства,True,False,False
-Alyssa,Mcintyre,Anthony,Департамент C,stephenjohnson@example.net,$2b$12$w7xhJfeUpLLegGPeWwSVIeCZztFU2NQ1nFdAeHmyikoduPx/WBW8e,1968-07-22,ж,оператор производства,True,False,False
-Sherry,Roth,Ashley,Департамент A,coreysimon@example.com,$2b$12$4qFhQM.iqN7cDf/l.v/4Le72WsFUyCGksvW6qWUP/Owfdr28d5DQi,1964-10-21,ж,администратор,True,False,False
-Jacob,Walton,Shelley,Департамент A,jeremiah25@example.org,$2b$12$cB1gtF5t.m0GpXhx.Uc92uFrZVFbe1tA3jSkpX9petkURbD3txh/G,1993-06-05,ж,оператор производства,True,False,False
-Amy,Miller,Jeffrey,Департамент A,andrewlarson@example.net,$2b$12$zV8R9C.7QR4r8hKD9JP1TudBjKbAijRmt9rSiOSXgMCXD48vXQ5Cq,1977-12-30,м,специалист по обслуживанию,True,False,False
-Steven,Ortiz,Edward,Департамент C,ramoskathleen@example.org,$2b$12$VCqSNXvZjY4eAnfvrWN/y.gyrfWphxmLG1macC5Y.sD.grzNLFiya,1998-02-05,ж,специалист по обслуживанию,True,False,False
-Gregory,Lewis,Deborah,Департамент C,reginaldfrancis@example.com,$2b$12$A18iI5iA/vOnG1NbzKYeWuVa7f46WHmZoUWhXKV4nZZwfKWSFvxES,1973-02-06,м,специалист по обслуживанию,True,False,False
-Jason,Dodson,Sara,Департамент A,wiseguy@example.net,$2b$12$hGNX5fhbNYg.PB08whisfue.tWQ691HAsjTx7Fna87qdnCF8bwlW6,1966-06-30,м,администратор,True,False,False
-Wayne,Gray,John,Департамент A,gmiller@example.org,$2b$12$48wv/RA8RrkU8V2nBOHhvOuNcnG1ZRjqJNctT5mXMYtsqW98z7/vS,1994-09-14,м,оператор производства,True,False,False
-Justin,Lane,Tammy,Департамент A,jonesjoshua@example.org,$2b$12$f/h.XW0JG7llFb1tTtalhecUrshA1TkXkZ.SmjA8NCrAq2v8bOKP.,1989-02-07,м,оператор производства,True,False,False
-Joshua,Dillon,Stephen,Департамент C,angela81@example.com,$2b$12$bxoipKnFHR9H/B2gqP1.Ke8j49HILwgTpDObJeVdbhjiH1kTUw8eG,1983-01-17,ж,специалист по обслуживанию,True,False,False
-Christopher,Osborne,Amber,Департамент B,nicholasrhodes@example.com,$2b$12$JVencEBhHkSt6SDsgkz1luqHPxO/QHLFoQP6tKo6RCc0GBWwfYkf.,1999-04-03,м,оператор производства,True,False,False
-Sara,Holmes,Matthew,Департамент B,rwade@example.com,$2b$12$Z7JmUycZykE3hTw9.TG.lOm3iQgDpW.bCMjvyzkbzywDO1Af6IqAa,1983-10-28,м,специалист по обслуживанию,True,False,False
-Shawna,Allen,Jennifer,Департамент A,lawrencerandy@example.org,$2b$12$UagtAsUU5IFAKlxpCN7QZ.wql9aUkZczNcxkDRQKqjZ08jKPaqnrC,1971-11-17,ж,оператор производства,True,False,False
-Troy,Hart,Jacqueline,Департамент A,michael64@example.com,$2b$12$w6uk6ij5mch3URFxm5qzne/ejGigp39oaFQMNU7SdW669X.6GXGCy,1971-04-23,ж,специалист по обслуживанию,True,False,False
-Kelsey,Morgan,Alexander,Департамент B,calderonmarcus@example.com,$2b$12$OYdj5x.EEG37y8z.sgT8wepYb2X34DFMw3ANovJanNfQyvoX/BQ/.,1976-10-25,м,оператор производства,True,False,False
+Crystal,Jackson,Robert,Департамент C,kelly01@example.com,$2b$12$vHkBianfwtTi21k5KAkZlOHTLVZ.2iCoNkQ67tE.FURm5ltY7QPx2,1972-12-04,ж,оператор производства,True,False,False
+Brandon,Brown,Kevin,Департамент A,ochoaalyssa@example.org,$2b$12$57UgTlTDeByEjrGWb9Pc3.unXpkEL141PwlkDUmjdUYEu6qmLL8O6,1990-03-10,ж,специалист по обслуживанию,True,False,False
+Devin,Espinoza,Jennifer,Департамент C,leroy14@example.net,$2b$12$o5GvgWg5zBGLDjkYcQm82ezffeSua3/EpDFVeWfSPgIDhGUE3s7ze,1984-09-11,м,специалист по обслуживанию,True,False,False
+Sarah,Garner,Leslie,Департамент C,cindyrichardson@example.org,$2b$12$dfd0SZGP7TeTPSQv3swfh.6B3d.2RImpdCSAJ5aO3lVjAQs9v.L7u,1980-12-21,м,оператор производства,True,False,False
+Melissa,Cooper,Vicki,Департамент A,woodlouis@example.net,$2b$12$kPLpdTCLcEumnlK9ISf6v.0zON8ZKbNOkDaF5QWarzhCYAURzWr2C,1965-06-20,м,оператор производства,True,False,False
+Patricia,Martinez,Jennifer,Департамент B,jakevalenzuela@example.com,$2b$12$p3LFQwi8ISgzHPubg4JO.u0mZ9xvsgkyxAAyNc.LUuec8J5qlSHLS,1972-12-16,ж,оператор производства,True,False,False
+Kathleen,Gay,Alan,Департамент C,holly28@example.org,$2b$12$Fzm7G6Kb0hKrY70bh9yyC.bQQ3p2WSfr.iDnw/xEdSPnEKWgVnVdC,1981-01-16,ж,оператор производства,True,False,False
+Frances,Hernandez,Victoria,Департамент C,garytate@example.net,$2b$12$DeTGSKBbytYxj8eDL/uIVORL6PMo.v6pRWo7rlStTipbfuy6eOnJq,1996-10-26,ж,администратор,True,False,False
+Lisa,Barker,Stephen,Департамент A,matthewsmith@example.net,$2b$12$oPbaPBwOA57loW7Zr242A.8IbZIKMTFHgjjYSjWsuTPIyl9vwI7TG,1976-10-09,ж,специалист по обслуживанию,True,False,False
+Maria,Wade,Rebecca,Департамент A,bryanward@example.net,$2b$12$bphdrn/hrQpbPPEA8UjVf.mpCUvrFRvBcHd6MnE5i.au9FhG1/ZLq,1997-06-10,м,специалист по обслуживанию,True,False,False
+Joseph,Fisher,Megan,Департамент A,samantha42@example.org,$2b$12$W3U2Bc594iZx0/kvVV3wC.n0F/LWkldq6Q5x2x4V/1oGdm5mW0XfS,1966-12-28,м,оператор производства,True,False,False
+Shannon,Pineda,Philip,Департамент B,lindafowler@example.net,$2b$12$raaS5EEmtPuGeeH6scH/MOvbL82pZ/pChz7EZGAYsG3qlTihcz0V2,1993-05-02,м,оператор производства,True,False,False
+Jeffrey,Smith,Amber,Департамент B,bethallen@example.org,$2b$12$h4EaBzlM9dCgd91EFvpur.VJ/R9ATeSKRhiebBx8ksd7Y/TzMn89i,1987-10-02,м,специалист по обслуживанию,True,False,False
+Christine,Fitzpatrick,Jessica,Департамент A,hoganchristina@example.net,$2b$12$okDCjT/gIHnTOAMPn7jaNeeLdXAZ7U6DdidfaIkvitnWl0Ua2xoEu,1966-11-23,м,администратор,True,False,False
+Caleb,Gibson,Kenneth,Департамент B,gabriel81@example.org,$2b$12$WlqZ1H4SrviPSvT0i8SHnuPCwudZimMcDyvTRBMvvMTlaqBWossbe,1986-04-13,ж,оператор производства,True,False,False
+Miguel,Shelton,Melissa,Департамент A,melissasullivan@example.org,$2b$12$PF5.rD.p9pCx9fBu9CNjy.buk0H/gFyFFsOtuD1dqzB4DRogpPLTa,1997-02-04,ж,администратор,True,False,False
+Thomas,Ortega,Andre,Департамент A,maldonadojody@example.org,$2b$12$4xMIhdZbb3pY2L3Hm7EVmuCFmHgI4JKYd55DIWZ6qpt6e/wxU8dMK,1997-12-25,ж,администратор,True,False,False
+Carly,Gonzalez,Samantha,Департамент B,shanemartinez@example.org,$2b$12$wYm3w0tetKL5tX8kKnkcg.pMLh8nP.YAYfiqO9NwEs5goxaSUh2ZO,1978-10-09,м,оператор производства,True,False,False
+Sara,Robinson,Shawn,Департамент C,maddenjames@example.org,$2b$12$QXK819NQcuzxYk7guzOcLeCk2K5ib50slc.FhhU1CwPZ8DDXGkMfO,1966-04-12,ж,специалист по обслуживанию,True,False,False
+Laura,Ray,Derek,Департамент B,kaitlin07@example.com,$2b$12$LXZMvl5H9Qzqwl/Orn93V.Gc1dnRIL0u2.x5N8eWWtJ3X/fCiT2hm,1983-05-07,ж,администратор,True,False,False
+Frances,Johnson,Michael,Департамент C,paul47@example.net,$2b$12$V7iX5NNnuHkK9C/7DuKnM.fur5VQMCbpsc1ddVNfy5QiVsqlKJksi,1980-08-18,ж,специалист по обслуживанию,True,False,False
+Michelle,Hernandez,Hannah,Департамент C,baileytimothy@example.net,$2b$12$t.FU1/Ca.KHeoH2n1VBhO.IKECWYim7tDEneUAcuInNEv3z6/1P06,1979-12-01,ж,администратор,True,False,False
+Brandy,Kim,Erica,Департамент C,russell28@example.com,$2b$12$jiN..M.OSaCbIjU530wS6eb2yOZDjtAAdhBt4MsD0wVKw00O8/E82,1999-05-18,ж,оператор производства,True,False,False
+Elizabeth,Diaz,Duane,Департамент A,walkercolin@example.net,$2b$12$vFlEqT7/Maqti5XZeTsT5uJ1qnE6XLEAagIUYOJlAOgnWWiUeReTm,1997-03-20,ж,оператор производства,True,False,False
+Danielle,Gonzales,Kevin,Департамент B,janice05@example.net,$2b$12$/G6zfmNmDtxMbjfLibJ.7eYoByBtJhfatK6kFLnv356u4js6v8KL.,1969-10-10,м,администратор,True,False,False
+Erica,Price,Laura,Департамент B,erodriguez@example.com,$2b$12$kgxcOzmxk7yx44Y/1XgyEecH/Ov7L7eJYU71qFc.jJZ/rjOGdHNwu,1966-10-28,м,администратор,True,False,False
+Eric,Lin,Michael,Департамент A,rjohnson@example.com,$2b$12$e42OJpnLD7MCCQp2xOC7AOq9c4yxPYuE5yOezxcjs545ZKCJFfiM2,1981-08-30,м,оператор производства,True,False,False
+John,Daniels,Larry,Департамент C,michaelcortez@example.net,$2b$12$dfDzwvnCfxoNHWRZqxTVees19u.e8cQSBOoHVl1tuMqecAhQp39ti,1992-04-28,м,специалист по обслуживанию,True,False,False
+William,Willis,Kathryn,Департамент C,julianmccormick@example.com,$2b$12$wETbw0FVTcDrgwqMhrWStOLGlVKTBpW12IXnPjzXsL6.4FylIO/h.,1972-07-10,м,администратор,True,False,False
+Brian,Colon,Amanda,Департамент B,brownlisa@example.com,$2b$12$BJfc.kqh2UQ8fPqdOcnAt.2DHykBXb8hHoHxOPSLrbMnzmj8UDSa.,1972-03-12,м,оператор производства,True,False,False
+Mary,Davidson,Lisa,Департамент C,lunakim@example.org,$2b$12$NPXjbkS9PByUBPt0to6rNuE6UhjvvtGHTHzN.vzb2Vj9NiHlvVPC.,1986-11-25,м,специалист по обслуживанию,True,False,False
+Andrea,Beard,Shelia,Департамент C,megan54@example.net,$2b$12$all2r3ecjnOgXdRpfTe6QenP03aLyrXr2DHxtVoHkhi3PJdqpOs7y,1978-02-18,м,оператор производства,True,False,False
+Rodney,Brooks,Heather,Департамент B,jason56@example.net,$2b$12$q5tFEzOmHI4RIN0vdX/OVOXZd6Mh0bYlziP6nw.mqZcyHYjBPo4kq,1983-02-19,ж,оператор производства,True,False,False
+Danielle,Parker,Luke,Департамент A,tinalane@example.org,$2b$12$KRONbaPrv6/fr5uOwnc7y.SBhirLR.bSX2wgDRLDUDj/ZwXYvGakS,1975-06-22,ж,оператор производства,True,False,False
+Christina,Mullins,Aaron,Департамент A,ryandaniel@example.org,$2b$12$rYWwdJyWtIuN475MJnYzRuxi.juNBt/4IAqMf912qoG3O5pPnIa8i,1978-04-18,м,специалист по обслуживанию,True,False,False
+Angela,Nash,Mark,Департамент A,lewisjillian@example.net,$2b$12$rmqhacV9F07fsov/TRe2lO/sg3vUmy1rCfOSMJonNhG4OP1tGKhy6,1984-04-23,м,специалист по обслуживанию,True,False,False
+Christopher,Stewart,Kelly,Департамент A,daviskristina@example.com,$2b$12$yyFzec5ycUX.CvfWCh0Fee4.lIQeIgSm6XfAJ1PtUZH9yr7XhyPJq,1966-11-13,м,оператор производства,True,False,False
+Lori,Duke,Chad,Департамент A,emelendez@example.com,$2b$12$3PW/RbVa7fm4o1yITPDbEO2WsQ4iE4j6HpbgkSB5SrFm9goQFZU1S,1972-11-02,м,администратор,True,False,False
+Douglas,Chang,Andre,Департамент A,msingh@example.org,$2b$12$QghrjILAFdg.dW0NKJqORuNE1cdQtyt/S3kx747uHLBqNipISbING,1972-06-09,м,специалист по обслуживанию,True,False,False
+David,Welch,Tyler,Департамент C,ireyes@example.net,$2b$12$dGuB3cOhhLFmXf7COK.pCenjoiKlPyNLv/O/o0YPY09rgC7yFm3zC,1965-02-03,ж,администратор,True,False,False
+Alicia,Davis,Cynthia,Департамент B,mmorales@example.com,$2b$12$.6b2G2M2n7JUn4gl4RIKhu..sgXprg45uNFHJW5K7O0vntkwHWWm6,1969-08-18,ж,администратор,True,False,False
+Karen,Stephens,Tanya,Департамент B,destinyrodriguez@example.net,$2b$12$fKsqCitD7Ok5fUg8cB2kweE13IMU7tDgIr1dhswlES5YwH7xXJ3g2,1986-05-08,ж,специалист по обслуживанию,True,False,False
+Steven,Taylor,Kelly,Департамент C,jerry34@example.com,$2b$12$tukA77yCslqgvf.JBGpJjOXdDeojMisNW/xSRRJGnIO.ZCk4uTBNi,1992-02-24,ж,специалист по обслуживанию,True,False,False
+Annette,Williams,Vincent,Департамент C,munozsteven@example.com,$2b$12$4hrkuDgo5Seqe7ZOWfCXmun44euqCCb10mtAWSb2mdT4OLbm.ifKu,1971-02-26,ж,администратор,True,False,False
+Nathan,Holloway,Brian,Департамент B,bfoster@example.com,$2b$12$GI5k/KmWob1/RxSOa1O5I.cJ0B/zJwrPzFiBWgSlK8iioKGNIV/G.,1985-05-30,ж,администратор,True,False,False
+Mary,Williams,John,Департамент A,dsuarez@example.net,$2b$12$fYVVJCBToh3tR3CqmRmpFejB/JhKs73keyS3q0MGYv1RJKBswoL42,1963-11-27,м,оператор производства,True,False,False
+Brandon,Greene,Troy,Департамент B,stephenguzman@example.net,$2b$12$/L5N1Z6D.rmT7bbSlIt93.J9xvObCFE6XJAcL5I2c4SAZjEv7gCFG,1993-12-04,ж,оператор производства,True,False,False
+Heidi,Anderson,Erika,Департамент A,teresa04@example.org,$2b$12$r/hYbx3Erwms1M.6Q/hmLOBsPNK7W9KXK9/JBGALkP7bdvJNAVW7S,1965-09-14,ж,администратор,True,False,False
+Gregory,Foster,David,Департамент C,diana12@example.com,$2b$12$4s2BffD4nBDYWjaFSmIFIO/u1Z.3qYQps5FADs54sAXZRuSEafPc.,1977-10-23,ж,администратор,True,False,False
+Amy,Howard,Amanda,Департамент C,ramirezjason@example.com,$2b$12$G8XeBxPPVJz2Mo8IAE8kCe076oH1O0xwAtQFB2MEAeqBguV0SOk8O,1997-09-26,ж,оператор производства,True,False,False
+Anna,Morrison,Vincent,Департамент A,michelle18@example.com,$2b$12$vglMqJcnT.CJ9JtkFB4fXOkR0jubAE5wvffdjy.vsehVcWLvWvcx2,1975-08-02,ж,оператор производства,True,False,False
+Victoria,Shaffer,James,Департамент C,watsonbrenda@example.org,$2b$12$RlnqRob7dTBMsmCenOfKtOiJ4eeawJf6iiWMVlK4tzhYtV4YZaEwG,1963-12-07,ж,администратор,True,False,False
+Jamie,Young,Calvin,Департамент C,welchjon@example.net,$2b$12$Wj/bWn4UFu2CTQBJLjpNW.tO7YB42KVus3DUFKA0MQEiVZO5g2AEK,1975-10-16,м,администратор,True,False,False
+David,Ramirez,Samantha,Департамент B,hcruz@example.com,$2b$12$b57BBh9ExaPhJoSxmoI64.Q6xq/Uc2Jx9gaOjYQrijp.rjzsDHCCa,1981-01-15,ж,оператор производства,True,False,False
+Ricky,Mcdonald,Sara,Департамент C,timothybell@example.net,$2b$12$tws91hTZXBbjTv5m0Mgi5egOqqAchDW7/iMxakO4L1ZObIUb9UghO,1976-11-21,ж,оператор производства,True,False,False
+Sandra,Stevens,Patricia,Департамент A,bwilson@example.org,$2b$12$KAatEKjeGl0ZAXW.1GLQ6eqqoYGbh9fy7dfGQjstcV0O.Ry9u.Mwy,1977-09-27,ж,администратор,True,False,False
+Allison,Benton,Jonathan,Департамент B,ryan79@example.com,$2b$12$zd3UdEDQB5pFbUC5ouBaRODYlzWBQqNcSV8g/tO9XsdxZ3BAuBtRW,1976-07-13,м,оператор производства,True,False,False
+Shannon,Saunders,Cynthia,Департамент C,davidsalazar@example.com,$2b$12$jv5Jne3zV59Kc4qecy2nvuBlhomiNuVFYQbPR/KD1IoNitXmVHEoy,1982-11-19,ж,администратор,True,False,False
+Rodney,Brennan,Catherine,Департамент B,mjackson@example.net,$2b$12$McS1Di7gXKeTa6EPZ7sL0uT5JQAU24NzoWBPeQdUcN6n7jUPK3YUO,1982-12-07,м,оператор производства,True,False,False
+Joshua,Reynolds,John,Департамент A,rodriguezmiranda@example.org,$2b$12$vtq/GIfXy97NzT/QdIi01.9J.Axf0Y.UIYpp00lr98oMm2nAXkfQ.,1976-06-12,м,специалист по обслуживанию,True,False,False
+Donald,Patrick,Leslie,Департамент B,perezcatherine@example.net,$2b$12$S9OsJy43flmb5MsUppoV8eLFLbsd6Ce7iohno3SWz.jOwJ0aiibx6,1978-02-28,ж,оператор производства,True,False,False
+Jesse,Romero,Shelly,Департамент C,suarezmiranda@example.net,$2b$12$ZOu0YMKQOFPBT2LZex3nxeOSMm6PiENiWqjHk/qePsTuwOaCBdMB2,1970-11-22,ж,специалист по обслуживанию,True,False,False
+Rachel,Martin,Jennifer,Департамент C,renee39@example.com,$2b$12$3.zC3RY4wAXcDmaBHSVl9O8NxVx1ZIRsZCuINJSfL/tRzNOzOtSBu,1980-10-26,м,специалист по обслуживанию,True,False,False
+Robert,Ward,Daniel,Департамент C,devinhorton@example.org,$2b$12$vunJ4MqCnf.uCZSJe9OphuMkClvdjR9EWIXNyTpFGoLSvrll3URam,1987-12-05,м,администратор,True,False,False
+Michael,Diaz,Steven,Департамент B,stephanieyoung@example.org,$2b$12$L2sM7BcaKXsUiwQjXlFywOdw5PDekkkG3.lmdPwSvbnBLBnuNuv8.,1969-05-30,м,оператор производства,True,False,False
+Patricia,Schmidt,James,Департамент C,jessica12@example.org,$2b$12$xyZ17If/.qu08lzR1Mww9etHeTPw3/TD/UwOt8VbLpVvYgdWsS8L6,1994-02-14,м,специалист по обслуживанию,True,False,False
+Alexander,Bryant,Steven,Департамент B,wendy14@example.net,$2b$12$1yTkxSsCjgiNq4NTxsIXXOE.WTnuJIMwYiau6.GOT5NToNiFDQHfi,1974-10-21,ж,администратор,True,False,False
+Jorge,Jones,Darrell,Департамент A,nelsoneric@example.net,$2b$12$xHYSQrGvvtIfX902KxGR/e2flNUaCIp52fQ6eAkNht0PlqRHHHk7K,1972-10-27,м,специалист по обслуживанию,True,False,False
+Johnny,Vasquez,Brittany,Департамент C,stephanie88@example.org,$2b$12$A646d5jGcTBwkW90XXeDxOtUye.2t24k9Ur9EgZ6TFrrduJ7.4eqO,1986-03-18,м,оператор производства,True,False,False
+Stephen,Smith,Holly,Департамент B,millerchristine@example.net,$2b$12$5SljxO4bXbLVYzmTzfuFRO5/Vaz91evp1n/Nwn0OTtI1XCyFEQGNy,1984-03-02,м,оператор производства,True,False,False
+Alan,Hernandez,Jeremy,Департамент A,george44@example.net,$2b$12$jLDF26gRuKLwBPybsfOFLey9Vt/Zhkk4w7nj.Xi0c2cmwmKXMjsA.,1971-02-15,ж,специалист по обслуживанию,True,False,False
+Cheryl,West,Megan,Департамент A,taylorkaren@example.net,$2b$12$/AXz/47l1tS126pG3.RP.OdsE/DEr17/WCyQaN4SKXh4OQLWhlQHe,1964-08-25,ж,администратор,True,False,False
+Casey,Ellison,Eric,Департамент B,andrew08@example.com,$2b$12$2ZmnIoXPMar.m32bbG3Bbei2/gfdPudd5BKFFgJQwQYi6f6wdYjDy,1988-07-08,м,оператор производства,True,False,False
+Michael,Medina,Alexander,Департамент C,jaredking@example.net,$2b$12$NglwoZ1KtPthAvN0EK9W4OG2K9tab3UfNm7v73YgoPuG0ue8aKHu.,1975-11-12,м,специалист по обслуживанию,True,False,False
+Jonathan,Curtis,Michael,Департамент B,timothyhensley@example.net,$2b$12$Z/vInMe.rH/XBT/dQP1jFue28YiR1Ftk9kez1xDvbDWY4MQZ965Pa,1992-11-08,м,специалист по обслуживанию,True,False,False
+Jose,Herrera,Charles,Департамент B,garciaalfred@example.org,$2b$12$kEKTWi3VJXKOnFzzscM1fuN/gQjsAohyqXvOrMmVbvU6pB87nZPqq,1982-09-28,м,специалист по обслуживанию,True,False,False
+Cody,Young,Kari,Департамент C,robertsharp@example.net,$2b$12$Nv7NcObJEidquzVUOhmll.uF6rpZoJ1RrF.egT9t.zM8i8RadJ/gO,1985-01-11,м,администратор,True,False,False
+Joel,Rodriguez,Annette,Департамент A,npratt@example.org,$2b$12$JstUDSF0l4wkpn1Wp5xTKutNjBbPJN2XlSuYcvudlysM9Rn6J80OC,1993-10-18,ж,специалист по обслуживанию,True,False,False
+Melissa,Small,Karen,Департамент A,leonabigail@example.org,$2b$12$EFzGLaflxvuToszAB.RTZuBnTaGVd7Vbc9Ace7Hk86T.lvk9RvvXy,1978-11-29,ж,оператор производства,True,False,False
+Jimmy,Mcbride,Robert,Департамент C,williamsheather@example.org,$2b$12$TDPYL3rh9QoimXZyRMSGmOJLfJFwqjL9Vlivlg8kJ9zBZ29ffkUv6,1964-09-07,м,специалист по обслуживанию,True,False,False
+Robert,Miller,Frank,Департамент B,pgilbert@example.net,$2b$12$yWMfQKr059v3dEkofO/wHeLYyDjJH3ckVAa.XaRYyAkgo/hk4Nx62,1967-01-06,м,администратор,True,False,False
+Regina,Taylor,Brian,Департамент C,pmoon@example.org,$2b$12$dodRNjLbjt7YdGUgJKPeauJ1/AgbFINCAaY0cbVPISRheHr3gb2/K,1990-10-31,ж,оператор производства,True,False,False
+Rick,Mullins,Kevin,Департамент A,whitakertammy@example.net,$2b$12$UbJUIk2Fer7FAdWsL5dBNOtmXUXgPiXBHxjKssFMW62GKkA35n3H.,1966-01-15,м,специалист по обслуживанию,True,False,False
+Joshua,Davidson,Maria,Департамент C,smithshawn@example.net,$2b$12$wRCYz.sUAs7UoM/xa.9vDe.Arv99ANHlQ8vDT3g9inep1K/Sb6cfi,1979-05-12,ж,специалист по обслуживанию,True,False,False
+Rachel,Wilson,Shannon,Департамент A,kanthony@example.net,$2b$12$attLjhz4jXcUG.8RB7klnOx4VG4hTfWA88xsxfAzZMYJbloLyRplS,1985-04-30,м,специалист по обслуживанию,True,False,False
+Timothy,Brown,Glenn,Департамент B,garciabrian@example.com,$2b$12$TiozNA5.UFAwD.36OuEEKuaKM3TuATnkW2f7xW6KbjtvfKhu9W9fW,1986-10-29,м,специалист по обслуживанию,True,False,False
+Thomas,Olsen,Kellie,Департамент A,elizabeth18@example.com,$2b$12$1o2jvC92xsa.JT0crNoFouEkYS1yyTU5KwUHmLTut7S3SXGiM5zuG,1997-11-05,ж,специалист по обслуживанию,True,False,False
+Alexander,Walsh,Tracy,Департамент A,alexander12@example.net,$2b$12$eRadX2F.NAheFp0VL4zu8uVRCO9Jx7mRPiUb2E6pb1JcU.6s18s..,1976-07-10,ж,администратор,True,False,False
+Judith,Hunter,Scott,Департамент A,davisrussell@example.org,$2b$12$HOnpt6VM0RGpSJDT1UAl9eHb67tAu.z9XxN761U93oTf5j7CUopPC,1964-04-17,м,специалист по обслуживанию,True,False,False
+Michael,Reid,Ashley,Департамент A,ejohnson@example.com,$2b$12$nEXXNnHMITRGmFpA4/9NPOML/eNubB7XafkQIkBM5R3waNGAE4Fv6,1992-11-13,ж,специалист по обслуживанию,True,False,False
+Darlene,Williams,Allison,Департамент C,lauraburton@example.net,$2b$12$Ux6dyeiIyNt2HkjsH.iVk.Xfk6w2gsmeRuUlIUjAi9qxJz/9N8peS,1985-11-02,ж,администратор,True,False,False
+Michelle,Harris,Joseph,Департамент A,rickeybrown@example.com,$2b$12$7O/HeqyUUso41eE47pf7jeXFiDotTNBKLgDgU8KvgnnasTXLp72Uy,1994-02-07,ж,администратор,True,False,False
+Steven,Walker,Charlene,Департамент A,joshua41@example.com,$2b$12$oALPd2in8sGeJaaFcW4Jbu9P7noPbUovp4sPtyUYHMVL5pSoAjp.2,1968-11-22,м,специалист по обслуживанию,True,False,False
+Cheryl,Holden,Joseph,Департамент B,whitejulie@example.org,$2b$12$hdLYCacSxp/PyMLFVPyqueJwW7zrA24Z28Ni5Xlop..Nu2a99lFTe,1993-11-15,ж,оператор производства,True,False,False
+Christopher,Gonzales,Kathleen,Департамент A,michael08@example.org,$2b$12$8.VCcbBGE3Y5kbl5oH7vceLecy0NDGVGVfDZkqEVu6Ahfq9UawqqG,1994-04-20,ж,оператор производства,True,False,False
+Brittany,Gonzalez,Daniel,Департамент C,millerkathleen@example.com,$2b$12$tPhBOwqMc6oyiZebBkm/bujdUCr3R2BElGmn0fZ7j4sdVMdD1UWF6,1972-07-04,ж,оператор производства,True,False,False
+Thomas,Elliott,Timothy,Департамент B,zroberts@example.com,$2b$12$2PwS0Wn02.QXeM45txUwceGc8dV/w.clFbyLjgyyD30AfnG3Vkdkm,1993-05-07,м,администратор,True,False,False
+Kayla,Gaines,Robert,Департамент B,smithjason@example.org,$2b$12$o0lTrOfzZGWwnkjHm2.CvOxneh5DkKjScZ9/HhOo/3bZdNHTeFlJ2,1965-06-18,ж,оператор производства,True,False,False
+Kevin,Walker,Bonnie,Департамент B,zlong@example.org,$2b$12$zOdBfgA5NYhohzwpXGp7QO.FbZ09XUOk/DeZO5oR8/MVbkoPPMqXy,1990-07-13,м,специалист по обслуживанию,True,False,False
+Joshua,Case,Tara,Департамент C,tylerperez@example.com,$2b$12$2XtpjrawqcNX1BgzDhMJVuqWGGqkRm2kWWytwxJObJO82un3IBtAG,1991-11-30,ж,специалист по обслуживанию,True,False,False
+Zachary,James,Jacob,Департамент A,tiffany95@example.com,$2b$12$L1zxQTUQg0uRzvPmV8MlIeglUFRFmi2NO3fAx2En4bZxHyt0/MmIy,1979-07-04,м,специалист по обслуживанию,True,False,False
+Crystal,Lucas,Julie,Департамент C,matthewdavis@example.com,$2b$12$zrTVevmwB41J0PbC22GQneUPwiYLVW1Zn8aZ65cWD8wPAQCtFmki6,1996-02-10,м,специалист по обслуживанию,True,False,False
+Jonathan,Brady,Brenda,Департамент A,dakotagreen@example.org,$2b$12$MKf3m/KtNze6CwWxk7XBIuanHSrrDGfhHh3Ek2zFR3e27XS2YnWpy,1981-10-16,ж,специалист по обслуживанию,True,False,False
+Helen,Reyes,Kristen,Департамент C,inicholson@example.org,$2b$12$yHILhAb4IG574Tev3JLl4e7Wj7HkJXtLS5vbF/ey7mbQe6EGuSfyu,1999-06-29,ж,специалист по обслуживанию,True,False,False
+Benjamin,Nguyen,Hannah,Департамент C,joe20@example.org,$2b$12$.KJZd6PnJOts1tX7tCT4Ue/DNgZErmsPoKt3O1P2rrw.wei7L5fE2,1990-06-28,ж,специалист по обслуживанию,True,False,False
+Richard,Owens,Allen,Департамент C,mclaughlinnancy@example.net,$2b$12$vpaB.GCiZZlzz2sTiAyuPOyj.AyfFw9hLFngSai82UjldGENOh9om,1973-09-17,ж,оператор производства,True,False,False
+Michael,Wood,Robin,Департамент A,kcarr@example.com,$2b$12$EiRu41pwWUwPG9EeWYLmMO8HvPn8LkHzCc/j7rEFBJcj5BBr61UT6,1991-04-24,м,оператор производства,True,False,False
+Christine,Serrano,Linda,Департамент A,jennifer84@example.com,$2b$12$unqSlWzAz2z8VNf0d7/yOeZgFrh5qc16q30pb5Fll7YAvirlOvwde,1972-10-18,м,оператор производства,True,False,False
+David,Jenkins,Ryan,Департамент C,daryl69@example.org,$2b$12$cJLTpf9j6h32mLSAPw5sne35uQ0/zTZa1/idrvaQ.9iaZBkcABRdK,1986-06-11,м,специалист по обслуживанию,True,False,False
+Ashley,Padilla,Russell,Департамент B,theresaoneill@example.org,$2b$12$m4EFWxyH67agiEEnKVl9q.8SRIHi3T1ClmGXvQRKSgjk8KMLTdmTW,1974-03-07,ж,специалист по обслуживанию,True,False,False
+Judy,Winters,Tina,Департамент B,ecruz@example.net,$2b$12$Lr/U1y/dFAx2OX04yna3PO6fX/IC1VxaGY8yKveKKPjb/7AZphCma,1967-07-01,м,оператор производства,True,False,False
+Thomas,Simmons,David,Департамент A,ewingsandra@example.org,$2b$12$p.iFX1HWYAY1FWvqDlY3veMPj1WpdL2bYXbQslzG6hO4.KSu8wFzG,1968-05-07,м,специалист по обслуживанию,True,False,False
+John,James,Heather,Департамент A,haroldacosta@example.net,$2b$12$oNKiHsRVregbWx4qnBCusOBz0DyDxk4jXByavQnq0nv0B7uqmZxAa,1984-01-15,м,оператор производства,True,False,False
+Robert,Grimes,Kelsey,Департамент B,raymondprince@example.org,$2b$12$kOTnJ5rwiKEqfuanSqhjHud09Xbm1ld3jIv8wglmQFCyft5l/JiPO,1986-12-27,м,специалист по обслуживанию,True,False,False
+Amber,Jones,Russell,Департамент A,torresjessica@example.org,$2b$12$.J0wZOm3fntOYCuZkC2IJOCen6/ZFOw2tPddBzYfl63WAZxVzGbEq,1990-09-17,ж,администратор,True,False,False
+Ernest,Hines,Sandra,Департамент B,leonbobby@example.com,$2b$12$wadrK5U8/mgPg5UJBzVZM.jX.hIHkD0SkH1FwK1B5vhRBy9XxBfW6,1980-02-08,м,администратор,True,False,False
+Robert,Anderson,Ana,Департамент A,qburke@example.com,$2b$12$D98agsXONVDpDLYgq3ahe.1TwmoySdcoxAYLuwbGLej1KHQIG9tfG,1989-08-16,ж,специалист по обслуживанию,True,False,False
+Johnathan,White,Dustin,Департамент A,aaronmarshall@example.net,$2b$12$ayL2I27V5z39DrdPvH4Uou/aYbikl7owVTIuCp.0djupTxS3FVb0O,1969-05-02,м,оператор производства,True,False,False
+Kayla,Wright,Whitney,Департамент A,mjohnson@example.net,$2b$12$Nw34w2yIyfi2R1MDEJncT.DrG1qouKjV187y7L0CZphZJk2.AVXXu,1997-05-20,м,администратор,True,False,False
+Lawrence,Reid,Wayne,Департамент A,kevin71@example.com,$2b$12$mGAHgK/CGipZIN7kr9gyNuvaeqd6ulCw5NP9hDAsFuPkUjDS.y.oi,1978-12-08,ж,администратор,True,False,False
+Nancy,Thompson,Valerie,Департамент B,pearsontimothy@example.net,$2b$12$qhz0Kl.xFUhh3/7Ti4SXW.3KKUP/zbwyMsZyKGnClEyzcylEqOxSm,1973-08-22,м,оператор производства,True,False,False
+Lisa,Hopkins,Matthew,Департамент B,dawn33@example.net,$2b$12$md49nU7bG6vJ4w2U1Jg9su.RhX2czRZX71dNTC4EiwQGWvIoH.y2G,1971-02-28,м,администратор,True,False,False
+Sara,Adams,Susan,Департамент B,perezmichelle@example.com,$2b$12$1KwHw.Dj3PiAoaA9T/8Bau79LAlGNeobm.7LUVzyswmlZipOVPrpG,1991-04-15,ж,оператор производства,True,False,False
+Sarah,Roberts,Scott,Департамент A,johnsmith@example.org,$2b$12$yYnJHQrUrkY53rzKPIoEyeQGz4StUGNKEoj9wugttHo6wG1sjbpOW,1982-01-03,м,оператор производства,True,False,False
+Kevin,Aguirre,Scott,Департамент A,nicholasmccann@example.org,$2b$12$K.8fY4LURlLDdXdSOyq8xOUXVyKHDEKNbhWqdT8Qrt9p5TTD4VtHS,1969-10-19,ж,администратор,True,False,False
+John,Espinoza,Stephanie,Департамент B,jonesvincent@example.org,$2b$12$TgPKfVc8MIQqZY4LpQ4MqOZG6PBjIRNaVRLTwUv2eEC89OIjV6dEe,1974-04-21,ж,оператор производства,True,False,False
+Kimberly,Murillo,Mike,Департамент B,santanaglenda@example.com,$2b$12$IP8xjkZGycO3YPT2l.e3i.MjySmwIpfLRxpKiyY6nlE/OSm9axvFO,1987-02-25,м,администратор,True,False,False
+Lindsey,Nelson,Andrew,Департамент A,jhouston@example.org,$2b$12$tiyyW8ydki82iLWmHorfJ.dR7UNFZuBluLo3XQEjxiNRIu61DnW4i,1975-08-25,ж,оператор производства,True,False,False
+Sarah,Valdez,Dennis,Департамент B,boydclaudia@example.org,$2b$12$zwgFhetTTal58ezEQHNWyOdSWTDwFJ6pP0TF7plNCmY70.AuLUElG,1976-07-02,м,специалист по обслуживанию,True,False,False
+Todd,Smith,Christopher,Департамент A,oray@example.org,$2b$12$x/xj1/2E2KmNgJrsamCs3.SlShrmbr7q2iOvhn7e/sJ5wY2H8C6FG,1999-05-24,м,специалист по обслуживанию,True,False,False
+Angelica,Scott,Stacey,Департамент A,jeremy81@example.com,$2b$12$YlpsZniLqGUj8KYwinsORuFBWxoxXKWD7nMbuXef/M9XZE1YtKXX.,1964-01-08,м,администратор,True,False,False
+Dennis,Daniel,Thomas,Департамент A,hannahbutler@example.org,$2b$12$GiFxMc8mRVUZan21DnBNse3DtGGKWVoT.yBkm4aZvru0.gEmwbPVK,1988-12-16,м,оператор производства,True,False,False
+Sarah,Mcdonald,George,Департамент C,ohuang@example.com,$2b$12$A9BUt.NNl27eHexC1xPSE.q7oIKcL3nN1wwpVrqQl.TglSjoTiiK.,1966-12-05,ж,оператор производства,True,False,False
+Amanda,Nelson,Frank,Департамент C,scottcalvin@example.com,$2b$12$ta2elEYVcdW4ED9tmy5RuuEFfd1F64eWjEIc3zmf7jVYlkW23fTdW,1989-08-22,м,администратор,True,False,False
+Gerald,Walker,Cody,Департамент A,sotoangela@example.org,$2b$12$hcTeBEemOxSQiL.vtdXGe.iVAwCBKxvEazGNvx.1Zv84yY1duE1Jm,1987-10-26,м,оператор производства,True,False,False
+Stephen,Williams,Lauren,Департамент C,elliottjoseph@example.net,$2b$12$KHqp8FRScLosyZOAGjsWv.mwi59utl3o7HC0Nqas6mH45Xh.9TSra,1968-12-03,м,специалист по обслуживанию,True,False,False
+Erika,Cervantes,Allison,Департамент B,alexanderle@example.com,$2b$12$0XCHYb7PaNeRpTNimH5pAOVqJrSiSgZGU4JnEMEFbdqX4x/TBaTUG,1993-05-17,м,администратор,True,False,False
+Kimberly,Ware,Ryan,Департамент A,garciajames@example.com,$2b$12$vscjDLbEJbJMI6ZdW8DOL.ysNRU/rUufbQofOU/C/aLzNKVw20Q3y,1989-07-26,ж,администратор,True,False,False
+Daniel,Morris,Randall,Департамент A,john21@example.net,$2b$12$OQRHmarhKQIeRD4uTgMfT.e5hYWnil1UoEsbE.WbhtB83jWZAShBG,1978-04-29,ж,оператор производства,True,False,False
+Tim,Peck,Victor,Департамент A,suzannelogan@example.net,$2b$12$fdxbsXlQgRQZ9bVPzv1km.lkK6jmZJWhOkkp4vjYr/9rDxnyhNhn.,1963-09-20,ж,администратор,True,False,False
+Joseph,Montoya,Michelle,Департамент C,gina20@example.org,$2b$12$ntnqjxshTz.FlcJ1HrQijeON6wwUjmWeqBRH2E0eF7zvGY3uzSUQq,1973-12-07,ж,оператор производства,True,False,False
+Michelle,Herrera,Brenda,Департамент B,beanedwin@example.com,$2b$12$r9ORaEUoTBMTXVtxBbOGm.ZLSDFViyHzeLS1spPWV2MQZ5s.2Dsxm,1971-08-02,ж,оператор производства,True,False,False
+Ryan,Olson,Benjamin,Департамент C,gcarpenter@example.net,$2b$12$LSi/mK88Fya41bMTU91R4.0O9tJGyCJQ8bX5rh2ppcSpGWIhjmy.K,1998-10-08,м,специалист по обслуживанию,True,False,False
+Ashley,Miller,Sheila,Департамент B,colemanjoanne@example.org,$2b$12$fggVqyRIWVyje1cKjy0qbeKcLuP.2E.NoYn.cZqQrs4jZW5mVKVsO,1967-04-22,м,специалист по обслуживанию,True,False,False
+Lauren,Wheeler,Veronica,Департамент B,adamspencer@example.com,$2b$12$BefoM.JK21xZwWOHVg5Cq.E0FTrYGEAI5y6d94GXpYCbMBpKQiiCK,1988-09-17,ж,оператор производства,True,False,False
+Mary,James,Timothy,Департамент B,troydavis@example.org,$2b$12$uTuPcrpXAuL1rd1sK4DPv.NQDtWymT3Ftc5T135u60yxQblb5ArMy,1966-11-08,ж,специалист по обслуживанию,True,False,False
+Joshua,Hamilton,Howard,Департамент C,lauren00@example.org,$2b$12$SQzCODM/eEnUvoicP9Nl9e99K0xjy3DhLDBsNMLpM4Cax/h1NHJry,1979-07-17,ж,администратор,True,False,False
+Anthony,Kelley,Christian,Департамент B,schmidtjennifer@example.com,$2b$12$LpS7P2i1Rdh/u2yz7DwPReDafzZs8XU7ppLl1JgiVGMWH6Ljhbjzm,1968-09-03,м,администратор,True,False,False
+John,Thomas,Scott,Департамент B,bergrobyn@example.com,$2b$12$NCg8xmGFwziouHfLvmKxleyxB4wwsSbgCAEYLGiQ8cO9vOd3rvEHS,1984-12-05,м,оператор производства,True,False,False
+Jeffrey,Alvarez,Melissa,Департамент C,lucas15@example.com,$2b$12$VTLpZEQcM1X4XTO1XtEtD.eDkr./iTLJIl/6P2cprC5rqoynqGzJO,1971-05-29,ж,администратор,True,False,False
+Joseph,Ross,Mark,Департамент B,pricekyle@example.net,$2b$12$rZPv1/SF3TwHN0KSRHF4pOYe9FSl6//aUBF7LweZQ8ifHfRS0.C3u,1983-10-27,ж,оператор производства,True,False,False
+Anna,Brown,Rachael,Департамент B,charlesscott@example.com,$2b$12$8BWrNdMg4Acb92ROVue3WOfxK43xbcLpqncjKcRkEm1W.LIjL0Yd6,1985-08-10,м,специалист по обслуживанию,True,False,False
+April,Jackson,Jeffrey,Департамент C,richard93@example.net,$2b$12$E2cGc5u4/dxUOAkptt8nvO78/Mx6qkfas6avf.SQ/QMjVMSA2G7AW,1996-09-28,ж,специалист по обслуживанию,True,False,False
+Arthur,Howard,Timothy,Департамент C,hamiltonjessica@example.org,$2b$12$c/zsNMGMX2zsjKS.Ti3D0uQr8P8YzZvh5pUVIFGUS00zWhO.ngZAS,1978-06-15,м,специалист по обслуживанию,True,False,False
+Angela,Blevins,Tristan,Департамент A,taylorcraig@example.com,$2b$12$4fE2/YbkbQQsstd0SaWbZu4Yxs3GlPRms.INIajrJ1uNncF/8ILBu,1973-05-22,м,специалист по обслуживанию,True,False,False
+Amanda,Davis,John,Департамент A,montesandrea@example.net,$2b$12$qSxc5LqVly.W2DILsYK0c.8BiMbg81M9rtVMxaLE4TqVYv0bfL2fe,1997-09-11,м,администратор,True,False,False
+Donald,Lynch,Jason,Департамент A,ronald73@example.net,$2b$12$NNzO94zfSKZ6.2J0XAafE.f6mEr6OAfcWAEkOIgm658BUQap0m/mW,1978-02-15,м,специалист по обслуживанию,True,False,False
+Ashley,Ramsey,Sabrina,Департамент C,justinadams@example.net,$2b$12$ik6O.Nkd9azNfCIXc9H6UeWJqEJFIDQWmTLSFfvKzkLpM8JM/BXTa,1998-04-27,ж,специалист по обслуживанию,True,False,False
+John,Kennedy,Jerome,Департамент A,gina05@example.org,$2b$12$mK52edfI0fd.kc8zfTmgge2j/X1hNs43GgElDbnGHSk0Vy.TWiuGm,1970-12-17,м,оператор производства,True,False,False
+Michelle,Davis,Ryan,Департамент A,jonesjeremy@example.net,$2b$12$Sgrr0ToNuTaKQ90p41x2iu8Aw98bWpUbdAOmHJRDVZy8tOwLKGxnO,1966-07-16,ж,оператор производства,True,False,False
+Cassandra,Nixon,Larry,Департамент C,uparks@example.net,$2b$12$WptB2rC9Pv54.H/i6jVdRu.fpiI2NQFSQoGuSaxH9e/Q71FIfvcGu,1999-06-16,м,оператор производства,True,False,False
+Joshua,Walker,Wayne,Департамент B,ohowell@example.com,$2b$12$c4XHz8wBdIP6jjw4men96.PkQhHtyJabPjmYN5ZHUKoazwEhsYHqu,1983-10-26,ж,оператор производства,True,False,False
+Kenneth,Richardson,Rachel,Департамент B,anthonyclarke@example.com,$2b$12$LB.hW1Sxq8oJU7UhWoiB1e7DjaXAzw2RPIytTG4DivzH8JW230bfu,1968-05-10,ж,оператор производства,True,False,False
+Vincent,Bell,Erin,Департамент C,fergusondavid@example.com,$2b$12$y9OBlwfFbGc.TeAcuwoTK.ESF4D9WViOm076SkbdPjs16E5GhA2RS,1974-12-26,м,специалист по обслуживанию,True,False,False
+Michael,Blankenship,Larry,Департамент B,scottlewis@example.net,$2b$12$Aod0d9SuYH.nWWtQE.8Jd.dhuc/P9RNIXPvHqb1Qla7ffKYSnPEg2,1997-10-09,ж,оператор производства,True,False,False
+Tonya,Wilson,Chris,Департамент C,ambersanchez@example.org,$2b$12$ugRQWj849Pb1p9inC2ecYeKq5WFNj9jrL9N68do./stztg52BSEra,1966-11-26,ж,специалист по обслуживанию,True,False,False
+Jennifer,Johnson,Mark,Департамент B,vyoung@example.org,$2b$12$iCgFd6KoOFckrJNKLeQy7OsR6coViN9CWTWikUsvZzFDPn6Vr2GIW,1985-06-05,м,оператор производства,True,False,False
+Joy,Adams,Terri,Департамент A,colemanjonathan@example.net,$2b$12$kpBR7Ryi7Hhh5NCfs7r3Uuwt./VepWqSY/JuOtVj4Eecuslru6UvW,1979-02-13,м,специалист по обслуживанию,True,False,False
+Alexandra,Brown,David,Департамент A,nbonilla@example.com,$2b$12$n8sY.3v4iEeOHjvOGpxzWuJZdOMAysqPg3h7ueC5t3CZIkkwZ172G,1967-07-25,м,специалист по обслуживанию,True,False,False
+Wendy,Roberts,Elizabeth,Департамент A,dakota30@example.com,$2b$12$bgyIT/hhc71qx/to4wwpjeN3KE1brlf09ieZUN21O6NsfRdxHU1.S,1970-02-13,м,специалист по обслуживанию,True,False,False
+Benjamin,Brown,Kevin,Департамент C,wcarter@example.com,$2b$12$TpT5hyuJaiHjnCKPW6PXnetpEf9WQBoEqRbtZZN9Kns6Ff4.zi.Pa,1984-08-25,ж,специалист по обслуживанию,True,False,False
+Stephanie,Flores,Lisa,Департамент B,ericbaker@example.org,$2b$12$84HacLlAkRiGPZ0bqAwbQedlZCMmGn3T/qZteYrlDhkaP/H.YIrlW,1987-05-06,ж,администратор,True,False,False
+Cynthia,Ortega,Mark,Департамент A,diazwesley@example.net,$2b$12$U.rPzj8sZuEwmwMRShhAl.ZF.c7kEklP5/AzdLMtoKud75Ga5Q5Qu,1973-07-03,ж,оператор производства,True,False,False
+Jerry,Jones,Daniel,Департамент B,todd72@example.org,$2b$12$LuL5CSmntoTC6p1XUe1jA.5k/d.bWpGVxT5NJZIKNF2sY/5s0sBna,1969-11-10,ж,специалист по обслуживанию,True,False,False
+Jason,Booth,Kristi,Департамент A,jamescunningham@example.org,$2b$12$tXyxNZDwn6bqpsKfkOHtLe4gcm.g8JsQPqU8ddsrVObXFNo79WS02,1964-03-20,ж,оператор производства,True,False,False
+Kimberly,Aguilar,Chad,Департамент B,meagan88@example.com,$2b$12$IwCO/R4HWYJtDWVpP/j7wOmCK3ksqK1Vp65Yh4ir9PStOVaGd0gG2,1984-12-31,ж,специалист по обслуживанию,True,False,False
+Miranda,Shannon,Michael,Департамент A,turnerjennifer@example.net,$2b$12$OeX7ry/7T6MLXfgDMFCuWOpct2vgvCGUWt32mYmU6xNI4i/yOmJwa,1983-12-14,м,специалист по обслуживанию,True,False,False
+Christopher,Clark,Danielle,Департамент C,alexis15@example.com,$2b$12$XDNG.YsFQ/Ne6tSgbBAv4Oghow2shrcMm2tn42ToAOBASBph9Kp2i,1978-06-14,ж,специалист по обслуживанию,True,False,False
+Megan,Robinson,Sandy,Департамент A,oflores@example.com,$2b$12$k406vR3wjlLHWh1E54gxA.tXygX8dqAu0vdGJ.Wuub5d/5PcAvwVy,1996-04-06,ж,администратор,True,False,False
+Cassandra,Walter,Michelle,Департамент B,mary77@example.com,$2b$12$D8vDNp7y/476azbw2xBiueWKewH204OwtOORjxu6dtcF4l6DTO8rm,1970-01-13,м,специалист по обслуживанию,True,False,False
+Richard,Thomas,James,Департамент A,kimberly26@example.org,$2b$12$IKKS3p4dWQLVVZYbaEsy3Oa23/kZyEk0MDHQHzOhdl3g2wxqXyrZW,1987-12-28,ж,специалист по обслуживанию,True,False,False
+Courtney,Scott,Jeffrey,Департамент B,ryanmurray@example.net,$2b$12$AkOhIA87Gm/EfF7yv3lnTuthHWa/kGrz9HYYJrKm0T7qKTHskA9Ke,1980-07-22,ж,специалист по обслуживанию,True,False,False
+Brian,Martinez,Daniel,Департамент C,rebeccahernandez@example.com,$2b$12$STHs59D8UKsZHTvjKBG9x.wEbrSUMvgM0kz1NxWyBAGe5NvESxn7q,1978-09-12,ж,администратор,True,False,False
+Latoya,Cain,Robert,Департамент C,brandongriffin@example.net,$2b$12$s8wjggOB84oz1eB25swYy.PevXfSEX4ND8ds3uTIsU4AUBDzPE7dq,1973-06-28,м,оператор производства,True,False,False
+Michael,Drake,Joshua,Департамент C,blackchristopher@example.com,$2b$12$5SvccwwcKg0LUgRma7C4/.xaCVfLPO9tJrAxD965Jxdz7Ihgff4Ze,1981-11-02,м,специалист по обслуживанию,True,False,False
+Jennifer,Thomas,Joseph,Департамент A,wjohnson@example.com,$2b$12$/Son1IVR4VazI84eQKuV1.desngKNDncAEUwP3lkK2m8lkeOIIRxO,1996-05-20,м,администратор,True,False,False
+Raymond,Baker,Terri,Департамент C,ucarter@example.com,$2b$12$ydX/h.pPKsO3Sjvh/CnLK.oaHfcdgCDo0Zfy5Q/d5TnIsyxowJ3iy,1990-08-18,ж,оператор производства,True,False,False
+Martin,Marshall,Jacob,Департамент B,ralphstewart@example.net,$2b$12$bgO5iDQjoEJGLC.UpMto9.Z1w8lOirX2jfiuxAe0XJmPQodetB0wS,1968-02-24,ж,оператор производства,True,False,False
+Curtis,Richmond,Elizabeth,Департамент B,jean38@example.com,$2b$12$n9gYMwZkxgnfwC/ijq4aKu/Yfe6mrgnBP3sgqoVea0gacRPyK62.q,1976-05-07,м,администратор,True,False,False
+Christopher,Manning,Ashley,Департамент A,nathan86@example.org,$2b$12$aw4j9W.3p9jTTPDFUDkyuujBXCN/UUhVfe6lyuHLGNWARTL.FuRzK,1968-03-11,ж,оператор производства,True,False,False
+Ronald,Gutierrez,Sandra,Департамент C,brianwalker@example.org,$2b$12$EoWLj4H23MRlx.ve7io05e6s/wthfGda46c1ffPrvY1cAm0qfu0.u,1988-06-28,м,оператор производства,True,False,False
+Michael,Wagner,Katherine,Департамент B,barbara88@example.org,$2b$12$uJFTKmi5TSzcithIzTOVuO2KrYdS8z1vIk9oHWNDiMDmLFxfHMEHy,1974-09-22,ж,оператор производства,True,False,False
+John,Martin,Steven,Департамент A,gilbertbrandt@example.org,$2b$12$UgCqIoGJFgXIYZafPyZ2Y.9dnHVsQDXZMkoBbXaqsUzqp10jXcwWq,1968-06-18,ж,специалист по обслуживанию,True,False,False
+Laura,Chavez,William,Департамент B,mmcdonald@example.com,$2b$12$1ZupLkp31sBbtKo8AMOIMOP0MAly3B0nydwnP1iSRNljt7ewRfbr6,1996-06-30,м,специалист по обслуживанию,True,False,False
+Denise,Berry,Rachel,Департамент C,sheltonrachel@example.org,$2b$12$raInPo0b.d9g59Ntj5oj9u4UMDhSZ7OErSYk5csZsngDM55OWz3MG,1967-09-14,ж,оператор производства,True,False,False
+Kyle,Sparks,Michelle,Департамент A,martinezmichael@example.org,$2b$12$iw4phu/jDNcoDQRyUuI/tuTdU6ihulecVUd3QF/rKKeuejmPHYYuy,1980-01-18,м,администратор,True,False,False
+Christopher,Simon,Patrick,Департамент B,igarcia@example.com,$2b$12$fG37JAEt7sKU3OS393qa1uJBjQjs8jsTCKm7H88vEUEaT/J4Q8eSK,1976-10-31,ж,администратор,True,False,False
+Hailey,Carson,Megan,Департамент B,angelagonzalez@example.org,$2b$12$NhGbuoWpyfsrFEVUbv.HO.A92vNP2zL9SEYmYzHl3BdmALYC9u0Vm,1999-05-10,ж,оператор производства,True,False,False
+Ashley,Young,Heather,Департамент A,loristafford@example.com,$2b$12$SE0m7CYCCMZ2PF56KeTeIeA6EdqmMb6YeA8m7Vabk1P89P/aYX5O.,1984-04-27,м,администратор,True,False,False
+John,Mills,Michelle,Департамент C,khanvictoria@example.org,$2b$12$idewyod6f5vxlzjWkVoXTe.Pl9jWtB0Nie.X3pt1Qe6Fx93E6ZrHq,1979-02-28,ж,оператор производства,True,False,False
+Carolyn,Acosta,Joseph,Департамент B,gonzalezmichael@example.com,$2b$12$64QKMp74wTBCHQNOlqKJKOx0..2xy7UaRiWvdidqt2krjnKJv0kWu,1993-12-09,ж,администратор,True,False,False
+Jennifer,Johnson,Bianca,Департамент B,alishacaldwell@example.net,$2b$12$OnzZ83AWlKW7ERKh6FJmueX7gyEuaHbVcxWTC2bOrilXd5VQXNp.6,1988-07-14,м,специалист по обслуживанию,True,False,False
+Sarah,Gilbert,Veronica,Департамент B,smithalejandro@example.org,$2b$12$013syNPpIcQRpsnm880szOY9QYPXRC9gavmESin81T8QCNOJHu/GG,1988-07-02,ж,оператор производства,True,False,False
+Jessica,Singleton,Tina,Департамент B,kennethfranco@example.org,$2b$12$Md.cQKJfPN7KcAtfJIsrVeDRazJZwn00C6s0Zhl548jG07X0A9Ug2,1998-07-26,м,администратор,True,False,False
+Donald,Richardson,Deborah,Департамент C,carrolldonald@example.org,$2b$12$iVaQQwAxBDNfYNe6OoxpMO0iDRlfqP0lg23lcFfUeUxiVRakYu2F6,1970-10-23,м,администратор,True,False,False
+Travis,Schaefer,Walter,Департамент A,gomezjoseph@example.com,$2b$12$cvtvXA0OgyMc0/JDXrNUeuMnEAlz3KQKi4UZZRhaGQmw2TKhoKnG2,1977-11-23,м,специалист по обслуживанию,True,False,False
+Gregory,Ortega,Brittany,Департамент C,sarahwalsh@example.net,$2b$12$8MrVsv2GZ6vKWe5wXhuZKuuNb5I4IkTsYo17bcWJcFgj8NYU0mETa,1966-09-27,ж,администратор,True,False,False
+Daniel,Barnett,Robert,Департамент C,larryharris@example.net,$2b$12$XGWJlWnpzPA/6NCQWms/puvmQwzi7GeVYNdO7OC/B/t4X6pziS/ue,1995-08-04,м,специалист по обслуживанию,True,False,False
+Christopher,Townsend,Glen,Департамент C,taylorsarah@example.net,$2b$12$/8aZHjZ7QSMHkWLldEXM/OAQg1LwOBRybuJk9BtdPtZ264oXM/idu,1978-03-02,ж,специалист по обслуживанию,True,False,False
+Jeffrey,Moore,Robert,Департамент C,andersonkatherine@example.net,$2b$12$kVvwcWgN18/ps7yNf.NwauhtIaeh5AAZ0dE.blDvmSOY.GjkugKGm,1968-05-16,ж,оператор производства,True,False,False
+Lauren,Shepherd,Jordan,Департамент C,sheadanielle@example.org,$2b$12$yTrgUxSS5/mXvv5.dsjOjO5JIhfCVdSl/1hBy3kT3ywQuVUbhcvne,1973-08-22,м,оператор производства,True,False,False
+Jared,Rivers,Adam,Департамент A,barnessteven@example.com,$2b$12$v4rxVObMHYTg4wQ/iFQZg.3xm9ia3T4g0vy5utnJV52L0DCiBN9L.,1990-11-07,ж,специалист по обслуживанию,True,False,False
+Patrick,Jones,Debbie,Департамент A,margaretwhite@example.com,$2b$12$uWa70jOL7UyM1teUsosdxuFG3XY2ggqfbi2o6g46mGYqLHieT0Vr.,1996-08-10,ж,оператор производства,True,False,False
+Kevin,Schmidt,Martin,Департамент B,alexander27@example.org,$2b$12$THlMkjaGpEu1oJJhzomYgeAS8qFe16HldYwbPSKi9zaEB1JJH.XRi,1978-01-25,ж,оператор производства,True,False,False
+Richard,Landry,Evan,Департамент B,charlesedwards@example.net,$2b$12$XzYZiV/aSs8N6BFPI.s5cOXXJBRzHvG0WJQWNhq4YQ8A1PYLDLDau,1989-12-18,м,специалист по обслуживанию,True,False,False
+Catherine,Tran,Sandra,Департамент A,brownsamuel@example.org,$2b$12$cmbMQ7bzLtziN.zIN8cNL.uAcfAmMKdT1WrPyTvvTnjLSIpoGdanS,1964-12-14,м,администратор,True,False,False
+Paul,Romero,Cathy,Департамент A,patriciahall@example.net,$2b$12$JW/hK4NAWx9fPYYvcQc6O.vCYXRSa8gwIw1Axk6mzJFFQ13BBAIgu,1992-12-22,ж,администратор,True,False,False
+Randy,Lopez,Beverly,Департамент B,milleradam@example.org,$2b$12$U7ChewgNMLGVWJX22o1XpuZ6Nc2M5/mDyIpaXSdOPGvu7ajLlBz1K,1996-12-11,м,администратор,True,False,False
+Destiny,Archer,Sara,Департамент B,mmiller@example.org,$2b$12$HNjLymQ/Bw/P5fjTO/K0/e3n2Cg1xN/B78xTPfTfxbmPVuabY89uu,1981-03-31,м,специалист по обслуживанию,True,False,False
+Julia,Garcia,Tina,Департамент B,harrisonderek@example.org,$2b$12$yFyCWd1DD/KQulZfggAxCug7lYOoDtfA3VUVp39k0llf6LXcP5EsO,1998-06-26,м,оператор производства,True,False,False
+Kayla,Howell,Gina,Департамент B,dreed@example.net,$2b$12$rtTvRb700yANppW0cLVgKO6CNYPCwOa6e5CGZKJ86X45tj4IQfxgS,1966-09-16,ж,специалист по обслуживанию,True,False,False
+Roy,Chambers,Marcia,Департамент C,fewing@example.com,$2b$12$xwOjG7DihvSS41.o2ePzAu664Zb/z7GzoSawE5d67aGHx2XdVhXGm,1972-12-02,ж,администратор,True,False,False
+Jacob,Rios,Luke,Департамент B,larrylewis@example.com,$2b$12$kUsBSImAAOqZBkgVV3JWrubLUSfePiPoEroN1uzJskE3pn1MRYPjy,1995-01-22,м,администратор,True,False,False
+Karen,Waters,Lauren,Департамент C,yjohnson@example.org,$2b$12$sk7r1Z8yJgec/OB2MMrUdOpJk/qum5oFrYABAWhCJDqvugOBx2fpS,1977-08-22,ж,специалист по обслуживанию,True,False,False
+Timothy,Coleman,Carrie,Департамент A,tacosta@example.org,$2b$12$sbgmlwX70cxsmZs.dOzS7uQllYLAW56P54mGj8uVqbakzIkhPu7Z2,1982-07-07,ж,специалист по обслуживанию,True,False,False
+Victoria,Lang,Christopher,Департамент B,jon14@example.com,$2b$12$nFSPvW0VsCR286x2m4T7fex6XG3O.r7qmvzmcNfVo.dMzvWa02EYu,1978-02-14,ж,администратор,True,False,False
+Jackie,Figueroa,Blake,Департамент A,chase31@example.com,$2b$12$VetQ/sQNl48V2.gbyCsAceKpwIaFgkcG6zpN7mk97rCf90sCf2Vlu,1995-12-05,м,администратор,True,False,False
+Jeffrey,Short,Kathryn,Департамент C,ohardy@example.org,$2b$12$McFhJNWgQ7.rYFUXNkk8/evTpNqa9x1gO0/ElffE.RCCAExCpdtqy,1984-08-04,ж,специалист по обслуживанию,True,False,False
+Jack,Melton,Lauren,Департамент A,isaiahhorne@example.org,$2b$12$hLmXhw7ox3NDiaBbUCa0Ze1heD/KaISNxzsjFDWFxgovSA6prOJqu,1986-02-28,м,администратор,True,False,False
+Krystal,Wolfe,Tammy,Департамент C,michelle17@example.net,$2b$12$KScERcZMGhBbLv8Ya1Q4p.5/HCgz3oP4YPZMnOusWljoe2edrWrS6,1977-09-15,м,специалист по обслуживанию,True,False,False
+Tanya,Hale,Anna,Департамент C,savagenicholas@example.net,$2b$12$qnZ0W0xAl/YmRcxOb1mgZudC6x5hHnOfz4AVlHWcrtFdvj80NOiKm,1980-12-09,м,специалист по обслуживанию,True,False,False
+Joy,Patel,Troy,Департамент B,donald98@example.com,$2b$12$Wk6fuNAINR/2kk.M.Y6Pz.5NuJ7TtOmsj/9dYSG5qd.Dwnohx2DJK,1993-02-15,м,администратор,True,False,False
+Dana,Sanchez,Juan,Департамент A,laurenpayne@example.net,$2b$12$OdzH5j7AX03M8EYZlvUEOONFtUV1SQCK2c3jhbClmNNrOP9DwA7ti,1995-11-10,ж,администратор,True,False,False
+Christina,Taylor,Mark,Департамент B,christopher15@example.com,$2b$12$fE51RwKPx6TroKAJ2VMiI.3NlsCF5rnPzpRvGMzvewo7srwicPFGe,1982-12-07,ж,специалист по обслуживанию,True,False,False
+Trevor,Patel,Patrick,Департамент C,bowmanjacob@example.com,$2b$12$dTkWNQd8bXXk.8xDH8C7XuBPeTpnkYytNLW1QxqFV9mUnkAi0xa1y,1983-02-24,м,оператор производства,True,False,False
+Scott,Warner,Linda,Департамент C,drewryan@example.net,$2b$12$Y2LaEtOG4scl3rkmPdIPwOlUUuHiQFJKC9RgwNy94xWU55756nmka,1993-08-22,ж,администратор,True,False,False
+Carlos,Woodard,Debra,Департамент C,wmiller@example.org,$2b$12$/yhe.qG1Jk8sLSitNeuzD.M54DJAqBd/aSwDsfDMwM0YOVeIL5VU.,1985-02-28,ж,оператор производства,True,False,False
+Edwin,Cohen,James,Департамент C,amberpowers@example.com,$2b$12$EOUy5AMWNOoQr90ija0y..bEet2S8ZTJOfp122brmH5QO.xN91ubG,1987-09-05,м,оператор производства,True,False,False
+Jonathan,Morgan,Erin,Департамент A,bryan85@example.com,$2b$12$055Saulx4i8OKqBDX2Xa4OBB8ffkeQsP/a/OPYEloX/FzWw8ghFii,1969-12-08,ж,администратор,True,False,False
+Glenn,Perez,Sheena,Департамент C,victoria00@example.org,$2b$12$7x2ojGTourTSGjKcJzORquh6auUaIf5GbjM7DdpiWaAD991bse78a,1998-05-01,м,администратор,True,False,False
+Hunter,Lane,Marie,Департамент C,victoriaibarra@example.org,$2b$12$i9iZO7kJERJahUyCHnGMcOpOVDyLUYVnrH2BJlI82cYdWGU3YwmbS,1992-06-17,м,администратор,True,False,False
+Richard,Hensley,Nicole,Департамент B,sarah09@example.org,$2b$12$wSfIKgCM7Wo8U8LfPcH38uQeBeb6W/JQqgODe9i6X3piPpUXr6zO2,1989-12-19,ж,специалист по обслуживанию,True,False,False
+Jeremiah,Williams,Chad,Департамент A,gabriel99@example.org,$2b$12$65q.H5PARVlEAuTEfdshY.Gi7Q71dlpx593BEFLkaJ8qk69Q.xMYe,1986-12-03,ж,администратор,True,False,False
+James,Lawson,Amy,Департамент C,jacob18@example.net,$2b$12$DCxJuLqzGq/Ux9HhGL.Jv.b6eeJWr5DIwfQAEbtCPyoOzbxx7Avca,1982-11-05,ж,специалист по обслуживанию,True,False,False
+Jenna,Montgomery,Mary,Департамент A,hduncan@example.org,$2b$12$dtIpczUafoHJAL5s.Bjdwe7NPdLPP1NzOVLgUsmxgrJrtLa86p44m,1971-02-28,ж,оператор производства,True,False,False
+Bruce,Green,Brittany,Департамент C,ericnelson@example.net,$2b$12$ygvwi/ZaO95iAdqStl6I6u3./CwW4TMEZEdbG9e2I8acrANw8nuja,1976-03-04,ж,специалист по обслуживанию,True,False,False
+Barbara,Michael,John,Департамент B,obaldwin@example.com,$2b$12$Xz0F0.q3HgXyi2zmwbY.teIKQcLOojcyh78vj08uWS4VNYYcg5cMK,1973-11-16,ж,администратор,True,False,False
+Melissa,Clark,Robert,Департамент B,kennethball@example.org,$2b$12$T/hfDKyS/yMORmWrKLUqxeYmunUvACRfmSg99XKUi9w2bM2lFa20O,1974-09-23,ж,администратор,True,False,False
+Michael,Bowers,Jessica,Департамент C,paul43@example.org,$2b$12$J77Lr0zjlrT4fiaA/JOV5e1UX08R51GSvDEA9PbpxJ793CwcuOsga,1969-04-05,м,оператор производства,True,False,False
+Ronald,Williams,David,Департамент B,melissa08@example.com,$2b$12$l6f8XRDAHQZyuj5k.vAmOOsiCjXt36jLKlso9ubJoDTCxV7WHVRDW,1965-10-30,ж,оператор производства,True,False,False
+Julie,Thomas,Melissa,Департамент C,jchung@example.com,$2b$12$uNmNlY9dQuQMnsGXY5bNoeRTT83qahojPdh1U7mQcb5Yf4dFb8BU2,1993-06-30,ж,оператор производства,True,False,False
+Ryan,Schneider,Jacqueline,Департамент B,vwhite@example.net,$2b$12$.5kFhNrweqaYT7qGZNb2gu8FnHvCb9T7Cid.ZzhGSVFeEqkKO07Wm,1997-09-29,ж,специалист по обслуживанию,True,False,False
+Carla,Esparza,David,Департамент B,bridgesjulia@example.org,$2b$12$69UZtjCQ6/vXo6hSqDiguO8VI5gZZc5l7F5xvEgisz5Sm7diSehNa,1978-08-01,ж,администратор,True,False,False
+Terri,Rhodes,John,Департамент C,elliottdavid@example.org,$2b$12$BzTKZvhePlXJqkKWROVY3eaZRgf7LMtNIzovR2.lUiiblrMz6JvnO,1972-04-14,ж,специалист по обслуживанию,True,False,False
+Adam,Baker,Emily,Департамент B,mezamarc@example.net,$2b$12$7ZlEU3E7cJjTx7UhAX38xe8YFKJ0ru9B.M7Hz7XBEpT8tTwtb.ttC,1980-06-30,ж,оператор производства,True,False,False
+Christopher,Wells,Jill,Департамент B,cmatthews@example.com,$2b$12$lxIdoktAII/Fz.r6rkmkwOIRJPDXaCX.RaFy2./gH.kWWPs.eVFaC,1992-02-13,м,оператор производства,True,False,False
+Savannah,Cortez,Joseph,Департамент B,kathryn74@example.net,$2b$12$K0cA41Xd6vv7sZqSUTIhYuff8woWtGGbj71.MpaHKXPGsFYdqyaJi,1983-02-12,ж,администратор,True,False,False
+Vernon,Stanley,Lynn,Департамент A,gkelly@example.org,$2b$12$pG/FxNgWV8j/sW1ABACfZutMT222LFFaep9sbehEY27iM2PjPBTnG,1976-09-22,ж,специалист по обслуживанию,True,False,False
+Ruth,Oconnor,Reginald,Департамент A,joshualewis@example.net,$2b$12$yvUb/LRUyv2hbJepPDq28O008Z4EA1Rvox0GnhJTyUp3TdVpIzzZ.,1980-07-05,ж,администратор,True,False,False
+Kristina,Brandt,James,Департамент B,stephanieeaton@example.org,$2b$12$nJAUkHghAOpYPN2bdnxLD.MsOedet.uvuKmNVGaxaNvi/H4iIU322,1969-09-18,м,специалист по обслуживанию,True,False,False
+Alyssa,Green,Henry,Департамент A,brandon78@example.org,$2b$12$3MQZWyMB004BkTCdnmnMaOjPSAX4a2rpz0iwdifQuZOQ9wvfrnvRO,1971-04-02,ж,оператор производства,True,False,False
+Charles,Martinez,Sheila,Департамент A,curtiskenneth@example.net,$2b$12$0hxiN2VHcdQrUIM2asIKouO3CHnk58/ukOBgv/WavhgydaMp0nUcu,1999-02-15,м,специалист по обслуживанию,True,False,False
+Jeffrey,Perez,Paul,Департамент C,lisa91@example.net,$2b$12$bIUGZ27VlZKR80GAECNrqurdUw.XeM0CB7nCQDR1xXzA6fdHx2JRK,1989-09-18,м,специалист по обслуживанию,True,False,False
+Lorraine,Lowe,Richard,Департамент A,kpearson@example.com,$2b$12$KHHy8JODxdf1M2teHMH9VOWwtsu1vTNGu3JSUHbPjbDs1uTN9fYbi,1979-08-12,м,администратор,True,False,False
+Shelby,Bell,Daniel,Департамент C,lambertpaul@example.net,$2b$12$cj3IAttYV6xVb/erhYIJiu5S2SmkbzGoVNQJLFPIMBB4Qx7dzFvFe,1982-03-09,м,оператор производства,True,False,False
+Christopher,Harris,Justin,Департамент B,obarber@example.net,$2b$12$KEuLYnZ/aEZGdNr8K7BiWOfWwGHE3JiqzpKIFHmX8z/ufdomv59Cy,1963-09-06,м,оператор производства,True,False,False
+Michael,Williams,Alyssa,Департамент C,sthompson@example.org,$2b$12$.pyz66NkEJEYiNwz0eTRcO2gGPbuOysAlcJchAzO8rZZ/zwTWuUs2,1994-06-01,ж,оператор производства,True,False,False
+Bradley,Baker,Stephanie,Департамент C,barkerkristin@example.com,$2b$12$8web56PWPv808QuQYxs6NOGUuKvcZ8A.jowZJ2s51cQV/G03rnwti,1987-04-28,ж,оператор производства,True,False,False
+Shawn,Walsh,Martin,Департамент A,lori21@example.org,$2b$12$av42sWH6uJiEvbNz3XMB6OL5Q0Q6.KmUj2llg.H4Sc8Bh0ZF/cXea,1996-06-17,м,администратор,True,False,False
+Michael,Dyer,Monica,Департамент A,abigailgardner@example.net,$2b$12$URtCCpXiymMY9Nnk.ievq.DSwCiDZ.c3zIj/GVrkvRa3N9GBJ80mS,1977-05-09,м,администратор,True,False,False
+Philip,Walker,Alyssa,Департамент C,mrose@example.com,$2b$12$ut08tmsH7coPmc7dM9aYSO2sODFiT3Y6IT8uz8DaiRFNKF.CdHERi,1973-04-13,ж,администратор,True,False,False
+Angela,Blackwell,Timothy,Департамент B,allison29@example.org,$2b$12$.8tRajhjPgB4Y9W.mYKOhOSz7mx28U1iyWEvHq0/gfxq9JqvYEhma,1972-03-03,м,оператор производства,True,False,False
+Kayla,Harrison,Megan,Департамент B,scain@example.org,$2b$12$vjJkkYCVsUDR98XvHLyq0.fcVDx/t0k3PdVa6DY9Qa4BZi50Dj1IS,1994-12-27,м,администратор,True,False,False
+Dale,Anderson,Pamela,Департамент C,mcdonalderin@example.com,$2b$12$1RBfnT5Tow5oBOUzCp4TV.KicoAVIGtbnEt6TakORpXelRdg4rzC.,1963-10-09,ж,администратор,True,False,False
+Tanya,Reed,Christopher,Департамент B,christine88@example.net,$2b$12$6oWQQiFRkjEuugxYedVrAOFmEC5pjLR89hT3Q3htfwt.eQ5lbSotW,1972-02-19,м,администратор,True,False,False
+Todd,Evans,William,Департамент A,reginaldglover@example.net,$2b$12$BY/U8xLn81xFfMNTXpdlu.7zNxKvpbJRIXcoStA3C5u2Fw/vPzNdC,1967-12-02,ж,оператор производства,True,False,False
+Sherry,Summers,Joseph,Департамент C,rita09@example.org,$2b$12$Y3BWBIPOJ4Ai1HT1bbLFNOUmmXEo9co05Ehb2hqzUBy7TrKSsaKjy,1964-01-06,м,оператор производства,True,False,False
+Johnathan,Anderson,Richard,Департамент C,warnermark@example.com,$2b$12$JRceZ30bKizCt7NF3G.Msus5zqGNA/Gz3lSGMIhbNj3z2SIcfOHRO,1988-01-05,ж,специалист по обслуживанию,True,False,False
+Carl,Davis,Elaine,Департамент A,melissagray@example.net,$2b$12$/VQOL5tQDQhqabdkX6iVkOGtgYtuDINJ.f3/zioE6QxeQdXOymGgi,1995-12-26,м,специалист по обслуживанию,True,False,False
+Keith,Howell,Leslie,Департамент A,earmstrong@example.net,$2b$12$cIaXraNt8cFXGQPjndZkfOJIFe5Hw3uRkoi8DK/HRDFu9oG4E5zwC,1981-08-31,м,оператор производства,True,False,False
+Dalton,Gonzalez,Jose,Департамент A,bondsarah@example.net,$2b$12$3kmg4ybcxSfbPTjdCNNMYuk.uAOsQWOw5MAnRXJvrUrzGTdbuADbu,1998-12-26,ж,оператор производства,True,False,False
+Marcus,Morales,Amber,Департамент C,jessica16@example.org,$2b$12$aUwj2rOiIYZDYfNHQED2A.yEIuqBgT6sLzDUebUhiQqkF5mNGTC22,1993-10-29,ж,администратор,True,False,False
+Patrick,Archer,Peggy,Департамент A,douglascandace@example.org,$2b$12$v1oEvBznvp2hHXL0pnHNjefNRP1.mgZZW/hmDGWs8bN6JhxZZA3F.,1975-03-30,ж,администратор,True,False,False
+Jonathan,Wiggins,Andrew,Департамент B,christophercampbell@example.org,$2b$12$OZS9G9gzA5pQF9ElgDNZAu0/6DBHuUrkfgCSp7wEf0afCUtAc.YAK,1965-01-29,ж,администратор,True,False,False
+Daniel,Graham,Daniel,Департамент B,martinwalters@example.net,$2b$12$USwBl4/6mlxSJnby00QTL.VTDZDBXN9cCZIVITJ40khtKEUOCaCB.,1985-05-14,м,администратор,True,False,False
+Edward,Butler,Donald,Департамент C,gonzalezmolly@example.net,$2b$12$1BCJjkuTI1sepRDjYkjnFOBfQi.Uqi4hHYn1OOV9a2HHLNgmunL2W,1992-09-30,ж,специалист по обслуживанию,True,False,False
+Jacob,Lewis,Brian,Департамент B,grayjennifer@example.org,$2b$12$VO3MJ54mlVIStFI3EZuDiO2eU7/g3ccOa2eGjH9UOOKl9ZCyfYf4S,1966-01-07,ж,администратор,True,False,False
+Aaron,Stephens,Kevin,Департамент A,clarknicole@example.net,$2b$12$bJOvmjttxZ.Ounnl7t0rX.GwAnsKllP7w974judxs5T0eMrBuu7i6,1967-11-10,м,оператор производства,True,False,False
+Courtney,Duncan,Albert,Департамент A,cfoster@example.net,$2b$12$ZdcvCckRhWw80sXs0veTHOBtGAr.A1gKHtoaI2LOO4V9gLV4xjFr2,1978-03-15,ж,специалист по обслуживанию,True,False,False
+Linda,Lyons,Whitney,Департамент B,justin16@example.org,$2b$12$/hMcUWqmFZIZDW/BC6GeJu5ZHw3X.2pDGhq7dBmhtbyYE8iOrQ3MW,1992-10-11,м,оператор производства,True,False,False
+Edward,Jones,Cynthia,Департамент C,bhernandez@example.com,$2b$12$qIztiSBo8E4hYUXv63NvnetO6AworYjFIvgDwCQwg5LNDCFANUhAe,1992-05-02,м,администратор,True,False,False
+Erin,Reyes,Jessica,Департамент A,candiceabbott@example.net,$2b$12$lXqYSiYq4XB0UwNsIFAbQexb8wXJbpiqg60nnHH4i5GtqPVPLN73m,1977-03-28,ж,администратор,True,False,False
+John,Davis,Michelle,Департамент B,wolfechristina@example.net,$2b$12$g9lx9jQWQkx6sKo9RBXIxeQ54OIIoCMPQPkKlauvuelkjk3X1TQc6,1974-02-01,ж,специалист по обслуживанию,True,False,False
+Taylor,Weeks,Christine,Департамент A,rebecca18@example.org,$2b$12$aT25hum6MN5z0ei9Eb.KHeUyaXswstFJKtXyG6V/60LhXGMDOUG/6,1969-05-16,м,администратор,True,False,False
+Kristin,Chang,Michele,Департамент B,maria64@example.com,$2b$12$P6Q99wNMyAcMpGpqM64/pe6VF.3p5K1ZDyrGHeLBfWN5lFutKRL5m,1977-10-15,ж,специалист по обслуживанию,True,False,False
+Debra,Parker,Michael,Департамент A,tsnyder@example.com,$2b$12$M0UCAH5XbtaEKC9pW6pSA.aS6ESqp8RjAlXMCThHtKYcizTeI5tEq,1992-06-21,ж,специалист по обслуживанию,True,False,False
+Ryan,Combs,David,Департамент B,jeanjohnson@example.org,$2b$12$sx6Rsj8KdKRcXMd1/.3iDuy1DzmnYeSVkG.BnRBkhW9HVeOr5HpSO,1967-08-30,ж,администратор,True,False,False
+Joshua,Serrano,Ashley,Департамент B,danielbrown@example.com,$2b$12$CmoJm9HNKvzObCcuvs4a0uh98F1nAUbKJW9CA.QDGMBLqX9xvtzoK,1966-05-07,м,специалист по обслуживанию,True,False,False
+Robert,Wright,Lisa,Департамент A,jonathan40@example.com,$2b$12$R1mylIvALpqdLUm0CvpFxODo6rsUN1qGmL6h4s8BQqjuLMfrFaO6i,1984-06-21,м,специалист по обслуживанию,True,False,False
+Debbie,Clark,Danielle,Департамент A,englishdanielle@example.com,$2b$12$0mViYgmA1Vp2FgDjJq18xer0PejSekOmWZspPQ/YfGrq/XVZJyyjW,1966-05-05,ж,специалист по обслуживанию,True,False,False
+Kurt,Gonzalez,Christopher,Департамент A,mirandakristen@example.com,$2b$12$KV9Acml.NUXY9a1lL59qVuuzsRqcxDS/ZGaz.MGd0lz1pkQkYPTae,1988-11-03,м,оператор производства,True,False,False
+Amy,Warren,Christian,Департамент B,michelleburns@example.net,$2b$12$rb8S7JzPQrAGUMz4ygurq.9QX2EURZgxnaUpotbUE6s9kLndEz7OO,1984-12-09,ж,специалист по обслуживанию,True,False,False
+Joseph,Reyes,John,Департамент A,kevinevans@example.net,$2b$12$QcXwr4WMyK4YV5btdVF8gO9dBh72gF3IFCUTxV6moB8FoUanaFNiW,1975-05-12,ж,оператор производства,True,False,False
+Randall,Brooks,Joseph,Департамент C,travisguzman@example.net,$2b$12$V.oDNORXHEs010lJSx0ql.AfmaJcn3J1VR1C7VbXn8qatNNqhtQYK,1982-12-07,м,оператор производства,True,False,False
+Christopher,Hobbs,Steven,Департамент C,erin42@example.net,$2b$12$G044PmLqZCMUwwKz5DlEluu0ZGXxyKwtxVYXxA31pw1t8zy9kZKJK,1980-12-26,ж,администратор,True,False,False
+Natalie,Gilmore,Jason,Департамент C,juliagomez@example.com,$2b$12$2YHJAFjI20g1OtA0rhKJuePfXVE1N34NbG5dzohBAqBeSUkGOovM6,1978-09-15,ж,оператор производства,True,False,False
+Sharon,Moore,Felicia,Департамент B,emily76@example.net,$2b$12$AZbGTgWguAK2T.XUlAZ8fObU6TMvLYJYhrMRPyEjyS0Aug1eHJ1YO,1977-11-10,м,оператор производства,True,False,False
+Jordan,Walton,Bruce,Департамент B,steven44@example.net,$2b$12$4fsXofNH9ZMc2pRfhjpnGOBB1ITY/884aYfmpPSRdO40z1h8UULKe,1994-09-26,ж,оператор производства,True,False,False
+William,Wilkinson,Timothy,Департамент B,christopher38@example.net,$2b$12$PjoZpvfrgxS90742h569VO3aGaTIgg3LI2rrHVyrR4WoQysHSoIfy,1972-05-03,ж,администратор,True,False,False
+Eric,Bean,Michael,Департамент B,brocklaura@example.org,$2b$12$wU9KBpcm76fh7VuZnCboY.pziZbNIXIP6nIQmKQq4.qP3O214hZqm,1970-07-27,м,администратор,True,False,False
+Kathy,Smith,Mark,Департамент B,greg12@example.net,$2b$12$5rBhm16aNhybwxr8f3Ste.sCLCrPKAlfZSdaseUb.CIxwMdgZn3Oa,1991-05-14,ж,администратор,True,False,False
+Randy,Chapman,Joseph,Департамент C,tmartinez@example.net,$2b$12$OzaUJN/I8SewG51Dz1R5TOFxSeyoYvf8jRi/Oeu5nrarCvvK0lrWe,1965-12-07,ж,администратор,True,False,False
+Nicholas,Randall,Alexander,Департамент C,kyleallen@example.com,$2b$12$g5n7zBE6WehlivQ9pDV07OcmbP29jXeYHqmM7dJpVpWFkCEy/nay.,1974-12-10,м,оператор производства,True,False,False
+David,Stewart,Ryan,Департамент C,hurstcheryl@example.org,$2b$12$pol/lUeTXcNhEm2UXZLR7OlBdZHBOLrM63IANYCycr5DSKLkmUu6.,1991-11-28,ж,администратор,True,False,False
+Margaret,Shaffer,John,Департамент A,roy03@example.com,$2b$12$7wiOTEI8XIrH1JTBdeTfJuw2Bi5qbWUoHovFat8ebe96.g81UHj6W,1992-02-17,ж,специалист по обслуживанию,True,False,False
+Tyler,Bray,Latasha,Департамент B,cohendavid@example.net,$2b$12$jocH7dabNXN9Mg4YYraq..c3hevmTMscCZp8q46uIsiCKGvN0.QrK,1994-01-24,м,администратор,True,False,False
+Audrey,Sanchez,Sherry,Департамент C,marycarlson@example.net,$2b$12$oo0qet8SEzUVIazynkAh/uta1.uEncunVD3iZlUqDgakoC9DCZSnC,1973-03-07,м,оператор производства,True,False,False
+Amanda,Cross,Richard,Департамент C,ryan79@example.net,$2b$12$DldVlkME43K01d5CoWNQKue4BIYsMRarxkFyFK89ieACD5wnO4jYq,1967-07-08,м,специалист по обслуживанию,True,False,False
+Alexandria,Davis,Daniel,Департамент A,holmesanna@example.org,$2b$12$fcK5KgBBepH8oCY9qJ5jv.rPWhQci0CZJjkRtPc1OLYCMwFi7Roae,1978-07-08,м,оператор производства,True,False,False
+Mary,Chapman,Pamela,Департамент B,tiffanysantos@example.org,$2b$12$4E989/jklKBuUASuEBVJPOFEWSDKmpugy6YTApbqUpqgrMhco2tyq,1979-10-03,м,администратор,True,False,False
+Eric,Solis,Eric,Департамент A,sylviaramirez@example.org,$2b$12$4bxzv4Ku6NIEoyUzEy3eh.2B3JACJb85QXbsXG1QO1qIcC1eiohUu,1996-07-30,м,специалист по обслуживанию,True,False,False
+Samuel,Coleman,Gary,Департамент A,fletchercharles@example.com,$2b$12$E/6uKn1SF3xqHoqe/SpVEOZUfHxv8W46ogJWZVUlNSkJbl.pprq/q,1964-08-29,м,специалист по обслуживанию,True,False,False
+Catherine,Greene,Willie,Департамент A,znorton@example.net,$2b$12$ru0h3YNj2rmCUGdG0PbyNODRqZt0OraNSVQQQoUhdTBx9D6Vy510.,1975-10-28,ж,оператор производства,True,False,False
+Christopher,Terry,Scott,Департамент B,mendozabrian@example.com,$2b$12$J5az5vU3NC/W5gbAOBto7.n0eBN7tdeyUWGBP4Bl2KKJoatbmtb.S,1993-12-04,м,специалист по обслуживанию,True,False,False
+Jennifer,Phillips,Charles,Департамент A,brownnatalie@example.org,$2b$12$AYaBK4Dto.3lNY6jo6oCSu3K9xioPdQrVxFd8CBif.cto8I1n6Ham,1986-02-16,м,оператор производства,True,False,False
+Jennifer,Brown,Richard,Департамент C,rhondagray@example.net,$2b$12$Cown/92J3VJJagLwNkcJveF16W4cSlCxDtwuf5tQbEsbV4/xTBDfW,1992-05-25,ж,оператор производства,True,False,False
+Elizabeth,Dickson,Denise,Департамент C,darrell61@example.com,$2b$12$SPweRGF56V1BHhOZ1Pw3We2TMFUqDY/LoXLWx8Y4wjF6/OZczLbrq,1984-03-11,ж,оператор производства,True,False,False
+Francisco,Maddox,Brett,Департамент A,brittanynelson@example.org,$2b$12$Rc2OIyADw2nmOD.E/cn8lewxQClIuz6qBeI3nccMH2DYO/H1UoTN.,1987-08-10,м,администратор,True,False,False
+Kevin,Williams,Heather,Департамент B,vgrant@example.com,$2b$12$PZAPJX5qYofxhD.X2.Gm7OegxnM7KbEFN9M/s8pHKAdhvl/0qHeOi,1970-10-16,ж,оператор производства,True,False,False
+Daniel,Hurst,Allison,Департамент C,stephanie64@example.org,$2b$12$HvUvJGadHXOX8gc0NecszeXJf2mekAK4NjIvZGQnpO0V4b8P3U2EO,1980-01-19,м,оператор производства,True,False,False
+Jennifer,Warner,Melissa,Департамент C,thomas59@example.com,$2b$12$yP9DYDkoHxaJN.0SepbWD.r63qniQPR65DyZACRdue2du6rmwXcva,1999-02-07,ж,администратор,True,False,False
+Penny,Cummings,David,Департамент C,edwardsjonathan@example.net,$2b$12$dsNy1Bqk95Vqd6lY3x9Um.w65tjw7wDEQWujYnbNIG7PnFkVPupMK,1973-05-14,м,оператор производства,True,False,False
+Russell,Andrews,Alexis,Департамент A,rmartinez@example.org,$2b$12$uD4AtiOoX/Pe4qZ5Mpu4R.F4qxEKMMOyjrK2G8OBUraYZCBXReKWu,1983-10-11,ж,администратор,True,False,False
+Rebecca,Ford,David,Департамент C,doconnell@example.org,$2b$12$bqFs4zXW1mNj501btflYUeGaeStCQNpQHRyZaOERB6DADGniZA1vW,1994-01-05,ж,администратор,True,False,False
+Roy,Davis,Monica,Департамент B,zbenton@example.org,$2b$12$eHvVkgi13rTcf1PARv48.eL2P/h.XMOVGVGBQng.PTaoWAqNFB1Tu,1976-02-28,ж,специалист по обслуживанию,True,False,False
+Dustin,Thomas,Sara,Департамент A,peterjones@example.com,$2b$12$czQUDpg8e3byP7yV9bqf1uysCvZ1HPdGIAtyTbS.c4Fcas2/JTis.,1972-10-18,ж,специалист по обслуживанию,True,False,False
+Kimberly,Cline,Angela,Департамент A,bowersdana@example.com,$2b$12$0NdwfcIM4w8Vi6AloHwkYeSDxltjo8S..Feb3CC44991Gf7Iz24YS,1965-10-06,ж,оператор производства,True,False,False
+Kathleen,Gamble,Austin,Департамент B,gandrews@example.net,$2b$12$8UrgxobLJJT021y8HNCEHuLzLYDO7MOGNhkU8VgoVvK2NUSjwkTJe,1974-02-18,ж,администратор,True,False,False
+Raymond,Mcgrath,Breanna,Департамент A,jameslarson@example.org,$2b$12$VuzKqfBnVCzO3Rh1e3DvhO.AUHNBunJXPGUmiIsYjF3Ab0gWXzUHu,1989-05-11,ж,специалист по обслуживанию,True,False,False
+Bob,Horton,Kevin,Департамент C,wscott@example.org,$2b$12$/9i35J4mUkaPq51m.t9W0ujDhGs.XCLxiql6Fs6y5m1iR0uAx1NlC,1989-05-18,ж,специалист по обслуживанию,True,False,False
+Brenda,Martin,Jeffrey,Департамент A,dianaporter@example.net,$2b$12$DpM.e6trNK7pXvmwtb3zCeY4e2lV97zNyYoB8xdqfSV3b8pM2A3/m,1983-03-11,м,специалист по обслуживанию,True,False,False
+Leah,Taylor,Holly,Департамент C,sheri32@example.org,$2b$12$hmkbuLE9NDI75WvwSQU4PeRd/FJxbNfrMVdDo3Zz4zMGD.xE15ah2,1986-07-27,м,администратор,True,False,False
+Andrea,Hall,Mark,Департамент C,michael96@example.com,$2b$12$op53w37JlrnVFu3dXCqeSuGiRiIZSX6ikVCYRbs5UCWkSrsAkTW2y,1975-01-11,м,оператор производства,True,False,False
+Harold,Frank,Gerald,Департамент C,gilbertjames@example.com,$2b$12$3Ann5tDW78o.wD97JvDy6Ooof9.MtOzTH17FyJiHkEdLGB/sQ0N7G,1965-12-18,ж,оператор производства,True,False,False
+Kim,Jimenez,Nancy,Департамент B,tjarvis@example.org,$2b$12$QPN.SJV1fQogl0otuB.3Zug5uS1op1oVAuCQRqMWrTMt5NPvpm0fO,1982-03-16,ж,специалист по обслуживанию,True,False,False
+Kimberly,Sanders,Heather,Департамент B,thomasharrell@example.net,$2b$12$5zKAEJGa6KvQ8hOyN0toDOyQZYwEIP2jNp37To4s9ZMIMLgl/d0Ge,1994-12-09,м,оператор производства,True,False,False
+Tim,Potts,Michael,Департамент A,aliciajames@example.com,$2b$12$jeEZUVeB7OUYIMIYwRmGrOAgEGuIqy3RsPi.ISjqyDbm8HkbFQBhS,1988-02-29,ж,специалист по обслуживанию,True,False,False
+Lori,Garner,Rodney,Департамент A,cordovamitchell@example.net,$2b$12$4FCNa1GbYCnmdvNYplPpFuIlydk9ey05G8X3YLMMdujoDAwk.6uHi,1983-11-26,м,администратор,True,False,False
+Tyler,Guerrero,Kathleen,Департамент B,tdawson@example.org,$2b$12$z8aYMjMSiVkmTEleaZPjJe5esbHGDxhqYqn6OOzrBI/Rewn0pIcbK,1999-02-18,м,специалист по обслуживанию,True,False,False
+Vanessa,Gibson,Jesse,Департамент B,vcameron@example.org,$2b$12$czAZp8/g78oag72MyIssZu.PAvd7OyBO02dZ8bJx9fxCblhd8rRMi,1994-01-02,м,специалист по обслуживанию,True,False,False
+Justin,Richard,Kimberly,Департамент A,patricia76@example.org,$2b$12$N8m28TnnwZdVlOIolkYwqeHOTRfk./m4AsDOv7HYNqru0y/nSk5ea,1984-02-18,м,оператор производства,True,False,False
+Daniel,Ortiz,Philip,Департамент A,whitemary@example.org,$2b$12$z5BlH4fdNt1TxpIl4s0HyOWl1/yJfhfbFe3R2CGxQpY9hSReEemiq,1981-05-10,ж,специалист по обслуживанию,True,False,False
+David,Weber,Kenneth,Департамент A,millerdaniel@example.net,$2b$12$ishDMptkXhKVAP9vafGjzexfHsnncTE0QhQfSnXAtnbzuJc.T1ZJa,1984-01-14,м,оператор производства,True,False,False
+Jody,Thomas,Jeanette,Департамент B,jennifermitchell@example.org,$2b$12$rE3DzuFj1n.ZQD8VrYfFy.HKqpwDXhEzcSknXqcEHce.XXVniAX92,1981-12-17,ж,администратор,True,False,False
+Jonathan,Hughes,Antonio,Департамент C,richardsonedward@example.com,$2b$12$pQictmymzvuAPRtEcofJiOz.JfjVDpRmxqhhumUetQd8s2YNkx4W2,1969-10-15,м,администратор,True,False,False
+Kevin,Pennington,Anthony,Департамент C,qperez@example.net,$2b$12$JHrte/BaS3Iy1HYzJVCsKeSmxsAWGOAF88GZzwBO8XS6kUeEbYnJ2,1964-01-19,м,администратор,True,False,False
+Stephen,Wilson,Anthony,Департамент C,laurenfrye@example.org,$2b$12$yxuPWPySG8.2vBgg8KNy5OKLKfOXhZgkPeWKk3Vt3dy8jECIs7aRy,1963-09-06,м,оператор производства,True,False,False
+Johnathan,Bolton,Diana,Департамент B,david73@example.org,$2b$12$Me5sEhI4CXaqwswTS4QoK.Rj6Vb/h5BTaY2FSPaReT5DCqSPbeKuy,1989-03-22,м,оператор производства,True,False,False
+Daniel,Sherman,Jessica,Департамент A,alyons@example.org,$2b$12$XIToSGrV3aBGttIeIBBOt.0C7J1m9D68oT4ho9pSCZdMl/609B7OC,1966-01-21,м,оператор производства,True,False,False
+Laura,Vasquez,Amanda,Департамент A,xbates@example.com,$2b$12$lvBnDpaEojVh0/3PfXWc4OyAyUAHO17n4IqhuBBuk4ru6SQrsCIDi,1996-06-03,ж,оператор производства,True,False,False
+Stacy,Henderson,Ryan,Департамент C,tina71@example.org,$2b$12$WoHjZfGGT28xrQdaRYODAexaMN6FavWYCrKy4R8urmrV8JGFav.Da,1999-04-05,ж,администратор,True,False,False
+Joshua,Castillo,Lisa,Департамент A,ochandler@example.com,$2b$12$vRTmFTdFxZ0ghSmqNmTbl.REok/tECyEJBMsfBUHA.MOEK5Ik/B46,1983-06-10,ж,администратор,True,False,False
+Elizabeth,Riley,Bryan,Департамент C,qhenderson@example.com,$2b$12$y8MmrdRVU7hUv5fdHYEw5e87Cc1B.h0bnpm51ZqzemQer4J45aoMC,1993-02-17,м,администратор,True,False,False
+Kimberly,Cortez,Krystal,Департамент C,wmorgan@example.net,$2b$12$1aBSR6/CzIFGfHt6l64sCOvs9KfXpF5DsAIOpvm2XKfpOeXNKA1/a,1994-08-24,м,администратор,True,False,False
+Michael,Johnson,Sean,Департамент B,carterdalton@example.net,$2b$12$UsdIq8Fk7NOFDR79ZF1wk.N/YcXN16igqUixneEaqInDyTGDPXVWy,1986-01-11,м,администратор,True,False,False
+Edward,Curtis,Troy,Департамент B,colerobin@example.org,$2b$12$m1Vq4UXa.M.EBUpJNNSC5egvpezv5fRHTRvf1uXMOEnbvbRfo8Vva,1970-09-26,ж,администратор,True,False,False
+Larry,Cruz,Tonya,Департамент B,lopeznicole@example.net,$2b$12$R7tvlIIUYTjGvx5aBf7v1.i1qx.M5hcfgmVdFd0GAJdcvibKzzEfi,1984-12-13,м,администратор,True,False,False
+Jody,Odom,James,Департамент A,greenannette@example.org,$2b$12$mcrFrhRuG/COKqLPAbrt/.PReR3zMuaI39eDXn3KMrL/hCyW1lrWK,1984-03-17,ж,оператор производства,True,False,False
+Brandon,Sanford,Sherry,Департамент A,townsendkayla@example.net,$2b$12$Z6q2Y6ek5W4TP8YsqYZ1vuwVEcUSe/Z2xMfSOd/HpCxggjqb.FrZW,1969-12-26,ж,администратор,True,False,False
+Jordan,Deleon,Ralph,Департамент A,dparker@example.com,$2b$12$B8dQpArWn.W6HO/Xys8CjuaplBrQ5I5IO7na20Xu7Mbgcgz5YwRgq,1964-05-06,ж,специалист по обслуживанию,True,False,False
+Tina,Young,Sara,Департамент A,maria95@example.org,$2b$12$df2wa/j3L2fGFs9z/AbCSeFOBGDI5/HHRQi7Jp6fK4rJ6BfsO1peq,1988-09-13,ж,специалист по обслуживанию,True,False,False
+Kristina,Lopez,Albert,Департамент C,jhumphrey@example.net,$2b$12$lqZtWt2RpZGNsZzvbckh8ujjPNgX.yPWtv8Uo3gPYwFMHqWpva1ku,1975-12-27,ж,администратор,True,False,False
+Kent,Terry,Brent,Департамент B,npena@example.net,$2b$12$DdAdemuT3qKCNIS9J.OQHu.5xkeV0pl7XfJhLVQsWGHy0CcmtPhHO,1993-09-03,ж,специалист по обслуживанию,True,False,False
+Timothy,Washington,Emily,Департамент C,ucox@example.net,$2b$12$RgfYJJ0UgUQq1BrxsDDXtedh0rK.fsRrEIsaLik/F2fbQspuoAFwu,1964-11-09,м,специалист по обслуживанию,True,False,False
+Jill,Stout,Julie,Департамент C,april29@example.org,$2b$12$AvSt9XfRnJoUW1SL/j7zOOQ8bsI1kSfS4gxxjFCiKE0mW9cI4ChY.,1978-03-21,ж,администратор,True,False,False
+Angela,Walters,Noah,Департамент B,hollybrown@example.com,$2b$12$KS9Pug2KJG0OpxKrfWmQSera3cC/M3MIxWaIUCngGfJuSQtpv5VHq,1993-10-03,ж,специалист по обслуживанию,True,False,False
+Raymond,Chase,Raymond,Департамент A,evansmitchell@example.org,$2b$12$9qnHPcoNOyRgJlQ8fiENMOoYHA2CZxbcDk9JmCkX2yGt3Dk7yk.su,1995-05-12,м,оператор производства,True,False,False
+Anthony,Torres,Ryan,Департамент B,michaelharris@example.com,$2b$12$pNFU6uKD9sp3eNz616sejuAdsKFvDQanobpA5b8gnkwKkUmLLW/bS,1963-09-01,ж,администратор,True,False,False
+Christopher,Robinson,Tracy,Департамент C,nfisher@example.net,$2b$12$catEHeZ/3mXLJi5Ofxjd9.iQGWa6gKAToPlAx98smADD8vGcU285m,1988-08-25,ж,оператор производства,True,False,False
+William,Levine,Elizabeth,Департамент B,caitlinturner@example.net,$2b$12$Cra94rlMIF/nJPtKqLUNy.zDI92kyW22rNq681uuF2N.Mrxa6KtE2,1986-08-06,ж,специалист по обслуживанию,True,False,False
+Leah,Ramirez,Richard,Департамент A,robertkelly@example.net,$2b$12$StNAV54RaJma3DL4okyrIem9kXUt9Rim3I5CA53.o.CoQ2n0nu132,1993-08-11,м,оператор производства,True,False,False
+Blake,Armstrong,Jacob,Департамент C,lisamartin@example.org,$2b$12$aMuXMEmo0SrPus6wBzl/ge5HRGZWgCahAMH2v/ulGdFk/C9J5c7w.,1978-01-08,ж,администратор,True,False,False
+Brendan,Conrad,Yvonne,Департамент B,paul22@example.org,$2b$12$lvtj17k/IB919ILZVJ44iOU6vOI0fTi82jpq2UNNSvjt5HBXoNl/a,1993-07-23,ж,оператор производства,True,False,False
+Peter,Richardson,Amy,Департамент C,chamberscody@example.com,$2b$12$n6g.6eX8MgEQL5gfbsnbI.ofTd8xACAw7X1QCW3XrmAwcLSdTx/Nu,1998-06-20,м,специалист по обслуживанию,True,False,False
+Lynn,Fowler,Sydney,Департамент A,mitchell29@example.net,$2b$12$s9HJrbWXz8GoGAZj9QOmAuCxce/jEdTApblvVIciVDAiPtFuDcChK,1995-11-09,м,администратор,True,False,False
+Eric,Best,John,Департамент A,hamiltonrichard@example.org,$2b$12$eo1Hk59Hw2tQVsDLnJh61.zDtK7SrVwHEjF2JGuI/3lPjSMAB8cnK,1978-01-18,м,специалист по обслуживанию,True,False,False
+Alexandra,Wright,Denise,Департамент B,tleblanc@example.com,$2b$12$HHGdvseSjZTmp6mHvS//leeMiYTEUGIDK4TxNrPV/oaxMksJYmXmy,1971-06-13,ж,оператор производства,True,False,False
+Patrick,West,Bradley,Департамент C,maryrichards@example.org,$2b$12$W9c.hTdrJvIkzE7wsBJdeOWn45ORfQSF3CvbXBLMsiHMkSATkOy4y,1998-03-19,м,оператор производства,True,False,False
+Erin,Gibbs,James,Департамент B,johnsonlee@example.org,$2b$12$wi7bavj7.teTURAg8heZ0.ZB1yEoWTWfN4PgAK9DFqHgEOuURb6U.,1980-06-20,м,специалист по обслуживанию,True,False,False
+Ashley,Allen,Tracey,Департамент A,sarah58@example.org,$2b$12$m/gVkxXOYq8ffBeWizazb.78DHda7RSNHMFnByEwmm8N5THDhOE0C,1986-05-17,м,оператор производства,True,False,False
+Amy,Stanton,Amanda,Департамент C,smithrobert@example.org,$2b$12$3PUahWXrXqm74cZloZKiu.bILUwvLiaEC1PCEngM26d.pKtyMkz5K,1991-09-22,м,специалист по обслуживанию,True,False,False
+Charlotte,Ross,Robin,Департамент A,michaelkeith@example.com,$2b$12$Cb6eb7mCEBpXATxz.z4shOipqmXOeLkd3op3E8/pBAqqeCUKs24BG,1989-06-13,ж,администратор,True,False,False
+Heather,Hunter,Sally,Департамент C,kenneth59@example.net,$2b$12$jTmnl7EPVnavQXHa1pAUpeRz1DW/73RsmzT0ZXIPktUt0CnoIgx7u,1970-04-10,м,администратор,True,False,False
+Jennifer,Taylor,Tracy,Департамент B,juliaallen@example.com,$2b$12$mb7ZwNzX39n3BEKfx1bzYevGvlllXqvu30Y/wkxfinU/xmzGmlWSq,1981-03-07,ж,администратор,True,False,False
+Nicole,Day,Kimberly,Департамент B,chavezmindy@example.com,$2b$12$7qvimGqEFjoSkzqv5DOLpOE2Q8D1hQpCmX/Ua3tj2p9YD5f2XhJoG,1997-03-05,м,специалист по обслуживанию,True,False,False
+Kristin,Berry,Steven,Департамент A,davisdavid@example.net,$2b$12$kpg0yR7xzL1PJN4fjJuNLuqyR5gHiw2JJed0e7RqRdt/eXyHTi/je,1977-05-21,ж,администратор,True,False,False
+Douglas,Crane,Andrea,Департамент C,ortizkelly@example.net,$2b$12$1wgYbwHbB./lk4QOPtI0pORd5U.8jYGXpHcOyNAqFVLzBqO2n.A96,1993-10-24,м,оператор производства,True,False,False
+Maria,Gregory,Rodney,Департамент C,stevensnancy@example.org,$2b$12$03I825Cw9RXuaSJyfgcMouJCe5fuHXr5/JKyDc64sJIJTHTpwLznO,1988-12-27,ж,специалист по обслуживанию,True,False,False
+Amanda,Rodriguez,Linda,Департамент B,katherinedavis@example.net,$2b$12$JzcLhgvgWzbZeq4VELWxVOvqrN4BZsf0dK0YO15ADGgb38Iml2U0S,1986-01-20,ж,оператор производства,True,False,False
+Donna,Mclaughlin,Michael,Департамент C,freemanronald@example.org,$2b$12$0mUD.mDm/uZa5ADSz5UXD.wQd.A6aZJOe8eLT7T363k5rjKuCy.XW,1976-11-15,м,оператор производства,True,False,False
+Joseph,Pierce,Kristin,Департамент C,andrew57@example.com,$2b$12$PSOMumrXbjLkK51zIRaBI.KZgRUBj1lcGnJ98k.VpFotRkMFvR3iS,1981-10-27,м,специалист по обслуживанию,True,False,False
+Joyce,Jones,Chelsea,Департамент B,cynthia64@example.org,$2b$12$SADY21XZE9OPD54lHtsYzuwNtNpyEUQjn/I7neHToUve7x7ieId5.,1996-03-15,м,администратор,True,False,False
+Michael,Larsen,Karen,Департамент A,wendy54@example.org,$2b$12$vvwtAbCvA84EqrMJ802BuuKHFxcZA2H.vgPOpu2wIh0degAS7h.3m,1986-09-26,м,специалист по обслуживанию,True,False,False
+Melody,Wall,Adam,Департамент C,erik12@example.org,$2b$12$huFxqKAHZHGFAUzHSudjruhKQldi5WBHXpnLkwe2iFzGJ2SSYV.J6,1969-02-27,м,администратор,True,False,False
+Veronica,Maldonado,Christopher,Департамент B,cwalker@example.org,$2b$12$hAj0pGhDUswlDqT1nPKcruXxmCUXFW77K5CwKgj0rU8/G4QGTqhzG,1996-02-12,м,специалист по обслуживанию,True,False,False
+Karen,Gibson,Jaclyn,Департамент C,whitejeffrey@example.org,$2b$12$CXCLjfRZk4SZ8pINGNmXSuRJNKAwsJcvO6DTCdMae/XGKp/7zWBnq,1972-08-29,ж,оператор производства,True,False,False
+Michael,Mendez,Chad,Департамент C,charlesweaver@example.org,$2b$12$/NOvGZreBUnmq6b.o8jwwOMbVuRs9SIol2FmacR1XQyKhXNXGvUrW,1978-07-27,ж,администратор,True,False,False
+Renee,Oliver,Isabella,Департамент C,danielwilliams@example.org,$2b$12$N1i843DTrS.qWsQ3apOt4.nCk8FWS2akth0kcuNu6pgha23R40CZy,1964-01-20,ж,оператор производства,True,False,False
+Brandi,Miller,Jeremy,Департамент B,emilyrandall@example.com,$2b$12$WVmp9etTVkiW0zma7UIlpeGv8yTVSd8FrRjn1e4t631grzdDfqhQW,1980-09-22,ж,специалист по обслуживанию,True,False,False
+Aaron,Boyd,Heidi,Департамент C,torrestheodore@example.net,$2b$12$nwaRT6BaC3ghnDmoinkhsep.HvE/MO5cmJbwGt0SrlCOjTU92e6re,1963-08-08,ж,оператор производства,True,False,False
+Ann,Chavez,Andrea,Департамент C,davidgay@example.org,$2b$12$x3V7ox.5MnalOif64c9PC.WJwnH4xGV0u0TvXjJBifcOh6UR62WGG,1983-11-17,м,оператор производства,True,False,False
+Brent,Harper,Steven,Департамент B,dustinponce@example.org,$2b$12$FxcGF9Xx3oFiyg0n6PM/oeMTBjlgFuY457ug4W9oSzvfOBSY/Lc6q,1964-06-28,м,оператор производства,True,False,False
+Diane,Mcdonald,Matthew,Департамент A,eberry@example.net,$2b$12$DDrPoQV5b1zKWUnxnyth.OvSRyNUjA5ysJeF5m0tkFfBsUbyUocZW,1974-02-09,ж,специалист по обслуживанию,True,False,False
+Crystal,Mills,Jamie,Департамент B,poncepatrick@example.net,$2b$12$n4LsfCutz6wh1pm0udBiD.IwFFAm3qFoHpstm.OYRbKsHwvAxXZWS,1972-08-03,м,администратор,True,False,False
+Tracy,Ramirez,Dylan,Департамент B,dgonzalez@example.net,$2b$12$hGTAZixukjbJOSaoE/eRKOkTuPD4Xmn9YenhxcXvjmTVtP8afgi4y,1976-11-07,м,специалист по обслуживанию,True,False,False
+Joseph,Molina,John,Департамент A,martinezstephanie@example.org,$2b$12$fwK2EvnVpNdVF9XowthX2.UmAAWwoUtNILGokjYRpDlF1YU2VaeQa,1973-03-26,м,специалист по обслуживанию,True,False,False
+Heather,Wilson,Jillian,Департамент B,canturyan@example.net,$2b$12$nuIJIlbFrhP56ObfuhDVNuHFuTmX5ibkbJHp4BIMuK6QqTw6mg.L6,1968-03-16,м,оператор производства,True,False,False
+Amanda,Conrad,James,Департамент B,eddie78@example.net,$2b$12$zXz/0.6aHD4AMEeCaRv5iu2wNL674rkDH6F9ZO.RVqEI2RCVgCGOu,1965-10-17,ж,специалист по обслуживанию,True,False,False
+Angela,Mcdonald,Alex,Департамент A,jillliu@example.net,$2b$12$OBstlU.YSpkF5lrG2KqgKuhaJhMdmn0m5tr6QDqAo881RUbssc/p2,1988-01-10,м,специалист по обслуживанию,True,False,False
+Bryan,Santos,Anthony,Департамент B,joelluna@example.org,$2b$12$3IIzmsa9cxv/co8xe7waguRgSMRq9Z4s/14awnjVQXbTK5J2OmbSq,1990-02-27,м,администратор,True,False,False
+Hannah,Watts,David,Департамент C,nicolebrown@example.com,$2b$12$RBn4t73GrGgjPeK2os3amuT4MbU.J4VRzJnC5rlLS5unaVJrYapDa,1993-09-11,м,специалист по обслуживанию,True,False,False
+Michael,Brown,Tanya,Департамент C,millersarah@example.com,$2b$12$fHuLwXyQarL0LfMdCh43pekwn/xF9htIrbAX0lvwhRnhJmY2FIwt2,1988-03-27,ж,специалист по обслуживанию,True,False,False
+Zachary,Morrison,Jeffrey,Департамент A,reynoldskelly@example.com,$2b$12$ogA14jPb/nyx6L7qCkW.PuAfYxrCR91cgcZjNPy05PXIh9CpwXRcu,1965-03-13,ж,оператор производства,True,False,False
+Bradley,Reeves,Lisa,Департамент A,gonzalezsteve@example.org,$2b$12$aU8SW09sJbWhTb9oYKZiQ.nDfphmL4vx/1ZIPkqW4.ndXFpJfIG2i,1993-10-31,ж,специалист по обслуживанию,True,False,False
+Paul,Walker,Anthony,Департамент B,hhunt@example.net,$2b$12$k6n/hSa8cBLfSco2TtMlSet1C9cJyYaglnfTCX10NBX0JjCAyG1AO,1983-12-16,м,специалист по обслуживанию,True,False,False
+Kristina,Gonzalez,Joshua,Департамент A,jason38@example.org,$2b$12$HiqmvgDo1/JQBDVzX5EXEu5GLtbRp/CJ68IXlI9ng7kxpwA8HY5FK,1984-03-31,м,администратор,True,False,False
+Derrick,Collins,Katie,Департамент C,jonesmark@example.com,$2b$12$Zcm2qMhKAPPAimZu0nylB.fsaaAAp4Ty/woT4KhKTn62zB97ttX/m,1995-04-21,ж,оператор производства,True,False,False
+Thomas,Williams,Teresa,Департамент C,martha05@example.org,$2b$12$unMc.vKlShX5W9b1KHquP.qq0V51wZSuluQbVMj4tA1JTm0Jv5bdy,1986-02-01,м,оператор производства,True,False,False
+Deborah,Singh,Emily,Департамент A,jacob85@example.com,$2b$12$GMnFurV51HsyIicWIAUy8.CD6389z9DpdYlX/KE4sGQJJTRnZ0a22,1971-04-06,ж,оператор производства,True,False,False
+Joshua,Martin,Christopher,Департамент B,hfranklin@example.net,$2b$12$DUiGqPFziVa7swgzrA1LCueSteXY89LxiUYGW79DEIOFwIKBTTISC,1982-06-01,ж,администратор,True,False,False
+Desiree,Roberson,James,Департамент B,nguyenstephen@example.com,$2b$12$YxWiuBNE/Z5b3QNGmdtrzu0tiKRMmtQLtyi24FEbVfgv6Nh3RRbem,1992-07-07,ж,администратор,True,False,False
+Theodore,Ellis,Michael,Департамент B,hallen@example.com,$2b$12$QgbciAT0iQEmSWm62sgwM.qGWQukVcRvGB2wP9cZvMCBCt/oXH7pa,1994-08-11,ж,специалист по обслуживанию,True,False,False
+Ashley,Hawkins,Danny,Департамент A,turnersusan@example.net,$2b$12$CFGB2LvSE9aaeHJ0hsBQuOUf9H934O9Cc2/Cd2LDQ93CxVoPxYI5u,1966-06-20,м,специалист по обслуживанию,True,False,False
+Janet,Ward,Ashley,Департамент C,qwilkerson@example.net,$2b$12$jjSd0t2PTFOfVVPuBx54P.H2LlPQL9FIVnZuc/gMxManuQ9vzhqTq,1975-12-20,м,администратор,True,False,False
+Dana,Fisher,Christopher,Департамент A,mlopez@example.com,$2b$12$FGjp0hFjKSIej1zDvvCPV.bNhJ4/WtTtYJNLsd5PM8r1ktn3yHTlm,1983-02-15,м,оператор производства,True,False,False
+Kelsey,Taylor,Cory,Департамент B,christinaspears@example.com,$2b$12$vNHBUJK1Kww6WhQTVdIQUORHOeEg3MB.eLxDv9hGgmD..R1ZNGaAG,1975-11-09,ж,специалист по обслуживанию,True,False,False
+Mark,Parker,Sarah,Департамент C,seancastillo@example.org,$2b$12$JpP1RCT.3UkNaKSKdNoV9ekeR2XZCdYzmDYQi45SWRYaK3j8o7y3m,1976-01-11,м,администратор,True,False,False
+Courtney,Brown,Cassandra,Департамент A,jason77@example.net,$2b$12$ggExw0AgwnqvGpZD.ABEI.BSDTvoC9QQY0S5uUdTjQIiQ3z.v0/0S,1981-04-09,м,администратор,True,False,False
+Tammy,Lopez,Amanda,Департамент B,gwilliams@example.net,$2b$12$3Qd58mdakGS.outYnEiqb.5oCR4SM6Oyf9ZpzR7Qmam8pVQ7wwKge,1990-07-15,м,администратор,True,False,False
+Michael,Garrett,Dillon,Департамент C,jessica39@example.org,$2b$12$N8LbmlKLIauA6Qgu04vgZ.0YkchCVpcdbb236ukTSTmPIFDIZyium,1979-01-02,м,специалист по обслуживанию,True,False,False
+Lauren,Marshall,Julia,Департамент B,cardenaslouis@example.net,$2b$12$QXRFoW5COJhwPKwoIY03l.TIt/pTwOjrBUUOY1XRQk/CYiuteVW1.,1967-05-06,м,оператор производства,True,False,False
+Chelsea,Anderson,James,Департамент B,thale@example.com,$2b$12$I.dwhTP.G9fAdMNUODCvouiNtIjEvWvY.OYtnS8WpuzouXUtEM65K,1982-10-14,м,специалист по обслуживанию,True,False,False
+Brian,Torres,Steven,Департамент A,jfisher@example.org,$2b$12$e9YRlzpsMGwrAVxG7JL..uomvSZiDNUTW89njgrDe3PYKF7mz9W9i,1973-03-04,м,оператор производства,True,False,False
+Brian,Hughes,Hannah,Департамент A,fmatthews@example.com,$2b$12$7fL67CcpyS/Ovb9XrC/3Tuastnarg5AmsCxua9Lw3diq04PnUhmS2,1974-09-07,ж,оператор производства,True,False,False
+Gregory,Johnson,Andrew,Департамент B,htaylor@example.net,$2b$12$tHDUsN3BgvCLSWFn4no/P.RlbEB8n1rzlalO8PnKLotvZf5uLuhOC,1979-08-30,ж,специалист по обслуживанию,True,False,False
+Jody,Morgan,Stephanie,Департамент B,angela46@example.org,$2b$12$tSl9Jar1q0K7tm4J11VuieYtRTHSkLkSiyjSIC6xIOX38fJfyjjGu,1998-09-12,м,специалист по обслуживанию,True,False,False
+Yvonne,Hall,Danielle,Департамент A,john82@example.net,$2b$12$d4h9LEawx31zX3Z7cpK9BO57tJouDByvsfa6z9tlilVlsjUZWrDAu,1993-09-09,м,специалист по обслуживанию,True,False,False
+Joanna,Calhoun,Philip,Департамент B,hernandezgabriel@example.org,$2b$12$jEofaYKZIhvmYHb9kg9zR.7YzAEbzvmcdfzHfVI/qf3.tY4dC9ZFe,1968-05-19,ж,администратор,True,False,False
+Alexandra,Williams,Taylor,Департамент A,frederick99@example.org,$2b$12$nCVaZdmlwSxhopXuMo8woeBYDzwvOfEDQW9GGoP/hsau1Q/DLsSma,1967-08-20,м,оператор производства,True,False,False
+Sean,Castillo,Sharon,Департамент B,peter12@example.net,$2b$12$e3fG/H5uTTugxmiUNq2aKuJuaoQ0I/bKX0cM5136wetqWzEOarpwq,1966-06-21,м,оператор производства,True,False,False
+Jennifer,Jones,Michael,Департамент B,edward96@example.org,$2b$12$dec/XGPqAjr/E5W3u9OKye9XzgeqYjJQPEriWbyl.XytoF7iTD4iC,1971-04-30,м,администратор,True,False,False
+Christopher,Campbell,David,Департамент C,barbaraphillips@example.net,$2b$12$6cHifxwMR0IvZOEQNAgPeuE/ZSUO73mBHn63nW88o6O4ToPvrsWCm,1968-02-18,ж,специалист по обслуживанию,True,False,False
+Marcus,Adams,Nicole,Департамент B,ebullock@example.net,$2b$12$beTAvysyMHK9CMwCsyBo7ekIA.fq3qNG7qxv6zwInk6qbEhUMNZk.,1990-04-18,ж,специалист по обслуживанию,True,False,False
+Benjamin,Jones,Timothy,Департамент B,stephanieharris@example.com,$2b$12$thdHn03WokEOyDv5tqYsCuVbanzHyUzIkFI7RpQAZV1wtu3k/lDU2,1967-09-03,ж,оператор производства,True,False,False
+Ryan,Burton,Christina,Департамент A,jenningsbeth@example.net,$2b$12$Kbs2OF5/OHbAaWKYEYdgleotf2iOjSO2Q1w8dp0TgISuS7neRtAgO,1993-09-01,м,оператор производства,True,False,False
+John,Mann,Angela,Департамент A,karenbernard@example.org,$2b$12$uCLgNkJQzPPZ83TYr3ooCealbMxkx6WVp9PCbBxvTgkxvPcbLgdBu,1987-11-22,ж,оператор производства,True,False,False
+Tracy,Roach,Aaron,Департамент C,vweaver@example.net,$2b$12$k9xGOFdN9TIbW/xjNiCLbu/uzuT5PC3cDpgtDN7avO015qfYMT9QW,1985-09-28,м,оператор производства,True,False,False
+William,Mendoza,Michael,Департамент B,joshua46@example.com,$2b$12$WAF2RAR5vuOt4IW/8HjecOC0AB02Z9zp6VVTLVpioTRfKeUPE5ZCy,1984-10-27,м,администратор,True,False,False
+Robert,Sanchez,Thomas,Департамент C,christopher78@example.net,$2b$12$xLPRCraL6qrDBOBuqPEvWeVriLit8fn7RsDGz6raTUbM6zOnfXHbC,1977-09-28,м,специалист по обслуживанию,True,False,False
+Samantha,Bowman,Kathleen,Департамент C,mcmahonrose@example.net,$2b$12$2ezcIVfgwWpvjVEgC0EPgeZsYTPkNaPCFk6ZxYMD091TF3SJvq9PO,1982-09-07,ж,специалист по обслуживанию,True,False,False
+Donna,Harrison,Timothy,Департамент C,salazarchristina@example.org,$2b$12$sf/hdgcMRSZMHWTWsF4wzu2abbp02xxxOHQk5cxrgV/gHXAVV4cc.,1966-06-03,ж,оператор производства,True,False,False
+Crystal,Quinn,Cameron,Департамент C,kristin13@example.com,$2b$12$aPzPgFNNrcAoHePdydZwkOpxAnxE95/euy4IIKbvJjfRzljb58kqK,1993-11-13,м,специалист по обслуживанию,True,False,False
+Daniel,Pennington,Gabriel,Департамент C,vmartin@example.org,$2b$12$Pb0IOwu40Sri0kmPL40YLuOwWHFdykOKV8puVHCD7tmuYKldAuOAG,1998-12-03,ж,оператор производства,True,False,False
+Megan,Boone,Kelly,Департамент A,morrisonmelissa@example.com,$2b$12$4cZE4V2BudvQTf31u1PV2uxeIXDat0Ig.zcbFfw1gtOp0U045nsK6,1978-09-22,м,администратор,True,False,False
+David,Smith,Dylan,Департамент C,bakerjack@example.org,$2b$12$Xdb26BfoDHBLu9aSEfHte.1qVLxhTGo2EXN2AMldSYFbWWypoB2nK,1966-06-21,ж,администратор,True,False,False
+Desiree,Lewis,Maureen,Департамент A,hernandezreginald@example.com,$2b$12$E2PwQ6L5LfgAuGfxMBRvseui9OKSbL9wushxBDRBYknVLSsABDSwG,1997-06-20,м,специалист по обслуживанию,True,False,False
+Annette,Larson,Joseph,Департамент B,latoyanorton@example.com,$2b$12$G4SlcUSk95nduMD6NIQbC.7RFtNQslptrYKrT6ZwXVItC5CoJtEGe,1969-01-17,м,администратор,True,False,False
+Emily,Harrison,Samantha,Департамент C,jessicabaker@example.net,$2b$12$uRE.nY7u3vaJEhrRXnMQnuF8HDvvicljlfsoHp8O37vZ1VrA80yL2,1979-03-31,м,специалист по обслуживанию,True,False,False
+Jason,Sosa,Maurice,Департамент C,thomasfuller@example.com,$2b$12$.JITahjlIeOccFioeOm0AOPmfui4xFy8pwLQh3nPXujhRge3DgeVi,1969-03-16,м,оператор производства,True,False,False
+Robert,Morrison,Cody,Департамент A,brittany23@example.net,$2b$12$5yVK.jn/ROYs5BQvayBGbOLJSzifcvdbLVyT12BK..JM44A2jAr8m,1989-01-14,ж,специалист по обслуживанию,True,False,False
+Kelly,Torres,Rhonda,Департамент B,monica25@example.net,$2b$12$SqxkrCmcCopNUWDBDT/7u.mLjK4MSSga2CLDc2f.tQgdUy2su48Rq,1994-12-06,ж,специалист по обслуживанию,True,False,False
+Richard,Williams,Seth,Департамент C,tyler79@example.net,$2b$12$QVGybCtUHxoXOopbY/fncuBPiov9Qdrm4nV8kCuIEHlVsfWvL.bW2,1980-07-13,м,администратор,True,False,False
+Jessica,Odonnell,Kristen,Департамент A,churchjohn@example.net,$2b$12$BSL3N84YNhQt5L9uf5K87etNA7Sqeki4ykSIPaV0yLh2al3iNalMG,1974-06-09,ж,оператор производства,True,False,False
+Leah,Lee,Ivan,Департамент B,katiele@example.com,$2b$12$mM06skD8RasaAuuOcmMmxOwabVHmK9KDuI6rKgoe0SFimr8BMZnRi,1966-10-08,ж,оператор производства,True,False,False
+Thomas,Garza,Austin,Департамент B,thomasjoshua@example.com,$2b$12$phaipZRR1ZH0KJeRiBhQEOx6AlesotkJlTvFcSx7Ic4M7SnvQAIuS,1996-04-03,м,администратор,True,False,False
+Joshua,Ortiz,Nicole,Департамент C,collinskayla@example.net,$2b$12$OD6EGbHGZcTD1tdmhlydgOxz2cLZnPw97J3e257gfxXJ2tBPt2MIW,1990-09-16,ж,администратор,True,False,False
+Paul,Harris,Michelle,Департамент C,mitchelljeanne@example.net,$2b$12$Rt8sCZzi8QygOiOTurTG6O.QoaJQBAAFFRAho3N4wwJ/l1NOxDp46,1988-05-27,ж,администратор,True,False,False
+Heather,Walton,Jeffrey,Департамент A,carlos02@example.net,$2b$12$elOY.3t8JQfRs/ox4L/GuuORTM81ijs6GEpAqteWcSW.XJE0aIUqO,1979-12-28,ж,специалист по обслуживанию,True,False,False
+Susan,Rivers,Kenneth,Департамент C,sabrina99@example.org,$2b$12$BgR4D8A3s9iKfkuWKuW26Oao29xwd99g15TzZ.Iw0awaFV1i7wxVC,1999-02-09,м,администратор,True,False,False
+Joseph,Lyons,April,Департамент A,kimlauren@example.com,$2b$12$o7kZjpUtpOQnhK1OKELeBO09zeGGmfynsdu91XidJdfK5zSWbiPBG,1965-08-25,ж,администратор,True,False,False
+Tara,Lang,Abigail,Департамент B,lisa79@example.net,$2b$12$68eWaEhJfuV51mswusEjNeI/7j1Rgkm31mMqTE/MWgtZCPdjVPzwO,1974-03-27,ж,администратор,True,False,False
+Lindsay,Roberson,Michael,Департамент A,philip92@example.org,$2b$12$JAKwKruvYFID0NUqOSHhaurW43m0tESSZrQBwgcBnlef3lFzWn6qC,1992-07-01,ж,администратор,True,False,False
+Jean,Fitzgerald,Todd,Департамент A,hernandezwhitney@example.net,$2b$12$4NWJZtTFIc6AM5zqR.BEyuTFU2cDeyriWY7JPgLFHgMc5syZP5pwG,1968-10-01,ж,специалист по обслуживанию,True,False,False
+Andrea,Garcia,Theresa,Департамент A,jwatson@example.com,$2b$12$iX062JJ8EODBEA06IIqTOOil8.ItAySAbQBTwRct60dhYhwM4YyQW,1965-04-10,м,специалист по обслуживанию,True,False,False
+Steven,Lara,Lisa,Департамент C,ethan16@example.com,$2b$12$imBxYqF32CVylxwpr8fNl.40A.bEsQ.FkTyaLFhvL3dSGN/LzDw7.,1966-12-15,ж,администратор,True,False,False
+Melissa,Stevens,Cory,Департамент A,james55@example.com,$2b$12$78fA/sJ60.oyMmrHkhOhbO/WhKJZcfWbG.sGt6x7M57J7rYuCSdVW,1992-07-04,м,оператор производства,True,False,False
+Michelle,Hurst,Daniel,Департамент B,pduran@example.com,$2b$12$AU.awJqNPsiW03gGAGQn.uvm8elBuzjlfotDBpS1U2/Faz8QDcsIK,1981-06-13,ж,специалист по обслуживанию,True,False,False
+Zachary,Richards,Tammy,Департамент A,deborahshelton@example.org,$2b$12$3WT/NgqLHhn78qbDaph5weMn1kYw6ABd5LTvC4/8KolpFXNfue1Im,1969-02-27,ж,оператор производства,True,False,False
+Marcus,Chen,Luke,Департамент B,pgutierrez@example.org,$2b$12$CZLRcoUTO0qkZlkk4CD98.joASa2FNV0XLX2DJRng.awuN5qv96AC,1998-07-08,ж,оператор производства,True,False,False
+James,Parks,Emily,Департамент C,rebecca85@example.org,$2b$12$YptCRGLvuB8CtbmRvLwT2u6wA0WhQtQjCLOMNbD50HV/Sgbq1Xjjm,1987-04-15,м,администратор,True,False,False
+Kelly,Oneal,Sara,Департамент C,nataliegillespie@example.com,$2b$12$erbxELWX8xkSMmq5/hxcXekyM9pyaYkZYPdwEsR/Y0c4Aegx7/Nki,1993-03-18,ж,администратор,True,False,False
+Robert,Aguilar,Paul,Департамент A,dariushenderson@example.com,$2b$12$43cNJp.q00xKifaXwEAOLeTTD/ha/vh48XIdu8b1ppg0JGAdpCYoG,1991-11-30,ж,администратор,True,False,False
+Theodore,Martinez,Eric,Департамент B,lauraortega@example.com,$2b$12$y8DiaGy5rLtBtfIdAKjRgO8/GYnaHdW7Yzn2v3QuNdZmzymUwPuVO,1979-03-13,ж,специалист по обслуживанию,True,False,False
+James,Baker,Gregory,Департамент B,nwashington@example.org,$2b$12$cRZgfB08g8IJEq6.VAUlDu/t65xgqoli8ZKg4Kfttch0KMUKZOO0O,1998-04-08,м,оператор производства,True,False,False
+Christopher,Hodge,Kenneth,Департамент A,opowell@example.net,$2b$12$czeVI3nUZxXmWZP/jtes1e35EhT3aXkFPdLxUqNmEnKILBnfZnIsG,1974-07-24,м,специалист по обслуживанию,True,False,False
+Ashley,Watts,Joshua,Департамент A,cameroncooper@example.org,$2b$12$4ax4BXz033C9be01dZeepOkXb23R63QlurTRs/.enSHdPJ5l4CRN.,1991-11-03,м,специалист по обслуживанию,True,False,False
+Sara,Russo,Beth,Департамент A,christophertran@example.org,$2b$12$/PJhwfUa9zv/XH51KvSGY.SrQSTvwS0wYjRjjgN35tF7WwwyucrRi,1987-06-24,ж,специалист по обслуживанию,True,False,False
+Clifford,White,Shelby,Департамент A,ortizmichael@example.org,$2b$12$OZLVv1zraZaA/u6zM6vFoeIxkLNN3r7bBhrJau8DdUbP09PJVyRDS,1999-03-11,м,оператор производства,True,False,False
+Misty,Davis,Fred,Департамент C,wallersydney@example.com,$2b$12$djgrUTqkr8nKlXqx6DeoQe1Eyz43OLhvGBzlANPiyonU7wqa0FBDW,1985-11-03,м,оператор производства,True,False,False
+Robert,Young,William,Департамент B,cynthia43@example.org,$2b$12$tni9RgekWoM.yE6/FQgKw.TulLR.GWEUV0lHPU8TvovU/1l5oSUim,1964-11-06,м,оператор производства,True,False,False
+Robert,Coffey,Christine,Департамент C,vfletcher@example.com,$2b$12$XuAqxR3GBI7hlqeCr55fQuS0rmQXDCrds77bHz3ZXtYgsI0OBfjh.,1996-04-13,м,специалист по обслуживанию,True,False,False
+Maria,Garcia,Johnny,Департамент C,whitematthew@example.org,$2b$12$qdeJMnMaBBVuX300ffGNFO5qQUETvx6ZPmlVTVqXVJH1ZebXEWVoq,1980-11-27,м,оператор производства,True,False,False
+Amy,Peterson,David,Департамент B,pkim@example.org,$2b$12$PeyVR7eCLwzZBl0M5fAZ1.cPHHW2WnctfZPxPHsFs3SnfsVD7vwcy,1998-04-19,ж,специалист по обслуживанию,True,False,False
+Scott,Martin,Diamond,Департамент A,stephanie44@example.com,$2b$12$OSNNT26OinFfBn6ZI9h94e.zcaLZcLNHTHQ79/.n4S4.3MJth./TO,1973-09-14,м,оператор производства,True,False,False
+Emily,Watson,Sierra,Департамент C,elizabethwebster@example.com,$2b$12$9/dMc5AQDIjwB8wtCW7gve3sCIc/AHrJH2.3Lw1TUh7QGE3PkfvvG,1965-11-17,м,администратор,True,False,False
+Kirsten,Byrd,Aaron,Департамент A,davisdavid@example.org,$2b$12$2vjzxZ/CZsxJneH0Msqk2Oub8EKY3z5vbIKvyL3SFuybQh5hsktXG,1979-03-18,ж,оператор производства,True,False,False
+Andrea,Reid,Caitlin,Департамент C,joseph00@example.org,$2b$12$ATeTseXKluRi01jXGTX.n.zj3rJ02549jMbBazLFtRml3O8DPZp1u,1997-04-27,м,оператор производства,True,False,False
+Jamie,Cantu,Christopher,Департамент A,ocarroll@example.org,$2b$12$AB.S2yQZr6vWYN7zsveKUe9/U4Rncbo5iRXY0RjqxqfZTimG4Ib2O,1977-07-26,м,администратор,True,False,False
+Carrie,Maldonado,Christian,Департамент B,anthony06@example.org,$2b$12$cGkcId1QtZCs6pBL6tDPSe0/08j7/6LIEL4XnidWZ1UVTWcYsMAUq,1979-01-01,ж,администратор,True,False,False
+Brittany,Watson,Brett,Департамент A,kgarcia@example.net,$2b$12$mKsjsNc2ZRH7PJF0spv.keZUWN78dGe5pRLe8fAdwF1b6DLHrNqxC,1995-12-29,ж,администратор,True,False,False
+Edward,Wallace,David,Департамент A,reeserebecca@example.com,$2b$12$0Q2SgvTnT6cjfxUO8gIynuyQI2AAkcK74AwNUbl0pFQdALIQZ2vyO,1992-10-03,м,оператор производства,True,False,False
+Justin,Mcgrath,Jessica,Департамент B,gambleadam@example.com,$2b$12$41NIPkmKnqjuxfrQR1KN9eEpV3MUBS3.DNU0Cw6hdbPI7QQSAOaHa,1979-12-14,м,оператор производства,True,False,False
+Christina,Johnson,Daniel,Департамент C,huffcheryl@example.org,$2b$12$GUZUdAnXfbM0zc2B1v3wvuH5eSCJ9IVMSDxGDS4PZ4wSuB6wLAw02,1983-09-14,м,администратор,True,False,False
+Paul,White,Christopher,Департамент B,fisherrichard@example.com,$2b$12$1eV96dTeqL3DRNma8Q1IT.1M2YivaFtRLz1gjbstAGUGnZArj0MDa,1999-07-14,ж,оператор производства,True,False,False
+Jerry,Aguirre,Heather,Департамент B,charlesharrison@example.org,$2b$12$J6TOeBcpIMI9ozrZlAMQY.KPddcilBS8tnZXRw82ob3cIg49QCgCq,1972-03-18,м,администратор,True,False,False
+Nicole,Wilson,Jessica,Департамент A,johnsonnicole@example.com,$2b$12$lG0tsGxgxdMPmhl4byxP6OR29V37aHGHFjhAWLO/FrhQW6pfMxhOi,1967-08-02,м,администратор,True,False,False
+Carla,Le,Alexis,Департамент B,lopezapril@example.com,$2b$12$lQ92Cklfy3a.E6uqBd/NIui6MA/O7cx3KxsHFCxUyuN0L9SHlM25C,1974-02-12,ж,администратор,True,False,False
+Julie,Lambert,Bruce,Департамент A,jodioconnell@example.com,$2b$12$GRayBc7bKep9pf0l5tKTauG8gFxHUY8GJY75pTRkgaQjKCeP0jg1.,1974-10-10,ж,администратор,True,False,False
+Thomas,Wagner,Julie,Департамент A,julia28@example.com,$2b$12$mDbd91fKdSPOXwLqLYRC7OMnyRk6sw/2NjN71GKPsIUObDEO9PisK,1999-01-13,м,специалист по обслуживанию,True,False,False
+Richard,Kim,Janet,Департамент C,patricksmith@example.net,$2b$12$eOqXigST.9IScLzXxwl44um3hrMTIU/uETRqk1AZNZ4Vqx9S6kO9e,1995-06-29,ж,администратор,True,False,False
+Christopher,Alvarez,Dawn,Департамент B,andrew27@example.net,$2b$12$lKbq3vMNq4qhyVOTdvbRUO/QqkhY.LfKRJDyu9UYtV7Eb1EEUNCfW,1965-08-26,ж,администратор,True,False,False
+David,Henderson,Kimberly,Департамент A,bushdebra@example.org,$2b$12$wUzYIFtkeTn2UJCNNxCrVub9WvU/3StlfGR.vYV8XJbIFwto9QxbG,1975-05-18,ж,оператор производства,True,False,False
+Andrea,Lopez,Jennifer,Департамент B,gregg74@example.com,$2b$12$9LURsk2UTFx8pj/npQ8bTOQnu57HAAda2wg./CJCM3Qei0lNhHBXq,1996-03-08,м,специалист по обслуживанию,True,False,False
+Martin,Jordan,Marie,Департамент B,loricole@example.org,$2b$12$xpOa4rsIXOBY3JYGCzpp2.FRzK8KiD5iTQ1fylnUSfLsg0mr9vDtm,1968-09-24,ж,администратор,True,False,False
+Kimberly,Burns,Kristen,Департамент C,turnerkatrina@example.net,$2b$12$W8ATRdCeZKiJeqar43DzpOM4egeWYZVRT1RuJLH8xgsZUznKefpMu,1997-02-13,м,специалист по обслуживанию,True,False,False
+Margaret,Garrett,Michael,Департамент B,richardsonjessica@example.com,$2b$12$MgeAs8DHLiMdGelc6E02seTXfmN848dbJzfNlkqmvTl.ms3.S0gpa,1987-09-21,м,оператор производства,True,False,False
+Robert,Ross,Samantha,Департамент B,yrowe@example.com,$2b$12$2WgCvdCVHHEEqxT5KL0yI.Gy.a3vqlkIELZnLkRxs/aq.ppKKgq4K,1997-05-06,ж,оператор производства,True,False,False
+Leslie,Park,Patricia,Департамент B,ddonovan@example.net,$2b$12$ILYDJpomrS/2pENMW1W9bef8.miI5UVbi7iOVI9Eh4G6hbAK9dj9S,1982-08-08,ж,специалист по обслуживанию,True,False,False
+Elizabeth,Reilly,Victor,Департамент A,jason57@example.net,$2b$12$.fzPIbxHme0z/RX/0C048u1oom4mRF5npzWFXERLkBS4jv4ohGb8W,1979-05-06,ж,администратор,True,False,False
+Mark,Marshall,Andrew,Департамент B,nstafford@example.org,$2b$12$jpY4x3ScXmDo6TCqtBZdQuLuF28XXhCa/XcojqKtpBKOuvmYSGzsu,1999-02-23,м,администратор,True,False,False
+Amy,Johnson,Karen,Департамент C,garciarichard@example.com,$2b$12$MlUICIuxaoW50CyN/se1Zu/vuXeb4HBDprseT88h3O1x9qlo4f4ly,1977-10-23,ж,специалист по обслуживанию,True,False,False
+Amy,Zamora,Brianna,Департамент A,petersonjohn@example.org,$2b$12$48yWCpeu0DNG0r2DXIxGtOHXDxv9Dhnl7gQZkuh.cxqfdCw3xzhnC,1985-01-22,ж,специалист по обслуживанию,True,False,False
+Raymond,Nelson,Cynthia,Департамент B,pamelaarmstrong@example.net,$2b$12$.eDYF32lcFaTBCkkKrDK1OzfISEDMZ4sdUm2aIyG2EpOiobYULbe2,1982-10-27,м,оператор производства,True,False,False
+Robert,Colon,Rickey,Департамент B,craig77@example.org,$2b$12$i8EhaQArsl2e8ZqOw9XZJeeIZuJiVXMlKBCZgi8MRsgG06Fh7geRC,1999-07-29,ж,оператор производства,True,False,False
+Jill,Ball,Marcus,Департамент B,jonescarlos@example.net,$2b$12$j57ik623ZocSt2Mv1Phu3e/wV8wOjb4ZJyB6ZMuvRzKfplVOcVm5G,1995-11-07,м,специалист по обслуживанию,True,False,False
+Thomas,Chen,Nancy,Департамент C,fperez@example.net,$2b$12$MQhMnUxWcX4ezKnf2lQYOeqOY4g0yLDVSiwxCwYdIYsU68dIf3nVW,1999-01-28,м,специалист по обслуживанию,True,False,False
+Mark,Hicks,Andrew,Департамент B,zayers@example.com,$2b$12$9ihBXIKPrSHBweEHIWjTM.aXHi2WX1MtMfivwyUEPhfp.YaOo3cNG,1981-04-16,м,специалист по обслуживанию,True,False,False
+Alexandra,Zimmerman,John,Департамент B,brentsullivan@example.org,$2b$12$97c9e.JLeOXTcmiRepwrLeXTrOXwsx0jkAkU0S3HuCldng3.z2sTK,1997-02-05,м,администратор,True,False,False
+Michael,Lewis,Aaron,Департамент C,adamcampbell@example.net,$2b$12$vV9bTRu2j5i/vnLqnU.SzubHC57s3nyttwvJgUuSmqgbQH98c/t0K,1995-07-12,м,оператор производства,True,False,False
+Melinda,Adams,Angela,Департамент C,jkrause@example.org,$2b$12$GFVC9zz8baeIpZP7pVP.Y.2PTUSZXQ4JHuk.P9N7vbxRKQeAAZdxW,1995-09-14,ж,администратор,True,False,False
+Lucas,Simpson,Deborah,Департамент A,stevenanderson@example.net,$2b$12$nkU2eGZDNn20RTVYkU5c4.XUVGMQwhdIezUCaWLj66xQH9D3VczgO,1980-02-19,м,администратор,True,False,False
+Shannon,Smith,Miranda,Департамент B,stacyscott@example.com,$2b$12$VyK7r6.mpnMemxr2j0ArQOc1KhMNi.tP2On46qGS4PzC6UeHate1i,1986-07-29,ж,администратор,True,False,False
+James,Owens,Jeffrey,Департамент C,lisajordan@example.net,$2b$12$2zMxkMVKGtlz0Msg/9XA0OMHVEbNdNILCDjw6iIOvAhLmd0NsiKFK,1992-08-30,м,специалист по обслуживанию,True,False,False
+Jason,Buckley,Bobby,Департамент B,whicks@example.net,$2b$12$vtqSC1lg5s6jGLSb3SyYZu2y4olcxjpNpSWoW.7zQjD3BKvlbZA6m,1979-05-02,ж,администратор,True,False,False
+James,Black,David,Департамент A,wrightkevin@example.com,$2b$12$IuaAR.W0pwtCzZ.9BQqBQOPJzRk84RvRrjAXNcb0T/pK7.VIvS/om,1981-12-02,м,специалист по обслуживанию,True,False,False
+Greg,Harrison,Darryl,Департамент B,ycochran@example.net,$2b$12$NwYe6DHh2OqBd7QqO9FlHuOj00Cn70DGvhERzqcTJ/WpfxBiWE.6u,1976-03-03,ж,оператор производства,True,False,False
+Jody,Perkins,Veronica,Департамент C,ortegakathleen@example.com,$2b$12$thCoDIN2IdIGwCs5xvC/dOy59qJZEQqTp1dm0Xi2UsiLsCZqYE6Dy,1970-07-26,ж,оператор производства,True,False,False
+Cheryl,Wilson,Carol,Департамент C,cgordon@example.com,$2b$12$IS78Fslue8juhko4JmWxy.UQfDJAeGj7tcRF2NT9.8G5BXkauouxi,1982-07-11,ж,администратор,True,False,False
+Judith,Ortiz,Leslie,Департамент B,saragreene@example.net,$2b$12$ew3/NRlyxbgdRWaMfkBCteo9kwhHh6ALLAHWKAksF9dMDVP1GF5B.,1972-08-29,ж,оператор производства,True,False,False
+Dawn,Mcdonald,Bradley,Департамент B,wiseashley@example.com,$2b$12$MdaI1ATCZ.ib6jU.ZwHBL.I50P33o/T5Gz.iMUJ1PIDiG8Dg43h8q,1981-02-13,ж,специалист по обслуживанию,True,False,False
+David,Jackson,Mary,Департамент C,jennyhansen@example.org,$2b$12$Q5eHTee0QatDXZgRcXTQ8eTc38SAayvwxbiD3ocHbfR.WAljbPC5C,1964-02-18,ж,специалист по обслуживанию,True,False,False
+Alexander,Brandt,Donna,Департамент B,carol83@example.net,$2b$12$D2kdmA4zSTyYJ6K.1SGbtOm/hlolaRRQNTBrVPA4CsplIu4IJYWTS,1968-05-29,м,оператор производства,True,False,False
+John,Ferguson,Amber,Департамент A,brownbrian@example.org,$2b$12$k3Faf7v5i0Sk188lc4LQp.5uJVoH9HuVvxrVUCjXn2Waku77uklzq,1988-07-01,м,администратор,True,False,False
+Tiffany,Young,Aaron,Департамент B,ibishop@example.org,$2b$12$soMuVAQ2T65ov9PVduat8eylMyqkqhB2iAeieMj/MHZoyoKxE2Lry,1968-10-11,ж,специалист по обслуживанию,True,False,False
+Nicole,Rodriguez,Mackenzie,Департамент B,tiffany63@example.com,$2b$12$2z/.1572d6pNsDlmjVz/IeVJDFuUhW.Xp5ABMEmQgJZX.bHY0569m,1989-02-07,ж,администратор,True,False,False
+Linda,Peterson,Andrea,Департамент C,suttonjennifer@example.net,$2b$12$v3s9TTabKNfQ./r2JgTNH.3NdfMxVc7Tw.GPbCUwjwjwhMJD0nxXW,1989-07-03,ж,оператор производства,True,False,False
+Brian,Hanna,Dennis,Департамент B,stefanieshields@example.com,$2b$12$GGJupHW4cjhFB0Yzm7EmQOno6KnYb/FMrSDpkgMrhRMG0rDgj7PDa,1972-04-21,ж,оператор производства,True,False,False
+Jennifer,Thompson,Yolanda,Департамент B,onash@example.com,$2b$12$zcs19AfIBZbctT.3l4/c0uEzxVf0DF4AfFsoLac6AGPesA1Mbk3gG,1993-09-19,м,оператор производства,True,False,False
+Karen,Robinson,Brent,Департамент A,sdavidson@example.net,$2b$12$kyJ3vQdiYzu4YO07/wzEOuE5ZYL7t280xumiBnuGLpo5kusdNjh2m,1965-07-28,ж,оператор производства,True,False,False
+Emily,Andersen,Nicholas,Департамент B,harrisleah@example.com,$2b$12$MlqN0q/SQJ0aFA3tIeYsCOrp9yBuohTkF.4k.NqJuhLv4/ya54/u2,1969-05-13,м,администратор,True,False,False
+Brittany,Sullivan,Willie,Департамент A,ibarraeduardo@example.org,$2b$12$sNiiwPWRly3.1Ij4RF/ZIehXaxS2rzu7u/fcfaoWf8iN3PmKypACW,1989-09-20,м,администратор,True,False,False
+Briana,Erickson,Nathan,Департамент A,kathleen29@example.net,$2b$12$p2vVlyATpi/cCbgZtcVfl.LU9Ok2gMZ9tIqrxfGqZPggoOHqu/Lo6,1970-01-05,м,оператор производства,True,False,False
+Brooke,Moon,Maria,Департамент C,christinariggs@example.com,$2b$12$pU.HRyNTVNbJvgZk9m48Qu.1vWfTl9lIfhvHD.TnIF0JxUGHSQHdC,1983-03-07,м,администратор,True,False,False
+Willie,Bauer,Chase,Департамент A,brownmegan@example.com,$2b$12$jW9blaK.jKqB7FgX2ZdvM.BV0m9QVsQ3PsediVRH93voYuFHQryNW,1980-03-26,м,специалист по обслуживанию,True,False,False
+Michael,Vasquez,Thomas,Департамент B,flynnmatthew@example.net,$2b$12$P9wsNgkGlnRzopEsziKyxeiplpbOk8KwzKfq1xMVTstz0gjFfyPCy,1968-03-25,м,оператор производства,True,False,False
+Vincent,Anderson,Susan,Департамент B,danielrandall@example.net,$2b$12$ycxH35yT6/yEDOd0XF9OsukP.ZMYWGsQUs3Sl5IeT/bF3cxitia1m,1996-12-22,ж,специалист по обслуживанию,True,False,False
+Frank,Taylor,Troy,Департамент B,nortonsarah@example.com,$2b$12$1kCuAjaEiOphcLgxiBpBouiD2Q7EvJHAt/RkJsRZtnusULIls84tS,1991-01-17,ж,оператор производства,True,False,False
+Margaret,Thomas,Justin,Департамент C,audrey02@example.com,$2b$12$2Mw4CUdtTSJe7huwcMc.I.tASrUirS9gdAFNnV1tcbCROYIlUoiF.,1969-08-09,м,специалист по обслуживанию,True,False,False
+Ashley,Shaffer,Lisa,Департамент C,michael59@example.org,$2b$12$vwmThEYFXTz16WyTnQMSHeOdByFqJ7KMx9l9hiKmKQGfojjQUlkFq,1988-08-12,м,администратор,True,False,False
+Tommy,Moore,Allen,Департамент A,dbaker@example.org,$2b$12$W9Q2Ik35Age8epjiRVXBLetQ4t85l8IurkzDqYwPP.GyqwaitvVjS,1988-03-03,м,специалист по обслуживанию,True,False,False
+Dana,Dickerson,Nicholas,Департамент C,belladam@example.net,$2b$12$j9p68T6El.eOpwx1d3y/w.PCxBn1Eomy5qXGXtTw3Qyls8HPGWOZe,1995-11-15,м,специалист по обслуживанию,True,False,False
+Grace,Middleton,Lisa,Департамент A,wrusso@example.com,$2b$12$8pxbsPSdGo9eZ5UDh2c1Te/O1BwWW5SSH3sxp5rg/0zpqrlMneEZq,1975-01-09,м,специалист по обслуживанию,True,False,False
+Debra,Harris,Manuel,Департамент A,james68@example.org,$2b$12$hd/lRzToAMTxqVWi5VKoo.INlCt6559VD8ReWZ7Y8UglsdpvxVUqm,1988-12-24,м,специалист по обслуживанию,True,False,False
+Tony,Sullivan,Jade,Департамент A,santanastephanie@example.net,$2b$12$TsCVhwwR5g/a5OAttxX3EuI1rPkilWwMVvVxWZxXlShjXZkvo8Y8W,1983-03-19,м,администратор,True,False,False
+Jessica,Carter,Lisa,Департамент B,wilsonmaria@example.org,$2b$12$w5belpS4/x.D1VY6BjsEa.2Vblp8.WGjvvv91bg0J26VdiJdfbGmq,1970-07-23,м,оператор производства,True,False,False
+Laura,Daniels,Cynthia,Департамент C,yangryan@example.com,$2b$12$f7xMKksLWEUXEs4rnz8hPO7b4f5lTBdKo9QzL1OufklDlPIRKgEoW,1993-05-23,ж,администратор,True,False,False
+Lauren,Montes,Angela,Департамент A,pgarcia@example.com,$2b$12$bYdshYwKpAqVmpymc14csOnZ7SHY.pCBKitFvbEJh4WqjuxGMN1dm,1969-07-07,м,администратор,True,False,False
+Christopher,Dean,Lauren,Департамент C,anthonychase@example.net,$2b$12$H3wXrSl7.YkmAUQzbR.PmOOxv.8LOS7Zk0i7yw9TuFZkoNm9vjKby,1981-02-12,м,администратор,True,False,False
+Isaiah,Rios,Amy,Департамент A,franklinmaureen@example.org,$2b$12$mHLeYGkCcb71CBMis.40qu7JTrpwGmuunICm5eZmdiOfihPIZ39Ba,1992-09-27,ж,специалист по обслуживанию,True,False,False
+Shannon,Tate,Jesse,Департамент C,carriecurtis@example.com,$2b$12$vnMS338h3JfIPNReWmiAJuQEc4QoWc9m4sWZpHPRb6IdFdUR0f17y,1982-05-08,ж,оператор производства,True,False,False
+Sandy,Hale,Dalton,Департамент B,mlee@example.net,$2b$12$L96DCzqY9PW.o5eklk2J/.YuvEJbTT7bhW3FQIg1/WnY4f.dIJHnW,1992-07-18,м,специалист по обслуживанию,True,False,False
+Stephen,Fletcher,Nicole,Департамент A,craig62@example.org,$2b$12$Cw80P8Dex5ws1f12VCHN9.Ev1ZGdBs98YX.cDiB20UayvAXUBelGq,1980-05-18,ж,администратор,True,False,False
+Darin,Preston,Joshua,Департамент C,qcharles@example.com,$2b$12$dyOleu3mMUO.H5Fj8fr.IuokFMnQkhWDAG9V70Bc0o3h2KcZN9iDO,1978-05-23,м,оператор производства,True,False,False
+Christopher,Gomez,Danielle,Департамент A,justin33@example.org,$2b$12$y/g.lB1tLOZkkO0ZF42EY.sHArO9a0gDYeTxqSnXZCs5KwlvyW.gG,1967-10-07,ж,оператор производства,True,False,False
+Caleb,Campbell,Hannah,Департамент C,charlescole@example.org,$2b$12$AQUX7fxK4bgClAcxk1h6neIYE1.lEu996xVdQDJcnVgc1D7Bdc/p2,1969-09-02,ж,оператор производства,True,False,False
+Lisa,White,Chelsea,Департамент B,james66@example.com,$2b$12$TCcsNTOzk7Bu9LxnLPfYWe5hW4k2G9uf65Tam1c1UEfrKkHMZnMmm,1967-06-12,м,специалист по обслуживанию,True,False,False
+Theodore,Watson,Brandon,Департамент A,atkinsmisty@example.com,$2b$12$hiU1TEkXFSlpflqBabTHieDmXZYKHpiSNS849gujSb4xSP7iXZMoi,1978-07-02,м,оператор производства,True,False,False
+Victoria,Cooper,Gregory,Департамент C,htaylor@example.org,$2b$12$bUB5oQ.JM2vzQWyoL2h.UuIH6QtOtmR9NpCe2PeIc31ue699Vg...,1966-12-09,ж,администратор,True,False,False
+Dave,Navarro,Ruth,Департамент A,nfarmer@example.org,$2b$12$v7D69L30vp8kK6CXn2vjBeP4mentia.JhhSb2XOnP2Gm.qc6DdM4G,1965-11-11,м,администратор,True,False,False
+Dawn,Berry,Sara,Департамент C,stephanie68@example.org,$2b$12$B3NJxPcNIaXt6lDOBByUrefZPvyKBhB..7G7MUnu3DY1.QJ7EhFYW,1992-05-04,ж,оператор производства,True,False,False
+Brett,Singh,Julie,Департамент C,gcooper@example.net,$2b$12$Ep.bh.l.6QnGdO2M1w.gyuW/nd2qCs4/ieeZWLK6NIM6WGpJQhSMC,1965-06-01,м,оператор производства,True,False,False
+Lindsey,Diaz,Mark,Департамент C,michaela08@example.com,$2b$12$p4b1qyWRvUd2Tu9W/Mugre134o.DW50hDjA4OG91ycbG2rmC4.bwS,1991-02-25,м,администратор,True,False,False
+Clifford,Smith,Casey,Департамент A,rayfarmer@example.net,$2b$12$Vjr5LHQYc07sko8ZUR8z9eDXM2HMRqiHXCrdEs6SZr7iRUHxUxwSS,1973-12-28,ж,оператор производства,True,False,False
+Craig,Peterson,Ian,Департамент B,lesliegarner@example.com,$2b$12$mYMcjokvVzzE.G1gUTs7huhUeXAkeSb7TPr.emQHdLLJJ/k9x01Wu,1971-10-12,ж,администратор,True,False,False
+Amanda,Perry,Dan,Департамент C,alvarezsarah@example.org,$2b$12$r0EgDNYlr2WNPrPVp10HzuV3jP7zXnq5OdRvJwWDVkx2aaC7x6DWu,1969-01-25,ж,администратор,True,False,False
+April,Wright,Mary,Департамент C,sean41@example.net,$2b$12$oghneywpSta1MCGYxcjxTeALOl8hvd8s4XyBWaVcgI9y7ca.v0.kO,1977-10-30,м,специалист по обслуживанию,True,False,False
+Brittany,Gonzalez,Shannon,Департамент A,gfoley@example.com,$2b$12$EpnXeTDbG8jlZaqpODZkeuhBjdY.vHzTqKid7qbAjN/ieYwLR7wSe,1990-10-25,ж,администратор,True,False,False
+Caroline,Lopez,Brandon,Департамент A,jamesrogers@example.net,$2b$12$TAn9GB9c2.URrDFGXNfcm.0RCaU4O6Vxvla1UEsmBtLbr1y9xyU/C,1980-03-31,м,оператор производства,True,False,False
+Logan,Williams,Haley,Департамент B,briannasmith@example.net,$2b$12$MO6qJJ040u8hhEvg5gq.3OyYhqnk3zR/ua8qADccOK70bXtPuYTQa,1982-01-18,ж,специалист по обслуживанию,True,False,False
+Blake,Nash,Erik,Департамент B,philiprodriguez@example.net,$2b$12$zhFl7e8OQntda43t9gMBxOm2AYFFxMvXcXZ0VFkbsnbAN5ZL3LAM.,1973-08-06,ж,оператор производства,True,False,False
+Tyrone,Small,Bobby,Департамент C,greeneanna@example.net,$2b$12$sbACSGWXsQw3jg9XlkhvvuxZ6v0zV.bJUNrG9JwHdEHvXFUtsOAVK,1985-03-16,м,оператор производства,True,False,False
+Kayla,Watkins,Jason,Департамент C,vclark@example.org,$2b$12$zNJl2TTKJamZd8.w2JqM4e2i3pd2.L9HJeyS/6nLKLopBqNtFcrhG,1979-04-10,ж,специалист по обслуживанию,True,False,False
+Jeremy,Duncan,David,Департамент B,moorekathryn@example.org,$2b$12$Hv1.ykTGd28MuItaAqVgjeKBqzw3egvdjrWJrRiy29ye.fuvnGcui,1963-08-24,м,специалист по обслуживанию,True,False,False
+Mary,Patrick,Beth,Департамент B,bonillakeith@example.com,$2b$12$jqBCPqkv8lAJs1opfGGyQ.Xgb2rKLzEo3vjLCy8PLosjRQRahFkDq,1997-06-23,ж,оператор производства,True,False,False
+Jill,Pratt,Adam,Департамент C,oaustin@example.net,$2b$12$HWsGNpca0eO.DXhWDFEsVuJMZo9mrbJY4XXY23pymNtFkGbYiCr4i,1982-10-13,м,администратор,True,False,False
+Chad,Ortiz,Stephanie,Департамент C,juanmccann@example.org,$2b$12$lDeM7QOBKIqqgrdKnuoYw.hMYq2S22S0xuFbNevl7AVA333Squ.Ra,1997-02-15,ж,администратор,True,False,False
+Rebecca,Soto,Christopher,Департамент C,amy90@example.net,$2b$12$L5nDCI02y7UWNZt/2pOfZeCDxRTZpoBkjXWoEiTEY6K5Kpp1NOaDe,1964-11-20,м,оператор производства,True,False,False
+Michelle,Jackson,Danielle,Департамент B,denniswong@example.com,$2b$12$4HAHuYca83zfQfCb9Z6Dqe5Z8Rsg8BgcYEO9Vey.oKMAVUHY6EGgS,1997-08-10,м,оператор производства,True,False,False
+Russell,Alexander,Scott,Департамент B,chad42@example.org,$2b$12$RU1ak709lchJI8FhKUkJxuSL2tqGPwIpYTI4oOOOCcVDyTZRJQqKu,1983-07-02,м,специалист по обслуживанию,True,False,False
+Jessica,Dunlap,Sarah,Департамент A,shanemercer@example.org,$2b$12$EufSUuo5LpF3/KZx4vaK4eDTQBU7tdJI6gZHaPmHH0OzsajrsdY7C,1984-11-01,м,оператор производства,True,False,False
+James,Butler,Richard,Департамент A,robert93@example.net,$2b$12$CznUJlputGuHyUF7cpPp5OhywQRlnI4m3yoKRcYY30qtPONDlgQga,1982-08-29,м,оператор производства,True,False,False
+Rebecca,Wiley,Pam,Департамент B,bullockkathryn@example.net,$2b$12$WXlcftPKkI47.gpe1om8XO6YHKuP7M1XBVz4NCY3sYRl1B30KOj4u,1982-11-10,ж,администратор,True,False,False
+Mark,Gibson,Hannah,Департамент C,ulyons@example.net,$2b$12$8wimX/ahvj.jnU8/VS6GsOnc69Ero4DEwG/S2hhrVq.3a1C4kQoBi,1967-07-28,ж,оператор производства,True,False,False
+Maria,Johnson,Richard,Департамент A,lisa74@example.com,$2b$12$HTsBmG/tKb2klt.L.xMW.u5JZRf8J/E/pDbjJbnIQgE.usEt5TrFO,1968-01-27,ж,администратор,True,False,False
+Michael,Perez,Justin,Департамент B,marquezheather@example.net,$2b$12$rNxeQIvl8RMLfjAvj02OrOul5m4WF6lyPvPS7xuACbFJ1filpQYcG,1965-02-06,ж,специалист по обслуживанию,True,False,False
+David,Caldwell,Kenneth,Департамент A,jennifer58@example.com,$2b$12$8va9ttStx2nGcxqNUPwxKeaZFBUSchudpu3nuMHATvin3Wo0QVFku,1995-02-15,ж,оператор производства,True,False,False
+Jeffrey,Patton,Brittany,Департамент C,kristin24@example.org,$2b$12$WZMMMV.Mt7XpaZkRlnQe0ujh2treSdiXpHysN6Bjrs/V46PoEECjG,1965-12-07,ж,оператор производства,True,False,False
+Michelle,Mora,Joseph,Департамент A,renee98@example.org,$2b$12$spl.BymDYRgixXqaldkFoe1qRpBU/HR729r.Adp7AQuW0wmAtknfS,1997-01-12,ж,администратор,True,False,False
+David,Terry,Victoria,Департамент C,djohnson@example.org,$2b$12$6wwGXb/GjD67V88Y2TLg1ep.Usqyea/D54hJOc.qh4oN8w9GO2eme,1970-12-24,м,специалист по обслуживанию,True,False,False
+Michael,Kelly,Jamie,Департамент A,nichole98@example.org,$2b$12$dHKllxbZAxW9EyHVvH2M.esi7DOkVIJXrYrJu69dbLFYSVAh7P.zy,1966-06-07,ж,оператор производства,True,False,False
+Sean,Williams,Heather,Департамент A,virginia53@example.net,$2b$12$lfFD3M2C3VDQ341rJagetOFWmWc1k/gMQ3OzbgN46mPZO/qLucBZS,1970-08-31,м,специалист по обслуживанию,True,False,False
+Kelly,Cobb,Megan,Департамент A,steven50@example.com,$2b$12$MqSMD9mXJXoZEbE5vFBqaeGQ6hj512X6WYmGWMSrCC36/O.jhJ0d.,1971-08-29,ж,специалист по обслуживанию,True,False,False
+Laura,Williams,Renee,Департамент A,johnblack@example.net,$2b$12$oaEk/rfruWkZkgXH.AsTy.AdEfy7iqHIo3G7AxjgWzf4S4Ss6JkrO,1985-02-13,ж,администратор,True,False,False
+Matthew,Marshall,Robert,Департамент B,joshua17@example.org,$2b$12$lc8XM35xrKbFNFNm5IzCP.OsLFrq2H8zgvF1taX3mcBEtCD8H7fAS,1972-06-06,м,специалист по обслуживанию,True,False,False
+Brandy,Anderson,Brandon,Департамент C,hughesrobert@example.net,$2b$12$m3ii70e8ywIF1Wn4R7ZhJOJGsY2AcxDyNVZw/7w4vRPZ0iFb0b4te,1980-08-11,м,администратор,True,False,False
+Craig,Kent,Tina,Департамент C,vaughnjacob@example.com,$2b$12$xoFY4Mn3tBC9g7G3du98lOWHJ24b5ucQ/AnU4C9y34uyGMLAtbXvC,1995-11-20,м,администратор,True,False,False
+Alexander,Schwartz,Jacob,Департамент B,cheryl84@example.com,$2b$12$kZVK2UYKO5hMQBi14RWcmuXhYlMzq.5473PBg3NaI9h7BZ6NJ2XbG,1991-11-13,м,администратор,True,False,False
+Susan,Mccann,Nathan,Департамент C,chamberserin@example.org,$2b$12$A4YrwmYkCVOrWi5xKEMkFejg5zRK/Ke89VpXZrFXnzg6dtUCnfl8W,1969-09-01,ж,оператор производства,True,False,False
+Ronald,Vasquez,Kevin,Департамент A,batesjeffrey@example.com,$2b$12$At.kKQD7nreD9M.N3uCBQO6d0Whh/fR.ytGrpNVPIlkGZU7riSlAO,1989-08-02,ж,администратор,True,False,False
+Kayla,Walker,Kim,Департамент B,jeffreyhaynes@example.org,$2b$12$pLgDrUhqjO8AZ0FTDmI1E.16Zb.l6XW077lKgEAUvOfV0w4KmB4FC,1990-01-13,ж,оператор производства,True,False,False
+Wendy,Hill,Donna,Департамент C,katherine27@example.com,$2b$12$FeOtbT1BiydFTToy0LPwdOwpHyfc5fFlsLsZG8MTBSkA5QxgKMJMG,1969-02-03,ж,оператор производства,True,False,False
+Alexander,Morris,Brenda,Департамент C,zacharyhatfield@example.org,$2b$12$XGy7vp2ZVv9IHt2RPOeV7O3cbgSCG.4vksjs4WApr6lhoH5ezwvqC,1990-04-29,ж,специалист по обслуживанию,True,False,False
+Christopher,Fischer,Maria,Департамент B,kimberly61@example.com,$2b$12$Vawnri/uMa.vORi.DHODWOmp3B1/RLkJwi3B7jNhZW70fH6oaSLN.,1973-12-15,м,администратор,True,False,False
+Amber,Martin,Thomas,Департамент A,edwardhunt@example.net,$2b$12$DU3AJC8EguRk2O7lv5cQDewB09tn3bmBQ3YsZwL9UC0PyVdwOtnH.,1991-07-10,м,администратор,True,False,False
+Sherry,Carter,Thomas,Департамент C,mrangel@example.net,$2b$12$zgZJ6ToQr5IcaeupIsyRTuPvU8fayjk.gYfPX1C2JcuUQs7ihUbVG,1981-08-31,ж,специалист по обслуживанию,True,False,False
+Eric,Contreras,Wendy,Департамент A,brianlopez@example.com,$2b$12$WwUPNJt4CTAD4sL5vSkgpO.3b3wmJQ8tz3M0NiFXFXZQg27T8pBtu,1968-08-04,ж,администратор,True,False,False
+Paul,Henderson,Shannon,Департамент C,amanda73@example.net,$2b$12$hl7Va0CD9GDzBHY7G0j33.LR0XR/PdGj.suehjk2MF0lDjqVZJ2ES,1966-04-17,м,администратор,True,False,False
+Renee,Castillo,Dorothy,Департамент B,jillmatthews@example.org,$2b$12$2ad9s2eD/isov3KGk2tJyeVYlFfa/dOtWDlvVYkSy15bsUR/ud1I.,1988-09-29,ж,специалист по обслуживанию,True,False,False
+William,Harrison,Kimberly,Департамент C,spugh@example.org,$2b$12$ISQIDxkzhOfKeKt4J/6k9Oo4.0QdLEw2iWmXRyI6/yepnuYfDqo.q,1968-08-11,м,специалист по обслуживанию,True,False,False
+Richard,Nguyen,Renee,Департамент C,coxrichard@example.net,$2b$12$2f9Cr/bfHLCZ8HhtoFDsreihqP7XtlZyrAmIuBMyO/pqSSxcA9yoW,1965-10-11,ж,администратор,True,False,False
+Eric,Ford,Michael,Департамент C,david02@example.org,$2b$12$fc6mkW.C/VNVFbz2mZDclOFjTwWx8werumFp1DKpkJBNk4LpDCF9O,1968-01-18,м,специалист по обслуживанию,True,False,False
+Colin,Harris,Debra,Департамент B,mark31@example.com,$2b$12$GYdQiK9TKAr/EEToNN/CIOx/UBC2C/b7OeRWxINKuGW6YpdADsKrq,1996-11-10,м,оператор производства,True,False,False
+Robert,Rios,Colin,Департамент A,elizabethbooker@example.com,$2b$12$H6aEeEj0.8jkN8H6RgMup.ha1lqXmGV9fA1QlalIbxnCBeOVQeIUa,1995-06-11,ж,оператор производства,True,False,False
+Kenneth,Clark,Margaret,Департамент C,alexa92@example.org,$2b$12$1lnEyQNUYa9OeoU.qz/RT.tHJfHD26Qjle599tNT7WlGFi5noZoyK,1978-05-27,ж,специалист по обслуживанию,True,False,False
+Sarah,Long,Thomas,Департамент A,smithfaith@example.org,$2b$12$SxBmt5yDUPXDYEqCrJ3hRuc2TIqbQV7sAuPF18KYOwzrMnxBA3nUe,1976-02-27,ж,специалист по обслуживанию,True,False,False
+Jeffrey,Estes,Lori,Департамент C,jennifer44@example.net,$2b$12$mTzNJO04hOAk5Lh7YiddkOam6oP/Qtim3J9SR4iaZgvdoR3VyiImy,1982-10-19,ж,специалист по обслуживанию,True,False,False
+Sharon,Shaw,Jennifer,Департамент B,rollinsadam@example.com,$2b$12$3yPoW1s/acCKYKpEo65W1.eyA24XnN.2JwsmCpfcOcwbHfmpvO7vW,1990-03-22,ж,оператор производства,True,False,False
+Kyle,Henson,Jessica,Департамент C,qhiggins@example.com,$2b$12$TsYyuFURBPuvfhaeAdNIleJS5lgynbupxLOHfGpy2Fsv8LLQjtWMm,1974-02-13,ж,оператор производства,True,False,False
+David,Frazier,Kimberly,Департамент A,sanchezrachel@example.com,$2b$12$.zYpP7n2DteLkPQMHXOkR.9EUNGX5KQLKAkVuQ8KXsMwBuvClQF72,1986-02-27,м,оператор производства,True,False,False
+Anthony,Jackson,Traci,Департамент B,espinozatanya@example.net,$2b$12$.7AQs6vI2l/nDQMBt0JX5.mFZIGV6HtuwypIebJgzhbguWW8HGY1G,1975-04-11,м,администратор,True,False,False
+Amy,Garcia,Norma,Департамент B,nicolereed@example.net,$2b$12$hNw4.DPNXAaCtSc3ROdkiu7AFfq8OK.p/qEqlgonwCILQBMIGsE3u,1979-11-06,ж,администратор,True,False,False
+Elizabeth,Cook,Henry,Департамент B,shawn77@example.org,$2b$12$76.W2O/JuMZg3bpn9fW7U.vKJ9Vu9kqE2UGNYOHlEYGAa6m1FALu6,1993-01-29,ж,специалист по обслуживанию,True,False,False
+Kimberly,Spears,Kathryn,Департамент B,hsmith@example.org,$2b$12$tiDczhbbNEEQHaSZXHRp2elLdbHpZ9rQiiq3nLMX2Ej9tk4SA/FXm,1973-06-23,м,администратор,True,False,False
+John,Schneider,Kim,Департамент A,ngarcia@example.com,$2b$12$eanBzjAlbA3YwrtqIdy.DuE8FBSAYG0pPTgchBiBxgQKyHN3XhVlO,1974-06-04,ж,оператор производства,True,False,False
+Amanda,Wise,Kevin,Департамент A,iklein@example.com,$2b$12$wTCu.5N2Cx1ct9uaPwYxD.J.t0R7WTv3Xdbm8/NB6e6m2W3nAkp5O,1995-07-17,ж,специалист по обслуживанию,True,False,False
+Kara,Davies,Matthew,Департамент A,michellemorris@example.net,$2b$12$zqmM24EfTyd9vpQc9y0zS.jauRedZcCq4WMMpAz2.aMn3rRXZt4ce,1994-09-19,м,оператор производства,True,False,False
+Lisa,Ellison,Stacey,Департамент B,laurenward@example.org,$2b$12$wBS0wizw9VLL2ipbVXFrner927R4UqudZHuH/82atJ5uAOmnQSH/O,1985-12-30,ж,специалист по обслуживанию,True,False,False
+Barbara,Davis,Michael,Департамент B,laura97@example.org,$2b$12$SClvNCrIYj3SKeWcUzQG7u1qHkhp9WThOK94/ZVao2j8R2LLvgU0O,1963-08-12,ж,администратор,True,False,False
+Alicia,Tanner,Sarah,Департамент B,bergmary@example.net,$2b$12$oLCRkH74o.mT2y7oA/B/FeitJjOQff/UBHCL99KQBvP30tSNFO.H.,1970-03-15,м,оператор производства,True,False,False
+Paul,Williams,Melissa,Департамент A,lorettarobertson@example.com,$2b$12$86dJsxTJ5zziHTajNUPXuODpVKMQciaFi7QIc4/ZV9BEPwCOQLdw.,1999-05-09,м,оператор производства,True,False,False
+Joseph,Hamilton,Heather,Департамент C,lmorrow@example.org,$2b$12$nugrDu3AhZ0PWn7JmcydLeKLRaDR1EnnU09pVQon6vzqb9G21mgsi,1967-01-15,ж,специалист по обслуживанию,True,False,False
+Miguel,Hamilton,Derrick,Департамент C,josephroberts@example.net,$2b$12$IkPDysJfUCwPnl6WhWrihOPMnLPMnJLIzLKkmMSGWNSzpXvX9qvOW,1989-11-22,м,администратор,True,False,False
+Elizabeth,Sutton,Sylvia,Департамент A,dayelizabeth@example.org,$2b$12$/FSo6areCMhbANe1sfaOfO8epZjbXjmf1cLj0.LmSfoNyFJPtUycq,1986-12-28,м,специалист по обслуживанию,True,False,False
+Cindy,Simmons,Jason,Департамент B,tmiller@example.org,$2b$12$R.TeS2j.Yw8KlveEIjfDzecue1lxZJ.eJJzDY2E7fHIq5GEC0tE1O,1968-04-04,м,специалист по обслуживанию,True,False,False
+Marc,Lopez,Katherine,Департамент C,rogerberg@example.org,$2b$12$MVXvSwUhBjzudHgPVweTXeEdms2ak5LSkfIHKxw/oK5/lL.z3vUx6,1991-05-26,ж,специалист по обслуживанию,True,False,False
+Virginia,Cooper,Michael,Департамент A,evansandrew@example.org,$2b$12$So0Dxqv0IC9vapDSjZL47.r5hDYGEGz7hGi80H5E54ziuWNTgf5Oe,1987-07-21,м,оператор производства,True,False,False
+James,Blake,Rhonda,Департамент B,melissadavis@example.org,$2b$12$cdtI2mfmuK2xQHG7jqQij.w.QKXJuaqdUVjHymgDVj/xZ60z.TOfm,1979-04-20,м,администратор,True,False,False
+Felicia,Gonzalez,Paul,Департамент B,walterwarren@example.org,$2b$12$gM4moMNPfXf/bOKagatCEuC9g92N0TJm560v5tvy0dhVuYRSz4EVK,1996-05-26,ж,специалист по обслуживанию,True,False,False
+Thomas,Kennedy,Anthony,Департамент B,kayla38@example.org,$2b$12$AYsF0bvam1mQOBpjkUDzjeVIr8UH9VkhhXR8619r7GdH0FOywq2c2,1975-06-29,м,специалист по обслуживанию,True,False,False
+Natalie,Flynn,Ronald,Департамент A,caldwelldana@example.net,$2b$12$hYLaUiClQ4iYV.45TNdu5.ExtoNXoroq5Hk2wVvH4qkw/LQmNFa6a,1977-07-15,м,администратор,True,False,False
+Rebecca,Phillips,Joseph,Департамент C,thines@example.net,$2b$12$5DpSFctWXJcmo2qJYFoVVOGOvxMRjWNX428CHSx04IvGGZ2vhsiUG,1997-07-12,ж,оператор производства,True,False,False
+Christina,Barnes,Bridget,Департамент C,shannon00@example.net,$2b$12$4T1mJtU5CqPxcaTUc.TijOaOOP7ImExh0ZRsRG4Gdb1SesXc6oepy,1970-08-03,м,администратор,True,False,False
+Angela,Harvey,Tasha,Департамент B,edwardskristen@example.net,$2b$12$3i41/rPVzPNWS0xPUlORIu0fu.wVtF4G3RfOyOa7aadMj7CIAaDHC,1976-07-29,ж,оператор производства,True,False,False
+Kaylee,Allen,Kelly,Департамент B,david27@example.net,$2b$12$a4ijZsk7sYjrSLba3e6ucOZ2.HjCBNvo/74XxrMnRAQ25w2hlWpXu,1977-10-27,м,оператор производства,True,False,False
+Mandy,Oneal,Brandon,Департамент C,rebeccaharvey@example.net,$2b$12$gHm4xDnoHdOSbKXuykb8eePDFHbOu4TtX5STqDc5AhCq8L/I1yFW6,1988-03-04,ж,оператор производства,True,False,False
+Shelly,Gonzalez,Aaron,Департамент B,jrowland@example.com,$2b$12$dpe28p7q8u7Kpvn2ste4Xu1he84A6Fp2RHqXaqitIIvMmVhxHpS0q,1986-06-29,ж,администратор,True,False,False
+Heather,Kent,Mary,Департамент A,yolandapowers@example.org,$2b$12$3sVU2W0LLy0H565bKaLFIOA0LJqbmMM9G3.D9NyEiTIIA4xrFfY2m,1974-10-29,м,специалист по обслуживанию,True,False,False
+Heather,Williams,Olivia,Департамент A,acostajeffrey@example.org,$2b$12$ZzashMGKJxYrE.ep0opoFu0AKapNjg2WPyyuFL/PE4QFy4EmyK.xy,1973-09-30,ж,специалист по обслуживанию,True,False,False
+Matthew,Dixon,Matthew,Департамент C,andrew63@example.org,$2b$12$iUr0Kg9d0mn8twblrIoeWOwSJQjvfa0adEKJ6HXjuDhz1lxfb0yOW,1972-09-22,м,администратор,True,False,False
+Amanda,Moody,Travis,Департамент B,cesarjones@example.net,$2b$12$0lyOFngaf9J17oTKt7c1JehfDwEY..t.1EcoX9Pi56zHKjUzcpv.C,1996-11-30,м,администратор,True,False,False
+Matthew,Henry,Melissa,Департамент B,inash@example.net,$2b$12$dvAcMLkIs5F3mc9eoz9mMe2bgSxsWcavAQoKCIJrTNE88QF.Io87i,1979-05-20,ж,специалист по обслуживанию,True,False,False
+Julia,Ross,Meredith,Департамент B,carol87@example.org,$2b$12$LfxgpKs/skk54LgDNMrh3.Yke6fI70IdTWgFdH2qbMa1HjGwxv7Y2,1989-02-04,м,специалист по обслуживанию,True,False,False
+Sydney,White,Julian,Департамент C,bstanton@example.net,$2b$12$CgIEJNuNBRko7HsHRscudeWUD7e0M.tUDClPnXUd8uXkgNM8UVyqG,1964-04-06,ж,оператор производства,True,False,False
+Julia,Moreno,Steven,Департамент B,brianhenry@example.net,$2b$12$0dSWJx28oRVuKd./RBpqfOVgekYtTTbC3q3cnHf4FguzgO7lGz6g.,1997-10-11,ж,оператор производства,True,False,False
+Chris,Gardner,Benjamin,Департамент C,carlos14@example.org,$2b$12$89EAtds.JMZgjTRzWmG2WeNBKQ4g4PKKHH./EsPDgGydX9Xvobs6i,1984-02-14,ж,администратор,True,False,False
+Ashley,Erickson,Austin,Департамент C,samanthajohnson@example.org,$2b$12$euP9MDsN7DqaTYEOf53FbuNmylDgxIxfYoZRw5BB2Fu1J0UNXUCBK,1982-08-27,м,оператор производства,True,False,False
+Joshua,Perez,Monica,Департамент A,christopher11@example.com,$2b$12$xS78/.qAp56NnqDKArsulOVM631FCWip3qEnciQ3vjIlmjWP1yRzq,1994-04-03,ж,администратор,True,False,False
+Cynthia,Rice,Lisa,Департамент C,uskinner@example.net,$2b$12$U8tsTTC.yw6dgcY7j59ZBOVgPePgIC2LZcEnUL.H.Dt7kL8s0absO,1971-08-18,м,оператор производства,True,False,False
+Jennifer,Turner,Earl,Департамент C,brittanywalker@example.net,$2b$12$PpVBaBNnjUXo96dgRkBDFe0C9Y4poDRgBc2mGBRUCDPwc4zY7Tm1C,1978-12-10,м,администратор,True,False,False
+Bill,Hurley,Kenneth,Департамент A,lbrennan@example.org,$2b$12$BrBcKhmIYYIS0nxHtx4mwugKxrwmmLImdC22hPl60ku1MFwOfrhlK,1994-10-18,ж,администратор,True,False,False
+Dawn,Williams,Courtney,Департамент A,william69@example.com,$2b$12$FiEUBfH4x7kh076BJ.fl2uCSiy.X6fD.ZSaok7EERoGByhELRocj.,1982-06-20,м,администратор,True,False,False
+Christian,Morris,Sandra,Департамент B,rodriguezeric@example.org,$2b$12$pmB8CSBA7WZsudyqaHXWSu5kv3ITiuBpf6y9qZiLO5T/2aNbM5L8y,1978-03-20,ж,специалист по обслуживанию,True,False,False
+Emily,Chen,Stephanie,Департамент B,ramostimothy@example.org,$2b$12$jLX0FBIRatSibLG0FmM28.nwm0HUPelqZw9BqCIEWZYJ/jltNDZCm,1968-07-14,м,оператор производства,True,False,False
+Jennifer,Nguyen,Michael,Департамент C,meredithgill@example.org,$2b$12$79baNUQtaHjBaOQ1GwWcLOKljwSqjeGHuhNnIQCkWCH2VrN1Kktq.,1970-02-01,м,оператор производства,True,False,False
+Kevin,Johnson,Valerie,Департамент A,bradleyanthony@example.com,$2b$12$J9ZEhzuB3D4lVBsGolXWteR6TkvKCR.i3vQjxOkY./Q7Bwj3Jxl86,1994-03-07,м,администратор,True,False,False
+Kevin,Collins,Paige,Департамент C,xcontreras@example.com,$2b$12$NXWIYWee86KkOFZ2MqnT8.kUP4pyEapR15qCnVyZFDYutQa6ntEpu,1997-05-02,м,специалист по обслуживанию,True,False,False
+Paul,Moore,Matthew,Департамент B,christina31@example.net,$2b$12$7dSfHfowJUios9I4cbYv7O9JV31iGieNkOGDFSHTtcUXMNOL6y81W,1970-09-14,м,оператор производства,True,False,False
+Stephanie,Krause,Tammy,Департамент A,andersonbrian@example.org,$2b$12$YUK97yNWAsPk1YKFPov5FuIQiuZRKQGHqT0OvsYVgvvRRreUMSbnu,1996-05-14,м,оператор производства,True,False,False
+Kenneth,Chavez,Kevin,Департамент B,yfernandez@example.net,$2b$12$0yHO6BNVHnyuMZXo9aOHke9QENSAdm7ycMADGdIB/zWhEuw8hY6QG,1975-03-24,ж,оператор производства,True,False,False
+Hunter,Keller,Sean,Департамент B,hallrobin@example.com,$2b$12$D5UQ6nayzWkwzpGe6GKJPu/GMOg5SpsKdcOeoBbKVl7CyFdIaEpGa,1981-03-29,ж,администратор,True,False,False
+Michael,Patrick,Nancy,Департамент B,collinsrichard@example.net,$2b$12$rk/l9hxuNZUCDl/K1iJUCe2F0XZSAyG3sRiDuElmMDDosm75vFFJO,1984-04-05,м,администратор,True,False,False
+Lisa,Cross,Lee,Департамент C,bennettsandra@example.net,$2b$12$/IMQ9N3hYGpqI7G6LNTP3ue1OhAzLkqnZGvwoM3ip.6/Jo7dV3B7S,1968-01-13,м,администратор,True,False,False
+Scott,Benson,David,Департамент C,xromero@example.com,$2b$12$iQW75oCB1YuhVZDp/T6HwO1UqC7ZvDMjsuxyNfaqPBjEil0ofvs0y,1990-05-08,м,специалист по обслуживанию,True,False,False
+Tammy,Johnson,Justin,Департамент B,hoffmantracy@example.com,$2b$12$yOMIbCc.3oN4A0Vz5DPLpuI/7wylDjJUkUxNLZWO7hoO2vJc.XVxm,1981-04-30,м,специалист по обслуживанию,True,False,False
+Justin,Ramos,Elizabeth,Департамент C,smithnicholas@example.com,$2b$12$D1Aekwv/b1xJ9EtrNjO2ROX1UXvvrv4OohiNh8vZ75p3H71R7dYD2,1973-11-06,м,администратор,True,False,False
+Jennifer,Carroll,Stephanie,Департамент A,carlaburns@example.net,$2b$12$2V8cl.l1X7u2x3OZ6RAp3.mvb/2apPAuzpsiJq92u7iyYEFVAk/dq,1997-12-12,ж,оператор производства,True,False,False
+Joanna,Roberts,Tanner,Департамент B,ohickman@example.net,$2b$12$6T.06vWmIOjWO.UE9z3v7OGu3RlmszCJ5UMy1FEILqNxhWle2XLyW,1992-01-18,ж,специалист по обслуживанию,True,False,False
+Erica,James,Janet,Департамент A,rebecca25@example.com,$2b$12$oki2wKM.PJDBuYGP7S.kK.oZK6j5oybrH1I5XF.qlwR6WVfAXBWXi,1980-08-02,ж,оператор производства,True,False,False
+Sara,Stephenson,Pamela,Департамент A,benjamindenise@example.com,$2b$12$wVJ5rezQfmYw3x6oBwnxJ.lEdyDs9i1aWMb3QljwGIVaKDZAR5a6.,1965-04-09,ж,администратор,True,False,False
+Raymond,Russell,Ashley,Департамент C,tannerbrown@example.net,$2b$12$SoysLo.h3dnzBPgLzogNWOMNl1BfcUSw4zEOWrZKYE8oTDxn.bLFO,1966-11-13,ж,специалист по обслуживанию,True,False,False
+Anthony,Lee,Richard,Департамент A,heidi33@example.org,$2b$12$8g6Po7se.FlZG4UuVN8eQe1fVGz8lF41weBw7iLEfsMQs3/oTDGoS,1969-05-09,м,администратор,True,False,False
+Terry,Murphy,Sheryl,Департамент B,natalietaylor@example.net,$2b$12$u6rUidPp/eCIQmrzkYFtv.NLLeeyargwxtItRm3KQGLpnY6HU1nbq,1972-07-28,ж,оператор производства,True,False,False
+Alan,Woods,Christina,Департамент C,stanner@example.net,$2b$12$q13RmkVnkGwH9mtv34/jreqdYYy2a/Zt3gc6zIiKLQzWQ2nBOMSlG,1976-05-23,ж,специалист по обслуживанию,True,False,False
+Angela,Ramirez,Alexis,Департамент C,michelleperry@example.org,$2b$12$TYAlb4OoNc09ndLLmjt0yezlZIccMmM9I2870OFIitSDmzPZ28dsS,1983-02-13,м,оператор производства,True,False,False
+Anne,Silva,Diana,Департамент B,cgarrett@example.com,$2b$12$iqNu1nOov9oE1Pu0MkoH2Olj2I8zqCuKV7PtZI.RvWSYCTJCR6SLy,1971-02-18,м,оператор производства,True,False,False
+James,Lee,Matthew,Департамент C,pzimmerman@example.org,$2b$12$T5/1tZYdHSb.dxI9GJIlqO3pXrd8HA/27vIGweLBuw9GhvJDqerda,1975-02-20,ж,специалист по обслуживанию,True,False,False
+James,Marquez,William,Департамент C,olsonapril@example.com,$2b$12$fCLISidCFc5wWqlEiPeskOktJgNBX4Kls4gU8lkC26qy/Uy8.bHNC,1989-01-18,ж,оператор производства,True,False,False
+Yvonne,Guerra,Elizabeth,Департамент B,pmoore@example.net,$2b$12$TUlF.3UcihXvIWwVijSiourdY4A0ELTxveBcpvjLvF4CelTdOeCEu,1995-10-17,ж,специалист по обслуживанию,True,False,False
+Jennifer,Maynard,Juan,Департамент B,matthew62@example.com,$2b$12$2g.AwCWAayOeSIzFNnMNhucDE8YLMnb4eu78a7LowvF8t8TbC6fTG,1982-07-03,м,администратор,True,False,False
+Sarah,Spears,Jessica,Департамент A,christophergallagher@example.com,$2b$12$Sj.vZVHhmRLSKM0/giBmDeT2fn/Fb.mVkCqKlEXhvoeWlVh18qvny,1986-04-20,м,администратор,True,False,False
+Amy,Elliott,Eric,Департамент A,walkerstephen@example.org,$2b$12$oipXY2DVYf9YCNka.qi0EuNJAgSl9nV9xTjAIgcQb/ejGGQSKxbz.,1972-02-13,м,специалист по обслуживанию,True,False,False
+Joel,Price,Brandi,Департамент B,zhebert@example.net,$2b$12$cfhhQxLu4.VfQWMGWlriCek40WKcd8Q1buad9IUSfdu614FzxzZC6,1982-12-01,м,оператор производства,True,False,False
+David,Rodriguez,Stephen,Департамент A,callahandarlene@example.com,$2b$12$L8.89H8PevDKgZ3aqbeHS.HerQBavsZ4zlllIytdu1Hg19lLqrOIu,1974-03-22,ж,специалист по обслуживанию,True,False,False
+Patrick,Harris,Karen,Департамент A,rosejennifer@example.org,$2b$12$HQzGZ/hXaXKae.JREmpuX.FPW6DDNH4Q48wpEo6VsstrX0e4wIZ.m,1999-07-18,м,специалист по обслуживанию,True,False,False
+Alice,Shah,Gabriel,Департамент A,andrewjohnson@example.com,$2b$12$hTmL8LyHaUul6O6k/zLrG.gZQDe/8AI26PhJbEX4OfGhN0BkJDsd.,1971-02-28,ж,администратор,True,False,False
+Eric,Mayo,Matthew,Департамент B,kcook@example.com,$2b$12$SAF5Sf/9nCIDgHU.gh2PT.AYiSzU875pYh9Xi3nMCXAEG2yfKIsKy,1965-03-02,ж,администратор,True,False,False
+Robert,Jackson,Karla,Департамент C,gcook@example.net,$2b$12$vbX/lU1ZfhX2hkPMeXHTnOV6NlXJKKpPu3.5tBuQ8XrJEV8hDBsz.,1976-03-12,ж,оператор производства,True,False,False
+Angela,Brown,Tina,Департамент B,anthony18@example.net,$2b$12$SEFDsR.ZjsGDoDWgcsN47OyBTjqdOYZz5dgWPJ42c7SmNB1ZIMJeS,1981-10-28,м,администратор,True,False,False
+Stephen,Martin,Nicole,Департамент C,cantrellmichelle@example.net,$2b$12$SzzkvzbyZUW5w4es2zADnO3UHdTHfodNaUpcSSUhc8Qbwv8kZjdMW,1971-09-10,ж,специалист по обслуживанию,True,False,False
+Robert,Garcia,Kathleen,Департамент A,robinsonnicole@example.net,$2b$12$TmUsxT7HUcPIzQ3zfnd9Xuq2DYe3aAcD0OUjILpwu5julv.QUilP.,1973-01-31,ж,оператор производства,True,False,False
+Joseph,Guzman,Monica,Департамент A,teresa68@example.com,$2b$12$32fNF1Txyng2hCnI7VO.vO/Ngt3N2ZNh19IEHMbrolTbpffqCiBrK,1997-06-01,м,специалист по обслуживанию,True,False,False
+Luke,White,Matthew,Департамент C,ecox@example.com,$2b$12$yO.aqiO52hQpsOA8l.CLheIylAeyROEQE.yyQQkOxKgu.LeQVs4Gi,1979-06-06,ж,оператор производства,True,False,False
+Steven,Howard,Brandon,Департамент A,toddday@example.org,$2b$12$UPlW7P0cjILpEB4XoeQZCeYVtFrcbNvXOh2BWTygT6DpeSCHjJzS6,1983-06-19,ж,оператор производства,True,False,False
+Brianna,Sanchez,Shelby,Департамент A,figueroacrystal@example.net,$2b$12$TggvHLjJsuEz/wV9L1QXZuH2SeGnBnkeUtBtyvaFpIeTB1qwfc/3i,1989-10-15,ж,специалист по обслуживанию,True,False,False
+Timothy,Brewer,Carol,Департамент B,jharris@example.org,$2b$12$VhrwTEEZSqo739czztZkAeuvMhqp5uNe.PzpacMAVoWBlpEt0hZhW,1966-10-02,ж,оператор производства,True,False,False
+Brian,Edwards,Sandra,Департамент A,thomassean@example.org,$2b$12$0Kblko85.AsSuKOedAKfg.JR62YCiqdOMMgZKzhYWHlmdJvu4t0xq,1998-09-04,м,специалист по обслуживанию,True,False,False
+Robin,Moore,Miguel,Департамент A,cesarjenkins@example.com,$2b$12$dcVCNCQx8pGDplI/7.CHO.WfocTagt6I0DqKGPHGZVD30YcbDz93e,1977-02-17,ж,оператор производства,True,False,False
+Melvin,Porter,Kimberly,Департамент B,davisemily@example.org,$2b$12$Wsamhc3cRUjMtc2K5DpYZ.6Ar2bosv8NK9iy5u5zPEqkDrpEzUgn.,1970-07-28,ж,оператор производства,True,False,False
+Tammy,Smith,Lisa,Департамент B,asanchez@example.com,$2b$12$N1slRJPdcEU9t5eg5QGoQex9atWc.9FxKgoMSZt4dnmDlzIHKBtiK,1988-11-20,м,оператор производства,True,False,False
+Stephanie,Simon,Yvonne,Департамент B,rebecca63@example.org,$2b$12$GE/gmU/gqKX/EI9I/L0noOQu/k68SF2aXwjGE2/PuFtEA7JCyXaJ2,1989-06-14,ж,специалист по обслуживанию,True,False,False
+Jennifer,Crawford,Katherine,Департамент B,whill@example.net,$2b$12$FFWdvRLGEOd5AvQaz2ph9uMkaYhOGeQdBK3WCJY.TgJaJ.xyg108m,1983-09-16,м,оператор производства,True,False,False
+Kelly,Lane,Jennifer,Департамент C,frankpaul@example.net,$2b$12$c8BsyhoVrW6L9Z/QVMzMzu09adYodl/sVF5oGh.k1MW4KdrFzsVXe,1978-06-26,м,оператор производства,True,False,False
+Kyle,Santos,Sandra,Департамент C,james54@example.com,$2b$12$hYVaMUp4S6kg5SHUlwpxveDWQgWOwBRlB/Aidxv26sStexc7o3pM2,1969-02-27,ж,администратор,True,False,False
+Christopher,Mcintosh,Laurie,Департамент B,wrightbryan@example.org,$2b$12$r1zNWUl.Y7oBB9.5jruRb.7ptPScphmLx6WKa0BKJcZU8hH9l/UU.,1966-04-16,м,специалист по обслуживанию,True,False,False
+Catherine,Smith,Suzanne,Департамент B,ramirezbrian@example.org,$2b$12$uTU49nwMCwEEsd3o44kWCudKOMzdcPRslDeUQr3NRmsWpMXIeqmxG,1975-12-09,ж,оператор производства,True,False,False
+Kathy,Curry,George,Департамент B,elittle@example.net,$2b$12$dnQ9Eb9dIW5z/CW2SddFqeE6ZRJifFzpAAL9kAgN0GtIbQBa17hiq,1970-01-18,м,администратор,True,False,False
+Miranda,Reid,Julie,Департамент B,brownnancy@example.org,$2b$12$oP.tn5n8H/TSSy8IUJOGtOhTlXDn/NNMKnlYfH4OQGtaxyD45Ng7G,1984-03-14,м,специалист по обслуживанию,True,False,False
+Jacob,Brown,Philip,Департамент B,monique38@example.net,$2b$12$60GgWMN3uXg0Svut78y75.EHjS9sMtwbm/9W.Z359nrLnzLPza/lO,1987-05-04,ж,специалист по обслуживанию,True,False,False
+Angela,Browning,David,Департамент B,gbrooks@example.net,$2b$12$4AdMAiLMlkddT..lg3x9bObLDP5V88745VmzltcVNqQcyEIahlZXW,1979-06-26,ж,специалист по обслуживанию,True,False,False
+Angela,Gonzalez,Todd,Департамент C,ghenry@example.org,$2b$12$xMGK6knXmPhjldciiWbjEe/zcQ2Spbb7poV50Soanbb1hvbQxL3Y.,1977-12-04,ж,администратор,True,False,False
+Dale,Lucas,Kathleen,Департамент C,cheryl31@example.org,$2b$12$cnlZBMMmjCnflwVLaZ6JIOCE8ZkTlIV9t.k4imyOGjn6rYemLa4o.,1986-05-20,м,оператор производства,True,False,False
+Kelly,Gutierrez,Andrew,Департамент A,alexis77@example.com,$2b$12$0VvR/i26b5bhsqFslR01Ae/Eq6X2bS.oEZuTVhMqZgpRnwGfHtl8W,1971-11-23,м,специалист по обслуживанию,True,False,False
+Janet,Powers,Mary,Департамент C,danielsanders@example.org,$2b$12$kbAsIa5l24UVQ.2fNle.FOO4TU565Y2nnVM/aeNlp68XG174rxW4e,1981-06-17,ж,администратор,True,False,False
+Angela,Peters,Elizabeth,Департамент A,ythompson@example.org,$2b$12$DIaQw07B6eJ4Rj70FVI7t.WZJ7MfR.C3lrXb2IENOdNXiOvKKzOIy,1965-06-13,ж,специалист по обслуживанию,True,False,False
+Bryan,Garcia,Gina,Департамент C,stephanie92@example.com,$2b$12$dRnbE2EbakyLzsRb4xQys.9vBmCeLyqBtzxrUq2gZkVEvHlICa8HS,1968-06-24,м,администратор,True,False,False
+Kathryn,Ramos,Natalie,Департамент B,katrina92@example.net,$2b$12$KWiu37UJh1K3SX4YZsEFuubPejVN1Im5d6nIClZOP/jbMI68TI.cC,1983-09-26,м,администратор,True,False,False
+Alison,Tucker,Jennifer,Департамент B,gford@example.net,$2b$12$J1Nq7Ezsi6Lyr.D3MZukveqIu56WQnkRGi790Wpez/01R/ymt4xpS,1963-11-16,ж,оператор производства,True,False,False
+Lori,King,Derek,Департамент A,darren09@example.org,$2b$12$FaI1Ds3D82eYN5saKb.9aeM2GWwBk3SQEbIDUxZ8ddnXER0fBov0y,1970-03-01,ж,оператор производства,True,False,False
+Jessica,Vang,Amy,Департамент A,msoto@example.com,$2b$12$2btNap5anJLQGb9M1Ml5MeRY2i7Vtxb7qAkqRXk6BPYCY0y3euhMO,1963-12-29,ж,администратор,True,False,False
+Sherry,Contreras,Cheryl,Департамент C,ndiaz@example.net,$2b$12$qqoM8iY.o6kDuSbWIdE0AuZvZUBx94hjqB4fNhXhRk2Dd4939w7iq,1997-11-21,ж,администратор,True,False,False
+Savannah,Henderson,Randall,Департамент C,kgrimes@example.com,$2b$12$NKEi7MOiKFQ9wbK4ef9Y7OqC1EStaFfcwWzTAsTRHlo0KzzaSTm1K,1988-08-27,ж,оператор производства,True,False,False
+Megan,Robinson,Tiffany,Департамент B,michaelelliott@example.org,$2b$12$wCjy3TbZtMqTODmuJistt.KZQ2YI/NF3XSQRPJV.K2T05mTor4Hiu,1979-06-15,м,администратор,True,False,False
+Anthony,Moore,Nicholas,Департамент B,hsmith@example.net,$2b$12$a99P7T2.Np4Kdtb/nWBlz.g1Au6AJ75SIWYo6u8.U7yuGtyVw/nsK,1977-08-24,м,специалист по обслуживанию,True,False,False
+Elizabeth,Vasquez,Hannah,Департамент A,victorbolton@example.net,$2b$12$fzznpnucPTWMixLNdVvT2.mTuLGNwKEjcG.AGHpF1e7KTAi7g8hkq,1967-04-21,ж,оператор производства,True,False,False
+Christopher,Perry,Lisa,Департамент A,tinabates@example.com,$2b$12$GeYTUIH5J/C3PJGb57kqP.18en6GMZBEkiyiCHZy1kG6WcYRBPmB.,1998-11-17,м,оператор производства,True,False,False
+Bradley,Lester,Adam,Департамент B,william38@example.com,$2b$12$C2b9o00o/99r/dGPmSne7urwhpK3JHXF/qpPXDwgHwPm8zkF3l4jO,1963-08-11,ж,оператор производства,True,False,False
+Sarah,Gonzales,Brian,Департамент B,david42@example.com,$2b$12$KMF6z0rt1qO8LvN9a7HXjeAIj0MFcBQ9yZ2zzODeevp6fVcVbujwe,1968-03-23,м,администратор,True,False,False
+Rebecca,Garcia,Joshua,Департамент B,donaldsingleton@example.net,$2b$12$DBqxhYC/Bh3SImFB/5MdfeGwC822v2jACEjI4C0DHN5JNx6HsGAHK,1997-06-05,ж,оператор производства,True,False,False
+Rachel,Gibson,Meghan,Департамент A,rebeccagarza@example.com,$2b$12$oLbnClLq0vk43keFi3FTjO47P53wYo5Khy275re0AbhiGeCjxKtti,1967-06-08,м,оператор производства,True,False,False
+Keith,Davidson,Jonathan,Департамент B,bakerroger@example.com,$2b$12$kV7UufpB4kruiz9YXUZdpejqw2awG3WoiLqxPlbFrQ/W0nq54iuju,1978-07-24,м,администратор,True,False,False
+Philip,Schaefer,Jessica,Департамент B,blanchardsusan@example.org,$2b$12$bBVtJKjsdauMmUmT335djuitbAJMomM2YYgF/mLm.M2T/8cqbXqaC,1994-10-10,ж,оператор производства,True,False,False
+Michael,Brown,Christopher,Департамент B,barrywoodward@example.org,$2b$12$qKcrcPogfrUQCDjTSBURnORJ8CW4v5pvC27cw7hX06e19Pi0XKmkC,1969-11-23,ж,специалист по обслуживанию,True,False,False
+Sharon,Carter,Joy,Департамент C,fstewart@example.com,$2b$12$vtTihEXrGczjzhQ9x403IeqlJeh37HThcJ1VjlZBbUG0J2ksaApYG,1982-08-10,м,администратор,True,False,False
+Jasmin,Moore,Rachel,Департамент C,vgonzalez@example.org,$2b$12$.pU8VxdNW9REGGGcwgY4MuhLvZZ5IA3nj6fpqylEixiOK5W3cBElu,1995-09-20,ж,оператор производства,True,False,False
+Darren,Shelton,Monica,Департамент C,williamsdaniel@example.com,$2b$12$o3C2FLtPlaHHVMD9vBQZau.bys83lYQXHHiyu8u.MPcJz9LQ9Q2ka,1996-09-24,ж,оператор производства,True,False,False
+Ryan,Stone,Jose,Департамент B,tcampbell@example.org,$2b$12$hkE0cGijzYmiHIXRPVFibuF3GTP2dDHZGLHKQRilyf9dzI0IDhpbe,1996-12-23,м,специалист по обслуживанию,True,False,False
+Emily,Garcia,Michael,Департамент A,qparker@example.com,$2b$12$.AyOlRhDByyz0xqH/MmM0urO82qMFg35xhCsRcKjTn0hij1CeEMlO,1974-07-31,м,администратор,True,False,False
+Cody,Mccormick,Stephanie,Департамент C,breanna79@example.net,$2b$12$p8fmgMS.duiBX24vyhVZq.kj7VS7n3rVRUtocBWLpNlDSFkgylyre,1991-05-29,м,администратор,True,False,False
+Russell,Castro,Janet,Департамент B,ybrown@example.com,$2b$12$9JbaHwIsCj8Xc.shWQHL4u7zZVgzhMyO1NxwQD9cGQC9y7oOuBeKy,1971-06-09,ж,специалист по обслуживанию,True,False,False
+John,Rhodes,Ana,Департамент A,davidstephens@example.com,$2b$12$YYmO716WB3T8EfSjnVjfn.WaoxAXtX2DTp52Rsrm6yIgwTiMiq/p6,1975-05-22,ж,специалист по обслуживанию,True,False,False
+Brianna,Scott,Michele,Департамент A,vmorales@example.com,$2b$12$Js799j7nKPBajPyV3GgbLupiomTwvz9QbYPBkIYWolFLdrq0lsfYm,1968-09-30,м,оператор производства,True,False,False
+Frederick,Anderson,Joshua,Департамент A,phillipsjennifer@example.com,$2b$12$ln.C7PMud6iq7S1UNV4APu8tp1Kkwg/CvpuYCKcyyKk4WpdCkvEey,1982-04-30,ж,администратор,True,False,False
+David,Jones,Nancy,Департамент C,blake88@example.com,$2b$12$/NGNWAyeyMMbCSF1EhfqVe3hV4DGNqOnMbRmKXP8czl0CqDIqWQHi,1977-10-01,м,администратор,True,False,False
+Miguel,Castillo,Timothy,Департамент A,christopher12@example.com,$2b$12$dA1cq7yvyQHmjSz1zQkp9OtO3MtWyWq9Ay5Zyle8bqOn22cih.KLy,1994-07-21,м,оператор производства,True,False,False
+Jeremy,Ellis,Elizabeth,Департамент A,aliciawhite@example.org,$2b$12$dKCIYlrlBRWEKBCROhaJy./jzRQkGpaPjYeczfcfMOX8DmrpxSCoK,1985-11-08,м,специалист по обслуживанию,True,False,False
+Daniel,Fox,Bernard,Департамент B,underwoodana@example.net,$2b$12$GND4ct2errwpVw67oAbsFOSbvzLyb2Fe4uUUUOq9dWOOk69WynA/S,1991-07-04,м,администратор,True,False,False
+Carolyn,Chang,Kelli,Департамент B,hillkatie@example.net,$2b$12$9TSWswarNwvOdLy6sEfFOem.81DqxKUeOPEzjkB7E5Etr8dNK2rFq,1992-11-01,ж,специалист по обслуживанию,True,False,False
+Paul,White,Erin,Департамент C,jacksonlaura@example.org,$2b$12$YrwvAr4JpOfS0mgCMpngseMnhTsn/cGT7.KXR6.J/v7kkAE7zV0oy,1976-07-06,ж,специалист по обслуживанию,True,False,False
+James,Valencia,Jeffrey,Департамент B,vgoodman@example.com,$2b$12$R4uatNPd06j98XZeD0BI0.QQ7/T2bV4b39jFwDaGGII9AlXLecgZG,1996-08-06,ж,администратор,True,False,False
+Jeffrey,Lopez,Victor,Департамент A,leonardryan@example.com,$2b$12$OlOmkmbNsNpHYcGnMoJaju0wjnqO6OF9PKHGMb0G8d8N/hS70t3DK,1966-07-26,м,администратор,True,False,False
+Darlene,Gates,Susan,Департамент C,burkerebecca@example.net,$2b$12$l9j4YlXbNcW0Kf4v8sDwK.mTXgvOn2/.YikYwna6CrEDZVKfSxpLa,1996-01-17,ж,специалист по обслуживанию,True,False,False
+Kristina,Brown,Emily,Департамент A,hartlauren@example.net,$2b$12$V9ofAg0Yie9YaP4fZy0OWOPpr9/YMNKqDNIQOVDSAEELDjdsrX/we,1974-02-26,ж,оператор производства,True,False,False
+Victor,Rivera,Meghan,Департамент A,williammartin@example.com,$2b$12$TKeKwgoTVWLsIaYur8qiHu/8n2S55YoRMGWJgte2DgUomI0xSaPV2,1972-09-10,ж,оператор производства,True,False,False
+Cody,Stephens,Brandon,Департамент A,hannahleblanc@example.net,$2b$12$9erF7Z5A3Vd5/hfnjw142uZYhS0Qf7wE3xIRT5ti5ESqLMk8Ryolq,1997-07-23,м,администратор,True,False,False
+Jack,Knight,Ryan,Департамент B,prattadriana@example.com,$2b$12$VbdYrL/Ex1FCl8IOZbFxQuPuPSc5/fUkX1k2vcpoA6BqZmtbu.BeS,1977-12-23,ж,оператор производства,True,False,False
+Danielle,Lam,Donald,Департамент B,michaellloyd@example.net,$2b$12$.vR12UbaDKqjBLD5VCXWrO5KSr4xj29R2dINjuqp6fe/n567bU5Ey,1970-12-29,м,администратор,True,False,False
+Jeffrey,Villanueva,Matthew,Департамент B,wongchristopher@example.net,$2b$12$y20x0vOEjsS6L1cfWuGNNO3YttxAAENU2S2v2Ms13v6gxZALqIFYy,1967-12-07,м,специалист по обслуживанию,True,False,False
+William,Hall,Nicholas,Департамент C,prestonmonica@example.net,$2b$12$tRxOLX/HbKNm1lFXyQfPfusSArjr919JDpPJJeCJ/0T9R.G/VKKGq,1965-12-08,ж,администратор,True,False,False
+Tiffany,Peterson,Christopher,Департамент B,adam09@example.com,$2b$12$ic8yaw86Io1dW0mwDwhaHuDAxBudOeyhstonzESoDNAM8mE544e7W,1970-08-11,м,оператор производства,True,False,False
+Paige,Moran,Daniel,Департамент B,markmoore@example.com,$2b$12$.iYA.iN4FiT9dzjrnXyjweAUQlZchankRqIFU5doefSMAyaNj0dly,1984-01-04,ж,специалист по обслуживанию,True,False,False
+Steve,Ali,Joshua,Департамент B,pprice@example.net,$2b$12$If7osMyt2oAXBMWbu/WObu3kRW7AlGRuyHRvpfQIGQLZPmT.U0ZrK,1970-06-09,м,администратор,True,False,False
+Elizabeth,Austin,Lisa,Департамент A,haysandrew@example.org,$2b$12$JI2CWd1D1Af7utmgGu1TIejzbOShyuSeyvPODFGTOJyeVoW0ld0aC,1993-05-18,м,оператор производства,True,False,False
+William,Thompson,Tiffany,Департамент A,marylane@example.com,$2b$12$pIbhS559HSJoR06KMxG/oe8MAHqiN6dASSmpfNhYgtAYaT5IiRo5a,1965-01-22,м,оператор производства,True,False,False
+Susan,Clark,Peter,Департамент C,amyharper@example.com,$2b$12$p4h/i6DyrVQvgQEiDoFQWOd2urmAd4quTg6rFAjyRk40AvwE9Rkku,1974-08-14,м,специалист по обслуживанию,True,False,False
+Dale,Bowman,Lindsey,Департамент C,anthonygilbert@example.net,$2b$12$JoQ0jTEbnq2ktVDoAxm50eEmmEi6RCO6gfiBL0QEUf/iyOBWatjeO,1993-09-30,м,оператор производства,True,False,False
+Luis,Woodard,Katherine,Департамент B,csherman@example.net,$2b$12$NzUH75.6QYtm4uzMl//4heugA2TcZ2X5UHjw6gBvHIcBjt8la3l2a,1966-05-29,м,оператор производства,True,False,False
+Spencer,Farmer,Brandy,Департамент B,guerrerodavid@example.net,$2b$12$/tRhA2VzXcDLBRwVrGtAXOX8ghu375mrYy2cFrytGBfMXfn6s/a2m,1996-08-19,м,администратор,True,False,False
+Richard,Richardson,Paul,Департамент A,richard70@example.org,$2b$12$7lTOEwZFYc81Jk2K9NS3iu.2hDbDmZtS55ho7gxYtNb.FCSjWZBfK,1996-10-22,ж,оператор производства,True,False,False
+Taylor,Buchanan,Andrew,Департамент C,david41@example.com,$2b$12$IYEO02tC3fvIk6GrnYD26edi8sEfHWPvaYu9uxVE.uceEURK6NZzC,1992-07-04,ж,администратор,True,False,False
+Gina,Cook,Brandon,Департамент B,cathybarnes@example.net,$2b$12$n9RP10n.PVq4e8tzbJEsC.QGknfakZE8Rhb3fprMZrB9kQOJOwZ9W,1989-02-27,м,администратор,True,False,False
+Michelle,Rhodes,Jennifer,Департамент C,jamescollins@example.net,$2b$12$g82MJS2ojgFKwysnHh3rF.UNu5F2/mRa70J2UeAmC.FuR/S5XzjBu,1973-12-26,м,специалист по обслуживанию,True,False,False
+Cynthia,Phelps,John,Департамент C,gloria81@example.net,$2b$12$PurGXQSON0FqvJgiYNfyyOWda0efL5.LKfCZpQ0e.eK3G3uW9PT6a,1967-07-02,м,специалист по обслуживанию,True,False,False
+Susan,Obrien,Joseph,Департамент B,richmondalexa@example.com,$2b$12$X2rgz2RydvvYSkRp.HvzOObwf.1EMFiPhpCU997WDkhQmlXkQV3fG,1973-10-14,м,оператор производства,True,False,False
+Pamela,Holt,Antonio,Департамент C,lyork@example.net,$2b$12$MomnRrZqAFZB96boKkfDjeSetImryjQz6x8wSY2pryJbAP.Tloeee,1997-08-17,ж,специалист по обслуживанию,True,False,False
+Anthony,Tran,Stephanie,Департамент C,websterkaren@example.com,$2b$12$ITlNh0/ALQiozmO/fvbi6euasys2ee6g3O/Zh5Q7CRqoq.EYz.R9K,1975-12-02,м,администратор,True,False,False
+Brandon,Lang,Amber,Департамент C,melissa62@example.net,$2b$12$VidjkmiqBzNotePsgXIkw..xV4N9qU1XsOAcNBWNRMTRgMrRmyOk6,1973-02-13,ж,оператор производства,True,False,False
+Jennifer,Alexander,James,Департамент C,nancyshepherd@example.org,$2b$12$sn.Py3Otaeiu26IyoNC3ku7ETSaK6En1AvbYblbFN2OviMEiYYfqi,1979-12-23,ж,администратор,True,False,False
+Kenneth,Smith,Robert,Департамент B,hgonzalez@example.com,$2b$12$U81OOpunrou0wWnvn6BlgOkZxiOnz0uP/7sf/qcDjZMMMkqWbV5a6,1999-01-14,ж,специалист по обслуживанию,True,False,False
+Phillip,Harrell,Jose,Департамент A,luke69@example.net,$2b$12$klBEaoI39.5O6HcK.0Ej5eqxPmQa8DZWF5RrhJ1WAZpTVt53Npcxa,1973-01-08,м,оператор производства,True,False,False
+Amanda,Sanchez,James,Департамент A,agardner@example.com,$2b$12$hlv0gmhOXWnRTgzaYF.h2ujmrrUOJDxlfN6lCF7KVDhme1.IuMi1y,1966-05-28,м,оператор производства,True,False,False
+Angela,Armstrong,Briana,Департамент C,mcdonaldgina@example.org,$2b$12$2OcIzFNTf4RrZPbBOwjUtu55yb3B.zmHMrEKffMnuSLlxN0g9JbDe,1977-08-10,ж,оператор производства,True,False,False
+Joseph,Robinson,Stephen,Департамент B,nicole96@example.org,$2b$12$XB6RCVS4JpW6mzCXlP308O0Sx747TMEO5yNGuPhwugrDsdhsgxOMe,1990-03-21,ж,специалист по обслуживанию,True,False,False
+Cody,Spencer,Steven,Департамент B,ujackson@example.net,$2b$12$WupTqRDc706IfqxvEzSX/upQHqV6mzTpnDFDD8dApf6SN7WhcCKk.,1997-01-12,ж,специалист по обслуживанию,True,False,False
+Matthew,Davis,Ian,Департамент B,nicole32@example.net,$2b$12$4Y/DmSErKHV2p3d9grZX5.GN7YgMUK3tE5DKs4pBpHA3Mh6kfvhYW,1991-06-09,м,оператор производства,True,False,False
+Matthew,Hernandez,Timothy,Департамент C,joseph43@example.net,$2b$12$BJgIIYBhCvjF50PfRhz.Beyx1HvkUG1CswIrTMLhLbCUjzuRc.BtK,1972-02-10,м,оператор производства,True,False,False
+William,Williams,Erik,Департамент B,warrenbrandon@example.org,$2b$12$bUKYAPwws5BSsN4wIZx0fuVZJQ5KL98POIKgofg2cuDON02qvgOlu,1972-07-07,м,специалист по обслуживанию,True,False,False
+Danielle,Miller,Jacob,Департамент C,victor38@example.com,$2b$12$4gNVEXVzt7q.H3gC.kXoyuOxxr3Ye4RvfsDnJJeI5WXr3tx.EUbQa,1990-09-22,ж,оператор производства,True,False,False
+Alan,Herman,Darren,Департамент A,rmarquez@example.net,$2b$12$a4xnBh1oLyG4si1k1nrDVemkcJY.bD6NSFB51C0HRAnnP10tyFvVi,1983-09-13,ж,специалист по обслуживанию,True,False,False
+Brian,Lopez,Kristen,Департамент A,josephjackson@example.com,$2b$12$L0wVgvKdSkuDUgS.XWAnluIrAW6v5BX.dp2iSyexOdh1FFEMtQ0yy,1966-03-08,ж,оператор производства,True,False,False
+Lori,Johnson,Lisa,Департамент B,debratran@example.net,$2b$12$VCfiOxKoIckPR5Cs4utI3eXRbfPuBDAebf9MtRA1jLFCKNB0S0PPS,1977-05-08,м,администратор,True,False,False
+Samantha,Anderson,Melanie,Департамент C,asimpson@example.com,$2b$12$vPHYfuatxUg5QIuhXokibeb91DgFuiurugF0uPgKsD9zJeErJe5Xa,1976-09-16,ж,оператор производства,True,False,False
+Matthew,Miller,Michael,Департамент B,millercynthia@example.org,$2b$12$fjXgKS45K4uy6AI2n4XCyewfB5KzSrf4rTt0ztMxPDVWhn5.2wHU2,1976-03-10,м,оператор производства,True,False,False
+Sarah,Townsend,Linda,Департамент A,emathis@example.org,$2b$12$0rO6nSBPrXDRPrs4IY9cpe80.6m9XDmaCxkihh8.YMGLypgY3oUHC,1975-01-11,м,администратор,True,False,False
+Alexander,Mcgee,Justin,Департамент B,dmartinez@example.org,$2b$12$jqi0lY3q0M3KOg9C2/gK2u0bLCplX6okO6PiCBP.Iltl3c8oOktRK,1983-02-13,м,администратор,True,False,False
+Jeffrey,White,Lisa,Департамент A,josephspencer@example.net,$2b$12$x0nz1YGu.SzTvPiQWMokYeVShcK.fjGJ.JaSheiKhKUv1cU2i6I3S,1977-05-26,ж,администратор,True,False,False
+Robert,Jackson,Julie,Департамент B,darrenperkins@example.org,$2b$12$ssGN.FKLAn45kLGW1/98Y.hvgDKICXzaDMXpNCpo0azNABmBzka0i,1973-04-27,ж,администратор,True,False,False
+Daniel,Sanchez,Jack,Департамент C,vlevy@example.org,$2b$12$oBMu0rjdT9j4JTuFHcvM7eKZPy9dHw7H5RN9loxjxIoeO8YmJNTkO,1983-09-15,м,специалист по обслуживанию,True,False,False
+Martha,Gonzales,Amanda,Департамент B,nicholasevans@example.com,$2b$12$UTMBEwUyOjeNej4RmSCVoeDoxj9yAdr7By4chAJtdHSMwCXaIuR6q,1996-06-23,ж,специалист по обслуживанию,True,False,False
+Jessica,Lynch,Alison,Департамент C,larsenashley@example.net,$2b$12$NnO1Ac4iOVC4xW3hfgj0TeUFS5Un2WnOxMJDTz1MvEe0pHeRSjily,1983-01-03,м,администратор,True,False,False
+Seth,Moore,Jeffrey,Департамент C,xweaver@example.net,$2b$12$eX7L5yA6g9XIXpB3dlDI6.AJ59HFKGdNn//dzDBn0D6SxghvaFqsO,1985-02-23,м,администратор,True,False,False
+Melissa,Rivera,Ashley,Департамент A,anaaustin@example.com,$2b$12$achRBiS3K9XQWILCSsLpy.y5MyBJfohr7luD2uc.CyYFCOS.h149.,1980-02-19,м,оператор производства,True,False,False
+Edward,Cox,Jennifer,Департамент A,meltonalexandra@example.com,$2b$12$v8/.gVyg9xR7ldiJY4GvbewudroUH3rBkmmsitSWpIFYNk3MOXWaW,1981-10-28,ж,специалист по обслуживанию,True,False,False
+Maria,James,Carla,Департамент C,proctorvictoria@example.net,$2b$12$f7rfrK/BzzjQkpVCUdIg/eTSFIG9c8F2KQ8aIXl0CiCFX6mU9JO62,1979-04-08,ж,оператор производства,True,False,False
+Carrie,Wilkerson,Kevin,Департамент C,wschultz@example.com,$2b$12$eyHg5YkfwnaoLnZIIpMcHONrLW3lzaWzshXIx5nlTelVbQ9UNuRbS,1965-08-13,ж,оператор производства,True,False,False
+Eric,Rice,Alexandra,Департамент B,elizabethshaffer@example.org,$2b$12$WyqkfTANygVGAK8c1rCQcu04wLV5A7bl6FM7jidHxa/7/hBeeqxdK,1974-09-04,ж,администратор,True,False,False
+Jon,Roberson,Noah,Департамент A,ritamolina@example.net,$2b$12$DvUAGfllrMHO.kVBnbUtfe6qsAHR4frVoOlKceNf07z79EqN7sLI6,1967-07-05,ж,администратор,True,False,False
+Austin,Flynn,Karen,Департамент A,kristen67@example.com,$2b$12$J0Y4Kn4fjAcD/E/lledYCO.Dxj3pttRt08Jpp.LUmbd1I7E3bohZW,1994-03-01,м,оператор производства,True,False,False
+Jody,Valdez,Michelle,Департамент A,delacruzdestiny@example.org,$2b$12$yu8QlRbfLhRAeOhMzsnv1.HVkLBKPqb0mox5jCsYgooyKuN0CvZGS,1970-06-16,м,специалист по обслуживанию,True,False,False
+Annette,Murphy,Jeffrey,Департамент A,gvillanueva@example.org,$2b$12$PqlTR1q4YF70.3sxPwlixuCUK1BrYIfxNbVdBOhL2olhNN0PoSnvK,1987-12-01,ж,оператор производства,True,False,False
+Cole,Kelley,Kevin,Департамент C,rebeccacampbell@example.org,$2b$12$xJWLpq42Inr1pzmkGRrqGe0ikwsqjickqcAdinlEj3XSHHSDDpafG,1973-01-08,м,специалист по обслуживанию,True,False,False
+Sarah,Pace,Victoria,Департамент A,fgomez@example.com,$2b$12$cClVn15mj/mmd5aPt9DQleMVRm07JppM1bQzUg2rghzl1IA5zkoqO,1975-09-06,ж,администратор,True,False,False
+Timothy,Barker,Derek,Департамент A,wfarmer@example.net,$2b$12$ZzEqWvvE44anuqOZOYUpbux6f8nyYyO48fzHZ1QjmGGML.OMZf8Ra,1976-07-03,ж,оператор производства,True,False,False
+Matthew,Schwartz,Kathleen,Департамент A,bowersnancy@example.org,$2b$12$E7lcfjKYQlLCcFiXS3CU9e5ioehWkB1U0dRvCSkUX35y7K7N66fLu,1964-02-29,м,администратор,True,False,False
+John,Anderson,Jon,Департамент C,emily68@example.com,$2b$12$XIwZvxsIlL23Z0PwSLo7.Oa.wVx/2FV0K0ahsnMV0U63s8xM7IcC6,1982-10-16,ж,оператор производства,True,False,False
+Jacqueline,Bennett,William,Департамент B,jared33@example.com,$2b$12$XabLkNEowblUcAc3WCNRfuWJn4oR0V2OWvEPwFzjBEYnPUdIOYhVy,1975-03-27,ж,администратор,True,False,False
+David,Elliott,Christine,Департамент A,hgould@example.org,$2b$12$4ANwN2sgvlPQBXSoZxxCfODoNAy0LJjsr0SfcnXmEXFr1cHJ10xaO,1990-03-21,ж,специалист по обслуживанию,True,False,False
+Wendy,Thompson,Steven,Департамент C,gonzalezjason@example.org,$2b$12$ZWuRepi2ztIEBSS4Cz3nVua.N2XBU/C.yB3K4US.Q23aEyukd7Xka,1968-08-25,ж,администратор,True,False,False
+Jillian,Anderson,Emily,Департамент A,john65@example.org,$2b$12$qDf0PtXGtYvqVAWKy2q/Pe4azSqXhiJwsPWxUU68Eg4KbiclwwsLO,1972-02-17,ж,специалист по обслуживанию,True,False,False
+Jacob,Joyce,Michael,Департамент A,ustein@example.org,$2b$12$Asd6M.dDsyswpmvZxL/6zOZ2QCaxh5h88uyTLTtlzlUff8CZMJRjC,1993-12-26,м,администратор,True,False,False
+Jessica,Stewart,Carrie,Департамент B,william42@example.net,$2b$12$mLz0E5dpo0M/u9bC4t4/FeNXt.O1dsAdYcSPubxtaMGpoIoc/eQIy,1998-01-11,м,оператор производства,True,False,False
+Wayne,Randall,Kaylee,Департамент C,tara46@example.com,$2b$12$8PpmFaAEwQ6hRhVRa1QsbeEdEeBB8Q7lcyDnw4hlBp3MJQfx9tWgO,1967-11-06,ж,специалист по обслуживанию,True,False,False
+Miranda,Dorsey,Cory,Департамент C,christopherrowe@example.com,$2b$12$qHBP8Q9REwDzJcYnv15gT./d49q017JDm.vPOrqL4dCmhLdSaDwTm,1965-07-08,ж,оператор производства,True,False,False
+Caitlin,Sandoval,Alicia,Департамент C,martinezclaudia@example.org,$2b$12$ZKvEVuv6xISO14aGuATbCuVWCbzqLjsAYl0jSmj1xTp5c4g1DytQq,1981-06-11,м,специалист по обслуживанию,True,False,False
+Sabrina,Perez,Michael,Департамент C,sarahbarnes@example.org,$2b$12$23WOsiF3R2rxP0f.vMpgpOmAdGLrywhoTohTx9qvOdTCgyp9372s2,1993-10-06,м,специалист по обслуживанию,True,False,False
+Bradley,Johnson,David,Департамент C,arielbuchanan@example.org,$2b$12$ktSh/alMuzdxIcsaiCFG4ec..WvQv8twdpQoUKWGoiDVtEXKgmf/C,1982-10-11,ж,оператор производства,True,False,False
+Kathleen,Yu,Allison,Департамент B,armstrongdavid@example.org,$2b$12$l9YzCBhzEtVAsXh4i9uxzuuolDr.qlNQPHeeUzRkJuy2sgijdCC3u,1985-03-15,м,администратор,True,False,False
+Julie,Mcdonald,Chelsea,Департамент B,rodriguezamy@example.com,$2b$12$a4dePGdmbJugX8Tyu3BMo.LwKAg8LahKJpx0eKkJi7fX35w.E/L.m,1975-04-15,м,специалист по обслуживанию,True,False,False
+Caitlin,Moore,Suzanne,Департамент B,austin09@example.com,$2b$12$goRUtY7a75JzglraTuzUeOs25C0Dt2BEV1D.VD4xwfgXqVCsWxx2u,1999-03-18,м,специалист по обслуживанию,True,False,False
+Maria,Pacheco,Angela,Департамент B,isaacgrimes@example.net,$2b$12$/GzAICTzuaFYd7AjYoQeReEZO1Tikz8eMzOeSjWt5aX2mEV4YTLPC,1995-03-03,ж,оператор производства,True,False,False
+Jimmy,Barker,Joshua,Департамент A,traceyatkinson@example.org,$2b$12$pGAk2fOEC.ac1iI4eToDhOD5m4BwTCYTbVoVGGIE3v1O6iQzdHCC6,1976-11-19,м,администратор,True,False,False
+Lisa,Hoffman,Erin,Департамент A,nwilliams@example.net,$2b$12$IVUI6TaEzi.Kpr5Z7K2e7.XVqSILnR5FniLT6zDhCKoVmRB8mFafC,1982-11-30,ж,администратор,True,False,False
+Dennis,Williams,Rebecca,Департамент B,chandlersabrina@example.net,$2b$12$O9jTR4ehel9d79.x2.ExEOYzgh/L/gvozmbpPT30Nb1qpIBJhM4xa,1993-05-13,м,специалист по обслуживанию,True,False,False
+Todd,Conner,Laura,Департамент B,wellsrobert@example.com,$2b$12$902wlskfHieOo4QiXwEBDe7/j4Ft3RctxPJpACYtlSkqPRsgKjZSq,1991-11-10,ж,администратор,True,False,False
+Steven,Blair,Jorge,Департамент C,todd25@example.net,$2b$12$9ujCWBmI0TKoDAcKFd8PwehDmmcvd9Kw0to9Crrq/4cATPJrNJDWS,1990-08-15,м,оператор производства,True,False,False
+Kendra,Mayo,Janet,Департамент B,kleinlindsay@example.org,$2b$12$qvnRJAtd3pXitj.eWTEQHOX2UGAoimpi2Kxtur5FrTB9HaRpd3L42,1992-08-30,м,администратор,True,False,False
+David,Osborn,Raven,Департамент C,lisa90@example.org,$2b$12$p7jy54v9gNK51fhW3EHFJu9PfzgGUDIBcbYa3mDQ.gq0n0yPJV5Vi,1991-11-22,м,администратор,True,False,False
+Juan,Coleman,Sarah,Департамент A,schmittsabrina@example.org,$2b$12$/A.wqvgvQatgRvzyzGRBVeZKY.jKdh28VnZVR/LBHQ3jOISschXDq,1964-12-20,м,оператор производства,True,False,False
+Alexis,Pennington,Erica,Департамент B,kelly48@example.org,$2b$12$aBb/K8Pq3FCdfEGxZdbNtec7bS59tzm8WP/4cFNEy..xvpWGnm0u2,1983-03-23,ж,администратор,True,False,False
+Emily,Wilkins,Jason,Департамент B,felicia60@example.org,$2b$12$80LMgkwPLhXDJk8Gqz8nYuf4IWy0RFygpqmzX6lqolnrsR82N8ZRa,1965-02-11,м,специалист по обслуживанию,True,False,False
+Marissa,Alvarez,Grant,Департамент C,william79@example.net,$2b$12$zONQ5.hxYX.GXMoW7vV.juVjCCuBNe/iY7Dd5qq7BP463oVTDTrzi,1982-06-20,м,специалист по обслуживанию,True,False,False
+Kristen,Kelly,Ronald,Департамент C,michael55@example.org,$2b$12$0eJpRet3Ro8ZOxBBvAiwpeH3pj.trQYAEivhflWSoFHF.rb/.inuW,1995-11-28,м,оператор производства,True,False,False
+Daniel,Jennings,Michelle,Департамент A,renee12@example.com,$2b$12$brHeGxZngglKDuyZcT8WpugeEEeiwqOAWaGRvSknfv4iumP0V5ZNm,1967-01-19,ж,администратор,True,False,False
+Michelle,Evans,Julie,Департамент C,qatkins@example.net,$2b$12$kZZP.f2bwmReDqGZUK62uepP7TnqmsuLr3zpYUJoIVmBbwCfSN8re,1986-01-05,ж,администратор,True,False,False
+Jennifer,Ray,Amber,Департамент A,armstrongjulie@example.org,$2b$12$LhsNJaUpBwLWTcHcW07lOepPm1RPbNeIvJZW7IKiUZrCPt4wo26Yy,1973-02-23,ж,администратор,True,False,False
+Kim,Curtis,Lisa,Департамент B,tylerholloway@example.com,$2b$12$zLbSEFX5vqZHkraBWUIMle4u1XuLQXjmMbHvHMyonpD1JwTDNQSpy,1967-07-20,м,специалист по обслуживанию,True,False,False
+Mike,Dodson,Robert,Департамент A,virginia95@example.com,$2b$12$JDOfkwEHnhfprDJcGnH1IuvIN3y6UIaLXZ4gUjB7QEvbQKz9MG.fO,1994-11-15,ж,оператор производства,True,False,False
+Cynthia,Andrews,Luke,Департамент A,mark69@example.com,$2b$12$XO.O72vlChOcQBzsZ/t14OaNgn/2YqdYf0GSW14WQMp2S7j.gvtKm,1991-08-17,ж,администратор,True,False,False
+Ashley,Barron,Eric,Департамент A,rachelmcpherson@example.net,$2b$12$OVqek13AefrqBPe7uRf3W.de5cCaVheGfMvUpPpiao3x0o/fZSna2,1996-03-02,ж,администратор,True,False,False
+Anthony,Lang,Tracey,Департамент B,salinasbrandy@example.net,$2b$12$YEjl4DFuFSgVx86MHIUCW.tS7m09EbvLFd2jvwKqhXefHa0g0UolW,1974-06-21,ж,специалист по обслуживанию,True,False,False
+Randy,Gibson,Benjamin,Департамент A,debrajones@example.com,$2b$12$Ky2.uK8TVF8UwGU2bZUh/ew7m0Jhgg5fcZljUZiSbh5J/QjaTvMxG,1964-08-17,м,оператор производства,True,False,False
+Danielle,Smith,Melissa,Департамент B,michael73@example.com,$2b$12$8TCnPBVXVz492ruHbNG7sejWIgPN7zvsMNFNbAL4eyeXjvgiQMB9e,1974-08-18,м,специалист по обслуживанию,True,False,False
+Virginia,Rios,Scott,Департамент A,megan79@example.net,$2b$12$e6aAwG2ws7gjUtV6Xi1yQO6vnEgA4a8e.wxWoGLUAgRbUaV5KESQu,1966-07-11,м,администратор,True,False,False
+Joseph,Pierce,Jeremy,Департамент B,andreagarcia@example.net,$2b$12$rMOiMwwuR7/7Pk0KNzr9COfX85kn2Y0rH0yPwCnuu83xxR.4luOoe,1985-11-04,м,специалист по обслуживанию,True,False,False
+Susan,Ramirez,Andrew,Департамент C,patricia04@example.net,$2b$12$D4v2eZQ3U258S.WFlqLZYuG14ZpmtVpmz7fY92JawdNZ48ayk99cS,1964-06-03,м,оператор производства,True,False,False
+Ryan,Richardson,Michael,Департамент C,gibsonkathleen@example.org,$2b$12$uxonIEMx42InApiN9diAg.m970Z3wFD/OCby9Na/QInyA2b7BBzm2,1990-09-26,м,оператор производства,True,False,False
+Virginia,Cunningham,Joshua,Департамент A,jackson79@example.org,$2b$12$GlXfpvt.CIP8ioDDopb4GuHUDnsbv0/TvkpEtuceBSnArwkrVhTKe,1967-09-18,ж,оператор производства,True,False,False
+Joseph,Ross,Lisa,Департамент B,anthonysean@example.org,$2b$12$W17eTwiou.VRb1FlnbZ2iOR7rtmqPIOIf2YHFppr457tmuvYC3HVW,1980-01-15,м,оператор производства,True,False,False
+Paul,White,Jon,Департамент B,vhawkins@example.com,$2b$12$G3MyHirI.ZLwzqU2zCB2auwjsVY6jSo/g3dm2Oy0fz3c/GwoAs2Su,1984-10-22,ж,администратор,True,False,False
+Lauren,Moore,Michelle,Департамент C,ronald41@example.com,$2b$12$nMmi.MOsFw1xRIZbrbCJpu0jDF2XvNwL7ahgikeKiAs0kZ7g82qE6,1988-06-03,м,специалист по обслуживанию,True,False,False
+Sara,Bailey,Erin,Департамент C,darinnash@example.com,$2b$12$x4ROPw2kN0MpiRZcQ2mV0eWvkKxzM.s411nsyziMbi3ejkttAn2ee,1970-11-20,м,специалист по обслуживанию,True,False,False
+Emily,Burton,Ashley,Департамент B,mmay@example.net,$2b$12$9fOqu9KJMDablR48tXfmbezh2UTfzKFiTUFdSLRjOTQ4K211LvcSW,1976-07-30,ж,оператор производства,True,False,False
+Teresa,Garcia,Megan,Департамент B,aroberts@example.org,$2b$12$Zlfuw7MJwaD03hOFXLcyheLpWDqvG4L7egv5Bm5omFtiUHWgXs2B.,1988-12-04,м,администратор,True,False,False
+Christine,Powers,Linda,Департамент A,ithomas@example.com,$2b$12$9dEvy.TFhzeTvhm2PWafn.2PTVvmj9fF7lNW3Ol3jNtW99DrSgQua,1985-09-10,ж,оператор производства,True,False,False
+Reginald,Sawyer,Anthony,Департамент C,reneehart@example.com,$2b$12$SgZJVXpDxWuMkZVuBjSie.D5EnBI8bB53KTuYMVMtXNzp91CymNxO,1991-08-20,ж,оператор производства,True,False,False
+Kristen,Wallace,Joshua,Департамент C,sroberts@example.com,$2b$12$9q6gKwgXl.F5AtnBa0oMo.ylYOO/QOlZwE9fO7AQUUh/WkHH1lQ2m,1979-08-15,м,специалист по обслуживанию,True,False,False
+Sierra,Burton,Monica,Департамент B,emilymiller@example.com,$2b$12$8QhCE9bD3sat9oqa79laaut/EnkZlpgiBRAAo5fpiERZmwr0KEPXi,1978-08-04,ж,администратор,True,False,False
+Rachel,Blankenship,Jennifer,Департамент A,philiphull@example.net,$2b$12$wKhNFhanQyHq1KwL/raFaeXb3sOVP6S83i.Y8EmYQzC/OmZFS4X2u,1992-04-02,ж,специалист по обслуживанию,True,False,False
+Ashley,Hernandez,Andrew,Департамент B,william53@example.org,$2b$12$XxFRSlg9//MbNDoigrgNpe9H/ffg2APoSOBKu18BlHGWKcq.GZV62,1981-05-22,ж,администратор,True,False,False
+Sean,Smith,Ruben,Департамент C,parkervictoria@example.net,$2b$12$aHAHdkDzVF83vmxH8h60C..9Op5j9FEpVELpHp45mTIZqHvxTTTUu,1994-06-08,м,администратор,True,False,False
+Victoria,Thomas,Tammy,Департамент C,onealmary@example.org,$2b$12$ApqlsWMFmjPHBGCmz0ljRurPsphXtbQaA9mcw24j0KRIESd8pE0IO,1963-11-13,ж,администратор,True,False,False
+James,Howard,Wanda,Департамент C,phebert@example.com,$2b$12$iy9pKheasbUcFsFNxQExFOwrH7SZULRawqzvyGlj0i9LmtNMvxu/q,1989-06-11,м,администратор,True,False,False
+Ashley,Torres,Connie,Департамент C,sullivanwilliam@example.com,$2b$12$Z2THDhvdhmppqOG2HfaThOJ3.kWIbimEGijjatyF0WCiYHxdN4nn2,1980-10-01,м,специалист по обслуживанию,True,False,False
+Tyler,Carter,Donna,Департамент B,mike32@example.org,$2b$12$5jvB/EsJYUACA6UbDyLq6OCb1EX22E1zerWPWEVMUhJsRKOxCi/Yy,1971-01-27,ж,оператор производства,True,False,False
+Michele,Miller,Andrew,Департамент A,brandon93@example.net,$2b$12$K5BlJRW091RPN3sSTbKIauLM/8CNvAMC0atz4qoMmPmDJ6yrfaHAu,1974-04-04,ж,оператор производства,True,False,False
+Jorge,Ortiz,David,Департамент B,dunncameron@example.com,$2b$12$e7eUdZ0I5Fpu3MyH6B5w1eNbtSXhlF31CBmVfNPp.ua67e5M.jQhm,1999-01-13,м,оператор производства,True,False,False
+Kathleen,Brown,Kristin,Департамент B,thomasberry@example.com,$2b$12$84EX0GpX0y8tDiDLC2Q33euGqC9sV90zS8dm2Bnlov5kzqwsVkrp6,1966-07-14,ж,специалист по обслуживанию,True,False,False
+Brian,Miller,Melissa,Департамент B,imccann@example.com,$2b$12$1gZlFrCi3Llsda77Gv2sves5.SVTDCJYhxRw4rlpi19/p5jT4yckm,1975-02-13,м,специалист по обслуживанию,True,False,False
+Anthony,Hernandez,Stephen,Департамент B,christopher45@example.org,$2b$12$bnezkrT3u0wCcENSw1hvYO8/JzjvwwCy/no86eGDyeJ77ki2zMht6,1998-06-12,ж,администратор,True,False,False
+Yvonne,Stone,Matthew,Департамент C,katherine46@example.net,$2b$12$Affk/8rRPTwfjlw8p0v46Oo.rBpbN64MB74b0h57GL8s156jXxAk.,1972-08-13,ж,оператор производства,True,False,False
+Keith,Adams,Scott,Департамент B,penny21@example.org,$2b$12$gOXIyKA/TEa5XsYBgQ10duXZScItJ2O/aszHBL0PsRnrvS27hkhfq,1984-01-06,м,администратор,True,False,False
+Darin,Hampton,Lauren,Департамент B,matthew09@example.org,$2b$12$bQl5Dsmcmf7dLuL/mVHiWuDSlI/QSbWh2U56G5Q42C4szojFw4.mG,1986-07-31,м,оператор производства,True,False,False
+Jennifer,Reyes,Ryan,Департамент C,dustin40@example.org,$2b$12$xN2NkDdhuD5psoyWRigZxuzJ0Rzruvvn5qensAxA.sy1YMtRoMYYa,1967-10-30,ж,оператор производства,True,False,False
+Kathleen,Peters,Matthew,Департамент C,andrew54@example.com,$2b$12$ZN9cZ.13SA8hE67ufdTyyugSE4JY27upfhXjmvTkz9l3I0ajbhuKK,1995-12-19,м,специалист по обслуживанию,True,False,False
+Sandra,Gregory,Samantha,Департамент B,kmiller@example.org,$2b$12$bwwqEZ7M//2CV78Sg4lTzuzVJSpFoKuwEA7YKchwdABQAbPoQUl0.,1983-01-24,ж,оператор производства,True,False,False
+Dustin,Martin,James,Департамент B,crystalscott@example.org,$2b$12$lwoFBHsqGLPh8zoB7I/Tse4Ac7/sZV4dHMVpaUtXed/XqbIm2LP6i,1998-03-14,м,администратор,True,False,False
+Rodney,Lewis,Allison,Департамент C,coreydonovan@example.org,$2b$12$HpsJXr6x6D3LJxcvQPi0GuoLiHyaHmVZGPpdCshnOGMNzYIL0GYCe,1966-07-10,ж,администратор,True,False,False
+Lisa,Day,Dale,Департамент B,johnsonpatrick@example.net,$2b$12$2s9Mr3SuqN8qqgwKCWuoReMqaEVB3AA8dZQ//.bCvqiRVPtew6hOO,1972-07-02,м,администратор,True,False,False
+Alexander,Mills,Michael,Департамент A,claypatrick@example.org,$2b$12$VWgeadgguBBzGchPHScmq.sZ5RczQR9ENURy/FefRI.wFex8HpVBe,1992-08-27,м,администратор,True,False,False
+John,Morgan,Michael,Департамент A,jack20@example.org,$2b$12$BGetI8QXR4nqatx80duAEedYutLeEvLTTfZl1pJBFGgE0okQxHUMm,1997-11-14,ж,оператор производства,True,False,False
+Samantha,Bryant,Jennifer,Департамент C,jillhughes@example.net,$2b$12$AXiTSyf6LwE0Z59rrGtZKuW9223QVzBuYUTaqeSnw4JvCIZQJ6sqq,1977-02-15,м,оператор производства,True,False,False
+Michael,Austin,Kayla,Департамент C,perrymichael@example.com,$2b$12$jhWkLtkwgEhRo9MBCDIjluh5lp6MB3LttHE00OFNmRXzbI7BlWgY2,1985-06-22,ж,администратор,True,False,False
+Brenda,Mueller,Frances,Департамент A,bowersmargaret@example.org,$2b$12$Wv5zpfkuT5DQDtPrs21Cs.Xmz4Jkxieid35gZn9JLtygqzt7VINfa,1991-04-19,ж,администратор,True,False,False
+Jessica,Gray,Holly,Департамент C,tiffany54@example.net,$2b$12$dykKkgeo0kpel2bkh1ljKuCaTJGLpS.KpI8e5Xjr02u9iDSFKlpTm,1982-01-03,ж,оператор производства,True,False,False
+Paul,Reynolds,Michael,Департамент A,susan89@example.net,$2b$12$ClMT8dMnjNry37VJiAllH.XKSWgb/H5QmmePK1UmYh0p3O34QitnW,1991-11-15,ж,оператор производства,True,False,False
+Roy,Cox,Eileen,Департамент A,thomasnguyen@example.net,$2b$12$fo2p.WosdsrU.U2s8ZZTsutxVghE5B0vQRAjfCIOjQfqpvEXsliIi,1966-08-21,ж,специалист по обслуживанию,True,False,False
+Ricardo,Christian,John,Департамент B,shannonjensen@example.org,$2b$12$ShhuM0GFYcGtG.YfdV8zzO1zLznJQ8fYp2DaQVN50VxFqvWCrwX4W,1989-08-07,м,оператор производства,True,False,False
+Cheryl,Murphy,Michael,Департамент B,hwilliams@example.com,$2b$12$Wv49tvpYWimFOdQe.otlNe39G1Gx3LWcZMvzW3FTncs30/eIPZJ5y,1967-09-03,м,администратор,True,False,False
+Lauren,Adams,Rhonda,Департамент A,vgarcia@example.org,$2b$12$AetF7k4Wg2ezZR9qm/I0/u/fMRfI5CsQFK7olFxOWvGQontCXduwu,1974-03-30,ж,администратор,True,False,False
+Kimberly,Gordon,Angela,Департамент B,blake20@example.com,$2b$12$LI2.4UXITMb5yJ/mSu96AeZCJeH0786qNJPTfn5wkmH/bDKfjnxvi,1988-06-05,м,администратор,True,False,False
+Karen,Brown,Joann,Департамент B,bmartin@example.org,$2b$12$TTIZajFbrtD7o/J81jSwEuXJ3E18YElbqBuYqqVgxT0rTPoT4sXjK,1978-06-02,ж,оператор производства,True,False,False
+Julie,Robertson,Sarah,Департамент A,richardpham@example.org,$2b$12$yY1t4xHIkfOxQ.JyBHefAuhgxzNHr7Z47AUE0LHhnchlY7btkrfHm,1992-09-07,м,специалист по обслуживанию,True,False,False
+Thomas,Ruiz,Jose,Департамент B,colleenhall@example.com,$2b$12$2P4AkpM1jZ.E80pck.6TTepVesdLFzs5mZHx7QkGffFLwwIeMsFe6,1994-01-02,ж,администратор,True,False,False
+Christian,Watson,Mary,Департамент B,robyn65@example.com,$2b$12$.0IyJ9x940/iJHdGLRBrCeRVvvvipo186YJLRkVuzwDxd78vjpED.,1979-11-03,м,администратор,True,False,False
+Kathryn,Bates,Katrina,Департамент B,kimberlysantana@example.com,$2b$12$KlqGjngkQz/CH66LLMWtz.b0mUez96.YKB/hv.xEzD409wKyPh8XC,1971-08-31,м,администратор,True,False,False
+Tina,Parker,Kimberly,Департамент B,vargasanna@example.net,$2b$12$4HMTnPPARQJcZadxBqlUPOfFULU6inidhsHImfxmqF7w7BzuVlJd2,1967-06-11,ж,специалист по обслуживанию,True,False,False
+David,Ritter,Christine,Департамент B,alejandro67@example.net,$2b$12$wQhAEeDh0/nY/Fe3YX93BuEl3mr9Q/DjOMBlACXUkSwtrTtVE0oSy,1995-06-15,ж,оператор производства,True,False,False
+Jennifer,Wilson,Leslie,Департамент B,james63@example.com,$2b$12$2x69yZTVI1iNRFoolpaYtOg.llBUzCnV0ompNECU6SKbTS.rz4CMm,1974-01-16,ж,оператор производства,True,False,False
+Regina,Morrow,Evan,Департамент B,michaelflores@example.org,$2b$12$lSg6iV7lAbJ6FiWxTzNQ/.KFOuKy2Nv1BD3m1s5G0pMk/mwo3uMHO,1996-02-02,м,специалист по обслуживанию,True,False,False
+Jeffrey,Dudley,Kimberly,Департамент C,deborah11@example.org,$2b$12$l4m1WA05qrM7DGkVNjrPfeFc7PaeJFT.XRj5w5d7czhEYm7mrGFKe,1974-02-23,м,оператор производства,True,False,False
+Tina,Gordon,James,Департамент B,chelsea37@example.org,$2b$12$GmRdKxcms2bz1Q2wkjlLi.zw0y/XTkjFInQBy0ZX0lQHAXYxt/2py,1976-06-06,м,оператор производства,True,False,False
+Richard,Larson,Tamara,Департамент B,stoutbobby@example.net,$2b$12$FZtvDBmrb.Dc556aMa8DTe4cf03XHOGYpC9I04/9VzlObFJlLKBY2,1994-10-10,ж,администратор,True,False,False
+Anne,Davis,Miguel,Департамент B,edward36@example.org,$2b$12$av5akir7eRt74L41G45XZep10bxIvC7N8aZl.QfQgzAiAqSixR/0m,1968-02-09,м,специалист по обслуживанию,True,False,False
+Lisa,Lawrence,Dylan,Департамент B,knightsara@example.com,$2b$12$wG4K9wJU8.fIyB3vqkvRn.3WqYbO/HKYniVH/WMLK9GYgDauowd1y,1996-05-01,м,специалист по обслуживанию,True,False,False
+Damon,Dunlap,Brenda,Департамент C,tara02@example.net,$2b$12$P1w6LOnD7D.yPo5mRgLAS.MZzuQvVcZSDSDcBYc8osrxDrJzRMSHW,1993-04-23,ж,администратор,True,False,False
+Jill,Stephens,Thomas,Департамент A,nicholas65@example.org,$2b$12$v2QTaxnAb8kb2r/XAZ4v5.g3smJFIESYhjR9bqA1q8BVONjAKZioG,1967-10-08,м,оператор производства,True,False,False
+Donna,Adams,Morgan,Департамент A,grayzachary@example.com,$2b$12$CT9VKiU5LkJjaSLufiRx/eCbqe3kDUfU7qlNH4qZpYCOAlKvEV6lG,1964-08-22,м,оператор производства,True,False,False
+Logan,Le,Desiree,Департамент A,vjones@example.net,$2b$12$cCYbnOBOS6nWVB8gkhcubOFn2SQkU84Zx9nLbPiwi6PJKDJtxBDAa,1981-02-17,м,администратор,True,False,False
+Derrick,Lopez,Angela,Департамент A,sandra80@example.net,$2b$12$c6KrCrPhnGQB/dAYz1hNGufu0IDwjF7GOznfUcGaBz6Ll2ylVMEj.,1986-08-20,м,оператор производства,True,False,False
+Lucas,Smith,Thomas,Департамент A,alexanderbrandi@example.com,$2b$12$fhJaqlIm532Q83jNwDsFXuNTSo0sQh8KgvHENukg/AZqEX8vNS8KO,1994-09-17,м,оператор производства,True,False,False
+Theresa,Wagner,Amy,Департамент B,jensenjames@example.net,$2b$12$N0SmNoAz.MLT3h/hYB9q1u1NdRCTDZYiJacZMNG/JBIZR6h9KrC1e,1993-07-17,ж,оператор производства,True,False,False
+Mathew,Stuart,Krista,Департамент B,katie78@example.org,$2b$12$iUZ10MDxMes2JrlQwnwqj.XwW3.SnWcK5EW0S5ao2qqlBmpRVkDta,1969-04-24,ж,администратор,True,False,False
+Peter,Cook,Brian,Департамент B,hoovermegan@example.com,$2b$12$uGqHyemtR1shbtDZGr6ly.P936dWxU9v9R931.NRQH8V9FzjqVmxG,1979-02-28,м,администратор,True,False,False
+Steven,Perez,Kenneth,Департамент B,elizabeth53@example.com,$2b$12$Xw1BCKay2s2gtTN7Jpd8uujuvhnp92DILvLGThMLenvEizOZth8ya,1988-10-23,ж,специалист по обслуживанию,True,False,False
+Kristina,Middleton,Jeremy,Департамент B,kellycompton@example.net,$2b$12$sM6XAofnGwVsO8rWpDfqDu9FDKi8b6/ATgDAd0HqjaX7iSgZUJRhy,1973-03-24,м,администратор,True,False,False
+Ethan,Anderson,Randall,Департамент A,loririvera@example.net,$2b$12$ig31nHbU/36taNbFL1nkh.5OH76Wn9qCrh47RH0lqDIyIBXpzuN4m,1978-12-29,м,специалист по обслуживанию,True,False,False
+Amanda,Jones,Brandi,Департамент A,amanda24@example.net,$2b$12$vOPgl.7QhSdF2ijlhIpm4eW/RY1UO14E0phsEtMqnriDAHiRI2Mh.,1995-03-04,ж,администратор,True,False,False
+Valerie,Brown,Theresa,Департамент B,christopher92@example.org,$2b$12$GLm.eR8/TwLEnm5tZWCSd.81PGO9JN5ScEscakZyfegXGASAJIWXa,1965-01-04,м,администратор,True,False,False
+Daniel,Young,Lisa,Департамент B,browngregory@example.org,$2b$12$7vmCBgcFMT4S1lKZC.YtSuRSgifc2KqvR5ThmnbeYga07BsnzFV6G,1969-12-14,ж,специалист по обслуживанию,True,False,False
+Erin,Simpson,Michael,Департамент C,robinsonkevin@example.com,$2b$12$8FcDQ9NMUUsv1p4wEs0kcO4jdb7i8Bmv1xkIMmyFH/rTRvuo9/f1O,1993-07-20,м,оператор производства,True,False,False
+Carrie,Evans,Donald,Департамент B,steven15@example.com,$2b$12$oR45xrIHg.tgZa.t3X425ONoSVDlbNp4m6Vc.bOEshd50rDPTRnJy,1996-02-12,ж,администратор,True,False,False
+Benjamin,Proctor,Willie,Департамент C,ucooper@example.org,$2b$12$zuJm7zO6tYpsZutR2On93ekCffD/hDR2PFQVwb3Pts/WC3.U1f9u6,1965-03-25,м,администратор,True,False,False
+Robert,Morgan,Sheryl,Департамент C,ericbradshaw@example.net,$2b$12$fgRi895oXEyajwlxMaDjpOpwx8.76AFWuTKb3/Sok0vG5H4r42mB2,1976-12-10,ж,оператор производства,True,False,False
+Brandon,Walker,Tonya,Департамент A,phamlisa@example.org,$2b$12$GToMVONvC/aRWI.XoOQA7uujuDdd/DT8sQsJJzAErdpDCSmm1Lek2,1966-01-06,м,оператор производства,True,False,False
+David,Harper,Gregg,Департамент A,reneemccarthy@example.com,$2b$12$/SHaR.2rOxmFQVyxsKLs5eBXQHl/3VuI7qzTlo0P1HGlJ1WD1NRva,1976-04-16,м,администратор,True,False,False
+Pamela,Reid,Maria,Департамент B,melissadavis@example.net,$2b$12$WIyym7dsF9PLMppOmpR98OGblEh4auke5pMJBw.BOf3SM.yiOwQlq,1967-02-03,м,администратор,True,False,False
+Cole,Rogers,Rhonda,Департамент A,samantha18@example.net,$2b$12$/iya8e8qaAPA6cf9f8cbUO5sesO/MLOYwOPv0MsmkdObFkj5CRGGy,1976-01-08,м,администратор,True,False,False
+Clinton,Moore,Christopher,Департамент A,nhughes@example.net,$2b$12$U4ssBP3ZqhyqABopwcsMmOpMqa36cT5ccoTSzCX130ykjwZKpqUj6,1966-04-27,ж,администратор,True,False,False
+Samantha,Smith,Todd,Департамент C,joshua08@example.net,$2b$12$sIaGU1ekhcgfY5NTN2Rry.iSIg.TOBV.RDqsnnsu2Ll0ZKV3lTGKm,1996-04-17,м,администратор,True,False,False
+Alex,Ramirez,Ashley,Департамент A,allisontroy@example.org,$2b$12$JfJ8HAvXdiuzvLBYMVYiw.h1aslZ8xCoOv0.pjzhxRV/eX4K0P7y.,1995-11-11,ж,оператор производства,True,False,False
+Randy,Wilkerson,Colleen,Департамент B,samantha72@example.org,$2b$12$ZgAxMtTPEtAfYiygEMiMyOd0eBrJ.Mi4bXDFw6EjUMkFQPjgNBYRy,1979-01-24,ж,администратор,True,False,False
+Katherine,Barnes,Tonya,Департамент A,michael31@example.org,$2b$12$1H3uQIICOhn7S0Re.vwHUuQbO7mReoqMh/r7Erq.wmyYEp0OzymvG,1974-07-04,м,администратор,True,False,False
+Stephanie,Torres,Nathan,Департамент B,michael93@example.org,$2b$12$V29xuX3.8R3nReu.GG/FtO0twof9qfFQzoljP6HT5E8pstX9K97Z6,1967-05-03,м,специалист по обслуживанию,True,False,False
+Sue,Taylor,Gregory,Департамент C,bjohnson@example.net,$2b$12$FjqSKkp/2fUHHDQVgOfacu2I6NF1FtIEZbvx8x5i8mlK/vJgRr9MS,1979-11-02,м,специалист по обслуживанию,True,False,False
+Ronald,Miller,Morgan,Департамент A,hhooper@example.org,$2b$12$ebbhijva027AufOfHbqI2O3O2OKcAz66M0fMpvWwm3dvutc/5ciuq,1997-06-23,ж,администратор,True,False,False
+Daniel,Benton,Miranda,Департамент A,htucker@example.com,$2b$12$DD8s.2gx6OQ84YOEye9Wuu1zxmxzyYQPvqVSF3mU6CkPgoOT7.6gG,1991-05-01,м,специалист по обслуживанию,True,False,False
+Sean,Lopez,Jennifer,Департамент C,cookjames@example.com,$2b$12$5Q0faqR6qMo/.cSPSv/u7e3vGyfdFfhWuaomzqGuuPlNExukDKVbq,1996-04-18,м,администратор,True,False,False
+Robin,Ewing,Chad,Департамент A,cassandra48@example.com,$2b$12$MFyIbjkW.Ho2vlMX8Rft7uchxCWs/GZppvHlEnfyVnm8iM2PtES5y,1964-09-27,ж,администратор,True,False,False
+Jordan,Green,Joel,Департамент C,harrisdarius@example.net,$2b$12$8weFRKsR/q/ueWNIrpj8MOHtOaf.cbi3DovxForAnp8uBIuJOi.Dm,1964-04-28,ж,оператор производства,True,False,False
+Terry,Allen,Bryce,Департамент A,petersonricky@example.net,$2b$12$FyLweRVBvA3FYc6JeH6v/uRshOQoPRdWLbB3LpojctAaGar83oZoa,1984-11-07,м,специалист по обслуживанию,True,False,False
+Catherine,Wilson,Steven,Департамент B,murraywilliam@example.net,$2b$12$Us25HrGhQtwAzXkcdo4a/uJpKuuL5LYgAAtbQjhtEoFFQWHyMuMEy,1974-12-12,м,администратор,True,False,False
+Andrea,Perkins,Kaitlin,Департамент C,heaththomas@example.com,$2b$12$eHjU94teJxhgpJpNurJ.eO5X/6PR3Vrn6BRc6Fh/wx1Cjf1ZNRuPW,1998-06-08,ж,оператор производства,True,False,False
+Jeffrey,Guerra,Robert,Департамент A,terrydanny@example.com,$2b$12$ggZno7t4izCob6VhCPM6XegQ7MaD4hEyYG0.ysDpfssOu7XXX1Ly6,1978-02-20,ж,оператор производства,True,False,False
+Zachary,Turner,Melissa,Департамент C,charles14@example.org,$2b$12$AMKqg3Jhes5.IQsoxqqcS.ngQyqjw2Stki0j7aXCejhhaqNEzU56S,1990-08-29,м,специалист по обслуживанию,True,False,False
+Brenda,Brown,Haley,Департамент B,wscott@example.com,$2b$12$rw64r5/AQuEXweMxF1XNZeo6OVXG1sVRJmQ6jy1OChmdBWEeer9Ci,1979-08-02,ж,администратор,True,False,False
+Dylan,Smith,Jason,Департамент C,uturner@example.org,$2b$12$M6F8UajUBN4phEp1hykdrOGk3b6wy//NXaP20fwA9OPPgNEJwKVW.,1967-04-13,м,оператор производства,True,False,False
+Donald,Barnes,Mark,Департамент C,jgray@example.net,$2b$12$zyzudx8WD.mfsV2wuubB8uWhQG8B59NVw5KrrGMi75QWSrrTHBjSi,1998-04-03,ж,специалист по обслуживанию,True,False,False
+Michelle,Reeves,Robin,Департамент A,ymoore@example.org,$2b$12$e4fjba0WowJnQMLRsN/eq.LELZrlXvPSc.aosSQwT41yzmzQvP9qu,1965-06-08,м,специалист по обслуживанию,True,False,False
+Neil,Sanchez,Elizabeth,Департамент A,david72@example.org,$2b$12$5.zRNYlAyA0LALqduv4d5.kR/6.E23rl0vl5OBYvdjn6KNgDKCxMy,1989-01-22,м,специалист по обслуживанию,True,False,False
+Gregory,Tate,Julie,Департамент A,ryan82@example.net,$2b$12$mx6e/RCbz/9zAcNrk34cJeC12FN6E.SJCL.n3gwZN6KVDAugUjtum,1991-06-22,ж,специалист по обслуживанию,True,False,False
+Cody,Padilla,William,Департамент B,thompsonsheri@example.net,$2b$12$KZ4ytdDgUN7wgVgHrbR/r.bwqiwTS8gM1oWcQ/I/nC6VOgx3H.PYC,1966-08-22,ж,администратор,True,False,False

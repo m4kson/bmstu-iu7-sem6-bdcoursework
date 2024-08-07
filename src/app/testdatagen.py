@@ -217,32 +217,32 @@ def write_to_csv(filename, fieldnames, data):
             writer.writerow(row)
 
 # Генерация и запись данных
-num_records = 35
+num_records = 1000
 
-#tractors_data = generate_tractors_data(num_records)
-#write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/tractors.csv', tractors_data[0].keys(), tractors_data)
+tractors_data = generate_tractors_data(num_records)
+write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/tractors.csv', tractors_data[0].keys(), tractors_data)
 
-# assemblylines_data = generate_assemblylines_data(num_records)
-# write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/assemblylines.csv', assemblylines_data[0].keys(), assemblylines_data)
+assemblylines_data = generate_assemblylines_data(num_records)
+write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/assemblylines.csv', assemblylines_data[0].keys(), assemblylines_data)
 
-# details_data = generate_details_data(num_records)
-# write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/details.csv', details_data[0].keys(), details_data)
+details_data = generate_details_data(num_records)
+write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/details.csv', details_data[0].keys(), details_data)
 
-# users_data = generate_users_data(num_records)
-# write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/users.csv', users_data[0].keys(), users_data)
+users_data = generate_users_data(num_records)
+write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/users.csv', users_data[0].keys(), users_data)
 
-# line_detail_data = generate_line_detail_data(num_records, num_records, num_records)
-# write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/line_detail.csv', line_detail_data[0].keys(), line_detail_data)
+line_detail_data = generate_line_detail_data(num_records, num_records, num_records)
+write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/line_detail.csv', line_detail_data[0].keys(), line_detail_data)
 
-# tractor_line_data = generate_tractor_line_data(num_records, num_records, num_records)
-# write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/tractor_line.csv', tractor_line_data[0].keys(), tractor_line_data)
+tractor_line_data = generate_tractor_line_data(num_records, num_records, num_records)
+write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/tractor_line.csv', tractor_line_data[0].keys(), tractor_line_data)
 
-# requests_data = generate_service_requests(num_records)
-# write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/requests.csv', requests_data[0].keys(), requests_data)
+requests_data = generate_service_requests(num_records)
+write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/requests.csv', requests_data[0].keys(), requests_data)
 
 
-# report_data = generate_service_reports(num_records)
-# write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/report.csv', report_data[0].keys(), report_data)
+report_data = generate_service_reports(num_records)
+write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/report.csv', report_data[0].keys(), report_data)
 
 order_detail_data = generate_order_detail(num_records)
 write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/order_detail.csv', order_detail_data[0].keys(), order_detail_data)
@@ -251,7 +251,5 @@ write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/
 orders_data = generate_orders(num_records)
 write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/orders.csv', orders_data[0].keys(), orders_data)
 
-# detailorders_data = generate_detailorders_data(num_records)
-# write_to_csv('detailorders.csv', detailorders_data[0].keys(), detailorders_data)
 
 print("Data generation complete.")
