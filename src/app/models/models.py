@@ -1,5 +1,5 @@
 import datetime
-from sqlalchemy import Table, Column, ForeignKey, Integer, Float, String, Date, Text, Enum, Boolean
+from sqlalchemy import Index, Table, Column, ForeignKey, Integer, Float, String, Date, Text, Enum, Boolean
 from sqlalchemy.orm import relationship, Mapped, mapped_column
 from sqlalchemy.ext.declarative import declarative_base
 import enum
@@ -143,12 +143,17 @@ class ServiceRequest(Base):
     __tablename__ = 'servicerequests'
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"))
-    userid: Mapped[int] = mapped_column(ForeignKey("user.id", ondelete="CASCADE"))
-    requestdate: Mapped[datetime.datetime]
-    status: Mapped[ServiceRequestStatus] = mapped_column(Enum("открыта", "закрыта", "в работе", name="requeststatus_enum"))
+    lineid: Mapped[int] = mapped_column(ForeignKey("assemblylines.id", ondelete="CASCADE"), index=True)
+    userid: Mapped[int] = mapped_column(ForeignKey("user.id", ondelete="CASCADE"), index=True)
+    requestdate: Mapped[datetime.datetime] = mapped_column(index=True)
+    status: Mapped[ServiceRequestStatus] = mapped_column(Enum("открыта", "закрыта", "в работе", name="requeststatus_enum"), index=True)
     type: Mapped[ServiceRequestType] = mapped_column(Enum("техосмотр", "ремонт", name="requesttype_enum"))
     description: Mapped[str]
+
+    __table_args__ = (
+        Index('ix_servicerequests_lineid_requestdate', 'lineid', 'requestdate'),
+        Index('ix_servicerequests_userid_status', 'userid', 'status'),
+    )
 
 class ServiceReport(Base):
     __tablename__ = 'servicereports'
