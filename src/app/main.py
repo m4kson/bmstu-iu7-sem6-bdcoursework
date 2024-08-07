@@ -1,38 +1,18 @@
-from sqlalchemy import text, insert, bindparam
-from session import get_db
-from app.models.models import *
-import uuid
+import asyncio
+from sqlalchemy.future import select
+from app.session import async_session  # Импортируем фабрику сессий
+from app.models.models import User  # Импортируйте вашу модель
 
-def inseert_data():
-    session = next(get_db())
-    new_detail = Detail(
-        name="Шпендель гк-50",
-        country="Китай",
-        amount=250,
-        price=1.334,
-        length=150,
-        width=80,
-        height=150
-    )
-    session.add(new_detail)
-    session.commit()
+async def fetch_data():
+    async with async_session() as db:  # Используем фабрику сессий для получения сессии
+        query = select(User)
+        result = await db.execute(query)
+        items = result.scalars().all()
+        
+        # Выводим результаты
+        print("Полученные записи:")
+        for item in items:
+            print(item)
 
-def insert_assemblyline():
-    session = next(get_db())
-    new_line = AssemblyLine(
-        name = 'Line 8',
-        length=130,
-        height=52,
-        width=31,
-        status='работает', 
-        production=100,
-        downtime=10, 
-        inspectionsamountperyear=12, 
-        lastinspectiondate='2023-01-01',
-        nextinspectiondate='2024-01-01',
-        defectrate=2
-    )
-    session.add(new_line)
-    session.commit()
-
-insert_assemblyline()
+if __name__ == "__main__":
+    asyncio.run(fetch_data())
