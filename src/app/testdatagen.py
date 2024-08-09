@@ -217,7 +217,7 @@ def write_to_csv(filename, fieldnames, data):
             writer.writerow(row)
 
 # Генерация и запись данных
-num_records = 1000
+num_records = 10
 
 tractors_data = generate_tractors_data(num_records)
 write_to_csv('/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/tractors.csv', tractors_data[0].keys(), tractors_data)
