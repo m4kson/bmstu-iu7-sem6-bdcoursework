@@ -44,7 +44,7 @@ async def run_measurement(filter: ServiceRequestsFilter):
 async def main():
     my_filter_1 = ServiceRequestsFilter(limit = None, lineid=measurements_number + 5)
     my_filter_2 = ServiceRequestsFilter(limit = None, SortByDate=True)
-    my_filter_3 = ServiceRequestsFilter(limit = None, userId=1, SortByDate=True, status="открыта")
+    my_filter_3 = ServiceRequestsFilter(limit = None, SortByDate=True, status="открыта")
 
     await asyncio.gather(
         run_measurement(my_filter_1),
