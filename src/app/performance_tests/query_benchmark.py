@@ -42,7 +42,7 @@ async def run_measurement(filter: ServiceRequestsFilter):
         await measure_query(query_to_measure_1, request_repo, filter, num_runs=measurements_number)
 
 async def main():
-    my_filter_1 = ServiceRequestsFilter(lineid=30)
+    my_filter_1 = ServiceRequestsFilter(lineid=1999)
     my_filter_2 = ServiceRequestsFilter(SortByDate=True)
     my_filter_3 = ServiceRequestsFilter(userId=1, SortByDate=True, status="открыта")
 
