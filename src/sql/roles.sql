@@ -47,6 +47,10 @@ GRANT INSERT ON
 servicerequests
 TO operator_production;
 
+GRANT DELETE ON
+servicerequests
+TO operator_production;
+
 GRANT SELECT ON 
 tractors, 
 assemblylines, 
@@ -69,6 +73,11 @@ GRANT INSERT ON
 servicereports, 
 detailorders,
 order_detail
+TO service_specialist;
+
+GRANT DELETE ON
+servicereports,
+detailorders
 TO service_specialist;
 
 GRANT ALL PRIVILEGES ON 
