@@ -1,6 +1,7 @@
 -- DROP TRIGGER update_service_request_status_trigger ON servicereports;
 -- DROP TRIGGER update_line_status_trigger ON servicerequests;
 -- DROP TRIGGER update_assemblyline_trigger ON servicereports;
+-- DROP TRIGGER after_insert_servicereport ON servicereports;
 
 CREATE OR REPLACE FUNCTION update_service_request_status()
 RETURNS TRIGGER AS $$
@@ -76,3 +77,18 @@ EXECUTE FUNCTION update_assemblyline_after_report();
 
 
 
+CREATE OR REPLACE FUNCTION update_servicerequest_status()
+RETURNS TRIGGER AS $$
+BEGIN
+    UPDATE servicerequests
+    SET status = 'в работе'
+    WHERE id = NEW.requestid;
+    
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER after_insert_servicereport
+AFTER INSERT ON servicereports
+FOR EACH ROW
+EXECUTE FUNCTION update_servicerequest_status();
