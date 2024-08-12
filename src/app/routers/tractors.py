@@ -9,10 +9,10 @@ from .role_tests import *
 
 router_tractors = APIRouter(
     prefix="/tractors",
-    tags=["Tractors"]
+    tags=["Тракторы"]
 )
 
-@router_tractors.post("", response_model=dict)
+@router_tractors.post("", response_model=dict, summary="Добавить трактор")
 async def create_tractor(
     user: Annotated[User, Depends(get_admin_user)],
     tractor_create: Annotated[STractor, Depends()], 
@@ -22,7 +22,7 @@ async def create_tractor(
     tractor_id = await tractor_repo.add_tractor(tractor_create)
     return {"ok": True, "tractor_id": tractor_id}
 
-@router_tractors.get("", response_model=None)
+@router_tractors.get("", response_model=None, summary="Получить список тракторов")
 async def read_tractors(
     user: Annotated[User, Depends(get_user)],
     skip: int = 0,
@@ -33,7 +33,7 @@ async def read_tractors(
     tractors = await tractor_repo.get_all_tractors(skip=skip, limit=limit)
     return tractors
 
-@router_tractors.get("/{tractor_id}", response_model=None)
+@router_tractors.get("/{tractor_id}", response_model=None, summary="Получить информацию о тракторе по id")
 async def read_tractor(
     user: Annotated[User, Depends(get_user)],
     tractor_id: int, 

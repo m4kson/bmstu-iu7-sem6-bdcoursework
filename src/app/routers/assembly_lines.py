@@ -9,10 +9,10 @@ from .role_tests import *
 
 router_lines = APIRouter(
     prefix="/lines",
-    tags=["Assembly Lines"]
+    tags=["Производственные линии"]
 )
 
-@router_lines.post("")
+@router_lines.post("", summary="Добавить производственную линию")
 async def create_line(
     user: Annotated[User, Depends(get_admin_user)],
     line_create: Annotated[SAssemblyLine, Depends()], 
@@ -22,7 +22,7 @@ async def create_line(
     line_id = await line_repo.add_assembly_line(line_create)
     return {"ok": True, "line_id": line_id}
 
-@router_lines.get("")
+@router_lines.get("", summary="Получить список всех производственных линий")
 async def read_lines(
     user: Annotated[User, Depends(get_user)],
     db: AsyncSession = Depends(get_db),
@@ -33,7 +33,7 @@ async def read_lines(
     lines = await line_repo.get_all_assembly_lines(skip=skip, limit=limit)
     return lines
 
-@router_lines.get("/{line_id}")
+@router_lines.get("/{line_id}", summary="Получить информацию о производственной линии по id")
 async def read_line(
     user: Annotated[User, Depends(get_user)],
     line_id: int,

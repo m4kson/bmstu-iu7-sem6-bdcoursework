@@ -11,10 +11,10 @@ from .role_tests import *
 
 router_orders = APIRouter(
     prefix="/orders",
-    tags=["Detail Orders"]
+    tags=["Заказы деталей"]
 )
 
-@router_orders.post("")
+@router_orders.post("", summary="Создать заказ деталей")
 async def create_order(
     order_create: DetailOrderCreate, 
     db: AsyncSession = Depends(get_db),
@@ -29,7 +29,7 @@ async def create_order(
     except Exception as e:
         raise HTTPException(status_code=500, detail="An unexpected error occurred.")
     
-@router_orders.get("")
+@router_orders.get("", summary="Получить список всех заказов")
 async def read_orders(
     db: AsyncSession = Depends(get_db),
     skip: int = 0,

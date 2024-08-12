@@ -9,10 +9,10 @@ from .role_tests import fastapi_users, get_user, get_specialist_user, get_admin_
 
 router_users = APIRouter(
     prefix="/users",
-    tags=["Users"]
+    tags=["Пользователи"]
 )
 
-@router_users.get("")
+@router_users.get("", summary="Получить список пользователей")
 async def read_users(
     user: Annotated[User, Depends(get_admin_user)],
     skip: int = 0,
@@ -23,7 +23,7 @@ async def read_users(
     users = await user_repo.get_all_users(skip=skip, limit=limit)
     return users
 
-@router_users.get("/{user_id}")
+@router_users.get("/{user_id}", summary="Получить информацию о пользователе по id")
 async def read_user(
     user: Annotated[User, Depends(get_admin_user)],
     user_id: int, 
@@ -35,7 +35,7 @@ async def read_user(
         raise HTTPException(status_code=404, detail="Tractor not found")
     return user
 
-@router_users.put("/users/{user_id}/role")
+@router_users.put("/users/{user_id}/role", summary="Изменить роль пользователя")
 async def update_user_role(
     user_id: int,
     rights: Annotated[ SUserUpdateRights, Depends()],
