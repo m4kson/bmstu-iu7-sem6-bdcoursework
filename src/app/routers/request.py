@@ -11,10 +11,10 @@ from .role_tests import *
 
 router_requests = APIRouter(
     prefix="/service_request",
-    tags=["Service Requests"]
+    tags=["Заявки на обслуживание"]
 )
 
-@router_requests.post("")
+@router_requests.post("", summary="Создать заявку на обслуживание")
 async def create_request(
     request_create: Annotated[SServiceRequestWrite, Depends()],
     db: AsyncSession = Depends(get_db),
@@ -29,7 +29,7 @@ async def create_request(
     except Exception as e:
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
-@router_requests.get("")
+@router_requests.get("", summary="Получить список всех заявок на обслуживание")
 async def read_requests(
     user: Annotated[User, Depends(get_user)],
     db: AsyncSession = Depends(get_db),
@@ -39,7 +39,7 @@ async def read_requests(
     requests = await request_repo.get_all_service_requests(filter=filter)
     return requests
 
-@router_requests.get("/{id}")
+@router_requests.get("/{id}", summary="Получить информацию о заявке по id")
 async def read_request(
     user: Annotated[User, Depends(get_user)],
     id: int, 
@@ -51,7 +51,7 @@ async def read_request(
         raise HTTPException(status_code=404, detail="Service request not found")
     return request
 
-@router_requests.put("/{id}")
+@router_requests.put("/{id}", summary="Редактировать заявку")
 async def update_request(
     id: int,
     request_update: Annotated[SServiceRequestWrite, Depends()],
@@ -71,7 +71,7 @@ async def update_request(
     return updated_request
 
 
-@router_requests.delete("/{id}")
+@router_requests.delete("/{id}", summary="Удалить заявку")
 async def delete_request(
     id: int,
     db: AsyncSession = Depends(get_db),

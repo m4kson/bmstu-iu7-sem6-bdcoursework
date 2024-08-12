@@ -9,10 +9,10 @@ from .role_tests import *
 
 router_details = APIRouter(
     prefix="/details",
-    tags=["Details"]
+    tags=["Детали"]
 )
 
-@router_details.post("")
+@router_details.post("", summary="Добавить деталь")
 async def create_detail(
     user: Annotated[User, Depends(get_admin_user)],
     detail_create: Annotated[SDetail, Depends()], 
@@ -22,7 +22,7 @@ async def create_detail(
     detail_id = await detail_repo.add_detail(detail_create)
     return {"ok": True, "detail_id": detail_id}
 
-@router_details.get("")
+@router_details.get("", summary="Получить список всех деталей")
 async def read_details(
     user: Annotated[User, Depends(get_admin_or_specialist_user)],
     db: AsyncSession = Depends(get_db),
@@ -33,7 +33,7 @@ async def read_details(
     details = await detail_repo.get_all_details(skip=skip, limit=limit)
     return details
 
-@router_details.get("/{detail_id}")
+@router_details.get("/{detail_id}", summary="Получить информацию о детали по id")
 async def read_tractor(
     user: Annotated[User, Depends(get_admin_or_specialist_user)],
     detail_id: int, 

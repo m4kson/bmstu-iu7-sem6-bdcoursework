@@ -11,10 +11,10 @@ from .role_tests import *
 
 router_reports = APIRouter(
     prefix="/service_reports",
-    tags=["Service Reports"]
+    tags=["Отчеты об обслуживании"]
 )
 
-@router_reports.post("")
+@router_reports.post("", summary="Создать отчет об обслуживании")
 async def create_report(
     report_create: Annotated[SServiceReportWrite, Depends()],
     db: AsyncSession = Depends(get_db),
@@ -27,7 +27,7 @@ async def create_report(
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e))
 
-@router_reports.put("/close-report")
+@router_reports.put("/close-report", summary="Закрыть отчет об обслуживании")
 async def close_report(
     report_close: SServiceReportClose, 
     db: AsyncSession = Depends(get_db),
@@ -45,7 +45,7 @@ async def close_report(
     except ReportAlreadyClosedException as e:
         raise HTTPException(status_code=400, detail=str(e))
     
-@router_reports.get("")
+@router_reports.get("", summary="Получить список всех отчетов об обслуживании")
 async def read_reports(
     user: Annotated[User, Depends(get_user)],
     db: AsyncSession = Depends(get_db),
