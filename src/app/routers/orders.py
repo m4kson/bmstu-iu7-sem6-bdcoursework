@@ -50,4 +50,16 @@ async def read_orders(
         )
     
     return orders
+
+@router_orders.get("/{id}", summary="Получить информацию о заказе по id")
+async def read_order(
+    user: Annotated[User, Depends(get_admin_or_specialist_user)], 
+    id: int,
+    db: AsyncSession = Depends(get_db)
+):
+    order_repo = DetailOrderRepository(db)
+    order = await order_repo.get_order_by_id(id)
+    if order is None:
+        raise HTTPException(status_code=404, detail="Order not found")
+    return order
     
