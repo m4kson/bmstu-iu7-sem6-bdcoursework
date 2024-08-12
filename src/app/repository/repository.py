@@ -402,3 +402,7 @@ class ServiceReportRepository:
         
         result = await self.db.execute(query)
         return result.scalars().all()
+    
+    async def get_report_by_id(self, report_id: int) -> Optional[ServiceReport]:
+        result = await self.db.execute(select(ServiceReport).filter(ServiceReport.id == report_id))
+        return result.scalars().first()

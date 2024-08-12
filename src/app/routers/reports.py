@@ -56,3 +56,15 @@ async def read_reports(
     report_repo = ServiceReportRepository(db)
     requests = await report_repo.get_all_service_reports(skip=skip, limit=limit, lineId = lineId)
     return requests
+
+@router_reports.get("/{id}", summary="Получить информацию об отчете по id")
+async def read_report(
+    user: Annotated[User, Depends(get_user)],
+    id: int,
+    db: AsyncSession = Depends(get_db)
+):
+    report_repo = ServiceReportRepository(db)
+    report = await report_repo.get_report_by_id(id)
+    if report is None:
+        raise HTTPException(status_code=404, detail="Service report not found")
+    return report
