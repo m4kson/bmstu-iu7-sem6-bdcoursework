@@ -15,7 +15,11 @@ from app.session import create_session, get_db, async_session
 measurements_number = 100
 
 async def query_to_measure_1(repo: ServiceRequestRepository, filter: ServiceRequestsFilter):
+    # result = await repo.get_all_service_requests(filter)
+    # print(len(result))
+    # return result
     return await repo.get_all_service_requests(filter)
+
 
 async def query_to_measure_2(repo: ServiceRequestRepository, request: SServiceRequestWrite, user_id: int):
     service_request = SServiceRequestWrite(
@@ -42,13 +46,13 @@ async def run_measurement(filter: ServiceRequestsFilter):
         await measure_query(query_to_measure_1, request_repo, filter, num_runs=measurements_number)
 
 async def main():
-    my_filter_1 = ServiceRequestsFilter(lineid=1999)
-    my_filter_2 = ServiceRequestsFilter(SortByDate=True)
-    my_filter_3 = ServiceRequestsFilter(userId=1, SortByDate=True, status="открыта")
+    my_filter_1 = ServiceRequestsFilter(limit=None, lineId=4774)
+    my_filter_2 = ServiceRequestsFilter(limit=None, SortByDate=True)
+    my_filter_3 = ServiceRequestsFilter(limit=None, userId=5717, SortByDate=True, status="открыта")
 
     await asyncio.gather(
-        run_measurement(my_filter_1),
-        run_measurement(my_filter_2),
+        #run_measurement(my_filter_1),
+        #run_measurement(my_filter_2),
         run_measurement(my_filter_3),
     )
 
