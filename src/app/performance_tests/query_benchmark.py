@@ -12,7 +12,7 @@ from app.schemas.schemas import SServiceRequestWrite
 from app.session import create_session, get_db, async_session
 
 
-measurements_number = 100
+measurements_number = 1000
 
 async def query_to_measure_1(repo: ServiceRequestRepository, filter: ServiceRequestsFilter):
     # result = await repo.get_all_service_requests(filter)
