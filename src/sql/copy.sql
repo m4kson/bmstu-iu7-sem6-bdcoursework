@@ -20,12 +20,12 @@ FROM '/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/test
 DELIMITER ','
 CSV HEADER;
 
-COPY line_detail (lineid, detailid)
+COPY line_detail (lineid, detailid) 
 FROM '/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/line_detail.csv'
 DELIMITER ','
 CSV HEADER;
 
-COPY tractor_line (tractorid, lineid)
+COPY tractor_line (tractorid, lineid) 
 FROM '/Users/m4ks0n/study/IU7/sem6/dbcourse/bmstu-iu7-sem6-bdcoursework/doc/testdata/tractor_line.csv'
 DELIMITER ','
 CSV HEADER;
