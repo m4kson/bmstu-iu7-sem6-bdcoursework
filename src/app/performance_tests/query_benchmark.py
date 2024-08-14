@@ -20,14 +20,9 @@ async def query_to_measure_1(repo: ServiceRequestRepository, filter: ServiceRequ
     # return result
     return await repo.get_all_service_requests(filter)
 
-async def query_to_measure_2(repo: ServiceRequestRepository, request: SServiceRequestWrite, user_id: int):
-    service_request = SServiceRequestWrite(
-            lineid=1,
-            type="ремонт",
-            description="замер времени"
-        )
-    await repo.add_service_request(service_request, 1)
-    
+
+async def query_to_measure_2(repo: ServiceRequestRepository, request: SServiceRequestWrite):
+    await repo.add_service_request(request, 1)
 
 async def measure_query(query_func, *args, num_runs: int):
     total_time = 0
@@ -42,17 +37,19 @@ async def measure_query(query_func, *args, num_runs: int):
 async def run_measurement(filter: ServiceRequestsFilter):
     async with async_session() as session:
         request_repo = ServiceRequestRepository(session)
-        await measure_query(query_to_measure_1, request_repo, filter, num_runs=measurements_number)
+        await measure_query(query_to_measure_2, request_repo, filter, num_runs=measurements_number)
 
 async def main():
-    my_filter_1 = ServiceRequestsFilter(limit = None, lineId=4774)
-    my_filter_2 = ServiceRequestsFilter(limit = None, SortByDate=True)
-    my_filter_3 = ServiceRequestsFilter(limit = None, userId = 5717, SortByDate=True, status="открыта")
+    my_filter_1 = ServiceRequestsFilter(limit=None, lineId=4774)
+    my_filter_2 = ServiceRequestsFilter(limit=None, SortByDate=True)
+    my_filter_3 = ServiceRequestsFilter(limit=None, userId=5717, SortByDate=True, status="открыта")
+    add_request = SServiceRequestWrite(lineid=123, type="ремонт", description="performancetest")
 
     await asyncio.gather(
         #run_measurement(my_filter_1),
         #run_measurement(my_filter_2),
-        run_measurement(my_filter_3),
+        #run_measurement(my_filter_3),
+        run_measurement(add_request)
     )
 
 if __name__ == "__main__":
