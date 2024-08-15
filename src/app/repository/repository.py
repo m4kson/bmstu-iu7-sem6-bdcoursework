@@ -329,14 +329,16 @@ class ServiceRequestRepository:
     async def delete_service_request(self, id: int) -> None:
         try:
             result = await self.db.execute(select(ServiceRequest).where(ServiceRequest.id == id))
-        except:
-            raise ValueError(f"Service request with id {id} does not exist")
+            service_request = result.scalars().first() 
+            if service_request is None:
+                raise ValueError(f"Service request with id {id} does not exist")
+        except Exception as e:
+            raise ValueError(f"An error occurred: {str(e)}")
         
-        if result.status != "открыта":
-            raise ValueError(f"Service request with id {id} can not be deleted")
-
-        stmt = delete(ServiceRequest).where(ServiceRequest.id == id)
-        await self.db.execute(stmt)
+        if service_request.status != "открыта":
+            raise ValueError(f"Cannot delete service request with id {id} because it is not open")
+        
+        await self.db.delete(service_request)
         await self.db.commit()
 
 class ServiceReportRepository:
