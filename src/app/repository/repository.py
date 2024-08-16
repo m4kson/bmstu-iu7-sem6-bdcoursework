@@ -311,6 +311,15 @@ class ServiceRequestRepository:
         return result.scalars().first()
     
     async def update_service_request(self, id: int, request_update: SServiceRequestWrite) -> ServiceRequest:
+        result = await self.db.execute(select(ServiceRequest).where(ServiceRequest.id == id))
+        existing_request = result.scalar_one_or_none()
+
+        if existing_request is None:
+            raise ValueError(f"Service request with id {id} does not exist")
+
+        if existing_request.status != "открыта":
+            raise ValueError(f"Cannot update service request with id {id} because it is not open")
+
         update_data = request_update.dict(exclude_unset=True)
         
         stmt = (
@@ -325,6 +334,7 @@ class ServiceRequestRepository:
 
         updated_request = result.scalars().first()
         return updated_request
+
     
     async def delete_service_request(self, id: int) -> None:
         try:
